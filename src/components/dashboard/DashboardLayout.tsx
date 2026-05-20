@@ -1,27 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import DashboardStatCard from "@/components/dashboard/DashboardStatCard";
 
-export default function DashboardPage() {
-  const [userName, setUserName] = useState("");
+type DashboardLayoutProps = {
+  children: React.ReactNode;
+};
 
-  useEffect(() => {
-    async function getUser() {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-
-      if (user) {
-        setUserName(user.user_metadata.full_name || "User");
-      }
-    }
-
-    getUser();
-  }, []);
-
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const handleLogout = async () => {
     await supabase.auth.signOut();
     window.location.href = "/auth/login";
@@ -30,7 +16,7 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-[#071A3D] text-white">
       <div className="flex min-h-screen">
-        <aside className="w-64 bg-[#04122D] p-6">
+        <aside className="w-64 shrink-0 bg-[#04122D] p-6 border-r border-[#0D2A5E]">
           <h1 className="text-2xl font-bold text-[#D4AF37]">Dessetra</h1>
           <p className="mt-1 text-sm text-gray-400">Learn • Connect • Earn</p>
 
@@ -68,20 +54,7 @@ export default function DashboardPage() {
           </button>
         </aside>
 
-        <section className="flex-1 p-6">
-          <div className="rounded-2xl bg-[#0D2A5E] p-6 shadow-lg">
-            <h1 className="text-3xl font-bold">Welcome, {userName}</h1>
-            <p className="mt-2 text-gray-300">
-              Dessetra Dashboard — Learn • Connect • Earn
-            </p>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <DashboardStatCard title="Courses" value="0" subtitle="Courses enrolled" />
-            <DashboardStatCard title="Referrals" value="0" subtitle="Invited users" />
-            <DashboardStatCard title="Estimated Earnings" value="$0" subtitle="Pending rewards" />
-          </div>
-        </section>
+        <section className="flex-1 p-6">{children}</section>
       </div>
     </main>
   );
