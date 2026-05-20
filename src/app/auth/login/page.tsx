@@ -8,7 +8,6 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -19,21 +18,27 @@ export default function LoginPage() {
       return;
     }
 
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-    setLoading(false);
+      if (error) {
+        alert(`Supabase Error: ${error.message}`);
+        return;
+      }
 
-    if (error) {
-      alert(error.message);
-      return;
+      console.log("Login success:", data);
+      window.location.href = "/dashboard";
+    } catch (err) {
+      console.error("Unexpected login error:", err);
+      alert(`Unexpected Error: ${JSON.stringify(err)}`);
+    } finally {
+      setLoading(false);
     }
-
-    window.location.href = "/dashboard";
   };
 
   return (
@@ -48,7 +53,6 @@ export default function LoginPage() {
         </p>
 
         <form onSubmit={handleLogin} className="mt-6 space-y-4">
-
           <input
             type="email"
             placeholder="Email"
@@ -82,7 +86,6 @@ export default function LoginPage() {
           >
             {loading ? "Logging in..." : "Login"}
           </button>
-
         </form>
       </section>
     </main>
