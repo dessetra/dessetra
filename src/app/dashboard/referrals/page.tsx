@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import DashboardLayout from "@/components/dashboard/DashboardLayout";
 
 export default function ReferralsPage() {
   const [referralLink, setReferralLink] = useState("");
@@ -26,15 +27,15 @@ export default function ReferralsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#071A3D] p-6 text-white">
-      <div className="rounded-2xl bg-[#0D2A5E] p-6">
-        <h1 className="text-3xl font-bold">Referrals</h1>
-        <p className="mt-2 text-gray-300">
+    <DashboardLayout>
+      <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
+        <h1 className="text-2xl font-bold md:text-3xl">Referrals</h1>
+        <p className="mt-2 text-sm text-gray-300 md:text-base">
           Invite others to begin their Web3 learning journey with Dessetra.
         </p>
       </div>
 
-      <div className="mt-8 rounded-2xl bg-white p-6 text-[#071A3D]">
+      <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D]">
         <h2 className="text-xl font-bold">Your Referral Link</h2>
 
         <div className="mt-4 break-all rounded-lg bg-gray-100 p-4 text-sm">
@@ -65,6 +66,6 @@ export default function ReferralsPage() {
           <p className="mt-2 text-3xl font-bold">$0</p>
         </div>
       </div>
-    </main>
+    </DashboardLayout>
   );
 }

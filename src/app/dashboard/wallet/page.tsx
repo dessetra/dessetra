@@ -1,30 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import DashboardLayout from "@/components/dashboard/DashboardLayout";
 
 export default function WalletPage() {
   const [walletAddress, setWalletAddress] = useState("");
   const [withdrawAmount, setWithdrawAmount] = useState("");
 
   return (
-    <main className="min-h-screen bg-[#071A3D] p-6 text-white">
-      <div className="rounded-2xl bg-[#0D2A5E] p-6">
-        <h1 className="text-3xl font-bold">
-          Wallet
-        </h1>
-
-        <p className="mt-2 text-gray-300">
+    <DashboardLayout>
+      <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
+        <h1 className="text-2xl font-bold md:text-3xl">Wallet</h1>
+        <p className="mt-2 text-sm text-gray-300 md:text-base">
           Manage your wallet information and withdrawal requests.
         </p>
       </div>
 
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">
-
+      <div className="mt-6 grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-          <h2 className="text-2xl font-bold">
-            Wallet Address
-          </h2>
-
+          <h2 className="text-2xl font-bold">Wallet Address</h2>
           <p className="mt-2 text-sm text-gray-500">
             Add the wallet address where you want to receive rewards.
           </p>
@@ -43,10 +37,7 @@ export default function WalletPage() {
         </div>
 
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-          <h2 className="text-2xl font-bold">
-            Withdrawal Request
-          </h2>
-
+          <h2 className="text-2xl font-bold">Withdrawal Request</h2>
           <p className="mt-2 text-sm text-gray-500">
             Withdrawal requests will be manually reviewed and processed by admin.
           </p>
@@ -63,18 +54,15 @@ export default function WalletPage() {
             Request Withdrawal
           </button>
         </div>
-
       </div>
 
-      <div className="mt-8 rounded-2xl bg-[#0D2A5E] p-6">
-        <h2 className="text-2xl font-bold">
-          Withdrawal History
-        </h2>
+      <div className="mt-6 rounded-2xl bg-[#0D2A5E] p-6">
+        <h2 className="text-2xl font-bold">Withdrawal History</h2>
 
         <div className="mt-6 rounded-xl border border-dashed border-gray-500 p-10 text-center text-gray-400">
           No withdrawal requests yet.
         </div>
       </div>
-    </main>
+    </DashboardLayout>
   );
 }

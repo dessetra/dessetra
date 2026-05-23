@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import DashboardLayout from "@/components/dashboard/DashboardLayout";
 
 export default function ProfilePage() {
   const [fullName, setFullName] = useState("");
@@ -31,21 +32,19 @@ export default function ProfilePage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#071A3D] text-white p-6">
-      <div className="max-w-3xl mx-auto">
-
-        <div className="rounded-2xl bg-[#0D2A5E] p-6">
-          <h1 className="text-3xl font-bold">
+    <DashboardLayout>
+      <div className="max-w-3xl">
+        <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
+          <h1 className="text-2xl font-bold md:text-3xl">
             Profile
           </h1>
 
-          <p className="mt-2 text-gray-300">
+          <p className="mt-2 text-sm text-gray-300 md:text-base">
             Manage your Dessetra account information
           </p>
         </div>
 
-        <div className="mt-8 rounded-2xl bg-[#04122D] p-6">
-
+        <div className="mt-6 rounded-2xl bg-[#04122D] p-6">
           <div className="flex justify-center">
             <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#D4AF37] text-3xl font-bold text-[#071A3D]">
               {fullName?.charAt(0) || "U"}
@@ -53,7 +52,6 @@ export default function ProfilePage() {
           </div>
 
           <div className="mt-8 space-y-4">
-
             <input
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
@@ -90,9 +88,7 @@ export default function ProfilePage() {
 
             <input
               value={walletAddress}
-              onChange={(e) =>
-                setWalletAddress(e.target.value)
-              }
+              onChange={(e) => setWalletAddress(e.target.value)}
               placeholder="Wallet Address"
               className="w-full rounded-lg border border-gray-700 bg-[#0D2A5E] p-3"
             />
@@ -100,10 +96,9 @@ export default function ProfilePage() {
             <button className="w-full rounded-lg bg-[#D4AF37] py-3 font-semibold text-[#071A3D]">
               Save Changes
             </button>
-
           </div>
         </div>
       </div>
-    </main>
+    </DashboardLayout>
   );
 }
