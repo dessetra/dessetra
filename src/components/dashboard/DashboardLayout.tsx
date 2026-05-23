@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 
 type DashboardLayoutProps = {
@@ -17,15 +18,42 @@ const navLinks = [
 ];
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  const [checkingAuth, setCheckingAuth] = useState(true);
+
+  useEffect(() => {
+    async function checkUser() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (!user) {
+        window.location.href = "/auth/login";
+        return;
+      }
+
+      setCheckingAuth(false);
+    }
+
+    checkUser();
+  }, []);
+
   const handleLogout = async () => {
     await supabase.auth.signOut();
     window.location.href = "/auth/login";
   };
 
+  if (checkingAuth) {
+    return (
+      <main className="flex min-h-screen items-center justify-center bg-[#071A3D] text-white">
+        <p>Checking access...</p>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-[#071A3D] text-white">
-      <div className="md:flex min-h-screen">
-        <aside className="bg-[#04122D] p-5 md:w-64 md:min-h-screen">
+      <div className="min-h-screen md:flex">
+        <aside className="bg-[#04122D] p-5 md:min-h-screen md:w-64">
           <h1 className="text-2xl font-bold text-[#D4AF37]">Dessetra</h1>
           <p className="mt-1 text-sm text-gray-400">Learn • Connect • Earn</p>
 
