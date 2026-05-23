@@ -6,13 +6,15 @@ import { supabase } from "@/lib/supabase";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const email = String(formData.get("email") || "").trim();
+    const password = String(formData.get("password") || "");
 
     if (!email || !password) {
       alert("Please enter your email and password.");
@@ -22,7 +24,7 @@ export default function LoginPage() {
     try {
       setLoading(true);
 
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
@@ -32,7 +34,6 @@ export default function LoginPage() {
         return;
       }
 
-      console.log("Login success:", data);
       window.location.href = "/dashboard";
     } catch (err) {
       console.error("Unexpected login error:", err);
@@ -55,19 +56,19 @@ export default function LoginPage() {
 
         <form onSubmit={handleLogin} className="mt-6 space-y-4">
           <input
+            name="email"
             type="email"
             placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
             className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
           />
 
           <div className="relative">
             <input
+              name="password"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
               className="w-full rounded-lg border border-gray-300 p-3 pr-12 outline-none focus:border-[#1E88E5]"
             />
 
