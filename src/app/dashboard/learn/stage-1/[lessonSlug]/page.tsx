@@ -11,6 +11,13 @@ type LessonPageProps = {
   }>;
 };
 
+const lessons = [
+  "lesson-1-why-web3",
+  "lesson-2-internet-evolution",
+  "lesson-3-blockchain-simplified",
+  "lesson-4-hype-vs-opportunity",
+];
+
 export default async function LessonPage({ params }: LessonPageProps) {
   const { lessonSlug } = await params;
 
@@ -27,6 +34,18 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
   const lessonContent = fs.readFileSync(lessonPath, "utf8");
 
+  const currentIndex = lessons.indexOf(lessonSlug);
+
+  const previousLesson =
+    currentIndex > 0
+      ? `/dashboard/learn/stage-1/${lessons[currentIndex - 1]}`
+      : undefined;
+
+  const nextLesson =
+    currentIndex < lessons.length - 1
+      ? `/dashboard/learn/stage-1/${lessons[currentIndex + 1]}`
+      : undefined;
+
   const formattedTitle = lessonSlug
     .replaceAll("-", " ")
     .replace("lesson 1", "Lesson 1")
@@ -36,7 +55,12 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
   return (
     <DashboardLayout>
-      <LessonReader title={formattedTitle} content={lessonContent} />
+      <LessonReader
+        title={formattedTitle}
+        content={lessonContent}
+        previousLesson={previousLesson}
+        nextLesson={nextLesson}
+      />
     </DashboardLayout>
   );
 }
