@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import LessonReader from "@/components/learning/LessonReader";
+import LessonQuiz from "@/components/learning/LessonQuiz";
 
 type LessonPageProps = {
   params: Promise<{
@@ -21,18 +22,24 @@ const lessons = [
 export default async function LessonPage({ params }: LessonPageProps) {
   const { lessonSlug } = await params;
 
-  const lessonPath = path.join(
+  const lessonFolder = path.join(
     process.cwd(),
     "src/content/free/stage-1-awakening",
-    lessonSlug,
-    "lesson.md"
+    lessonSlug
   );
+
+  const lessonPath = path.join(lessonFolder, "lesson.md");
+  const quizPath = path.join(lessonFolder, "quiz.json");
 
   if (!fs.existsSync(lessonPath)) {
     notFound();
   }
 
   const lessonContent = fs.readFileSync(lessonPath, "utf8");
+
+  const quizQuestions = fs.existsSync(quizPath)
+    ? JSON.parse(fs.readFileSync(quizPath, "utf8"))
+    : [];
 
   const currentIndex = lessons.indexOf(lessonSlug);
 
@@ -61,6 +68,8 @@ export default async function LessonPage({ params }: LessonPageProps) {
         previousLesson={previousLesson}
         nextLesson={nextLesson}
       />
+
+      <LessonQuiz questions={quizQuestions} />
     </DashboardLayout>
   );
 }
