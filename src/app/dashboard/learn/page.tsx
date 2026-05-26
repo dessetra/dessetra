@@ -42,9 +42,12 @@ export default function LearnPage() {
               <p className="mt-2 text-sm text-gray-300">{module.progress}</p>
             </div>
 
-            <button className="mt-5 rounded-lg bg-[#D4AF37] px-5 py-2 font-semibold text-[#071A3D]">
-              Open
-            </button>
+            <a
+              href={index === 0 ? "/dashboard/learn/stage-1" : "#"}
+              className="mt-5 inline-block rounded-lg bg-[#D4AF37] px-5 py-2 font-semibold text-[#071A3D]"
+            >
+              {index === 0 ? "Open Lesson" : "Locked"}
+            </a>
           </div>
         ))}
       </div>

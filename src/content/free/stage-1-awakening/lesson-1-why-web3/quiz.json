@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What was one major limitation of Web2 platforms?",
+    "options": [
+      "Users owned the platforms",
+      "Users had no internet access",
+      "Platforms controlled user data and audiences",
+      "Blockchain did not exist"
+    ],
+    "answer": "Platforms controlled user data and audiences"
+  },
+  {
+    "question": "What is one major idea introduced by Web3?",
+    "options": [
+      "Centralized ownership",
+      "Digital ownership and control",
+      "Removing the internet",
+      "Eliminating online communities"
+    ],
+    "answer": "Digital ownership and control"
+  },
+  {
+    "question": "Why does Dessetra emphasize education first?",
+    "options": [
+      "Because hype is enough",
+      "Because knowledge should come before risk",
+      "Because trading guarantees profits",
+      "Because everyone in Web3 succeeds quickly"
+    ],
+    "answer": "Because knowledge should come before risk"
+  }
+]

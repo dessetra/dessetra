@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is hype mainly driven by?",
+    "options": [
+      "Careful understanding",
+      "Long-term research",
+      "Emotional excitement and urgency",
+      "Technical education"
+    ],
+    "answer": "Emotional excitement and urgency"
+  },
+  {
+    "question": "What is one characteristic of real opportunity?",
+    "options": [
+      "Guaranteed quick profits",
+      "Patience and understanding",
+      "Blindly following crowds",
+      "Ignoring risks"
+    ],
+    "answer": "Patience and understanding"
+  },
+  {
+    "question": "Why do many beginners fall into traps?",
+    "options": [
+      "They research too carefully",
+      "They avoid emotional decisions",
+      "They rush without understanding",
+      "They learn too slowly"
+    ],
+    "answer": "They rush without understanding"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is one core purpose of blockchain?",
+    "options": [
+      "To hide all information",
+      "To create transparent and shared records",
+      "To remove the internet",
+      "To guarantee profits"
+    ],
+    "answer": "To create transparent and shared records"
+  },
+  {
+    "question": "How is blockchain different from many traditional systems?",
+    "options": [
+      "It only works for social media",
+      "It depends on paper records",
+      "Information is shared across many computers",
+      "Only banks can use it"
+    ],
+    "answer": "Information is shared across many computers"
+  },
+  {
+    "question": "Does blockchain automatically eliminate scams?",
+    "options": [
+      "Yes, scams become impossible",
+      "No, human manipulation and scams can still exist",
+      "Only governments can scam people",
+      "Blockchain removes all risks"
+    ],
+    "answer": "No, human manipulation and scams can still exist"
+  }
+]

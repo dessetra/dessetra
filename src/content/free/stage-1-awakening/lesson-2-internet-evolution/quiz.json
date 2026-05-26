@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What was the main characteristic of Web1?",
+    "options": [
+      "Highly interactive social platforms",
+      "Read-only internet experience",
+      "Blockchain ownership systems",
+      "Creator monetization"
+    ],
+    "answer": "Read-only internet experience"
+  },
+  {
+    "question": "What major change did Web2 introduce?",
+    "options": [
+      "Users could create and share content",
+      "The internet stopped evolving",
+      "All platforms became decentralized",
+      "Blockchain replaced websites"
+    ],
+    "answer": "Users could create and share content"
+  },
+  {
+    "question": "What concern is associated with many Web2 platforms?",
+    "options": [
+      "Too much user ownership",
+      "No online communities",
+      "Platforms control user data and visibility",
+      "The internet cannot scale"
+    ],
+    "answer": "Platforms control user data and visibility"
+  }
+]
