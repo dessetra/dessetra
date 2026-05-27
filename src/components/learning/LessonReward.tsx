@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { supabase } from "@/lib/supabase";
 
 type LessonRewardProps = {
@@ -28,7 +29,7 @@ export default function LessonReward({
     } = await supabase.auth.getUser();
 
     if (!user) {
-      alert("Please login to save your progress.");
+      toast.error("Please login to save your progress.");
       setSaving(false);
       return;
     }
@@ -46,15 +47,15 @@ export default function LessonReward({
 
     if (error) {
       if (error.message.includes("unique_user_lesson_progress")) {
-        alert("You have already completed this lesson.");
+        toast("You have already completed this lesson.");
+        return;
+      }
+
+      toast.error(error.message);
       return;
     }
 
-      alert(error.message);
-     return;
-    }
-
-    alert("Lesson completed. Your DP has been saved.");
+    toast.success("Lesson completed. Your DP has been saved.");
   };
 
   return (

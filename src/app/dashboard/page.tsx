@@ -21,28 +21,48 @@ export default function DashboardPage() {
 
       setUserName(user.user_metadata.full_name || "User");
 
-      const { data, error } = await supabase
+      const { data: lessonData, error: lessonError } = await supabase
         .from("lesson_progress")
         .select("dp_earned, badge")
         .eq("user_id", user.id)
         .eq("completed", true);
 
-      if (error) {
-        console.log(error.message);
+      const { data: stageData, error: stageError } = await supabase
+        .from("stage_progress")
+        .select("dp_earned, badge")
+        .eq("user_id", user.id)
+        .eq("completed", true);
+
+      if (lessonError) {
+        console.log(lessonError.message);
         return;
       }
 
-      setCompletedLessons(data.length);
+      if (stageError) {
+        console.log(stageError.message);
+        return;
+      }
 
-      const dpTotal = data.reduce((sum, item) => {
+      const lessonRows = lessonData || [];
+      const stageRows = stageData || [];
+
+      setCompletedLessons(lessonRows.length);
+
+      const lessonDP = lessonRows.reduce((sum, item) => {
+        return sum + Number(item.dp_earned || 0);
+      }, 0);
+
+      const stageDP = stageRows.reduce((sum, item) => {
         return sum + Number(item.dp_earned || 0);
       }, 0);
 
       const uniqueBadges = new Set(
-        data.map((item) => item.badge).filter(Boolean)
+        [...lessonRows, ...stageRows]
+          .map((item) => item.badge)
+          .filter(Boolean)
       );
 
-      setTotalDP(dpTotal);
+      setTotalDP(lessonDP + stageDP);
       setBadgesEarned(uniqueBadges.size);
     }
 

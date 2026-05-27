@@ -8,6 +8,7 @@ type LessonReaderProps = {
   content: string;
   previousLesson?: string;
   nextLesson?: string;
+  isCompleted?: boolean;
 };
 
 export default function LessonReader({
@@ -15,6 +16,7 @@ export default function LessonReader({
   content,
   previousLesson,
   nextLesson,
+  isCompleted = false,
 }: LessonReaderProps) {
   return (
     <article className="overflow-hidden rounded-3xl bg-white text-[#071A3D] shadow-xl">
@@ -23,9 +25,17 @@ export default function LessonReader({
           Stage 1 • The Awakening
         </p>
 
-        <h1 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">
-          {title}
-        </h1>
+        <div className="mt-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <h1 className="text-3xl font-bold leading-tight md:text-4xl">
+            {title}
+          </h1>
+
+          {isCompleted && (
+            <span className="rounded-full bg-[#D4AF37] px-4 py-2 text-sm font-bold text-[#071A3D]">
+              Completed ✓
+            </span>
+          )}
+        </div>
 
         <p className="mt-3 max-w-2xl text-sm text-gray-300 md:text-base">
           Read carefully, reflect deeply, and continue your Web3 journey with clarity.

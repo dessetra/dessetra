@@ -31,6 +31,7 @@ const lessons = [
 
 export default function Stage1Page() {
   const [completedLessons, setCompletedLessons] = useState<string[]>([]);
+  const [stageCompleted, setStageCompleted] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -44,15 +45,43 @@ export default function Stage1Page() {
         return;
       }
 
-      const { data, error } = await supabase
+      const { data: lessonData, error: lessonError } = await supabase
         .from("lesson_progress")
         .select("lesson_slug")
         .eq("user_id", user.id)
         .eq("stage_id", "stage-1")
         .eq("completed", true);
 
-      if (!error && data) {
-        setCompletedLessons(data.map((item) => item.lesson_slug));
+      if (!lessonError && lessonData) {
+        const completed = lessonData.map((item) => item.lesson_slug);
+        setCompletedLessons(completed);
+
+        if (completed.length === lessons.length) {
+          const { data: stageData } = await supabase
+            .from("stage_progress")
+            .select("id")
+            .eq("user_id", user.id)
+            .eq("stage_id", "stage-1")
+            .maybeSingle();
+
+          if (!stageData) {
+            const { error: stageError } = await supabase
+              .from("stage_progress")
+              .insert({
+                user_id: user.id,
+                stage_id: "stage-1",
+                completed: true,
+                dp_earned: 100,
+                badge: "Awakening Badge",
+              });
+
+            if (!stageError) {
+              setStageCompleted(true);
+            }
+          } else {
+            setStageCompleted(true);
+          }
+        }
       }
 
       setLoading(false);
@@ -106,6 +135,25 @@ export default function Stage1Page() {
           )}
         </div>
       </div>
+
+      {stageCompleted && (
+        <div className="mt-6 rounded-2xl bg-[#D4AF37] p-6 text-[#071A3D] shadow-lg">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em]">
+            Stage Reward Unlocked
+          </p>
+
+          <h2 className="mt-3 text-3xl font-bold">Awakening Badge</h2>
+
+          <p className="mt-3 leading-7">
+            You completed Stage 1 and earned your first major Dessetra
+            achievement.
+          </p>
+
+          <div className="mt-5 inline-flex rounded-full bg-[#071A3D] px-5 py-2 font-bold text-white">
+            +100 DP
+          </div>
+        </div>
+      )}
 
       <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
         <h2 className="text-2xl font-bold">Story Introduction</h2>

@@ -7,6 +7,7 @@ import LessonReader from "@/components/learning/LessonReader";
 import LessonQuiz from "@/components/learning/LessonQuiz";
 import LessonReflection from "@/components/learning/LessonReflection";
 import LessonReward from "@/components/learning/LessonReward";
+import { supabase } from "@/lib/supabase";
 
 type LessonPageProps = {
   params: Promise<{
@@ -74,6 +75,7 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
   return (
     <DashboardLayout>
+      
       <LessonReader
         title={formattedTitle}
         content={lessonContent}
