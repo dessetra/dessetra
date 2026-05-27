@@ -7,19 +7,46 @@ import DashboardStatCard from "@/components/dashboard/DashboardStatCard";
 
 export default function DashboardPage() {
   const [userName, setUserName] = useState("");
+  const [completedLessons, setCompletedLessons] = useState(0);
+  const [totalDP, setTotalDP] = useState(0);
+  const [badgesEarned, setBadgesEarned] = useState(0);
 
   useEffect(() => {
-    async function getUser() {
+    async function loadDashboardData() {
       const {
         data: { user },
       } = await supabase.auth.getUser();
 
-      if (user) {
-        setUserName(user.user_metadata.full_name || "User");
+      if (!user) return;
+
+      setUserName(user.user_metadata.full_name || "User");
+
+      const { data, error } = await supabase
+        .from("lesson_progress")
+        .select("dp_earned, badge")
+        .eq("user_id", user.id)
+        .eq("completed", true);
+
+      if (error) {
+        console.log(error.message);
+        return;
       }
+
+      setCompletedLessons(data.length);
+
+      const dpTotal = data.reduce((sum, item) => {
+        return sum + Number(item.dp_earned || 0);
+      }, 0);
+
+      const uniqueBadges = new Set(
+        data.map((item) => item.badge).filter(Boolean)
+      );
+
+      setTotalDP(dpTotal);
+      setBadgesEarned(uniqueBadges.size);
     }
 
-    getUser();
+    loadDashboardData();
   }, []);
 
   return (
@@ -36,21 +63,21 @@ export default function DashboardPage() {
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <DashboardStatCard
-          title="Courses"
-          value="0"
-          subtitle="Courses enrolled"
+          title="Completed Lessons"
+          value={String(completedLessons)}
+          subtitle="Lessons finished"
         />
 
         <DashboardStatCard
-          title="Referrals"
-          value="0"
-          subtitle="Invited users"
+          title="Dessetra Points"
+          value={String(totalDP)}
+          subtitle="Total DP earned"
         />
 
         <DashboardStatCard
-          title="Estimated Earnings"
-          value="$0"
-          subtitle="Pending rewards"
+          title="Badges Earned"
+          value={String(badgesEarned)}
+          subtitle="Achievement badges"
         />
       </div>
     </DashboardLayout>

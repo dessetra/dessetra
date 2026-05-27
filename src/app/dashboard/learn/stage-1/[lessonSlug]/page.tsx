@@ -87,9 +87,11 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
       {rewardData && (
         <LessonReward
-          xp={rewardData.xp}
+          dp={rewardData.dp}
           badge={rewardData.badge}
           message={rewardData.message}
+          stageId="stage-1"
+          lessonSlug={lessonSlug}
         />
       )}
     </DashboardLayout>
