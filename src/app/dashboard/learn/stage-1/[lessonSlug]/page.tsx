@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import LessonReader from "@/components/learning/LessonReader";
 import LessonQuiz from "@/components/learning/LessonQuiz";
+import LessonReflection from "@/components/learning/LessonReflection";
+import LessonReward from "@/components/learning/LessonReward";
 
 type LessonPageProps = {
   params: Promise<{
@@ -30,6 +32,8 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
   const lessonPath = path.join(lessonFolder, "lesson.md");
   const quizPath = path.join(lessonFolder, "quiz.json");
+  const reflectionPath = path.join(lessonFolder, "reflection.md");
+  const rewardPath = path.join(lessonFolder, "reward.json");
 
   if (!fs.existsSync(lessonPath)) {
     notFound();
@@ -40,6 +44,14 @@ export default async function LessonPage({ params }: LessonPageProps) {
   const quizQuestions = fs.existsSync(quizPath)
     ? JSON.parse(fs.readFileSync(quizPath, "utf8"))
     : [];
+
+  const reflectionContent = fs.existsSync(reflectionPath)
+    ? fs.readFileSync(reflectionPath, "utf8")
+    : "";
+
+  const rewardData = fs.existsSync(rewardPath)
+    ? JSON.parse(fs.readFileSync(rewardPath, "utf8"))
+    : null;
 
   const currentIndex = lessons.indexOf(lessonSlug);
 
@@ -70,6 +82,16 @@ export default async function LessonPage({ params }: LessonPageProps) {
       />
 
       <LessonQuiz questions={quizQuestions} />
+
+      <LessonReflection content={reflectionContent} />
+
+      {rewardData && (
+        <LessonReward
+          xp={rewardData.xp}
+          badge={rewardData.badge}
+          message={rewardData.message}
+        />
+      )}
     </DashboardLayout>
   );
 }
