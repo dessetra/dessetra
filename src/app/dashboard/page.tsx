@@ -10,6 +10,7 @@ export default function DashboardPage() {
   const [completedLessons, setCompletedLessons] = useState(0);
   const [totalDP, setTotalDP] = useState(0);
   const [badgesEarned, setBadgesEarned] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadDashboardData() {
@@ -17,7 +18,10 @@ export default function DashboardPage() {
         data: { user },
       } = await supabase.auth.getUser();
 
-      if (!user) return;
+      if (!user) {
+        setLoading(false);
+        return;
+      }
 
       setUserName(user.user_metadata.full_name || "User");
 
@@ -33,13 +37,9 @@ export default function DashboardPage() {
         .eq("user_id", user.id)
         .eq("completed", true);
 
-      if (lessonError) {
-        console.log(lessonError.message);
-        return;
-      }
-
-      if (stageError) {
-        console.log(stageError.message);
+      if (lessonError || stageError) {
+        console.log(lessonError?.message || stageError?.message);
+        setLoading(false);
         return;
       }
 
@@ -64,6 +64,7 @@ export default function DashboardPage() {
 
       setTotalDP(lessonDP + stageDP);
       setBadgesEarned(uniqueBadges.size);
+      setLoading(false);
     }
 
     loadDashboardData();
@@ -73,7 +74,7 @@ export default function DashboardPage() {
     <DashboardLayout>
       <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
         <h1 className="text-2xl font-bold md:text-3xl">
-          Welcome, {userName}
+          {loading ? "Loading your dashboard..." : `Welcome, ${userName}`}
         </h1>
 
         <p className="mt-2 text-sm text-gray-300 md:text-base">
@@ -81,25 +82,36 @@ export default function DashboardPage() {
         </p>
       </div>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <DashboardStatCard
-          title="Completed Lessons"
-          value={String(completedLessons)}
-          subtitle="Lessons finished"
-        />
+      {loading ? (
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3].map((item) => (
+            <div
+              key={item}
+              className="h-32 animate-pulse rounded-xl bg-white/20"
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <DashboardStatCard
+            title="Completed Lessons"
+            value={String(completedLessons)}
+            subtitle="Lessons finished"
+          />
 
-        <DashboardStatCard
-          title="Dessetra Points"
-          value={String(totalDP)}
-          subtitle="Total DP earned"
-        />
+          <DashboardStatCard
+            title="Dessetra Points"
+            value={String(totalDP)}
+            subtitle="Total DP earned"
+          />
 
-        <DashboardStatCard
-          title="Badges Earned"
-          value={String(badgesEarned)}
-          subtitle="Achievement badges"
-        />
-      </div>
+          <DashboardStatCard
+            title="Badges Earned"
+            value={String(badgesEarned)}
+            subtitle="Achievement badges"
+          />
+        </div>
+      )}
     </DashboardLayout>
   );
 }

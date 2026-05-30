@@ -111,27 +111,33 @@ export default function Stage1Page() {
         </p>
 
         <div className="mt-6 rounded-2xl bg-white/10 p-4">
-          <div className="flex items-center justify-between text-sm">
-            <span>
-              {loading
-                ? "Loading progress..."
-                : `${completedCount} / ${totalLessons} lessons completed`}
-            </span>
+          {loading ? (
+            <div className="space-y-3">
+              <div className="h-4 w-48 animate-pulse rounded bg-white/20" />
+              <div className="h-3 animate-pulse rounded-full bg-white/20" />
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center justify-between text-sm">
+                <span>
+                  {completedCount} / {totalLessons} lessons completed
+                </span>
+                <span>{progressPercentage}%</span>
+              </div>
 
-            <span>{loading ? "..." : `${progressPercentage}%`}</span>
-          </div>
+              <div className="mt-3 h-3 overflow-hidden rounded-full bg-white/20">
+                <div
+                  className="h-3 rounded-full bg-[#D4AF37]"
+                  style={{ width: `${progressPercentage}%` }}
+                />
+              </div>
 
-          <div className="mt-3 h-3 overflow-hidden rounded-full bg-white/20">
-            <div
-              className="h-3 rounded-full bg-[#D4AF37]"
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-
-          {!loading && completedCount === totalLessons && (
-            <p className="mt-3 text-sm font-semibold text-[#D4AF37]">
-              Stage 1 Completed ✓
-            </p>
+              {completedCount === totalLessons && (
+                <p className="mt-3 text-sm font-semibold text-[#D4AF37]">
+                  Stage 1 Completed ✓
+                </p>
+              )}
+            </>
           )}
         </div>
       </div>
@@ -166,45 +172,52 @@ export default function Stage1Page() {
       </div>
 
       <div className="mt-6 grid gap-5 md:grid-cols-2">
-        {lessons.map((lesson) => {
-          const isCompleted = completedLessons.includes(lesson.folder);
+        {loading
+          ? [1, 2, 3, 4].map((item) => (
+              <div
+                key={item}
+                className="h-48 animate-pulse rounded-2xl bg-white/20"
+              />
+            ))
+          : lessons.map((lesson) => {
+              const isCompleted = completedLessons.includes(lesson.folder);
 
-          return (
-            <div
-              key={lesson.folder}
-              className={`rounded-2xl p-6 shadow-lg ${
-                isCompleted
-                  ? "bg-[#D4AF37] text-[#071A3D]"
-                  : "bg-[#0D2A5E] text-white"
-              }`}
-            >
-              <p
-                className={`text-sm ${
-                  isCompleted ? "text-[#071A3D]" : "text-[#D4AF37]"
-                }`}
-              >
-                {lesson.title}
-              </p>
+              return (
+                <div
+                  key={lesson.folder}
+                  className={`rounded-2xl p-6 shadow-lg ${
+                    isCompleted
+                      ? "bg-[#D4AF37] text-[#071A3D]"
+                      : "bg-[#0D2A5E] text-white"
+                  }`}
+                >
+                  <p
+                    className={`text-sm ${
+                      isCompleted ? "text-[#071A3D]" : "text-[#D4AF37]"
+                    }`}
+                  >
+                    {lesson.title}
+                  </p>
 
-              <h2 className="mt-2 text-xl font-semibold">{lesson.name}</h2>
+                  <h2 className="mt-2 text-xl font-semibold">{lesson.name}</h2>
 
-              <p className="mt-3 text-sm">
-                {isCompleted ? "Completed ✓" : "Available"}
-              </p>
+                  <p className="mt-3 text-sm">
+                    {isCompleted ? "Completed ✓" : "Available"}
+                  </p>
 
-              <Link
-                href={`/dashboard/learn/stage-1/${lesson.folder}`}
-                className={`mt-5 inline-block rounded-lg px-5 py-2 font-semibold ${
-                  isCompleted
-                    ? "bg-[#071A3D] text-white"
-                    : "bg-[#D4AF37] text-[#071A3D]"
-                }`}
-              >
-                {isCompleted ? "Review Lesson" : "Start Lesson"}
-              </Link>
-            </div>
-          );
-        })}
+                  <Link
+                    href={`/dashboard/learn/stage-1/${lesson.folder}`}
+                    className={`mt-5 inline-block rounded-lg px-5 py-2 font-semibold ${
+                      isCompleted
+                        ? "bg-[#071A3D] text-white"
+                        : "bg-[#D4AF37] text-[#071A3D]"
+                    }`}
+                  >
+                    {isCompleted ? "Review Lesson" : "Start Lesson"}
+                  </Link>
+                </div>
+              );
+            })}
       </div>
     </DashboardLayout>
   );

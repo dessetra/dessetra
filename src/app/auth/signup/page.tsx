@@ -1,20 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import toast from "react-hot-toast";
 import { supabase } from "@/lib/supabase";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function SignupPage() {
+  const searchParams = useSearchParams();
+
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [country, setCountry] = useState("");
+  const [referralCode, setReferralCode] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  useEffect(() => {
+    const ref = searchParams.get("ref");
+
+    if (ref) {
+      setReferralCode(ref);
+    }
+  }, [searchParams]);
 
   const passwordIsValid =
     password.length >= 8 &&
@@ -27,24 +41,24 @@ export default function SignupPage() {
     e.preventDefault();
 
     if (!fullName || !email || !password || !confirmPassword || !country) {
-      alert("Please fill in all fields.");
+      toast.error("Please fill in all required fields.");
       return;
     }
 
     if (!passwordIsValid) {
-      alert(
-        "Password must be at least 8 characters and include one uppercase letter, one lowercase letter, one number, and one symbol."
+      toast.error(
+        "Password must be at least 8 characters and include uppercase, lowercase, number, and symbol."
       );
       return;
     }
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match.");
+      toast.error("Passwords do not match.");
       return;
     }
 
     if (!acceptedTerms) {
-      alert("Please accept the terms before creating an account.");
+      toast.error("Please accept the terms before creating an account.");
       return;
     }
 
@@ -57,6 +71,7 @@ export default function SignupPage() {
         data: {
           full_name: fullName,
           country,
+          referral_code: referralCode || null,
         },
       },
     });
@@ -64,11 +79,11 @@ export default function SignupPage() {
     setLoading(false);
 
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
       return;
     }
 
-    alert(
+    toast.success(
       "Account created successfully. Please check your email to confirm your account."
     );
   };
@@ -135,9 +150,7 @@ export default function SignupPage() {
 
             <button
               type="button"
-              onClick={() =>
-                setShowConfirmPassword(!showConfirmPassword)
-              }
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
             >
               {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
@@ -149,6 +162,14 @@ export default function SignupPage() {
             placeholder="Country of Origin"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
+            className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
+          />
+
+          <input
+            type="text"
+            placeholder="Referral Code (optional)"
+            value={referralCode}
+            onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
             className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
           />
 
@@ -173,6 +194,13 @@ export default function SignupPage() {
           >
             {loading ? "Creating Account..." : "Create Account"}
           </button>
+
+          <p className="text-center text-sm text-gray-600">
+            Already have an account?{" "}
+            <Link href="/auth/login" className="font-semibold text-[#1E88E5]">
+              Login
+            </Link>
+          </p>
         </form>
       </section>
     </main>
