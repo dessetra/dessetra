@@ -10,6 +10,7 @@ export default function WalletPage() {
   const [withdrawAmount, setWithdrawAmount] = useState("");
   const [loading, setLoading] = useState(true);
   const [savingWallet, setSavingWallet] = useState(false);
+  const [requestingWithdrawal, setRequestingWithdrawal] = useState(false);
 
   useEffect(() => {
     async function loadWalletAddress() {
@@ -77,7 +78,7 @@ export default function WalletPage() {
     toast.success("USDT BEP20 wallet address saved successfully.");
   };
 
-  const requestWithdrawal = () => {
+  const requestWithdrawal = async () => {
     const amount = Number(withdrawAmount);
 
     if (!walletAddress.trim()) {
@@ -90,7 +91,34 @@ export default function WalletPage() {
       return;
     }
 
-    toast("Withdrawal request system will be connected next.");
+    setRequestingWithdrawal(true);
+
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      toast.error("Please login again.");
+      setRequestingWithdrawal(false);
+      return;
+    }
+
+    const { error } = await supabase.from("withdrawal_requests").insert({
+      user_id: user.id,
+      amount,
+      wallet_address: walletAddress.trim(),
+      status: "pending",
+    });
+
+    setRequestingWithdrawal(false);
+
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
+
+    setWithdrawAmount("");
+    toast.success("Withdrawal request submitted successfully.");
   };
 
   return (
@@ -121,7 +149,9 @@ export default function WalletPage() {
           <input
             type="text"
             placeholder={
-              loading ? "Loading wallet address..." : "Enter USDT BEP20 wallet address"
+              loading
+                ? "Loading wallet address..."
+                : "Enter USDT BEP20 wallet address"
             }
             value={walletAddress}
             onChange={(e) => setWalletAddress(e.target.value)}
@@ -158,9 +188,10 @@ export default function WalletPage() {
 
           <button
             onClick={requestWithdrawal}
-            className="mt-5 w-full rounded-lg bg-[#1E88E5] py-3 font-semibold text-white"
+            disabled={requestingWithdrawal}
+            className="mt-5 w-full rounded-lg bg-[#1E88E5] py-3 font-semibold text-white disabled:opacity-60"
           >
-            Request Withdrawal
+            {requestingWithdrawal ? "Submitting..." : "Request Withdrawal"}
           </button>
         </div>
       </div>
