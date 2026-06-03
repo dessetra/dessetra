@@ -1,0 +1,107 @@
+{
+  "passingScore": 7,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is the main difference between a coin and a token?",
+      "options": [
+        "A coin operates on its own blockchain while a token uses an existing blockchain",
+        "A token operates on its own blockchain while a coin uses another blockchain",
+        "Coins are always more valuable",
+        "There is no difference"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a stablecoin?",
+      "options": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "BNB"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why do people commonly use stablecoins?",
+      "options": [
+        "To reduce exposure to volatility",
+        "To increase transaction fees",
+        "To replace wallets",
+        "To avoid blockchain networks"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What does KYC stand for?",
+      "options": [
+        "Keep Your Crypto",
+        "Know Your Customer",
+        "Know Your Coin",
+        "Keep Your Code"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which security feature should be enabled on Bybit?",
+      "options": [
+        "Leverage Trading",
+        "Auto Trading",
+        "2FA",
+        "Copy Trading"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is a wallet address used for?",
+      "options": [
+        "Creating blockchains",
+        "Receiving and sending digital assets",
+        "Mining cryptocurrency",
+        "Reducing gas fees"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What can happen if crypto is sent using the wrong network?",
+      "options": [
+        "The transaction becomes faster",
+        "Nothing happens",
+        "Funds may be lost or difficult to recover",
+        "Rewards are earned"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Should you ever share your seed phrase?",
+      "options": [
+        "Yes, with support agents",
+        "Yes, with trusted friends",
+        "Only after verification",
+        "No, never"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is a phishing website?",
+      "options": [
+        "A blockchain explorer",
+        "A fake website designed to steal information",
+        "A stablecoin exchange",
+        "A wallet application"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a common scam warning sign?",
+      "options": [
+        "Clear risk disclosures",
+        "Pressure to act quickly with guaranteed profits",
+        "Educational content",
+        "Encouraging independent research"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
+

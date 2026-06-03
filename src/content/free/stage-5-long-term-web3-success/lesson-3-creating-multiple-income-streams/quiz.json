@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is an income stream?",
+      "options": [
+        "A source of earnings",
+        "A type of wallet",
+        "A blockchain network",
+        "A trading strategy"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why can multiple income streams be valuable?",
+      "options": [
+        "They reduce dependence on a single source of income",
+        "They eliminate all financial risk",
+        "They guarantee wealth",
+        "They replace skill development"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What often creates the most sustainable income?",
+      "options": [
+        "Following hype",
+        "Solving problems and creating value",
+        "Chasing every trend",
+        "Comparing yourself to others"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What does DeFi stand for?",
+      "options": [
+        "Digital Finance",
+        "Decentralized Finance",
+        "Distributed Funding",
+        "Digital Funding Infrastructure"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is commonly associated with DeFi?",
+      "options": [
+        "Lending and borrowing through blockchain systems",
+        "Printing physical currency",
+        "Opening a traditional bank branch",
+        "Government taxation"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why is understanding risk important before participating in DeFi?",
+      "options": [
+        "Because DeFi guarantees profits",
+        "Because rewards often come with risks",
+        "Because DeFi eliminates all financial risk",
+        "Because only banks can manage risk"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

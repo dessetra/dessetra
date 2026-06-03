@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "Should you ever share your seed phrase with anyone?",
+      "options": [
+        "Yes, if they claim to be support",
+        "Yes, if they are a close friend",
+        "No, your seed phrase should never be shared",
+        "Only if the project is popular"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is a phishing website?",
+      "options": [
+        "A website that teaches blockchain basics",
+        "A fake website designed to steal information",
+        "A website for buying stablecoins",
+        "A wallet address generator"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is a common warning sign of a crypto scam?",
+      "options": [
+        "Clear education and transparency",
+        "Pressure to act quickly with guaranteed profits",
+        "Explaining risks carefully",
+        "Encouraging users to verify information"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

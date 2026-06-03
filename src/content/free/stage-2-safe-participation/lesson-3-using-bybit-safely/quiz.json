@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is the primary purpose of a cryptocurrency exchange like Bybit?",
+      "options": [
+        "To create new blockchains",
+        "To buy, sell, and manage digital assets",
+        "To eliminate all risks in crypto",
+        "To replace digital wallets"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What does KYC stand for?",
+      "options": [
+        "Keep Your Crypto",
+        "Know Your Customer",
+        "Know Your Coin",
+        "Keep Your Code"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which security feature should every Bybit user enable?",
+      "options": [
+        "Auto Trading",
+        "Margin Trading",
+        "Two-Factor Authentication (2FA)",
+        "Leverage Trading"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

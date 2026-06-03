@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is the first question experienced participants usually ask before entering an opportunity?",
+      "options": [
+        "How much can I make?",
+        "What can I lose?",
+        "How fast can I get rich?",
+        "What is the highest APY?"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a common DeFi risk?",
+      "options": [
+        "Smart contract vulnerabilities",
+        "Guaranteed returns",
+        "Unlimited liquidity",
+        "Zero volatility"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is diversification?",
+      "options": [
+        "Putting all funds into one opportunity",
+        "Avoiding all risks completely",
+        "Spreading exposure across multiple assets or strategies",
+        "Only using stablecoins"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

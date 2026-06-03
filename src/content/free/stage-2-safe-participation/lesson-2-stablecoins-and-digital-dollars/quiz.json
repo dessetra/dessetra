@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is the primary purpose of a stablecoin?",
+      "options": [
+        "To increase in price rapidly",
+        "To maintain a relatively stable value",
+        "To replace blockchain networks",
+        "To eliminate transaction fees"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which stablecoin is primarily used within the Dessetra ecosystem?",
+      "options": [
+        "BTC",
+        "ETH",
+        "USDT",
+        "BNB"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why do many Web3 users move funds into stablecoins?",
+      "options": [
+        "To reduce exposure to price volatility",
+        "To avoid owning digital assets",
+        "To make stablecoins increase in value quickly",
+        "To eliminate all risks"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What should guide your personal Web3 journey?",
+      "options": [
+        "Only social media trends",
+        "Your interests, skills, and goals",
+        "Whatever everyone else is doing",
+        "Guaranteed profit opportunities"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why are goals important?",
+      "options": [
+        "They provide direction",
+        "They guarantee success",
+        "They remove risk",
+        "They predict outcomes"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the primary message of this lesson?",
+      "options": [
+        "Perfection is required",
+        "There is only one path to success",
+        "Continuous improvement and thoughtful decisions matter",
+        "Technology never changes"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

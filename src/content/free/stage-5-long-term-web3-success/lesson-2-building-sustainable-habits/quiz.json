@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What often creates long-term success in Web3?",
+      "options": [
+        "One lucky decision",
+        "Consistent habits over time",
+        "Following every trend",
+        "Taking maximum risk"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is considered a productive Web3 habit?",
+      "options": [
+        "Emotional trading",
+        "Research before action",
+        "Following rumors",
+        "Ignoring risk"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is more important than intensity when building habits?",
+      "options": [
+        "Speed",
+        "Popularity",
+        "Consistency",
+        "Luck"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

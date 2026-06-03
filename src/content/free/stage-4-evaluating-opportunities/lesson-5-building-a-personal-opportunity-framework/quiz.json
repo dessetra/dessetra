@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is the purpose of a personal opportunity framework?",
+      "options": [
+        "To eliminate all investment risk",
+        "To encourage disciplined and consistent decision-making",
+        "To guarantee profits",
+        "To predict market prices"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following should be included in an evaluation framework?",
+      "options": [
+        "Only token price",
+        "Only social media popularity",
+        "Product, team, utility, and risk analysis",
+        "Influencer opinions only"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why should participants continue learning even after creating a framework?",
+      "options": [
+        "Because markets and projects evolve over time",
+        "Because frameworks guarantee success",
+        "Because utility no longer matters",
+        "Because risk eventually disappears"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

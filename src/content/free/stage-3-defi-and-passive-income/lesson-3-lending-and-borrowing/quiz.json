@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is collateral in DeFi borrowing?",
+      "options": [
+        "A fee paid to validators",
+        "An asset pledged to secure a loan",
+        "A staking reward",
+        "A type of stablecoin"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why do lenders deposit assets into lending protocols?",
+      "options": [
+        "To earn interest and rewards",
+        "To avoid using wallets",
+        "To create NFTs",
+        "To eliminate all investment risk"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What can happen if collateral value falls too much?",
+      "options": [
+        "Rewards automatically increase",
+        "The collateral may be liquidated",
+        "The loan disappears",
+        "The borrower receives more collateral"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

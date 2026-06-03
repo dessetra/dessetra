@@ -1,0 +1,106 @@
+{
+  "passingScore": 7,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What does DeFi stand for?",
+      "options": [
+        "Digital Finance",
+        "Decentralized Finance",
+        "Distributed Funding",
+        "Digital Funding Infrastructure"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is staking?",
+      "options": [
+        "Mining Bitcoin",
+        "Locking assets to participate in a blockchain network and potentially earn rewards",
+        "Buying NFTs",
+        "Creating stablecoins"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why do people stake assets?",
+      "options": [
+        "To help secure networks and potentially earn rewards",
+        "To avoid wallets",
+        "To eliminate all risk",
+        "To guarantee profits"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is collateral in DeFi borrowing?",
+      "options": [
+        "A fee",
+        "An asset pledged to secure a loan",
+        "A reward token",
+        "A stablecoin"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What can happen if collateral value drops too much?",
+      "options": [
+        "Rewards increase automatically",
+        "The loan disappears",
+        "Liquidation may occur",
+        "Nothing happens"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Who are liquidity providers?",
+      "options": [
+        "People who contribute assets to liquidity pools",
+        "People who create blockchains",
+        "Exchange employees",
+        "Stablecoin issuers"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is yield farming?",
+      "options": [
+        "Growing crops using blockchain",
+        "Using DeFi systems to earn rewards from activities such as liquidity provision",
+        "Mining Ethereum",
+        "Creating NFTs"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is impermanent loss?",
+      "options": [
+        "A risk associated with providing liquidity when asset prices change",
+        "A guaranteed reward",
+        "A wallet backup method",
+        "A transaction fee"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is diversification?",
+      "options": [
+        "Putting all funds into one opportunity",
+        "Spreading exposure across multiple assets or strategies",
+        "Avoiding all risk",
+        "Only buying stablecoins"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "According to this module, what should participants consider before rewards?",
+      "options": [
+        "Marketing",
+        "Popularity",
+        "Risk",
+        "Social media trends"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

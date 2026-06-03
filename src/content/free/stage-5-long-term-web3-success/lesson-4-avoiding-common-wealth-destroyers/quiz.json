@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "Which of the following is a common wealth destroyer?",
+      "options": [
+        "Risk management",
+        "Continuous learning",
+        "Emotional decision-making",
+        "Diversification"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is lifestyle inflation?",
+      "options": [
+        "Reducing expenses",
+        "Increasing spending as income grows",
+        "Investing more carefully",
+        "Improving financial education"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is continuous learning important?",
+      "options": [
+        "Because markets and opportunities evolve",
+        "Because learning guarantees profits",
+        "Because risk disappears",
+        "Because trends never change"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "passingScore": 7,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What should be evaluated before trusting a Web3 project?",
+      "options": [
+        "Only social media popularity",
+        "The project's purpose, product, and transparency",
+        "The token price alone",
+        "Influencer recommendations"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is tokenomics?",
+      "options": [
+        "The economic design of a token",
+        "A marketing strategy",
+        "A trading indicator",
+        "A social media campaign"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is circulating supply?",
+      "options": [
+        "The maximum supply ever created",
+        "The number of tokens currently available in the market",
+        "The number of wallets holding the token",
+        "The number of developers"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is token utility important?",
+      "options": [
+        "It gives the token a purpose within the ecosystem",
+        "It guarantees profits",
+        "It eliminates inflation",
+        "It increases followers"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which is a sign of a healthy project team?",
+      "options": [
+        "Consistent communication and active development",
+        "Guaranteed profits",
+        "No updates",
+        "Anonymous promises"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is utility?",
+      "options": [
+        "The usefulness of a project or token",
+        "Its advertising budget",
+        "Its trading volume",
+        "Its follower count"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a common red flag?",
+      "options": [
+        "Transparent documentation",
+        "Guaranteed profits",
+        "Working products",
+        "Open communication"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should pressure tactics be treated carefully?",
+      "options": [
+        "They encourage research",
+        "They reduce risk",
+        "They can trigger emotional decisions",
+        "They improve utility"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is the purpose of a personal opportunity framework?",
+      "options": [
+        "To eliminate all risk",
+        "To encourage disciplined decision-making",
+        "To guarantee profits",
+        "To predict prices"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What should a strong evaluation framework include?",
+      "options": [
+        "Only token price",
+        "Only influencer opinions",
+        "Product, team, utility, and risk analysis",
+        "Only community size"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

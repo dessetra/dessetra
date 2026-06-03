@@ -1,0 +1,10 @@
+{
+  "id": "stage-2",
+  "title": "Safe Participation",
+  "description": "Learn how to safely use crypto tools, exchanges, wallets, and stablecoins before participating more deeply in Web3.",
+  "access": "referral-unlocked",
+  "dpReward": 100,
+  "totalLessons": 5,
+  "unlockRequirement": "Refer 5 users",
+  "status": "locked"
+}

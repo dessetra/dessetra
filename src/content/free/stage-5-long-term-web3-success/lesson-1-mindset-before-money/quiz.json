@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "Why is mindset important in Web3?",
+      "options": [
+        "It influences decision-making and risk management",
+        "It guarantees profits",
+        "It removes all risk",
+        "It predicts market prices"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is a common mistake of people focused only on fast profits?",
+      "options": [
+        "Developing skills",
+        "Managing risk carefully",
+        "Ignoring warning signs and chasing hype",
+        "Thinking long term"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "According to this lesson, what often creates long-term success?",
+      "options": [
+        "Patience, learning, and discipline",
+        "Following every trend",
+        "Comparing yourself to others",
+        "Guaranteed returns"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

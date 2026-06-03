@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "Which of the following is a common red flag?",
+      "options": [
+        "Transparent documentation",
+        "Guaranteed profits",
+        "A working product",
+        "Open communication"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should pressure tactics be treated carefully?",
+      "options": [
+        "They encourage careful research",
+        "They help reduce risk",
+        "They can reduce critical thinking and push emotional decisions",
+        "They improve project utility"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What should you ask when evaluating a project?",
+      "options": [
+        "Is everyone buying it?",
+        "Does it have a real product and transparency?",
+        "How fast can the price double?",
+        "Which influencer promotes it?"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

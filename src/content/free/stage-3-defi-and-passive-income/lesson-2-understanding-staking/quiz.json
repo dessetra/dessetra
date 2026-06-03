@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is staking?",
+      "options": [
+        "Borrowing money from a bank",
+        "Locking assets to participate in a blockchain system and potentially earn rewards",
+        "Mining Bitcoin with a computer",
+        "Buying NFTs"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a potential benefit of staking?",
+      "options": [
+        "Guaranteed profits",
+        "Supporting a blockchain network while earning rewards",
+        "Eliminating all investment risk",
+        "Avoiding market fluctuations"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a risk associated with staking?",
+      "options": [
+        "Token price declines",
+        "Guaranteed network growth",
+        "Unlimited rewards",
+        "Zero volatility"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

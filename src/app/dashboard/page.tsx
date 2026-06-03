@@ -37,8 +37,17 @@ export default function DashboardPage() {
         .eq("user_id", user.id)
         .eq("completed", true);
 
-      if (lessonError || stageError) {
-        console.log(lessonError?.message || stageError?.message);
+      const { count: referralCount, error: referralError } = await supabase
+        .from("referrals")
+        .select("*", { count: "exact", head: true })
+        .eq("referrer_id", user.id);
+
+      if (lessonError || stageError || referralError) {
+        console.log(
+          lessonError?.message ||
+            stageError?.message ||
+            referralError?.message
+        );
         setLoading(false);
         return;
       }
@@ -56,13 +65,15 @@ export default function DashboardPage() {
         return sum + Number(item.dp_earned || 0);
       }, 0);
 
+      const referralDP = (referralCount || 0) * 50;
+
       const uniqueBadges = new Set(
         [...lessonRows, ...stageRows]
           .map((item) => item.badge)
           .filter(Boolean)
       );
 
-      setTotalDP(lessonDP + stageDP);
+      setTotalDP(lessonDP + stageDP + referralDP);
       setBadgesEarned(uniqueBadges.size);
       setLoading(false);
     }
@@ -102,7 +113,7 @@ export default function DashboardPage() {
           <DashboardStatCard
             title="Dessetra Points"
             value={String(totalDP)}
-            subtitle="Total DP earned"
+            subtitle="Learning DP + Referral DP"
           />
 
           <DashboardStatCard

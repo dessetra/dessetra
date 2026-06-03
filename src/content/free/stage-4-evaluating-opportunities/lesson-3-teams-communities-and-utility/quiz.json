@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "Which of the following is often a sign of a strong project team?",
+      "options": [
+        "Consistent communication and ongoing development",
+        "Guaranteed profit promises",
+        "Anonymous social media accounts only",
+        "No product updates"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is utility in a Web3 project?",
+      "options": [
+        "The number of followers on social media",
+        "The actual usefulness and purpose of the project or token",
+        "The token's daily trading volume",
+        "The project's advertising budget"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which community behavior should be treated carefully?",
+      "options": [
+        "Discussing product updates",
+        "Providing educational content",
+        "Focusing only on guaranteed profits and hype",
+        "Helping new users understand the project"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

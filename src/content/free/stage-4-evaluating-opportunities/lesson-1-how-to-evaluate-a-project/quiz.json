@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What should you evaluate before trusting a Web3 project?",
+      "options": [
+        "Only social media popularity",
+        "The project's purpose, product, and transparency",
+        "The token price alone",
+        "The number of influencers promoting it"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is hype alone a poor reason to trust a project?",
+      "options": [
+        "Popular projects are always scams",
+        "Attention does not necessarily indicate quality",
+        "Hype guarantees profits",
+        "Hype replaces research"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is generally a positive sign?",
+      "options": [
+        "Hidden documentation",
+        "No product and no roadmap",
+        "Transparent communication and a working product",
+        "Promises of guaranteed profits"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

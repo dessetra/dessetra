@@ -1,0 +1,10 @@
+{
+  "id": "stage-3",
+  "title": "DeFi & Passive Income",
+  "description": "Learn how decentralized finance works, how people earn through staking and liquidity, and why risk management must come before rewards.",
+  "access": "premium",
+  "dpReward": 100,
+  "totalLessons": 5,
+  "unlockRequirement": "Premium subscription required",
+  "status": "locked"
+}

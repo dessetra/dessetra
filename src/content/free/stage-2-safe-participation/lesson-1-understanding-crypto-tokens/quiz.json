@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is the main difference between a coin and a token?",
+      "options": [
+        "A coin operates on its own blockchain while a token is built on an existing blockchain",
+        "A token operates on its own blockchain while a coin is built on another blockchain",
+        "Coins are always more valuable than tokens",
+        "There is no difference"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is commonly used as a stablecoin?",
+      "options": [
+        "Bitcoin",
+        "Ethereum",
+        "USDT",
+        "BNB"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why is it important to understand a token before buying it?",
+      "options": [
+        "Because every token will increase in value",
+        "Because knowledge helps you make better decisions and avoid mistakes",
+        "Because tokens are guaranteed investments",
+        "Because tokens never lose value"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

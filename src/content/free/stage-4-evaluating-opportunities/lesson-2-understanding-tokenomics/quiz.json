@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What does tokenomics refer to?",
+      "options": [
+        "The economic design of a token",
+        "The marketing strategy of a project",
+        "The price chart of a token",
+        "The social media presence of a project"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is circulating supply?",
+      "options": [
+        "The maximum number of tokens that can ever exist",
+        "The number of tokens currently available in the market",
+        "The number of wallets holding a token",
+        "The daily trading volume"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is token utility important?",
+      "options": [
+        "It helps give the token a purpose within the ecosystem",
+        "It guarantees price increases",
+        "It eliminates inflation",
+        "It replaces community engagement"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

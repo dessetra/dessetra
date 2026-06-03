@@ -1,0 +1,106 @@
+{
+  "passingScore": 7,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "Why is mindset important in Web3?",
+      "options": [
+        "It influences decision-making and risk management",
+        "It guarantees profits",
+        "It removes all risk",
+        "It predicts market prices"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What often contributes to long-term success?",
+      "options": [
+        "Consistent habits over time",
+        "One lucky trade",
+        "Following hype",
+        "Constant switching"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is an income stream?",
+      "options": [
+        "A source of earnings",
+        "A blockchain network",
+        "A wallet",
+        "A trading signal"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why can multiple income streams be valuable?",
+      "options": [
+        "They reduce dependence on a single source",
+        "They eliminate all risk",
+        "They guarantee wealth",
+        "They replace skill development"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a common wealth destroyer?",
+      "options": [
+        "Risk management",
+        "Continuous learning",
+        "Emotional decision-making",
+        "Diversification"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is lifestyle inflation?",
+      "options": [
+        "Reducing expenses",
+        "Increasing spending as income grows",
+        "Improving financial education",
+        "Increasing savings"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What should guide your personal Web3 journey?",
+      "options": [
+        "Your interests, skills, and goals",
+        "Only social media trends",
+        "Guaranteed profits",
+        "What everyone else is doing"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why are goals important?",
+      "options": [
+        "They provide direction",
+        "They remove risk",
+        "They guarantee success",
+        "They predict outcomes"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What creates sustainable opportunities?",
+      "options": [
+        "Creating value for others",
+        "Following every trend",
+        "Ignoring skills",
+        "Chasing hype"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is a key principle taught throughout Module 5?",
+      "options": [
+        "Continuous improvement and thoughtful decisions",
+        "Perfection is required",
+        "Quick wealth is guaranteed",
+        "Technology never changes"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

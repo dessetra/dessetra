@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is a wallet address used for?",
+      "options": [
+        "To create new cryptocurrencies",
+        "To identify where digital assets should be sent",
+        "To eliminate gas fees",
+        "To verify blockchain ownership"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What can happen if crypto is sent using the wrong network?",
+      "options": [
+        "The transaction becomes faster",
+        "The sender earns extra rewards",
+        "The funds may be lost or difficult to recover",
+        "Nothing happens"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Before sending crypto, what should always be verified?",
+      "options": [
+        "The wallet address, amount, and network",
+        "The recipient's social media profile",
+        "The sender's internet speed",
+        "The current Bitcoin price"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

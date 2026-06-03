@@ -1,0 +1,36 @@
+{
+  "passingScore": 2,
+  "maxAttempts": 3,
+  "questions": [
+    {
+      "question": "What is a liquidity pool?",
+      "options": [
+        "A group of assets locked in a smart contract for users to trade or swap",
+        "A personal savings account",
+        "A type of centralized exchange",
+        "A wallet recovery tool"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is yield farming?",
+      "options": [
+        "Using DeFi systems to earn rewards from activities like liquidity provision or staking",
+        "Mining Bitcoin with hardware",
+        "Sending stablecoins to a wallet",
+        "Buying crypto from a bank"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is one major risk of providing liquidity?",
+      "options": [
+        "Impermanent loss",
+        "Guaranteed profits",
+        "Free transactions forever",
+        "Zero market volatility"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}
