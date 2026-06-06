@@ -37,6 +37,8 @@ const lessons = [
 export default function Stage2Page() {
   const [completedLessons, setCompletedLessons] = useState<string[]>([]);
   const [stageCompleted, setStageCompleted] = useState(false);
+  const [referralCount, setReferralCount] = useState(0);
+  const [unlocked, setUnlocked] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -50,6 +52,28 @@ export default function Stage2Page() {
         return;
       }
 
+      const { count, error: referralError } = await supabase
+        .from("referrals")
+        .select("*", { count: "exact", head: true })
+        .eq("referrer_id", user.id);
+
+      if (referralError) {
+        console.log(referralError.message);
+        setLoading(false);
+        return;
+      }
+
+      const totalReferrals = count || 0;
+      setReferralCount(totalReferrals);
+
+      if (totalReferrals < 5) {
+        setUnlocked(false);
+        setLoading(false);
+        return;
+      }
+
+      setUnlocked(true);
+
       const { data: lessonData, error: lessonError } = await supabase
         .from("lesson_progress")
         .select("lesson_slug")
@@ -61,31 +85,15 @@ export default function Stage2Page() {
         const completed = lessonData.map((item) => item.lesson_slug);
         setCompletedLessons(completed);
 
-        if (completed.length === lessons.length) {
-          const { data: stageData } = await supabase
-            .from("stage_progress")
-            .select("id")
-            .eq("user_id", user.id)
-            .eq("stage_id", "stage-2")
-            .maybeSingle();
+        const { data: stageData } = await supabase
+          .from("stage_progress")
+          .select("id")
+          .eq("user_id", user.id)
+          .eq("stage_id", "stage-2")
+          .maybeSingle();
 
-          if (!stageData) {
-            const { error: stageError } = await supabase
-              .from("stage_progress")
-              .insert({
-                user_id: user.id,
-                stage_id: "stage-2",
-                completed: true,
-                dp_earned: 100,
-                badge: "Navigator Badge",
-              });
-
-            if (!stageError) {
-              setStageCompleted(true);
-            }
-          } else {
-            setStageCompleted(true);
-          }
+        if (stageData) {
+          setStageCompleted(true);
         }
       }
 
@@ -98,6 +106,68 @@ export default function Stage2Page() {
   const completedCount = completedLessons.length;
   const totalLessons = lessons.length;
   const progressPercentage = Math.round((completedCount / totalLessons) * 100);
+  const allLessonsCompleted = completedCount === totalLessons;
+
+  if (loading) {
+    return (
+      <DashboardLayout>
+        <div className="rounded-2xl bg-[#0D2A5E] p-6 shadow-lg">
+          <h1 className="text-2xl font-bold">Checking Module Access...</h1>
+          <p className="mt-2 text-gray-300">
+            Please wait while we verify your referral unlock status.
+          </p>
+        </div>
+      </DashboardLayout>
+    );
+  }
+
+  if (!unlocked) {
+    return (
+      <DashboardLayout>
+        <div className="rounded-3xl bg-gradient-to-r from-[#04122D] to-[#0D2A5E] p-6 text-white shadow-lg md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
+            Module 2 Locked
+          </p>
+
+          <h1 className="mt-3 text-3xl font-bold md:text-4xl">
+            Safe Participation
+          </h1>
+
+          <p className="mt-3 max-w-2xl text-gray-300">
+            Module 2 unlocks after you refer 5 users to Dessetra.
+          </p>
+
+          <div className="mt-6 rounded-2xl bg-white/10 p-5">
+            <p className="text-lg font-semibold">
+              Referral Progress: {referralCount}/5
+            </p>
+
+            <div className="mt-3 h-3 overflow-hidden rounded-full bg-white/20">
+              <div
+                className="h-3 rounded-full bg-[#D4AF37]"
+                style={{
+                  width: `${Math.min((referralCount / 5) * 100, 100)}%`,
+                }}
+              />
+            </div>
+
+            <p className="mt-3 text-sm text-gray-300">
+              Refer {Math.max(5 - referralCount, 0)} more user
+              {Math.max(5 - referralCount, 0) === 1 ? "" : "s"} to unlock this
+              module.
+            </p>
+          </div>
+
+          <Link
+            href="/dashboard/referrals"
+            className="mt-6 inline-block rounded-lg bg-[#D4AF37] px-5 py-3 font-semibold text-[#071A3D]"
+          >
+            Go To Referrals
+          </Link>
+        </div>
+      </DashboardLayout>
+    );
+  }
 
   return (
     <DashboardLayout>
@@ -116,33 +186,24 @@ export default function Stage2Page() {
         </p>
 
         <div className="mt-6 rounded-2xl bg-white/10 p-4">
-          {loading ? (
-            <div className="space-y-3">
-              <div className="h-4 w-48 animate-pulse rounded bg-white/20" />
-              <div className="h-3 animate-pulse rounded-full bg-white/20" />
-            </div>
-          ) : (
-            <>
-              <div className="flex items-center justify-between text-sm">
-                <span>
-                  {completedCount} / {totalLessons} lessons completed
-                </span>
-                <span>{progressPercentage}%</span>
-              </div>
+          <div className="flex items-center justify-between text-sm">
+            <span>
+              {completedCount} / {totalLessons} lessons completed
+            </span>
+            <span>{progressPercentage}%</span>
+          </div>
 
-              <div className="mt-3 h-3 overflow-hidden rounded-full bg-white/20">
-                <div
-                  className="h-3 rounded-full bg-[#D4AF37]"
-                  style={{ width: `${progressPercentage}%` }}
-                />
-              </div>
+          <div className="mt-3 h-3 overflow-hidden rounded-full bg-white/20">
+            <div
+              className="h-3 rounded-full bg-[#D4AF37]"
+              style={{ width: `${progressPercentage}%` }}
+            />
+          </div>
 
-              {completedCount === totalLessons && (
-                <p className="mt-3 text-sm font-semibold text-[#D4AF37]">
-                  Module 2 Completed ✓
-                </p>
-              )}
-            </>
+          {stageCompleted && (
+            <p className="mt-3 text-sm font-semibold text-[#D4AF37]">
+              Module 2 Completed ✓
+            </p>
           )}
         </div>
       </div>
@@ -169,60 +230,71 @@ export default function Stage2Page() {
         <h2 className="text-2xl font-bold">Story Introduction</h2>
 
         <p className="mt-4 leading-8 text-gray-700">
-          You now understand what Web3 is and why it matters. But knowledge alone
-          is not enough. In this module, you will learn how to participate more
-          safely by understanding tokens, stablecoins, exchanges, crypto
+          You now understand what Web3 is and why it matters. But knowledge
+          alone is not enough. In this module, you will learn how to participate
+          more safely by understanding tokens, stablecoins, exchanges, crypto
           transfers, and common scam patterns.
         </p>
       </div>
 
+      {allLessonsCompleted && !stageCompleted && (
+        <div className="mt-6 rounded-2xl bg-[#D4AF37] p-6 text-[#071A3D] shadow-lg">
+          <h2 className="text-2xl font-bold">Final Assessment Unlocked</h2>
+
+          <p className="mt-2 leading-7">
+            You have completed all Module 2 lessons. Take the final assessment
+            to unlock the Navigator Badge and receive +100 DP.
+          </p>
+
+          <Link
+            href="/dashboard/learn/stage-2/final-assessment"
+            className="mt-5 inline-block rounded-lg bg-[#071A3D] px-5 py-3 font-semibold text-white"
+          >
+            Take Final Assessment
+          </Link>
+        </div>
+      )}
+
       <div className="mt-6 grid gap-5 md:grid-cols-2">
-        {loading
-          ? [1, 2, 3, 4, 5].map((item) => (
-              <div
-                key={item}
-                className="h-48 animate-pulse rounded-2xl bg-white/20"
-              />
-            ))
-          : lessons.map((lesson) => {
-              const isCompleted = completedLessons.includes(lesson.folder);
+        {lessons.map((lesson) => {
+          const isCompleted = completedLessons.includes(lesson.folder);
 
-              return (
-                <div
-                  key={lesson.folder}
-                  className={`rounded-2xl p-6 shadow-lg ${
-                    isCompleted
-                      ? "bg-[#D4AF37] text-[#071A3D]"
-                      : "bg-[#0D2A5E] text-white"
-                  }`}
-                >
-                  <p
-                    className={`text-sm ${
-                      isCompleted ? "text-[#071A3D]" : "text-[#D4AF37]"
-                    }`}
-                  >
-                    {lesson.title}
-                  </p>
+          return (
+            <div
+              key={lesson.folder}
+              className={`rounded-2xl p-6 shadow-lg ${
+                isCompleted
+                  ? "bg-[#D4AF37] text-[#071A3D]"
+                  : "bg-[#0D2A5E] text-white"
+              }`}
+            >
+              <p
+                className={`text-sm ${
+                  isCompleted ? "text-[#071A3D]" : "text-[#D4AF37]"
+                }`}
+              >
+                {lesson.title}
+              </p>
 
-                  <h2 className="mt-2 text-xl font-semibold">{lesson.name}</h2>
+              <h2 className="mt-2 text-xl font-semibold">{lesson.name}</h2>
 
-                  <p className="mt-3 text-sm">
-                    {isCompleted ? "Completed ✓" : "Available"}
-                  </p>
+              <p className="mt-3 text-sm">
+                {isCompleted ? "Completed ✓" : "Available"}
+              </p>
 
-                  <Link
-                    href={`/dashboard/learn/stage-2/${lesson.folder}`}
-                    className={`mt-5 inline-block rounded-lg px-5 py-2 font-semibold ${
-                      isCompleted
-                        ? "bg-[#071A3D] text-white"
-                        : "bg-[#D4AF37] text-[#071A3D]"
-                    }`}
-                  >
-                    {isCompleted ? "Review Lesson" : "Start Lesson"}
-                  </Link>
-                </div>
-              );
-            })}
+              <Link
+                href={`/dashboard/learn/stage-2/${lesson.folder}`}
+                className={`mt-5 inline-block rounded-lg px-5 py-2 font-semibold ${
+                  isCompleted
+                    ? "bg-[#071A3D] text-white"
+                    : "bg-[#D4AF37] text-[#071A3D]"
+                }`}
+              >
+                {isCompleted ? "Review Lesson" : "Start Lesson"}
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </DashboardLayout>
   );

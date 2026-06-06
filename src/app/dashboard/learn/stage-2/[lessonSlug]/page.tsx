@@ -7,6 +7,7 @@ import LessonReader from "@/components/learning/LessonReader";
 import LessonQuiz from "@/components/learning/LessonQuiz";
 import LessonReflection from "@/components/learning/LessonReflection";
 import LessonReward from "@/components/learning/LessonReward";
+import Stage2AccessGuard from "@/components/learning/Stage2AccessGuard";
 
 type LessonPageProps = {
   params: Promise<{
@@ -48,16 +49,16 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
   const quizQuestions = rawQuizData?.questions
     ? rawQuizData.questions.map(
-      (question: {
-         question: string;
-         options: string[];
-         correctAnswer: number;
-       }) => ({
-         question: question.question,
-         options: question.options,
-         answer: question.options[question.correctAnswer],
-       })
-     )   
+        (question: {
+          question: string;
+          options: string[];
+          correctAnswer: number;
+        }) => ({
+          question: question.question,
+          options: question.options,
+          answer: question.options[question.correctAnswer],
+        })
+      )
     : [];
 
   const reflectionContent = fs.existsSync(reflectionPath)
@@ -89,27 +90,29 @@ export default async function LessonPage({ params }: LessonPageProps) {
     .replace("lesson 5", "Lesson 5");
 
   return (
-    <DashboardLayout>
-      <LessonReader
-        title={formattedTitle}
-        content={lessonContent}
-        previousLesson={previousLesson}
-        nextLesson={nextLesson}
-      />
-
-      <LessonQuiz questions={quizQuestions} />
-
-      <LessonReflection content={reflectionContent} />
-
-      {rewardData && (
-        <LessonReward
-          dp={rewardData.dpReward}
-          badge={rewardData.badge}
-          message={rewardData.message}
-          stageId="stage-2"
-          lessonSlug={lessonSlug}
+    <Stage2AccessGuard>
+      <DashboardLayout>
+        <LessonReader
+          title={formattedTitle}
+          content={lessonContent}
+          previousLesson={previousLesson}
+          nextLesson={nextLesson}
         />
-      )}
-    </DashboardLayout>
+
+        <LessonQuiz questions={quizQuestions} />
+
+        <LessonReflection content={reflectionContent} />
+
+        {rewardData && (
+          <LessonReward
+            dp={rewardData.dpReward}
+            badge={rewardData.badge}
+            message={rewardData.message}
+            stageId="stage-2"
+            lessonSlug={lessonSlug}
+          />
+        )}
+      </DashboardLayout>
+    </Stage2AccessGuard>
   );
 }
