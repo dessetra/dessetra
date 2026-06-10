@@ -58,7 +58,7 @@ export default function LearnPage() {
     {
       title: "Module 3",
       name: "DeFi & Passive Income",
-      progress: "Premium access pending",
+      progress: "Premium access only",
       href: "/dashboard/learn/stage-3",
       locked: false,
       button: "Open Module",
@@ -66,7 +66,7 @@ export default function LearnPage() {
     {
       title: "Module 4",
       name: "Evaluating Web3 Opportunities",
-      progress: "Premium access pending",
+      progress: "Premium access only",
       href: "/dashboard/learn/stage-4",
       locked: false,
       button: "Open Module",
@@ -74,7 +74,7 @@ export default function LearnPage() {
     {
       title: "Module 5",
       name: "Long-Term Web3 Success",
-      progress: "Premium access pending",
+      progress: "Premium access only",
       href: "/dashboard/learn/stage-5",
       locked: false,
       button: "Open Module",
