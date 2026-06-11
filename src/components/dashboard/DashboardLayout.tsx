@@ -54,7 +54,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   }
 
   return (
-    <main className="min-h-screen bg-[#071A3D] text-white">
+    <main className="relative min-h-screen bg-[#071A3D] text-white">
       <div className="min-h-screen md:flex">
         <aside className="bg-[#04122D] p-5 md:min-h-screen md:w-64">
           <h1 className="text-2xl font-bold text-[#D4AF37]">Dessetra</h1>
@@ -85,6 +85,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
         <section className="flex-1 p-4 md:p-6">{children}</section>
       </div>
+
+      <Link
+        href="/dashboard/invest"
+        className="fixed bottom-6 right-6 z-50 rounded-full bg-[#D4AF37] px-6 py-4 font-bold text-[#071A3D] shadow-2xl hover:scale-105"
+      >
+        Invest
+      </Link>
     </main>
   );
 }
