@@ -7,11 +7,11 @@ import toast from "react-hot-toast";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { supabase } from "@/lib/supabase";
 
-type Subscription = {
+type Investment = {
   id: string;
-  plan_name: string;
-  billing_cycle: string;
-  amount_usd: number;
+  tier_amount_usd: number;
+  target_return_usd: number;
+  dsn_tokens: number;
   status: string;
   payment_status: string | null;
   pay_currency: string | null;
@@ -24,60 +24,60 @@ type Subscription = {
 const cryptoOptions = [
   { label: "USDT BEP20", value: "usdtbsc" },
   { label: "USDT TRC20", value: "usdttrc20" },
-  { label: "BNB", value: "bnbbsc" },
-  { label: "ETH", value: "eth" },
-  { label: "BTC", value: "btc" },
 ];
 
-export default function SubscriptionCheckoutPage() {
+export default function InvestmentCheckoutPage() {
   const params = useParams();
   const router = useRouter();
-  const subscriptionId = params.subscriptionId as string;
+  const investmentId = params.investmentId as string;
 
-  const [subscription, setSubscription] = useState<Subscription | null>(null);
+  const [investment, setInvestment] = useState<Investment | null>(null);
   const [selectedCurrency, setSelectedCurrency] = useState("usdtbsc");
   const [loading, setLoading] = useState(true);
   const [creatingPayment, setCreatingPayment] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [redirecting, setRedirecting] = useState(false);
 
-  useEffect(() => {
-    async function loadSubscription() {
-      const { data, error } = await supabase
-        .from("subscriptions")
-        .select(
-          "id, plan_name, billing_cycle, amount_usd, status, payment_status, pay_currency, pay_address, pay_amount, payment_url, payment_expires_at"
-        )
-        .eq("id", subscriptionId)
-        .maybeSingle();
+  async function loadInvestment() {
+    const { data, error } = await supabase
+      .from("investments")
+      .select(
+        "id, tier_amount_usd, target_return_usd, dsn_tokens, status, payment_status, pay_currency, pay_address, pay_amount, payment_url, payment_expires_at"
+      )
+      .eq("id", investmentId)
+      .maybeSingle();
 
-      if (error || !data) {
-        toast.error("Subscription request not found.");
-        setLoading(false);
-        return;
-      }
-
-      setSubscription(data as Subscription);
-
-      if (data.pay_currency) {
-        setSelectedCurrency(data.pay_currency);
-      }
-
+    if (error || !data) {
+      toast.error("Investment request not found.");
       setLoading(false);
+      return;
     }
 
-    if (subscriptionId) {
-      loadSubscription();
+    setInvestment(data as Investment);
+
+    if (data.pay_currency) {
+      setSelectedCurrency(data.pay_currency);
     }
-  }, [subscriptionId]);
+
+    setLoading(false);
+  }
 
   useEffect(() => {
-    if (!subscription?.payment_expires_at) return;
+    if (!investmentId) return;
+
+    queueMicrotask(() => {
+      void loadInvestment();
+    });
+  }, [investmentId]);
+
+  useEffect(() => {
+    if (!investment?.payment_expires_at) return;
 
     function updateTimer() {
-      const expiry = new Date(subscription?.payment_expires_at || "").getTime();
+      const expiry = new Date(investment?.payment_expires_at || "").getTime();
       const now = Date.now();
       const remaining = Math.max(Math.floor((expiry - now) / 1000), 0);
+
       setSecondsLeft(remaining);
     }
 
@@ -86,31 +86,31 @@ export default function SubscriptionCheckoutPage() {
     const timer = setInterval(updateTimer, 1000);
 
     return () => clearInterval(timer);
-  }, [subscription?.payment_expires_at]);
+  }, [investment?.payment_expires_at]);
 
   useEffect(() => {
-    if (!subscription?.id || !subscription.pay_address) return;
+    if (!investment?.id || !investment.pay_address) return;
 
     const pollPaymentStatus = async () => {
       const { data } = await supabase
-        .from("subscriptions")
+        .from("investments")
         .select(
-          "id, plan_name, billing_cycle, amount_usd, status, payment_status, pay_currency, pay_address, pay_amount, payment_url, payment_expires_at"
+          "id, tier_amount_usd, target_return_usd, dsn_tokens, status, payment_status, pay_currency, pay_address, pay_amount, payment_url, payment_expires_at"
         )
-        .eq("id", subscription.id)
+        .eq("id", investment.id)
         .maybeSingle();
 
       if (!data) return;
 
-      const updatedSubscription = data as Subscription;
-      setSubscription(updatedSubscription);
+      const updatedInvestment = data as Investment;
+      setInvestment(updatedInvestment);
 
-      if (updatedSubscription.status === "active" && !redirecting) {
+      if (updatedInvestment.status === "active" && !redirecting) {
         setRedirecting(true);
-        toast.success("Payment confirmed. Premium access activated.");
+        toast.success("Investment payment confirmed.");
 
         setTimeout(() => {
-          router.push("/dashboard");
+          router.push("/dashboard/investor");
         }, 3000);
       }
     };
@@ -118,7 +118,7 @@ export default function SubscriptionCheckoutPage() {
     const poller = setInterval(pollPaymentStatus, 7000);
 
     return () => clearInterval(poller);
-  }, [subscription?.id, subscription?.pay_address, redirecting, router]);
+  }, [investment?.id, investment?.pay_address, redirecting, router]);
 
   const countdown = useMemo(() => {
     const minutes = Math.floor(secondsLeft / 60);
@@ -131,14 +131,12 @@ export default function SubscriptionCheckoutPage() {
   }, [secondsLeft]);
 
   const paymentExpired =
-    Boolean(subscription?.pay_address) &&
-    Boolean(subscription?.payment_expires_at) &&
+    Boolean(investment?.pay_address) &&
+    Boolean(investment?.payment_expires_at) &&
     secondsLeft === 0 &&
-    subscription?.status !== "active";
+    investment?.status !== "active";
 
-  const paymentQrData = subscription?.pay_address
-    ? `${subscription.pay_address}`
-    : "";
+  const paymentQrData = investment?.pay_address ? investment.pay_address : "";
 
   const paymentQrUrl = paymentQrData
     ? `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(
@@ -146,31 +144,25 @@ export default function SubscriptionCheckoutPage() {
       )}`
     : "";
 
-  const formatPaymentStatus = (status: string | null) => {
-    if (!status) return "Waiting Payment";
-
-    return status.replaceAll("_", " ");
-  };
-
   const copyAddress = async () => {
-    if (!subscription?.pay_address) return;
+    if (!investment?.pay_address) return;
 
-    await navigator.clipboard.writeText(subscription.pay_address);
+    await navigator.clipboard.writeText(investment.pay_address);
     toast.success("Wallet address copied.");
   };
 
   const createPayment = async () => {
-    if (!subscription) return;
+    if (!investment) return;
 
     setCreatingPayment(true);
 
-    const response = await fetch("/api/nowpayments/create-payment", {
+    const response = await fetch("/api/nowpayments/create-investment-payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        subscriptionId: subscription.id,
+        investmentId: investment.id,
         payCurrency: selectedCurrency,
       }),
     });
@@ -180,29 +172,35 @@ export default function SubscriptionCheckoutPage() {
     setCreatingPayment(false);
 
     if (!response.ok) {
-      toast.error(result.error || "Unable to create payment.");
+      toast.error(result.error || "Unable to create investment payment.");
       return;
     }
 
-    setSubscription(result.subscription);
-    toast.success("Payment address generated.");
+    setInvestment(result.investment);
+    toast.success("Investment payment address generated.");
+  };
+
+  const formatPaymentStatus = (status: string | null) => {
+    if (!status) return "Waiting Payment";
+
+    return status.replaceAll("_", " ");
   };
 
   if (loading) {
     return (
       <DashboardLayout>
         <div className="rounded-2xl bg-[#0D2A5E] p-6 text-white">
-          Loading checkout...
+          Loading investment checkout...
         </div>
       </DashboardLayout>
     );
   }
 
-  if (!subscription) {
+  if (!investment) {
     return (
       <DashboardLayout>
         <div className="rounded-2xl bg-white p-6 text-[#071A3D]">
-          Subscription request not found.
+          Investment request not found.
         </div>
       </DashboardLayout>
     );
@@ -210,25 +208,59 @@ export default function SubscriptionCheckoutPage() {
 
   return (
     <DashboardLayout>
-      <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
-        <h1 className="text-2xl font-bold md:text-3xl">
-          Complete Subscription Payment
+      <div className="rounded-3xl bg-gradient-to-r from-[#04122D] to-[#0D2A5E] p-6 text-white shadow-lg md:p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
+          Founder Investment Checkout
+        </p>
+
+        <h1 className="mt-3 text-3xl font-bold md:text-4xl">
+          Complete Investment Payment
         </h1>
 
-        <p className="mt-2 text-sm text-gray-300 md:text-base">
-          Select your preferred cryptocurrency and complete payment within 45
-          minutes.
+        <p className="mt-3 max-w-3xl text-gray-300">
+          Complete your investment payment using USDT BEP20 or USDT TRC20.
+          Payment confirmation will activate your investor dashboard.
         </p>
       </div>
 
-      <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-        <h2 className="text-2xl font-bold">{subscription.plan_name}</h2>
+      <div className="mt-6 grid gap-6 lg:grid-cols-3">
+        <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+            Investment Amount
+          </p>
 
-        <p className="mt-2 text-gray-600">
-          Amount: ${Number(subscription.amount_usd)} • Billing:{" "}
-          {subscription.billing_cycle === "six_months"
-            ? "6 Months"
-            : "Monthly"}
+          <h2 className="mt-3 text-4xl font-bold">
+            ${Number(investment.tier_amount_usd).toLocaleString()}
+          </h2>
+        </div>
+
+        <div className="rounded-2xl bg-[#D4AF37] p-6 text-[#071A3D] shadow-lg">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em]">
+            Revenue Target
+          </p>
+
+          <h2 className="mt-3 text-4xl font-bold">
+            ${Number(investment.target_return_usd).toLocaleString()}
+          </h2>
+        </div>
+
+        <div className="rounded-2xl bg-[#071A3D] p-6 text-white shadow-lg">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-300">
+            Pending DSN Tokens
+          </p>
+
+          <h2 className="mt-3 text-4xl font-bold text-[#D4AF37]">
+            {Number(investment.dsn_tokens).toLocaleString()}
+          </h2>
+        </div>
+      </div>
+
+      <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
+        <h2 className="text-2xl font-bold">Payment Method</h2>
+
+        <p className="mt-2 text-sm text-gray-500">
+          Choose your preferred USDT network. Only send the exact amount shown
+          after the payment address is generated.
         </p>
 
         <div className="mt-6">
@@ -239,7 +271,7 @@ export default function SubscriptionCheckoutPage() {
           <select
             value={selectedCurrency}
             onChange={(event) => setSelectedCurrency(event.target.value)}
-            disabled={Boolean(subscription.pay_address)}
+            disabled={Boolean(investment.pay_address)}
             className="mt-2 w-full rounded-lg border border-gray-300 p-3 outline-none"
           >
             {cryptoOptions.map((crypto) => (
@@ -250,7 +282,7 @@ export default function SubscriptionCheckoutPage() {
           </select>
         </div>
 
-        {!subscription.pay_address && (
+        {!investment.pay_address && (
           <button
             onClick={createPayment}
             disabled={creatingPayment}
@@ -260,24 +292,24 @@ export default function SubscriptionCheckoutPage() {
           </button>
         )}
 
-        {subscription.pay_address && (
+        {investment.pay_address && (
           <div className="mt-6 rounded-2xl bg-gray-100 p-5">
             <h3 className="text-xl font-bold">Payment Details</h3>
 
             <div className="mt-4 rounded-xl bg-white p-4">
               <p className="text-sm font-semibold text-gray-500">Status</p>
+
               <p className="mt-1 text-lg font-bold capitalize">
-                {subscription.status === "active"
+                {investment.status === "active"
                   ? "Payment Completed"
-                  : formatPaymentStatus(subscription.payment_status)}
+                  : formatPaymentStatus(investment.payment_status)}
               </p>
             </div>
 
             <p className="mt-5 text-sm text-gray-600">Send exactly:</p>
 
             <p className="mt-1 break-all text-2xl font-bold">
-              {subscription.pay_amount}{" "}
-              {subscription.pay_currency?.toUpperCase()}
+              {investment.pay_amount} {investment.pay_currency?.toUpperCase()}
             </p>
 
             {paymentQrUrl && (
@@ -285,7 +317,7 @@ export default function SubscriptionCheckoutPage() {
                 <div className="rounded-2xl bg-white p-4 shadow">
                   <img
                     src={paymentQrUrl}
-                    alt="Payment QR Code"
+                    alt="Investment Payment QR Code"
                     className="h-60 w-60"
                   />
                 </div>
@@ -295,7 +327,7 @@ export default function SubscriptionCheckoutPage() {
             <p className="mt-5 text-sm text-gray-600">Wallet Address:</p>
 
             <p className="mt-1 break-all rounded-lg bg-white p-3 font-mono text-sm">
-              {subscription.pay_address}
+              {investment.pay_address}
             </p>
 
             <button
@@ -309,28 +341,28 @@ export default function SubscriptionCheckoutPage() {
               <p className="text-sm text-gray-300">Time left to pay</p>
 
               <p className="mt-1 text-3xl font-bold text-[#D4AF37]">
-                {subscription.status === "active" ? "Completed" : countdown}
+                {investment.status === "active" ? "Completed" : countdown}
               </p>
             </div>
 
             {paymentExpired && (
               <div className="mt-5 rounded-xl bg-red-50 p-4 text-sm text-red-800">
-                This payment window has expired. Please return to the
-                subscriptions page and start a new payment request.
+                This payment window has expired. Please return to the investment
+                page and start a new investment payment request.
               </div>
             )}
 
-            {subscription.status === "active" && (
+            {investment.status === "active" && (
               <div className="mt-5 rounded-xl bg-green-50 p-4 text-sm text-green-800">
-                Payment confirmed. Your premium access is active. Redirecting
-                you to the dashboard...
+                Payment confirmed. Your investor dashboard is now active.
+                Redirecting...
               </div>
             )}
 
-            {subscription.status !== "active" && !paymentExpired && (
+            {investment.status !== "active" && !paymentExpired && (
               <div className="mt-5 rounded-xl bg-yellow-50 p-4 text-sm text-yellow-800">
-                After payment, your subscription will activate automatically
-                once NOWPayments confirms the transaction.
+                After payment, your investment dashboard will activate
+                automatically once NOWPayments confirms the transaction.
               </div>
             )}
           </div>

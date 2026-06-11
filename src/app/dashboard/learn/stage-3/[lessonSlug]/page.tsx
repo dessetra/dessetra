@@ -7,6 +7,7 @@ import LessonReader from "@/components/learning/LessonReader";
 import LessonQuiz from "@/components/learning/LessonQuiz";
 import LessonReflection from "@/components/learning/LessonReflection";
 import LessonReward from "@/components/learning/LessonReward";
+import PremiumAccessGuard from "@/components/learning/PremiumAccessGuard";
 
 type LessonPageProps = {
   params: Promise<{
@@ -90,26 +91,28 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
   return (
     <DashboardLayout>
-      <LessonReader
-        title={formattedTitle}
-        content={lessonContent}
-        previousLesson={previousLesson}
-        nextLesson={nextLesson}
-      />
-
-      <LessonQuiz questions={quizQuestions} />
-
-      <LessonReflection content={reflectionContent} />
-
-      {rewardData && (
-        <LessonReward
-          dp={rewardData.dpReward}
-          badge={rewardData.badge}
-          message={rewardData.message}
-          stageId="stage-3"
-          lessonSlug={lessonSlug}
+      <PremiumAccessGuard requiredPlan="premium_access">
+        <LessonReader
+          title={formattedTitle}
+          content={lessonContent}
+          previousLesson={previousLesson}
+          nextLesson={nextLesson}
         />
-      )}
+
+        <LessonQuiz questions={quizQuestions} />
+
+        <LessonReflection content={reflectionContent} />
+
+        {rewardData && (
+          <LessonReward
+            dp={rewardData.dpReward}
+            badge={rewardData.badge}
+            message={rewardData.message}
+            stageId="stage-3"
+            lessonSlug={lessonSlug}
+          />
+        )}
+      </PremiumAccessGuard>
     </DashboardLayout>
   );
 }

@@ -12,6 +12,8 @@ const navLinks = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Learn", href: "/dashboard/learn" },
   { label: "Subscriptions", href: "/dashboard/subscriptions" },
+  { label: "Invest", href: "/dashboard/invest" },
+  { label: "Investor Dashboard", href: "/dashboard/investor" },
   { label: "Referrals", href: "/dashboard/referrals" },
   { label: "Earnings", href: "/dashboard/earnings" },
   { label: "Wallet", href: "/dashboard/wallet" },
@@ -56,7 +58,10 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <div className="min-h-screen md:flex">
         <aside className="bg-[#04122D] p-5 md:min-h-screen md:w-64">
           <h1 className="text-2xl font-bold text-[#D4AF37]">Dessetra</h1>
-          <p className="mt-1 text-sm text-gray-400">Learn • Connect • Earn</p>
+
+          <p className="mt-1 text-sm text-gray-400">
+            Learn • Connect • Earn
+          </p>
 
           <nav className="mt-6 grid grid-cols-2 gap-2 md:block md:space-y-3">
             {navLinks.map((link) => (
