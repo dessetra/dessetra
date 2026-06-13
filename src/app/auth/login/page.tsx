@@ -13,6 +13,7 @@ export default function LoginPage() {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
+
     const email = String(formData.get("email") || "").trim();
     const password = String(formData.get("password") || "");
 
@@ -30,14 +31,11 @@ export default function LoginPage() {
       });
 
       if (error) {
-        alert(`Supabase Error: ${error.message}`);
+        alert(error.message);
         return;
       }
 
       window.location.href = "/dashboard";
-    } catch (err) {
-      console.error("Unexpected login error:", err);
-      alert(`Unexpected Error: ${JSON.stringify(err)}`);
     } finally {
       setLoading(false);
     }
@@ -46,6 +44,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#071A3D] px-4 py-10">
       <section className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
+
         <h1 className="text-center text-3xl font-bold text-[#071A3D]">
           Welcome Back
         </h1>
@@ -55,30 +54,42 @@ export default function LoginPage() {
         </p>
 
         <form onSubmit={handleLogin} className="mt-6 space-y-4">
+
           <input
             name="email"
             type="email"
-            placeholder="Email"
+            placeholder="Email Address"
             autoComplete="email"
-            className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
+            className="w-full rounded-lg border border-gray-300 p-3 text-[#071A3D] placeholder:text-gray-700 placeholder:font-medium outline-none focus:border-[#1E88E5]"
           />
 
           <div className="relative">
+
             <input
               name="password"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
               autoComplete="current-password"
-              className="w-full rounded-lg border border-gray-300 p-3 pr-12 outline-none focus:border-[#1E88E5]"
+              className="w-full rounded-lg border border-gray-300 p-3 pr-12 text-[#071A3D] placeholder:text-gray-700 placeholder:font-medium outline-none focus:border-[#1E88E5]"
             />
 
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600"
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
+
+          </div>
+
+          <div className="flex justify-end">
+            <Link
+              href="/auth/forgot-password"
+              className="text-sm font-medium text-[#1E88E5] hover:underline"
+            >
+              Forgot Password?
+            </Link>
           </div>
 
           <button
@@ -90,12 +101,17 @@ export default function LoginPage() {
           </button>
 
           <p className="text-center text-sm text-gray-600">
-            Don&apos;t have an account?{" "}
-            <Link href="/auth/signup" className="font-semibold text-[#1E88E5]">
+            Don't have an account?{" "}
+            <Link
+              href="/auth/signup"
+              className="font-semibold text-[#1E88E5]"
+            >
               Sign up
             </Link>
           </p>
+
         </form>
+
       </section>
     </main>
   );
