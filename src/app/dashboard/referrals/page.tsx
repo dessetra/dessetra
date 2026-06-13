@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 
 type ReferralProfile = {
+  id: string;
   full_name: string | null;
   email: string | null;
 };
@@ -13,11 +14,17 @@ type ReferralProfile = {
 export default function ReferralsPage() {
   const [referralCode, setReferralCode] = useState("");
   const [referralLink, setReferralLink] = useState("");
-  const [totalReferrals, setTotalReferrals] = useState(0);
   const [firstGeneration, setFirstGeneration] = useState<ReferralProfile[]>([]);
+  const [secondGeneration, setSecondGeneration] = useState<ReferralProfile[]>(
+    []
+  );
   const [loading, setLoading] = useState(true);
 
-  const referralRewardDP = totalReferrals * 50;
+  const totalFirstGeneration = firstGeneration.length;
+  const totalSecondGeneration = secondGeneration.length;
+  const totalReferralNetwork = totalFirstGeneration + totalSecondGeneration;
+
+  const referralRewardDP = totalFirstGeneration * 50;
 
   useEffect(() => {
     async function loadReferralData() {
@@ -30,65 +37,85 @@ export default function ReferralsPage() {
         return;
       }
 
-      const { data, error } = await supabase
+      const { data: profileData, error: profileError } = await supabase
         .from("profiles")
         .select("referral_code")
         .eq("id", user.id)
         .single();
 
-      if (error) {
-        toast.error(error.message);
+      if (profileError) {
+        toast.error(profileError.message);
         setLoading(false);
         return;
       }
 
-      if (data?.referral_code) {
-        const code = data.referral_code;
+      if (profileData?.referral_code) {
+        const code = profileData.referral_code;
 
         setReferralCode(code);
         setReferralLink(`${window.location.origin}/auth/signup?ref=${code}`);
       }
 
-      const { count, error: referralError } = await supabase
-        .from("referrals")
-        .select("*", { count: "exact", head: true })
-        .eq("referrer_id", user.id);
+      const { data: firstReferralRows, error: firstReferralRowsError } =
+        await supabase
+          .from("referrals")
+          .select("referred_user_id")
+          .eq("referrer_id", user.id);
 
-      if (referralError) {
-        toast.error(referralError.message);
+      if (firstReferralRowsError) {
+        toast.error(firstReferralRowsError.message);
         setLoading(false);
         return;
       }
 
-      setTotalReferrals(count || 0);
+      const firstReferredIds =
+        firstReferralRows?.map((row) => row.referred_user_id) || [];
 
-      const { data: referralRows, error: referralRowsError } = await supabase
-        .from("referrals")
-        .select("referred_user_id")
-        .eq("referrer_id", user.id);
-
-      if (referralRowsError) {
-        toast.error(referralRowsError.message);
-        setLoading(false);
-        return;
-      }
-
-      if (referralRows && referralRows.length > 0) {
-        const referredIds = referralRows.map((row) => row.referred_user_id);
-
-        const { data: referredProfiles, error: referredProfilesError } =
+      if (firstReferredIds.length > 0) {
+        const { data: firstProfiles, error: firstProfilesError } =
           await supabase
             .from("profiles")
-            .select("full_name,email")
-            .in("id", referredIds);
+            .select("id, full_name, email")
+            .in("id", firstReferredIds);
 
-        if (referredProfilesError) {
-          toast.error(referredProfilesError.message);
+        if (firstProfilesError) {
+          toast.error(firstProfilesError.message);
           setLoading(false);
           return;
         }
 
-        setFirstGeneration(referredProfiles || []);
+        setFirstGeneration(firstProfiles || []);
+
+        const { data: secondReferralRows, error: secondReferralRowsError } =
+          await supabase
+            .from("referrals")
+            .select("referred_user_id")
+            .in("referrer_id", firstReferredIds);
+
+        if (secondReferralRowsError) {
+          toast.error(secondReferralRowsError.message);
+          setLoading(false);
+          return;
+        }
+
+        const secondReferredIds =
+          secondReferralRows?.map((row) => row.referred_user_id) || [];
+
+        if (secondReferredIds.length > 0) {
+          const { data: secondProfiles, error: secondProfilesError } =
+            await supabase
+              .from("profiles")
+              .select("id, full_name, email")
+              .in("id", secondReferredIds);
+
+          if (secondProfilesError) {
+            toast.error(secondProfilesError.message);
+            setLoading(false);
+            return;
+          }
+
+          setSecondGeneration(secondProfiles || []);
+        }
       }
 
       setLoading(false);
@@ -107,13 +134,56 @@ export default function ReferralsPage() {
     toast.success("Referral link copied.");
   };
 
+  const renderReferralList = (
+    title: string,
+    description: string,
+    people: ReferralProfile[],
+    emptyMessage: string,
+    rewardLabel: string
+  ) => {
+    return (
+      <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
+        <h2 className="text-xl font-bold">{title}</h2>
+
+        <p className="mt-2 text-sm text-gray-500">{description}</p>
+
+        {loading ? (
+          <p className="mt-4 text-sm text-gray-500">Loading referrals...</p>
+        ) : people.length === 0 ? (
+          <p className="mt-4 text-sm text-gray-500">{emptyMessage}</p>
+        ) : (
+          <div className="mt-4 space-y-3">
+            {people.map((person, index) => (
+              <div
+                key={`${person.id}-${index}`}
+                className="rounded-xl border border-gray-200 p-4"
+              >
+                <p className="font-semibold">
+                  {person.full_name || "Unnamed User"}
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  {person.email || "No email available"}
+                </p>
+
+                <p className="mt-2 text-xs font-semibold text-[#D4AF37]">
+                  {rewardLabel}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <DashboardLayout>
       <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
         <h1 className="text-2xl font-bold md:text-3xl">Referral Program</h1>
 
         <p className="mt-2 text-sm text-gray-300 md:text-base">
-          Invite others and earn Dessetra Points as the platform grows.
+          Invite others and grow your Dessetra referral network.
         </p>
       </div>
 
@@ -138,19 +208,25 @@ export default function ReferralsPage() {
         </button>
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
+      <div className="mt-6 grid gap-4 md:grid-cols-4">
         <div className="rounded-xl bg-white p-5 text-[#071A3D] shadow">
-          <h3 className="font-semibold text-gray-500">Total Referrals</h3>
+          <h3 className="font-semibold text-gray-500">First Generation</h3>
           <p className="mt-2 text-3xl font-bold">
-            {loading ? "..." : totalReferrals}
+            {loading ? "..." : totalFirstGeneration}
           </p>
         </div>
 
         <div className="rounded-xl bg-white p-5 text-[#071A3D] shadow">
-          <h3 className="font-semibold text-gray-500">Successful Referrals</h3>
-          <p className="mt-2 text-3xl font-bold">0</p>
-          <p className="mt-2 text-xs text-gray-500">
-            Successful referrals will count after payment or subscription.
+          <h3 className="font-semibold text-gray-500">Second Generation</h3>
+          <p className="mt-2 text-3xl font-bold">
+            {loading ? "..." : totalSecondGeneration}
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-white p-5 text-[#071A3D] shadow">
+          <h3 className="font-semibold text-gray-500">Total Network</h3>
+          <p className="mt-2 text-3xl font-bold">
+            {loading ? "..." : totalReferralNetwork}
           </p>
         </div>
 
@@ -160,43 +236,26 @@ export default function ReferralsPage() {
             {loading ? "..." : `${referralRewardDP} DP`}
           </p>
           <p className="mt-2 text-xs text-gray-500">
-            50 DP for each referred user.
+            DP reward currently applies to first generation signups.
           </p>
         </div>
       </div>
 
-      <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-        <h2 className="text-xl font-bold">First Generation Referrals</h2>
+      {renderReferralList(
+        "First Generation Referrals",
+        "These are users who signed up directly through your referral link.",
+        firstGeneration,
+        "You have no first generation referrals yet.",
+        "Direct Referral • +50 DP"
+      )}
 
-        {loading ? (
-          <p className="mt-4 text-sm text-gray-500">Loading referrals...</p>
-        ) : firstGeneration.length === 0 ? (
-          <p className="mt-4 text-sm text-gray-500">
-            You have no first generation referrals yet.
-          </p>
-        ) : (
-          <div className="mt-4 space-y-3">
-            {firstGeneration.map((person, index) => (
-              <div
-                key={`${person.email}-${index}`}
-                className="rounded-xl border border-gray-200 p-4"
-              >
-                <p className="font-semibold">
-                  {person.full_name || "Unnamed User"}
-                </p>
-
-                <p className="mt-1 text-sm text-gray-500">
-                  {person.email || "No email available"}
-                </p>
-
-                <p className="mt-2 text-xs font-semibold text-[#D4AF37]">
-                  Pending Referral • +50 DP
-                </p>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      {renderReferralList(
+        "Second Generation Referrals",
+        "These are users referred by your first generation referrals.",
+        secondGeneration,
+        "You have no second generation referrals yet.",
+        "Second Generation Referral"
+      )}
     </DashboardLayout>
   );
 }
