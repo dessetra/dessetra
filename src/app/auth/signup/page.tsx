@@ -65,12 +65,12 @@ function SignupForm() {
     setLoading(true);
 
     const { error } = await supabase.auth.signUp({
-      email,
+      email: email.trim(),
       password,
       options: {
         data: {
-          full_name: fullName,
-          country,
+          full_name: fullName.trim(),
+          country: country.trim(),
           referral_code: referralCode || null,
         },
       },
@@ -88,91 +88,120 @@ function SignupForm() {
     );
   };
 
+  const inputClass =
+    "w-full rounded-lg border border-gray-300 p-3 text-[#071A3D] placeholder:text-gray-700 placeholder:font-medium outline-none focus:border-[#1E88E5]";
+
+  const labelClass = "mb-1 block text-sm font-semibold text-[#071A3D]";
+
   return (
     <section className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
       <h1 className="text-center text-3xl font-bold text-[#071A3D]">
         Join Dessetra
       </h1>
 
-      <p className="mt-2 text-center text-sm text-gray-500">
+      <p className="mt-2 text-center text-sm text-gray-600">
         Start your Web3 journey the right way
       </p>
 
       <form onSubmit={handleSignup} className="mt-6 space-y-4">
-        <input
-          type="text"
-          placeholder="Full Name"
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
-        />
-
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
-        />
-
-        <div className="relative">
+        <div>
+          <label className={labelClass}>Full Name</label>
           <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 p-3 pr-12 outline-none focus:border-[#1E88E5]"
+            type="text"
+            placeholder="Enter your full name"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            className={inputClass}
           />
-
-          <button
-            type="button"
-            onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
-          >
-            {showPassword ? <FaEyeSlash /> : <FaEye />}
-          </button>
         </div>
 
-        <p className="text-xs leading-5 text-gray-500">
+        <div>
+          <label className={labelClass}>Email Address</label>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={inputClass}
+          />
+        </div>
+
+        <div>
+          <label className={labelClass}>Password</label>
+
+          <div className="relative">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Create a strong password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={`${inputClass} pr-12`}
+            />
+
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
+        </div>
+
+        <p className="text-xs leading-5 text-gray-600">
           Password must be at least 8 characters and include one uppercase
           letter, one lowercase letter, one number, and one symbol.
         </p>
 
-        <div className="relative">
-          <input
-            type={showConfirmPassword ? "text" : "password"}
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 p-3 pr-12 outline-none focus:border-[#1E88E5]"
-          />
+        <div>
+          <label className={labelClass}>Confirm Password</label>
 
-          <button
-            type="button"
-            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
-          >
-            {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-          </button>
+          <div className="relative">
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              placeholder="Confirm your password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className={`${inputClass} pr-12`}
+            />
+
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600"
+              aria-label={
+                showConfirmPassword ? "Hide confirm password" : "Show confirm password"
+              }
+            >
+              {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
         </div>
 
-        <input
-          type="text"
-          placeholder="Country of Origin"
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
-        />
+        <div>
+          <label className={labelClass}>Country of Origin</label>
+          <input
+            type="text"
+            placeholder="Enter your country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className={inputClass}
+          />
+        </div>
 
-        <input
-          type="text"
-          placeholder="Referral Code (optional)"
-          value={referralCode}
-          onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
-          className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#1E88E5]"
-        />
+        <div>
+          <label className={labelClass}>Referral Code</label>
+          <input
+            type="text"
+            placeholder="Referral code optional"
+            value={referralCode}
+            onChange={(e) => setReferralCode(e.target.value.toUpperCase())}
+            className={inputClass}
+          />
+        </div>
 
-        <label className="flex items-start gap-3 text-sm text-gray-600">
+        <label className="flex items-start gap-3 text-sm text-gray-700">
           <input
             type="checkbox"
             checked={acceptedTerms}
