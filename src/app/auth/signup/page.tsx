@@ -18,6 +18,7 @@ function SignupForm() {
   const [referralCode, setReferralCode] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [signupSuccess, setSignupSuccess] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -83,15 +84,49 @@ function SignupForm() {
       return;
     }
 
-    toast.success(
-      "Account created successfully. Please check your email to confirm your account."
-    );
+    setSignupSuccess(true);
   };
 
   const inputClass =
     "w-full rounded-lg border border-gray-300 p-3 text-[#071A3D] placeholder:text-gray-700 placeholder:font-medium outline-none focus:border-[#1E88E5]";
 
   const labelClass = "mb-1 block text-sm font-semibold text-[#071A3D]";
+
+  if (signupSuccess) {
+    return (
+      <section className="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-xl">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-3xl">
+          ✓
+        </div>
+
+        <h1 className="mt-5 text-3xl font-bold text-[#071A3D]">
+          Check Your Email
+        </h1>
+
+        <p className="mt-3 text-gray-600">
+          Your Dessetra account has been created successfully.
+        </p>
+
+        <p className="mt-3 text-sm leading-6 text-gray-600">
+          We have sent a confirmation link to:
+        </p>
+
+        <p className="mt-2 break-all font-semibold text-[#071A3D]">{email}</p>
+
+        <p className="mt-4 text-sm leading-6 text-gray-600">
+          Please open your email and click the confirmation link to activate
+          your account before logging in.
+        </p>
+
+        <Link
+          href="/auth/login"
+          className="mt-6 inline-block w-full rounded-lg bg-[#1E88E5] p-3 font-semibold text-white transition hover:bg-[#1565C0]"
+        >
+          Go to Login
+        </Link>
+      </section>
+    );
+  }
 
   return (
     <section className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
@@ -171,7 +206,9 @@ function SignupForm() {
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600"
               aria-label={
-                showConfirmPassword ? "Hide confirm password" : "Show confirm password"
+                showConfirmPassword
+                  ? "Hide confirm password"
+                  : "Show confirm password"
               }
             >
               {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
