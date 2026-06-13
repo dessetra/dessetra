@@ -23,16 +23,17 @@ export default function ReferralsPage() {
   const totalFirstGeneration = firstGeneration.length;
   const totalSecondGeneration = secondGeneration.length;
   const totalReferralNetwork = totalFirstGeneration + totalSecondGeneration;
-
   const referralRewardDP = totalFirstGeneration * 50;
 
   useEffect(() => {
     async function loadReferralData() {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      setLoading(true);
 
-      if (!user) {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      if (!session?.user || !session.access_token) {
         setLoading(false);
         return;
       }
@@ -40,7 +41,7 @@ export default function ReferralsPage() {
       const { data: profileData, error: profileError } = await supabase
         .from("profiles")
         .select("referral_code")
-        .eq("id", user.id)
+        .eq("id", session.user.id)
         .single();
 
       if (profileError) {
@@ -51,77 +52,31 @@ export default function ReferralsPage() {
 
       if (profileData?.referral_code) {
         const code = profileData.referral_code;
-
         setReferralCode(code);
         setReferralLink(`${window.location.origin}/auth/signup?ref=${code}`);
       }
 
-      const { data: firstReferralRows, error: firstReferralRowsError } =
-        await supabase
-          .from("referrals")
-          .select("referred_user_id")
-          .eq("referrer_id", user.id);
+      const response = await fetch("/api/referrals/network", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${session.access_token}`,
+        },
+      });
 
-      if (firstReferralRowsError) {
-        toast.error(firstReferralRowsError.message);
+      const result = await response.json();
+
+      if (!response.ok) {
+        toast.error(result.error || "Unable to load referral network.");
         setLoading(false);
         return;
       }
 
-      const firstReferredIds =
-        firstReferralRows?.map((row) => row.referred_user_id) || [];
-
-      if (firstReferredIds.length > 0) {
-        const { data: firstProfiles, error: firstProfilesError } =
-          await supabase
-            .from("profiles")
-            .select("id, full_name, email")
-            .in("id", firstReferredIds);
-
-        if (firstProfilesError) {
-          toast.error(firstProfilesError.message);
-          setLoading(false);
-          return;
-        }
-
-        setFirstGeneration(firstProfiles || []);
-
-        const { data: secondReferralRows, error: secondReferralRowsError } =
-          await supabase
-            .from("referrals")
-            .select("referred_user_id")
-            .in("referrer_id", firstReferredIds);
-
-        if (secondReferralRowsError) {
-          toast.error(secondReferralRowsError.message);
-          setLoading(false);
-          return;
-        }
-
-        const secondReferredIds =
-          secondReferralRows?.map((row) => row.referred_user_id) || [];
-
-        if (secondReferredIds.length > 0) {
-          const { data: secondProfiles, error: secondProfilesError } =
-            await supabase
-              .from("profiles")
-              .select("id, full_name, email")
-              .in("id", secondReferredIds);
-
-          if (secondProfilesError) {
-            toast.error(secondProfilesError.message);
-            setLoading(false);
-            return;
-          }
-
-          setSecondGeneration(secondProfiles || []);
-        }
-      }
-
+      setFirstGeneration(result.firstGeneration || []);
+      setSecondGeneration(result.secondGeneration || []);
       setLoading(false);
     }
 
-    loadReferralData();
+    void loadReferralData();
   }, []);
 
   const copyReferralLink = async () => {
@@ -153,9 +108,9 @@ export default function ReferralsPage() {
           <p className="mt-4 text-sm text-gray-500">{emptyMessage}</p>
         ) : (
           <div className="mt-4 space-y-3">
-            {people.map((person, index) => (
+            {people.map((person) => (
               <div
-                key={`${person.id}-${index}`}
+                key={person.id}
                 className="rounded-xl border border-gray-200 p-4"
               >
                 <p className="font-semibold">

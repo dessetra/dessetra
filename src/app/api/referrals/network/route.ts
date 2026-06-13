@@ -1,20 +1,34 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
+type ReferralRow = {
+  referred_user_id: string;
+};
+
+type ReferralProfile = {
+  id: string;
+  full_name: string | null;
+  email: string | null;
+};
+
 export async function GET(request: Request) {
   try {
     const authHeader = request.headers.get("authorization") || "";
 
     if (!authHeader.startsWith("Bearer ")) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-    const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-    const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    if (!supabaseUrl || !anonKey || !serviceKey) {
+      return NextResponse.json(
+        { error: "Referral server configuration is incomplete." },
+        { status: 500 }
+      );
+    }
 
     const authClient = createClient(supabaseUrl, anonKey, {
       global: {
@@ -26,55 +40,83 @@ export async function GET(request: Request) {
 
     const {
       data: { user },
+      error: authError,
     } = await authClient.auth.getUser();
 
-    if (!user) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
+    if (authError || !user) {
+      return NextResponse.json({ error: "Invalid session." }, { status: 401 });
     }
 
-    const adminClient = createClient(
-      supabaseUrl,
-      serviceKey
-    );
+    const adminClient = createClient(supabaseUrl, serviceKey);
 
-    const { data: firstRows } = await adminClient
+    const { data: firstRows, error: firstRowsError } = await adminClient
       .from("referrals")
       .select("referred_user_id")
       .eq("referrer_id", user.id);
 
-    const firstIds =
-      firstRows?.map((r) => r.referred_user_id) || [];
+    if (firstRowsError) {
+      return NextResponse.json(
+        { error: firstRowsError.message },
+        { status: 500 }
+      );
+    }
 
-    let firstGeneration: any[] = [];
-    let secondGeneration: any[] = [];
+    const firstIds = Array.from(
+      new Set((firstRows as ReferralRow[] | null)?.map((row) => row.referred_user_id) || [])
+    );
+
+    let firstGeneration: ReferralProfile[] = [];
+    let secondGeneration: ReferralProfile[] = [];
 
     if (firstIds.length > 0) {
-      const { data: firstProfiles } = await adminClient
-        .from("profiles")
-        .select("id,full_name,email")
-        .in("id", firstIds);
+      const { data: firstProfiles, error: firstProfilesError } =
+        await adminClient
+          .from("profiles")
+          .select("id, full_name, email")
+          .in("id", firstIds);
 
-      firstGeneration = firstProfiles || [];
+      if (firstProfilesError) {
+        return NextResponse.json(
+          { error: firstProfilesError.message },
+          { status: 500 }
+        );
+      }
 
-      const { data: secondRows } = await adminClient
+      firstGeneration = (firstProfiles || []) as ReferralProfile[];
+
+      const { data: secondRows, error: secondRowsError } = await adminClient
         .from("referrals")
         .select("referred_user_id")
         .in("referrer_id", firstIds);
 
-      const secondIds =
-        secondRows?.map((r) => r.referred_user_id) || [];
+      if (secondRowsError) {
+        return NextResponse.json(
+          { error: secondRowsError.message },
+          { status: 500 }
+        );
+      }
+
+      const secondIds = Array.from(
+        new Set(
+          (secondRows as ReferralRow[] | null)?.map((row) => row.referred_user_id) || []
+        )
+      );
 
       if (secondIds.length > 0) {
-        const { data: secondProfiles } =
+        const { data: secondProfiles, error: secondProfilesError } =
           await adminClient
             .from("profiles")
-            .select("id,full_name,email")
+            .select("id, full_name, email")
             .in("id", secondIds);
 
-        secondGeneration = secondProfiles || [];
+        if (secondProfilesError) {
+          return NextResponse.json(
+            { error: secondProfilesError.message },
+            { status: 500 }
+          );
+        }
+
+        secondGeneration = (secondProfiles || []) as ReferralProfile[];
       }
     }
 
@@ -86,12 +128,8 @@ export async function GET(request: Request) {
     });
   } catch {
     return NextResponse.json(
-      {
-        error: "Unable to load referral network.",
-      },
-      {
-        status: 500,
-      }
+      { error: "Unable to load referral network." },
+      { status: 500 }
     );
   }
 }
