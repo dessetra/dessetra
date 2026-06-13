@@ -22,7 +22,7 @@ export default function ForgotPasswordPage() {
     setLoading(true);
 
     const { error } = await supabase.auth.resetPasswordForEmail(cleanEmail, {
-      redirectTo: `${window.location.origin}/auth/reset-password`,
+      redirectTo: "https://www.dessetra.com/auth/reset-password",
     });
 
     setLoading(false);
