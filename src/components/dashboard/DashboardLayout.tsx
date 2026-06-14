@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 type DashboardLayoutProps = {
@@ -21,34 +22,36 @@ const navLinks = [
 ];
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  const router = useRouter();
+
   const [checkingAuth, setCheckingAuth] = useState(true);
 
   useEffect(() => {
-    async function checkUser() {
+    async function checkSession() {
       const {
-        data: { user },
-      } = await supabase.auth.getUser();
+        data: { session },
+      } = await supabase.auth.getSession();
 
-      if (!user) {
-        window.location.href = "/auth/login";
+      if (!session?.user) {
+        router.replace("/auth/login");
         return;
       }
 
       setCheckingAuth(false);
     }
 
-    checkUser();
-  }, []);
+    void checkSession();
+  }, [router]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    window.location.href = "/auth/login";
+    router.replace("/auth/login");
   };
 
   if (checkingAuth) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-[#071A3D] text-white">
-        <p>Checking access...</p>
+        <p>Loading dashboard...</p>
       </main>
     );
   }

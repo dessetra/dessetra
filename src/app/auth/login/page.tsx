@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,7 +38,7 @@ export default function LoginPage() {
         return;
       }
 
-      window.location.href = "/dashboard";
+      router.replace("/dashboard");
     } finally {
       setLoading(false);
     }
@@ -44,7 +47,6 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#071A3D] px-4 py-10">
       <section className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
-
         <h1 className="text-center text-3xl font-bold text-[#071A3D]">
           Welcome Back
         </h1>
@@ -54,7 +56,6 @@ export default function LoginPage() {
         </p>
 
         <form onSubmit={handleLogin} className="mt-6 space-y-4">
-
           <input
             name="email"
             type="email"
@@ -64,7 +65,6 @@ export default function LoginPage() {
           />
 
           <div className="relative">
-
             <input
               name="password"
               type={showPassword ? "text" : "password"}
@@ -80,7 +80,6 @@ export default function LoginPage() {
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
-
           </div>
 
           <div className="flex justify-end">
@@ -101,17 +100,12 @@ export default function LoginPage() {
           </button>
 
           <p className="text-center text-sm text-gray-600">
-            Don't have an account?{" "}
-            <Link
-              href="/auth/signup"
-              className="font-semibold text-[#1E88E5]"
-            >
+            Don&apos;t have an account?{" "}
+            <Link href="/auth/signup" className="font-semibold text-[#1E88E5]">
               Sign up
             </Link>
           </p>
-
         </form>
-
       </section>
     </main>
   );

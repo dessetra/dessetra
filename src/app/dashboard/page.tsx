@@ -15,47 +15,52 @@ export default function DashboardPage() {
   useEffect(() => {
     async function loadDashboardData() {
       const {
-        data: { user },
-      } = await supabase.auth.getUser();
+        data: { session },
+      } = await supabase.auth.getSession();
 
-      if (!user) {
+      if (!session?.user) {
         setLoading(false);
         return;
       }
 
+      const user = session.user;
       setUserName(user.user_metadata.full_name || "User");
 
-      const { data: lessonData, error: lessonError } = await supabase
-        .from("lesson_progress")
-        .select("dp_earned, badge")
-        .eq("user_id", user.id)
-        .eq("completed", true);
+      const [lessonResult, stageResult, referralResult] = await Promise.all([
+        supabase
+          .from("lesson_progress")
+          .select("dp_earned, badge")
+          .eq("user_id", user.id)
+          .eq("completed", true),
 
-      const { data: stageData, error: stageError } = await supabase
-        .from("stage_progress")
-        .select("dp_earned, badge")
-        .eq("user_id", user.id)
-        .eq("completed", true);
+        supabase
+          .from("stage_progress")
+          .select("dp_earned, badge")
+          .eq("user_id", user.id)
+          .eq("completed", true),
 
-      const { count: referralCount, error: referralError } = await supabase
-        .from("referrals")
-        .select("*", { count: "exact", head: true })
-        .eq("referrer_id", user.id);
+        supabase
+          .from("referrals")
+          .select("*", { count: "exact", head: true })
+          .eq("referrer_id", user.id),
+      ]);
 
-      if (lessonError || stageError || referralError) {
+      if (
+        lessonResult.error ||
+        stageResult.error ||
+        referralResult.error
+      ) {
         console.log(
-          lessonError?.message ||
-            stageError?.message ||
-            referralError?.message
+          lessonResult.error?.message ||
+            stageResult.error?.message ||
+            referralResult.error?.message
         );
         setLoading(false);
         return;
       }
 
-      const lessonRows = lessonData || [];
-      const stageRows = stageData || [];
-
-      setCompletedLessons(lessonRows.length);
+      const lessonRows = lessonResult.data || [];
+      const stageRows = stageResult.data || [];
 
       const lessonDP = lessonRows.reduce((sum, item) => {
         return sum + Number(item.dp_earned || 0);
@@ -65,7 +70,7 @@ export default function DashboardPage() {
         return sum + Number(item.dp_earned || 0);
       }, 0);
 
-      const referralDP = (referralCount || 0) * 50;
+      const referralDP = (referralResult.count || 0) * 50;
 
       const uniqueBadges = new Set(
         [...lessonRows, ...stageRows]
@@ -73,12 +78,13 @@ export default function DashboardPage() {
           .filter(Boolean)
       );
 
+      setCompletedLessons(lessonRows.length);
       setTotalDP(lessonDP + stageDP + referralDP);
       setBadgesEarned(uniqueBadges.size);
       setLoading(false);
     }
 
-    loadDashboardData();
+    void loadDashboardData();
   }, []);
 
   return (
