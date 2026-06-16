@@ -24,20 +24,13 @@ type WalletTransactionRecord = {
 
 type DatabaseClient = SupabaseClient;
 
-function safeCompareSignatures(
-  receivedSignature: string,
-  calculatedSignature: string
-) {
-  if (!receivedSignature || !calculatedSignature) {
-    return false;
-  }
+function safeCompareSignatures(receivedSignature: string, calculatedSignature: string) {
+  if (!receivedSignature || !calculatedSignature) return false;
 
   const receivedBuffer = Buffer.from(receivedSignature, "hex");
   const calculatedBuffer = Buffer.from(calculatedSignature, "hex");
 
-  if (receivedBuffer.length !== calculatedBuffer.length) {
-    return false;
-  }
+  if (receivedBuffer.length !== calculatedBuffer.length) return false;
 
   return crypto.timingSafeEqual(receivedBuffer, calculatedBuffer);
 }
@@ -83,37 +76,27 @@ async function createReferralCommission({
     .select("id")
     .maybeSingle();
 
-  if (walletError) {
-    console.log("Wallet commission error:", walletError.message);
-    return;
-  }
+  if (walletError) return;
 
-  const walletTransaction =
-    walletTransactionData as WalletTransactionRecord | null;
+  const walletTransaction = walletTransactionData as WalletTransactionRecord | null;
 
-  const { error: commissionError } = await supabase
-    .from("referral_commissions")
-    .upsert(
-      {
-        referrer_user_id: referrerUserId,
-        referred_user_id: referredUserId,
-        commission_type: commissionType,
-        commission_percentage: commissionPercentage,
-        amount_usd: amountUsd,
-        source_reference: sourceReference,
-        source_id: sourceId,
-        wallet_transaction_id: walletTransaction?.id || null,
-      },
-      {
-        onConflict:
-          "referrer_user_id,referred_user_id,commission_type,source_reference,source_id",
-        ignoreDuplicates: true,
-      }
-    );
-
-  if (commissionError) {
-    console.log("Referral commission error:", commissionError.message);
-  }
+  await supabase.from("referral_commissions").upsert(
+    {
+      referrer_user_id: referrerUserId,
+      referred_user_id: referredUserId,
+      commission_type: commissionType,
+      commission_percentage: commissionPercentage,
+      amount_usd: amountUsd,
+      source_reference: sourceReference,
+      source_id: sourceId,
+      wallet_transaction_id: walletTransaction?.id || null,
+    },
+    {
+      onConflict:
+        "referrer_user_id,referred_user_id,commission_type,source_reference,source_id",
+      ignoreDuplicates: true,
+    }
+  );
 }
 
 async function processSubscriptionReferralCommissions({
@@ -124,10 +107,7 @@ async function processSubscriptionReferralCommissions({
   subscription: SubscriptionRecord;
 }) {
   const subscriptionAmount = Number(subscription.amount_usd || 0);
-
-  if (!subscriptionAmount || subscriptionAmount <= 0) {
-    return;
-  }
+  if (!subscriptionAmount || subscriptionAmount <= 0) return;
 
   const { data: directReferralData } = await supabase
     .from("referrals")
@@ -136,12 +116,7 @@ async function processSubscriptionReferralCommissions({
     .maybeSingle();
 
   const directReferral = directReferralData as ReferralRecord | null;
-
-  if (!directReferral?.referrer_id) {
-    return;
-  }
-
-  const directCommissionAmount = Number((subscriptionAmount * 0.2).toFixed(2));
+  if (!directReferral?.referrer_id) return;
 
   await createReferralCommission({
     supabase,
@@ -149,7 +124,7 @@ async function processSubscriptionReferralCommissions({
     referredUserId: subscription.user_id,
     commissionType: "subscription_referral_level_1",
     commissionPercentage: 20,
-    amountUsd: directCommissionAmount,
+    amountUsd: Number((subscriptionAmount * 0.2).toFixed(2)),
     sourceReference: "subscriptions",
     sourceId: subscription.id,
   });
@@ -161,14 +136,7 @@ async function processSubscriptionReferralCommissions({
     .maybeSingle();
 
   const secondLevelReferral = secondLevelReferralData as ReferralRecord | null;
-
-  if (!secondLevelReferral?.referrer_id) {
-    return;
-  }
-
-  const secondLevelCommissionAmount = Number(
-    (subscriptionAmount * 0.05).toFixed(2)
-  );
+  if (!secondLevelReferral?.referrer_id) return;
 
   await createReferralCommission({
     supabase,
@@ -176,13 +144,15 @@ async function processSubscriptionReferralCommissions({
     referredUserId: subscription.user_id,
     commissionType: "subscription_referral_level_2",
     commissionPercentage: 5,
-    amountUsd: secondLevelCommissionAmount,
+    amountUsd: Number((subscriptionAmount * 0.05).toFixed(2)),
     sourceReference: "subscriptions",
     sourceId: subscription.id,
   });
 }
 
 export async function POST(request: Request) {
+  let logId: string | null = null;
+
   try {
     const rawBody = await request.text();
 
@@ -191,9 +161,59 @@ export async function POST(request: Request) {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
     const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 
-    if (!ipnSecret || !supabaseUrl || !supabaseServiceKey) {
+    if (!supabaseUrl || !supabaseServiceKey) {
       return NextResponse.json(
-        { error: "Server webhook configuration is incomplete." },
+        { error: "Supabase webhook configuration is incomplete." },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+ let parsedBody: Record<string, unknown> = {};
+
+    try {
+      parsedBody = JSON.parse(rawBody);
+    } catch {
+      parsedBody = {};
+    }
+
+    const paymentId = String(parsedBody.payment_id || "");
+    const paymentStatus = String(parsedBody.payment_status || "")
+      .trim()
+      .toLowerCase();
+    const orderId = String(parsedBody.order_id || "");
+
+    const { data: logData } = await supabase
+      .from("nowpayments_ipn_logs")
+      .insert({
+        payment_id: paymentId || null,
+        order_id: orderId || null,
+        payment_status: paymentStatus || null,
+        signature_valid: false,
+        signature_received: receivedSignature || null,
+        processing_step: "received",
+        error_message: null,
+        raw_body: rawBody,
+      })
+      .select("id")
+      .maybeSingle();
+
+    logId = logData?.id || null;
+
+    if (!ipnSecret) {
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "missing_ipn_secret",
+            error_message: "NOWPAYMENTS_IPN_SECRET is missing.",
+          })
+          .eq("id", logId);
+      }
+
+      return NextResponse.json(
+        { error: "NOWPayments IPN secret is missing." },
         { status: 500 }
       );
     }
@@ -209,7 +229,16 @@ export async function POST(request: Request) {
     );
 
     if (!isValidSignature) {
-      console.log("NOWPayments IPN rejected: Invalid signature.");
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            signature_valid: false,
+            processing_step: "invalid_signature",
+            error_message: "Invalid IPN signature.",
+          })
+          .eq("id", logId);
+      }
 
       return NextResponse.json(
         { error: "Invalid IPN signature." },
@@ -217,20 +246,32 @@ export async function POST(request: Request) {
       );
     }
 
-    const body = JSON.parse(rawBody);
-
-    const paymentId = String(body.payment_id || "");
-    const paymentStatus = String(body.payment_status || "");
-    const orderId = String(body.order_id || "");
+    if (logId) {
+      await supabase
+        .from("nowpayments_ipn_logs")
+        .update({
+          signature_valid: true,
+          processing_step: "signature_verified",
+        })
+        .eq("id", logId);
+    }
 
     if (!paymentId || !paymentStatus || !orderId) {
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "invalid_payload",
+            error_message: "Missing payment_id, payment_status, or order_id.",
+          })
+          .eq("id", logId);
+      }
+
       return NextResponse.json(
         { error: "Invalid IPN payload." },
         { status: 400 }
       );
     }
-
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     const { data: subscriptionData, error: subscriptionError } = await supabase
       .from("subscriptions")
@@ -241,6 +282,16 @@ export async function POST(request: Request) {
     const subscription = subscriptionData as SubscriptionRecord | null;
 
     if (subscriptionError || !subscription) {
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "subscription_not_found",
+            error_message: subscriptionError?.message || "Subscription not found.",
+          })
+          .eq("id", logId);
+      }
+
       return NextResponse.json(
         { error: "Subscription not found." },
         { status: 404 }
@@ -248,6 +299,15 @@ export async function POST(request: Request) {
     }
 
     if (subscription.status === "active") {
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "already_active",
+          })
+          .eq("id", logId);
+      }
+
       return NextResponse.json({
         success: true,
         message: "Subscription already active.",
@@ -263,6 +323,16 @@ export async function POST(request: Request) {
       } else if (subscription.billing_cycle === "six_months") {
         expiryDate.setMonth(expiryDate.getMonth() + 6);
       } else {
+        if (logId) {
+          await supabase
+            .from("nowpayments_ipn_logs")
+            .update({
+              processing_step: "invalid_billing_cycle",
+              error_message: "Invalid billing cycle.",
+            })
+            .eq("id", logId);
+        }
+
         return NextResponse.json(
           { error: "Invalid billing cycle." },
           { status: 400 }
@@ -282,6 +352,16 @@ export async function POST(request: Request) {
         .eq("id", orderId);
 
       if (updateError) {
+        if (logId) {
+          await supabase
+            .from("nowpayments_ipn_logs")
+            .update({
+              processing_step: "subscription_update_failed",
+              error_message: updateError.message,
+            })
+            .eq("id", logId);
+        }
+
         return NextResponse.json(
           { error: updateError.message },
           { status: 500 }
@@ -293,6 +373,16 @@ export async function POST(request: Request) {
         subscription,
       });
 
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "subscription_activated",
+            error_message: null,
+          })
+          .eq("id", logId);
+      }
+
       return NextResponse.json({
         success: true,
         paymentStatus,
@@ -301,7 +391,7 @@ export async function POST(request: Request) {
     }
 
     if (failedStatuses.includes(paymentStatus)) {
-      const { error: updateError } = await supabase
+      await supabase
         .from("subscriptions")
         .update({
           nowpayments_payment_id: paymentId,
@@ -311,11 +401,13 @@ export async function POST(request: Request) {
         })
         .eq("id", orderId);
 
-      if (updateError) {
-        return NextResponse.json(
-          { error: updateError.message },
-          { status: 500 }
-        );
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "subscription_cancelled",
+          })
+          .eq("id", logId);
       }
 
       return NextResponse.json({
@@ -335,6 +427,15 @@ export async function POST(request: Request) {
         })
         .eq("id", orderId);
 
+      if (logId) {
+        await supabase
+          .from("nowpayments_ipn_logs")
+          .update({
+            processing_step: "subscription_pending",
+          })
+          .eq("id", logId);
+      }
+
       return NextResponse.json({
         success: true,
         paymentStatus,
@@ -350,6 +451,15 @@ export async function POST(request: Request) {
         updated_at: new Date().toISOString(),
       })
       .eq("id", orderId);
+
+    if (logId) {
+      await supabase
+        .from("nowpayments_ipn_logs")
+        .update({
+          processing_step: "unknown_status_recorded",
+        })
+        .eq("id", logId);
+    }
 
     return NextResponse.json({
       success: true,
