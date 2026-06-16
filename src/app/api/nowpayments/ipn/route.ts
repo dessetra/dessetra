@@ -1,9 +1,10 @@
 import crypto from "crypto";
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { SupabaseClient, createClient } from "@supabase/supabase-js";
 
 const successfulStatuses = ["finished", "confirmed", "sending"];
 const failedStatuses = ["failed", "expired", "refunded"];
+const pendingStatuses = ["waiting", "confirming", "partially_paid"];
 
 type SubscriptionRecord = {
   id: string;
@@ -20,6 +21,8 @@ type ReferralRecord = {
 type WalletTransactionRecord = {
   id: string;
 };
+
+type DatabaseClient = SupabaseClient;
 
 function safeCompareSignatures(
   receivedSignature: string,
@@ -49,7 +52,7 @@ async function createReferralCommission({
   sourceReference,
   sourceId,
 }: {
-  supabase: any;
+  supabase: DatabaseClient;
   referrerUserId: string;
   referredUserId: string;
   commissionType: string;
@@ -81,36 +84,43 @@ async function createReferralCommission({
     .maybeSingle();
 
   if (walletError) {
+    console.log("Wallet commission error:", walletError.message);
     return;
   }
 
   const walletTransaction =
     walletTransactionData as WalletTransactionRecord | null;
 
-  await supabase.from("referral_commissions").upsert(
-    {
-      referrer_user_id: referrerUserId,
-      referred_user_id: referredUserId,
-      commission_type: commissionType,
-      commission_percentage: commissionPercentage,
-      amount_usd: amountUsd,
-      source_reference: sourceReference,
-      source_id: sourceId,
-      wallet_transaction_id: walletTransaction?.id || null,
-    },
-    {
-      onConflict:
-        "referrer_user_id,referred_user_id,commission_type,source_reference,source_id",
-      ignoreDuplicates: true,
-    }
-  );
+  const { error: commissionError } = await supabase
+    .from("referral_commissions")
+    .upsert(
+      {
+        referrer_user_id: referrerUserId,
+        referred_user_id: referredUserId,
+        commission_type: commissionType,
+        commission_percentage: commissionPercentage,
+        amount_usd: amountUsd,
+        source_reference: sourceReference,
+        source_id: sourceId,
+        wallet_transaction_id: walletTransaction?.id || null,
+      },
+      {
+        onConflict:
+          "referrer_user_id,referred_user_id,commission_type,source_reference,source_id",
+        ignoreDuplicates: true,
+      }
+    );
+
+  if (commissionError) {
+    console.log("Referral commission error:", commissionError.message);
+  }
 }
 
 async function processSubscriptionReferralCommissions({
   supabase,
   subscription,
 }: {
-  supabase: any;
+  supabase: DatabaseClient;
   subscription: SubscriptionRecord;
 }) {
   const subscriptionAmount = Number(subscription.amount_usd || 0);
@@ -199,6 +209,8 @@ export async function POST(request: Request) {
     );
 
     if (!isValidSignature) {
+      console.log("NOWPayments IPN rejected: Invalid signature.");
+
       return NextResponse.json(
         { error: "Invalid IPN signature." },
         { status: 401 }
@@ -280,6 +292,12 @@ export async function POST(request: Request) {
         supabase,
         subscription,
       });
+
+      return NextResponse.json({
+        success: true,
+        paymentStatus,
+        subscriptionStatus: "active",
+      });
     }
 
     if (failedStatuses.includes(paymentStatus)) {
@@ -299,13 +317,48 @@ export async function POST(request: Request) {
           { status: 500 }
         );
       }
+
+      return NextResponse.json({
+        success: true,
+        paymentStatus,
+        subscriptionStatus: "cancelled",
+      });
     }
+
+    if (pendingStatuses.includes(paymentStatus)) {
+      await supabase
+        .from("subscriptions")
+        .update({
+          nowpayments_payment_id: paymentId,
+          payment_status: paymentStatus,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", orderId);
+
+      return NextResponse.json({
+        success: true,
+        paymentStatus,
+        subscriptionStatus: "pending",
+      });
+    }
+
+    await supabase
+      .from("subscriptions")
+      .update({
+        nowpayments_payment_id: paymentId,
+        payment_status: paymentStatus,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", orderId);
 
     return NextResponse.json({
       success: true,
       paymentStatus,
+      subscriptionStatus: subscription.status,
     });
-  } catch {
+  } catch (error) {
+    console.log("NOWPayments IPN error:", error);
+
     return NextResponse.json(
       { error: "Webhook processing failed." },
       { status: 500 }
