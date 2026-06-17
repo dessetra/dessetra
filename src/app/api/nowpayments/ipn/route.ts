@@ -24,7 +24,27 @@ type WalletTransactionRecord = {
 
 type DatabaseClient = SupabaseClient;
 
-function safeCompareSignatures(receivedSignature: string, calculatedSignature: string) {
+function sortObject(value: unknown): unknown {
+  if (Array.isArray(value)) {
+    return value.map(sortObject);
+  }
+
+  if (value && typeof value === "object") {
+    return Object.keys(value as Record<string, unknown>)
+      .sort()
+      .reduce<Record<string, unknown>>((result, key) => {
+        result[key] = sortObject((value as Record<string, unknown>)[key]);
+        return result;
+      }, {});
+  }
+
+  return value;
+}
+
+function safeCompareSignatures(
+  receivedSignature: string,
+  calculatedSignature: string
+) {
   if (!receivedSignature || !calculatedSignature) return false;
 
   const receivedBuffer = Buffer.from(receivedSignature, "hex");
@@ -78,7 +98,8 @@ async function createReferralCommission({
 
   if (walletError) return;
 
-  const walletTransaction = walletTransactionData as WalletTransactionRecord | null;
+  const walletTransaction =
+    walletTransactionData as WalletTransactionRecord | null;
 
   await supabase.from("referral_commissions").upsert(
     {
@@ -170,7 +191,7 @@ export async function POST(request: Request) {
 
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
- let parsedBody: Record<string, unknown> = {};
+    let parsedBody: Record<string, unknown> = {};
 
     try {
       parsedBody = JSON.parse(rawBody);
@@ -218,9 +239,11 @@ export async function POST(request: Request) {
       );
     }
 
+    const sortedBody = sortObject(parsedBody);
+
     const calculatedSignature = crypto
       .createHmac("sha512", ipnSecret)
-      .update(rawBody)
+      .update(JSON.stringify(sortedBody))
       .digest("hex");
 
     const isValidSignature = safeCompareSignatures(
@@ -287,7 +310,8 @@ export async function POST(request: Request) {
           .from("nowpayments_ipn_logs")
           .update({
             processing_step: "subscription_not_found",
-            error_message: subscriptionError?.message || "Subscription not found.",
+            error_message:
+              subscriptionError?.message || "Subscription not found.",
           })
           .eq("id", logId);
       }
