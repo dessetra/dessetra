@@ -1,9 +1,10 @@
 import crypto from "crypto";
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { SupabaseClient, createClient } from "@supabase/supabase-js";
 
 const successfulStatuses = ["finished", "confirmed", "sending"];
 const failedStatuses = ["failed", "expired", "refunded"];
+const pendingStatuses = ["waiting", "confirming", "partially_paid"];
 
 type InvestmentRecord = {
   id: string;
@@ -16,20 +17,39 @@ type ReferralRecord = {
   referrer_id: string;
 };
 
+type WalletTransactionRecord = {
+  id: string;
+};
+
+type DatabaseClient = SupabaseClient;
+
+function sortObject(value: unknown): unknown {
+  if (Array.isArray(value)) {
+    return value.map(sortObject);
+  }
+
+  if (value && typeof value === "object") {
+    return Object.keys(value as Record<string, unknown>)
+      .sort()
+      .reduce<Record<string, unknown>>((result, key) => {
+        result[key] = sortObject((value as Record<string, unknown>)[key]);
+        return result;
+      }, {});
+  }
+
+  return value;
+}
+
 function safeCompareSignatures(
   receivedSignature: string,
   calculatedSignature: string
 ) {
-  if (!receivedSignature || !calculatedSignature) {
-    return false;
-  }
+  if (!receivedSignature || !calculatedSignature) return false;
 
   const receivedBuffer = Buffer.from(receivedSignature, "hex");
   const calculatedBuffer = Buffer.from(calculatedSignature, "hex");
 
-  if (receivedBuffer.length !== calculatedBuffer.length) {
-    return false;
-  }
+  if (receivedBuffer.length !== calculatedBuffer.length) return false;
 
   return crypto.timingSafeEqual(receivedBuffer, calculatedBuffer);
 }
@@ -38,14 +58,12 @@ async function processInvestmentReferralCommission({
   supabase,
   investment,
 }: {
-  supabase: any;
+  supabase: DatabaseClient;
   investment: InvestmentRecord;
 }) {
   const investmentAmount = Number(investment.tier_amount_usd || 0);
 
-  if (!investmentAmount || investmentAmount <= 0) {
-    return;
-  }
+  if (!investmentAmount || investmentAmount <= 0) return;
 
   const { data: referralData } = await supabase
     .from("referrals")
@@ -55,9 +73,7 @@ async function processInvestmentReferralCommission({
 
   const referral = referralData as ReferralRecord | null;
 
-  if (!referral?.referrer_id) {
-    return;
-  }
+  if (!referral?.referrer_id) return;
 
   const commissionAmount = Number((investmentAmount * 0.07).toFixed(2));
 
@@ -83,6 +99,9 @@ async function processInvestmentReferralCommission({
     .select("id")
     .maybeSingle();
 
+  const walletTransactionRecord =
+    walletTransaction as WalletTransactionRecord | null;
+
   await supabase.from("referral_commissions").upsert(
     {
       referrer_user_id: referral.referrer_id,
@@ -92,7 +111,7 @@ async function processInvestmentReferralCommission({
       amount_usd: commissionAmount,
       source_reference: "investments",
       source_id: investment.id,
-      wallet_transaction_id: walletTransaction?.id || null,
+      wallet_transaction_id: walletTransactionRecord?.id || null,
     },
     {
       onConflict:
@@ -118,9 +137,22 @@ export async function POST(request: Request) {
       );
     }
 
+    let body: Record<string, unknown> = {};
+
+    try {
+      body = JSON.parse(rawBody);
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid investment IPN JSON payload." },
+        { status: 400 }
+      );
+    }
+
+    const sortedBody = sortObject(body);
+
     const calculatedSignature = crypto
       .createHmac("sha512", ipnSecret)
-      .update(rawBody)
+      .update(JSON.stringify(sortedBody))
       .digest("hex");
 
     const isValidSignature = safeCompareSignatures(
@@ -135,10 +167,10 @@ export async function POST(request: Request) {
       );
     }
 
-    const body = JSON.parse(rawBody);
-
     const paymentId = String(body.payment_id || "");
-    const paymentStatus = String(body.payment_status || "");
+    const paymentStatus = String(body.payment_status || "")
+      .trim()
+      .toLowerCase();
     const orderId = String(body.order_id || "");
 
     if (!paymentId || !paymentStatus || !orderId) {
@@ -204,6 +236,12 @@ export async function POST(request: Request) {
         supabase,
         investment,
       });
+
+      return NextResponse.json({
+        success: true,
+        paymentStatus,
+        investmentStatus: "active",
+      });
     }
 
     if (failedStatuses.includes(paymentStatus)) {
@@ -232,11 +270,62 @@ export async function POST(request: Request) {
           updated_at: new Date().toISOString(),
         })
         .eq("investment_id", orderId);
+
+      return NextResponse.json({
+        success: true,
+        paymentStatus,
+        investmentStatus: "cancelled",
+      });
     }
+
+    if (pendingStatuses.includes(paymentStatus)) {
+      await supabase
+        .from("investments")
+        .update({
+          nowpayments_payment_id: paymentId,
+          payment_status: paymentStatus,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", orderId);
+
+      await supabase
+        .from("investment_payments")
+        .update({
+          payment_status: paymentStatus,
+          nowpayments_payment_id: paymentId,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("investment_id", orderId);
+
+      return NextResponse.json({
+        success: true,
+        paymentStatus,
+        investmentStatus: "pending",
+      });
+    }
+
+    await supabase
+      .from("investments")
+      .update({
+        nowpayments_payment_id: paymentId,
+        payment_status: paymentStatus,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", orderId);
+
+    await supabase
+      .from("investment_payments")
+      .update({
+        payment_status: paymentStatus,
+        nowpayments_payment_id: paymentId,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("investment_id", orderId);
 
     return NextResponse.json({
       success: true,
       paymentStatus,
+      investmentStatus: investment.status,
     });
   } catch {
     return NextResponse.json(

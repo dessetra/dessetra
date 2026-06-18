@@ -68,7 +68,7 @@ export async function POST(request: Request) {
         pay_currency: payCurrency,
         order_id: investment.id,
         order_description: `Dessetra Founder Investment - $${investment.tier_amount_usd}`,
-        ipn_callback_url: `${siteUrl}/api/nowpayments/investment-ipn`,
+        ipn_callback_url: `${siteUrl}/api/nowpayments/ipn`,
         success_url: `${siteUrl}/dashboard/investor`,
         cancel_url: `${siteUrl}/dashboard/invest`,
       }),
