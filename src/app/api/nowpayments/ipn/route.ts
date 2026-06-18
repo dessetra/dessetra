@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { SupabaseClient, createClient } from "@supabase/supabase-js";
 import { sendEmail } from "@/lib/email";
 import { buildSubscriptionReceipt } from "@/lib/subscriptionReceipt";
+import { buildInvestmentReceipt } from "@/lib/investmentReceipt";
 
 export const runtime = "nodejs";
 
@@ -23,6 +24,9 @@ type InvestmentRecord = {
   id: string;
   user_id: string;
   tier_amount_usd: number | string;
+  target_return_usd?: number | string | null;
+  dsn_tokens?: number | string | null;
+  next_meeting_at?: string | null;
   status: string;
 };
 
@@ -123,6 +127,49 @@ async function sendSubscriptionReceiptEmail({
       month: "long",
       day: "numeric",
     }),
+  });
+
+  await sendEmail({
+    to: profile.email,
+    subject: receipt.subject,
+    html: receipt.html,
+  });
+}
+
+async function sendInvestmentReceiptEmail({
+  supabase,
+  investment,
+  paymentId,
+  activatedAt,
+}: {
+  supabase: DatabaseClient;
+  investment: InvestmentRecord;
+  paymentId: string;
+  activatedAt: Date;
+}) {
+  const { data: profileData } = await supabase
+    .from("profiles")
+    .select("full_name, email")
+    .eq("id", investment.user_id)
+    .maybeSingle();
+
+  const profile = profileData as ProfileRecord | null;
+
+  if (!profile?.email) return;
+
+  const receipt = buildInvestmentReceipt({
+    fullName: profile.full_name || "Dessetra Investor",
+    email: profile.email,
+    investmentAmount: Number(investment.tier_amount_usd || 0),
+    targetReturn: Number(investment.target_return_usd || 0),
+    dsnTokens: Number(investment.dsn_tokens || 0),
+    paymentId,
+    activatedAt: activatedAt.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
+    nextMeetingAt: investment.next_meeting_at || null,
   });
 
   await sendEmail({
@@ -658,18 +705,38 @@ export async function POST(request: Request) {
         .eq("investment_id", orderId);
 
       await processInvestmentReferralCommission({
-        supabase,
-        investment,
-      });
+  supabase,
+  investment,
+});
 
-      await updateIpnLog({
-        supabase,
-        logId,
-        values: {
-          processing_step: "investment_activated",
-          error_message: null,
-        },
-      });
+try {
+  await sendInvestmentReceiptEmail({
+    supabase,
+    investment,
+    paymentId,
+    activatedAt: new Date(),
+  });
+
+  await updateIpnLog({
+    supabase,
+    logId,
+    values: {
+      processing_step: "investment_activated_receipt_sent",
+      error_message: null,
+    },
+  });
+} catch (emailError) {
+  console.log("Investment receipt email failed:", emailError);
+
+  await updateIpnLog({
+    supabase,
+    logId,
+    values: {
+      processing_step: "investment_activated_receipt_failed",
+      error_message: "Investment activated, but receipt email failed.",
+    },
+  });
+}
 
       return NextResponse.json({
         success: true,
