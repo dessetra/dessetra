@@ -83,7 +83,7 @@ export default function FounderWithdrawalsPage() {
 
       const searchable = `${withdrawal.user?.full_name || ""} ${
         withdrawal.user?.email || ""
-      } ${withdrawal.wallet_address || ""}`.toLowerCase();
+      } ${withdrawal.user_id || ""} ${withdrawal.wallet_address || ""}`.toLowerCase();
 
       const matchesSearch = searchable.includes(searchTerm.toLowerCase());
 
@@ -110,19 +110,46 @@ export default function FounderWithdrawalsPage() {
     });
   };
 
+  const copyText = async (text: string, successMessage: string) => {
+    if (!text) {
+      toast.error("Nothing to copy.");
+      return;
+    }
+
+    await navigator.clipboard.writeText(text);
+    toast.success(successMessage);
+  };
+
   const updateWithdrawal = async (
-    withdrawalId: string,
+    withdrawal: WithdrawalRequest,
     status: "approved" | "rejected"
   ) => {
-    const adminNote = adminNotes[withdrawalId] || "";
-    const txHash = txHashes[withdrawalId] || "";
+    const adminNote = adminNotes[withdrawal.id] || "";
+    const txHash = txHashes[withdrawal.id] || "";
 
     if (status === "approved" && !txHash.trim()) {
       toast.error("Please enter the blockchain transaction hash before approval.");
       return;
     }
 
-    setProcessingId(withdrawalId);
+    const confirmationMessage =
+      status === "approved"
+        ? `Confirm approval?\n\nMake sure you have already sent ${formatMoney(
+            withdrawal.amount
+          )} ${withdrawal.currency || "USDT_BEP20"} to:\n\n${
+            withdrawal.wallet_address
+          }\n\nTX Hash:\n${txHash}`
+        : `Confirm rejection?\n\nThis will reject ${formatMoney(
+            withdrawal.amount
+          )} withdrawal request for ${
+            withdrawal.user?.full_name || "this user"
+          }.`;
+
+    const confirmed = window.confirm(confirmationMessage);
+
+    if (!confirmed) return;
+
+    setProcessingId(withdrawal.id);
 
     const {
       data: { session },
@@ -141,7 +168,7 @@ export default function FounderWithdrawalsPage() {
         Authorization: `Bearer ${session.access_token}`,
       },
       body: JSON.stringify({
-        withdrawalId,
+        withdrawalId: withdrawal.id,
         status,
         adminNote,
         txHash,
@@ -204,7 +231,7 @@ export default function FounderWithdrawalsPage() {
         <div className="mt-6 rounded-2xl bg-white p-5 text-[#071A3D] shadow-lg">
           <input
             type="text"
-            placeholder="Search by name, email, or wallet address..."
+            placeholder="Search by name, email, user ID, or wallet address..."
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
             className="w-full rounded-lg border border-gray-300 p-3 outline-none"
@@ -240,6 +267,10 @@ export default function FounderWithdrawalsPage() {
                         {withdrawal.user?.country || "Unknown country"}
                       </p>
 
+                      <p className="mt-2 break-all text-xs text-gray-500">
+                        <strong>User ID:</strong> {withdrawal.user_id}
+                      </p>
+
                       <p className="mt-3 text-2xl font-bold text-[#071A3D]">
                         {formatMoney(withdrawal.amount)}{" "}
                         {withdrawal.currency || "USDT_BEP20"}
@@ -269,9 +300,24 @@ export default function FounderWithdrawalsPage() {
                       Destination Wallet
                     </p>
 
-                    <p className="mt-2 break-all rounded-lg bg-gray-100 p-3 font-mono text-sm">
-                      {withdrawal.wallet_address}
-                    </p>
+                    <div className="mt-2 rounded-lg bg-gray-100 p-3">
+                      <p className="break-all font-mono text-sm">
+                        {withdrawal.wallet_address}
+                      </p>
+
+                      <button
+                        type="button"
+                        onClick={() =>
+                          copyText(
+                            withdrawal.wallet_address,
+                            "Wallet address copied."
+                          )
+                        }
+                        className="mt-3 rounded-lg bg-[#0D2A5E] px-4 py-2 text-sm font-semibold text-white"
+                      >
+                        Copy Wallet Address
+                      </button>
+                    </div>
                   </div>
 
                   {withdrawal.status === "pending" ? (
@@ -316,9 +362,7 @@ export default function FounderWithdrawalsPage() {
 
                       <div className="flex gap-3 md:col-span-2">
                         <button
-                          onClick={() =>
-                            updateWithdrawal(withdrawal.id, "approved")
-                          }
+                          onClick={() => updateWithdrawal(withdrawal, "approved")}
                           disabled={processingId === withdrawal.id}
                           className="flex-1 rounded-lg bg-green-600 py-3 font-semibold text-white disabled:opacity-60"
                         >
@@ -328,9 +372,7 @@ export default function FounderWithdrawalsPage() {
                         </button>
 
                         <button
-                          onClick={() =>
-                            updateWithdrawal(withdrawal.id, "rejected")
-                          }
+                          onClick={() => updateWithdrawal(withdrawal, "rejected")}
                           disabled={processingId === withdrawal.id}
                           className="flex-1 rounded-lg bg-red-600 py-3 font-semibold text-white disabled:opacity-60"
                         >
@@ -348,9 +390,21 @@ export default function FounderWithdrawalsPage() {
                       </p>
 
                       {withdrawal.tx_hash && (
-                        <p className="mt-2 break-all">
-                          <strong>TX Hash:</strong> {withdrawal.tx_hash}
-                        </p>
+                        <div className="mt-2">
+                          <p className="break-all">
+                            <strong>TX Hash:</strong> {withdrawal.tx_hash}
+                          </p>
+
+                          <button
+                            type="button"
+                            onClick={() =>
+                              copyText(withdrawal.tx_hash || "", "TX hash copied.")
+                            }
+                            className="mt-3 rounded-lg bg-[#0D2A5E] px-4 py-2 text-sm font-semibold text-white"
+                          >
+                            Copy TX Hash
+                          </button>
+                        </div>
                       )}
 
                       {withdrawal.admin_note && (
