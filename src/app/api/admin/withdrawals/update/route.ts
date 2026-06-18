@@ -56,12 +56,7 @@ export async function POST(request: Request) {
 
     const { adminClient, founderId } = verified;
 
-    const {
-      withdrawalId,
-      status,
-      adminNote,
-      txHash,
-    } = await request.json();
+    const { withdrawalId, status, adminNote, txHash } = await request.json();
 
     if (!withdrawalId) {
       return NextResponse.json(
@@ -71,8 +66,12 @@ export async function POST(request: Request) {
     }
 
     if (!["approved", "rejected"].includes(status)) {
+      return NextResponse.json({ error: "Invalid status." }, { status: 400 });
+    }
+
+    if (status === "approved" && !String(txHash || "").trim()) {
       return NextResponse.json(
-        { error: "Invalid status." },
+        { error: "Transaction hash is required before approving withdrawal." },
         { status: 400 }
       );
     }
@@ -92,42 +91,60 @@ export async function POST(request: Request) {
 
     if (withdrawal.status !== "pending") {
       return NextResponse.json(
-        {
-          error: "This withdrawal has already been processed.",
-        },
+        { error: "This withdrawal has already been processed." },
         { status: 400 }
       );
     }
 
-    const { error } = await adminClient
+    const { error: withdrawalUpdateError } = await adminClient
       .from("withdrawal_requests")
       .update({
         status,
         admin_note: adminNote || null,
-        tx_hash: txHash || null,
+        tx_hash: status === "approved" ? String(txHash).trim() : null,
         admin_id: founderId,
         processed_at: new Date().toISOString(),
       })
       .eq("id", withdrawalId);
 
-    if (error) {
+    if (withdrawalUpdateError) {
       return NextResponse.json(
-        { error: error.message },
+        { error: withdrawalUpdateError.message },
+        { status: 500 }
+      );
+    }
+
+    const walletStatus = status === "approved" ? "completed" : "cancelled";
+
+    const { error: walletUpdateError } = await adminClient
+      .from("wallet_transactions")
+      .update({
+        status: walletStatus,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("reference_table", "withdrawal_requests")
+      .eq("reference_id", withdrawalId)
+      .eq("transaction_type", "withdrawal")
+      .eq("direction", "debit");
+
+    if (walletUpdateError) {
+      return NextResponse.json(
+        { error: walletUpdateError.message },
         { status: 500 }
       );
     }
 
     return NextResponse.json({
       success: true,
+      message:
+        status === "approved"
+          ? "Withdrawal approved successfully."
+          : "Withdrawal rejected successfully.",
     });
   } catch {
     return NextResponse.json(
-      {
-        error: "Unable to update withdrawal.",
-      },
-      {
-        status: 500,
-      }
+      { error: "Unable to update withdrawal." },
+      { status: 500 }
     );
   }
 }
