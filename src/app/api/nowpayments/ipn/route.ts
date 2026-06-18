@@ -1,6 +1,10 @@
 import crypto from "crypto";
 import { NextResponse } from "next/server";
 import { SupabaseClient, createClient } from "@supabase/supabase-js";
+import { sendEmail } from "@/lib/email";
+import { buildSubscriptionReceipt } from "@/lib/subscriptionReceipt";
+
+export const runtime = "nodejs";
 
 const successfulStatuses = ["finished", "confirmed", "sending"];
 const failedStatuses = ["failed", "expired", "refunded"];
@@ -11,6 +15,7 @@ type SubscriptionRecord = {
   user_id: string;
   amount_usd: number | string;
   billing_cycle: "monthly" | "six_months" | string;
+  plan_name?: string | null;
   status: string;
 };
 
@@ -27,6 +32,11 @@ type ReferralRecord = {
 
 type WalletTransactionRecord = {
   id: string;
+};
+
+type ProfileRecord = {
+  full_name: string | null;
+  email: string | null;
 };
 
 type DatabaseClient = SupabaseClient;
@@ -58,6 +68,68 @@ function safeCompareSignatures(
   if (receivedBuffer.length !== calculatedBuffer.length) return false;
 
   return crypto.timingSafeEqual(receivedBuffer, calculatedBuffer);
+}
+
+async function updateIpnLog({
+  supabase,
+  logId,
+  values,
+}: {
+  supabase: DatabaseClient;
+  logId: string | null;
+  values: Record<string, string | boolean | null>;
+}) {
+  if (!logId) return;
+  await supabase.from("nowpayments_ipn_logs").update(values).eq("id", logId);
+}
+
+async function sendSubscriptionReceiptEmail({
+  supabase,
+  subscription,
+  paymentId,
+  startDate,
+  expiryDate,
+}: {
+  supabase: DatabaseClient;
+  subscription: SubscriptionRecord;
+  paymentId: string;
+  startDate: Date;
+  expiryDate: Date;
+}) {
+  const { data: profileData } = await supabase
+    .from("profiles")
+    .select("full_name, email")
+    .eq("id", subscription.user_id)
+    .maybeSingle();
+
+  const profile = profileData as ProfileRecord | null;
+
+  if (!profile?.email) return;
+
+  const receipt = buildSubscriptionReceipt({
+    fullName: profile.full_name || "Dessetra Member",
+    email: profile.email,
+    planName: subscription.plan_name || "Premium Access",
+    billingCycle: subscription.billing_cycle,
+    amountUsd: Number(subscription.amount_usd || 0),
+    paymentId,
+    activatedAt: startDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
+    expiresAt: expiryDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
+  });
+
+  await sendEmail({
+    to: profile.email,
+    subject: receipt.subject,
+    html: receipt.html,
+  });
 }
 
 async function createReferralCommission({
@@ -176,7 +248,8 @@ async function processSubscriptionReferralCommissions({
     amountUsd: Number((subscriptionAmount * 0.05).toFixed(2)),
     sourceReference: "subscriptions",
     sourceId: subscription.id,
-    description: "5% second-generation referral commission from subscription payment",
+    description:
+      "5% second-generation referral commission from subscription payment",
   });
 }
 
@@ -210,20 +283,6 @@ async function processInvestmentReferralCommission({
     sourceId: investment.id,
     description: "7% referral commission from investment payment",
   });
-}
-
-async function updateIpnLog({
-  supabase,
-  logId,
-  values,
-}: {
-  supabase: DatabaseClient;
-  logId: string | null;
-  values: Record<string, string | boolean | null>;
-}) {
-  if (!logId) return;
-
-  await supabase.from("nowpayments_ipn_logs").update(values).eq("id", logId);
 }
 
 export async function POST(request: Request) {
@@ -345,27 +404,11 @@ export async function POST(request: Request) {
       );
     }
 
-    const { data: subscriptionData, error: subscriptionError } = await supabase
+    const { data: subscriptionData } = await supabase
       .from("subscriptions")
       .select("*")
       .eq("id", orderId)
       .maybeSingle();
-
-    if (subscriptionError) {
-      await updateIpnLog({
-        supabase,
-        logId,
-        values: {
-          processing_step: "subscription_lookup_failed",
-          error_message: subscriptionError.message,
-        },
-      });
-
-      return NextResponse.json(
-        { error: subscriptionError.message },
-        { status: 500 }
-      );
-    }
 
     const subscription = subscriptionData as SubscriptionRecord | null;
 
@@ -443,14 +486,36 @@ export async function POST(request: Request) {
           subscription,
         });
 
-        await updateIpnLog({
-          supabase,
-          logId,
-          values: {
-            processing_step: "subscription_activated",
-            error_message: null,
-          },
-        });
+        try {
+          await sendSubscriptionReceiptEmail({
+            supabase,
+            subscription,
+            paymentId,
+            startDate,
+            expiryDate,
+          });
+
+          await updateIpnLog({
+            supabase,
+            logId,
+            values: {
+              processing_step: "subscription_activated_receipt_sent",
+              error_message: null,
+            },
+          });
+        } catch (emailError) {
+          console.log("Subscription receipt email failed:", emailError);
+
+          await updateIpnLog({
+            supabase,
+            logId,
+            values: {
+              processing_step: "subscription_activated_receipt_failed",
+              error_message:
+                "Subscription activated, but receipt email failed.",
+            },
+          });
+        }
 
         return NextResponse.json({
           success: true,
@@ -514,27 +579,11 @@ export async function POST(request: Request) {
       });
     }
 
-    const { data: investmentData, error: investmentError } = await supabase
+    const { data: investmentData } = await supabase
       .from("investments")
       .select("*")
       .eq("id", orderId)
       .maybeSingle();
-
-    if (investmentError) {
-      await updateIpnLog({
-        supabase,
-        logId,
-        values: {
-          processing_step: "investment_lookup_failed",
-          error_message: investmentError.message,
-        },
-      });
-
-      return NextResponse.json(
-        { error: investmentError.message },
-        { status: 500 }
-      );
-    }
 
     const investment = investmentData as InvestmentRecord | null;
 
