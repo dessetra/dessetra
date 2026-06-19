@@ -125,51 +125,103 @@ export default function WalletPage() {
 
   useEffect(() => {
     queueMicrotask(() => {
-    void loadWalletData();
+      void loadWalletData();
     });
   }, []);
 
+  const getAccessToken = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    return session?.access_token || null;
+  };
+
   const saveWalletAddress = async () => {
-    if (!walletAddress.trim()) {
+    const cleanWalletAddress = walletAddress.trim();
+
+    if (!cleanWalletAddress) {
       toast.error("Please enter your USDT BEP20 wallet address.");
+      return;
+    }
+
+    if (cleanWalletAddress.length < 20) {
+      toast.error("Please enter a valid USDT BEP20 wallet address.");
       return;
     }
 
     setSavingWallet(true);
 
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+    const accessToken = await getAccessToken();
 
-    if (!user) {
+    if (!accessToken) {
       toast.error("Please login again.");
       setSavingWallet(false);
       return;
     }
 
-    const { error } = await supabase
-      .from("profiles")
-      .update({
-        wallet_address: walletAddress.trim(),
-        updated_at: new Date().toISOString(),
-      })
-      .eq("id", user.id);
+    const otpResponse = await fetch("/api/wallet/send-otp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        purpose: "wallet_save",
+        walletAddress: cleanWalletAddress,
+      }),
+    });
 
-    setSavingWallet(false);
+    const otpResult = await otpResponse.json();
 
-    if (error) {
-      toast.error(error.message);
+    if (!otpResponse.ok) {
+      toast.error(otpResult.error || "Unable to send verification code.");
+      setSavingWallet(false);
       return;
     }
 
-    toast.success("USDT BEP20 wallet address saved successfully.");
+    toast.success("Verification code sent to your email.");
+
+    const otpCode = window.prompt(
+      "Enter the 6-digit code sent to your email to save this wallet address."
+    );
+
+    if (!otpCode) {
+      toast.error("Wallet verification cancelled.");
+      setSavingWallet(false);
+      return;
+    }
+
+    const saveResponse = await fetch("/api/wallet/save-wallet", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        otpCode: otpCode.trim(),
+      }),
+    });
+
+    const saveResult = await saveResponse.json();
+
+    setSavingWallet(false);
+
+    if (!saveResponse.ok) {
+      toast.error(saveResult.error || "Unable to verify wallet address.");
+      return;
+    }
+
+    setWalletAddress(saveResult.walletAddress || cleanWalletAddress);
+    toast.success("Wallet address verified and saved successfully.");
+    await loadWalletData();
   };
 
   const requestWithdrawal = async () => {
     const amount = Number(withdrawAmount);
 
     if (!walletAddress.trim()) {
-      toast.error("Please save your USDT BEP20 wallet address first.");
+      toast.error("Please verify and save your USDT BEP20 wallet address first.");
       return;
     }
 
@@ -190,25 +242,54 @@ export default function WalletPage() {
 
     setRequestingWithdrawal(true);
 
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
+    const accessToken = await getAccessToken();
 
-    if (!session?.access_token) {
+    if (!accessToken) {
       toast.error("Please login again.");
       setRequestingWithdrawal(false);
       return;
     }
 
-    const response = await fetch("/api/withdrawals/request", {
+    const otpResponse = await fetch("/api/wallet/send-otp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${session.access_token}`,
+        Authorization: `Bearer ${accessToken}`,
       },
       body: JSON.stringify({
+        purpose: "withdrawal",
         amount,
-        walletAddress: walletAddress.trim(),
+      }),
+    });
+
+    const otpResult = await otpResponse.json();
+
+    if (!otpResponse.ok) {
+      toast.error(otpResult.error || "Unable to send verification code.");
+      setRequestingWithdrawal(false);
+      return;
+    }
+
+    toast.success("Withdrawal verification code sent to your email.");
+
+    const otpCode = window.prompt(
+      "Enter the 6-digit code sent to your email to submit this withdrawal request."
+    );
+
+    if (!otpCode) {
+      toast.error("Withdrawal verification cancelled.");
+      setRequestingWithdrawal(false);
+      return;
+    }
+
+    const response = await fetch("/api/withdrawals/request-with-otp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        otpCode: otpCode.trim(),
       }),
     });
 
@@ -245,8 +326,8 @@ export default function WalletPage() {
       <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
         <h1 className="text-2xl font-bold md:text-3xl">Wallet</h1>
         <p className="mt-2 text-sm text-gray-300 md:text-base">
-          Manage your USDT BEP20 wallet address, referral earnings, investment
-          earnings, and withdrawal requests.
+          Manage your verified USDT BEP20 wallet address, referral earnings,
+          investment earnings, and withdrawal requests.
         </p>
       </div>
 
@@ -298,7 +379,8 @@ export default function WalletPage() {
         <p className="mt-2 text-sm leading-7">
           Only submit a <strong>USDT BEP20</strong> wallet address. ERC20,
           TRC20, Solana, Polygon, Bitcoin, or other network addresses are not
-          supported. Withdrawals sent to unsupported networks may be lost.
+          supported. Wallet saving and withdrawal requests require email
+          verification.
         </p>
       </div>
 
@@ -308,6 +390,7 @@ export default function WalletPage() {
 
           <p className="mt-2 text-sm text-gray-500">
             Add the USDT BEP20 address where approved payouts should be sent.
+            A verification code will be sent to your email before saving.
           </p>
 
           <input
@@ -327,7 +410,7 @@ export default function WalletPage() {
             disabled={savingWallet || loading}
             className="mt-5 w-full rounded-lg bg-[#D4AF37] py-3 font-semibold disabled:opacity-60"
           >
-            {savingWallet ? "Saving..." : "Save USDT BEP20 Address"}
+            {savingWallet ? "Verifying..." : "Verify & Save Wallet Address"}
           </button>
         </div>
 
@@ -349,6 +432,9 @@ export default function WalletPage() {
             </p>
             <p className="mt-1">
               Network: <strong>BEP20 only</strong>
+            </p>
+            <p className="mt-1">
+              Verification: <strong>Email OTP required</strong>
             </p>
           </div>
 
@@ -372,7 +458,9 @@ export default function WalletPage() {
             disabled={requestingWithdrawal || loading || !canWithdraw}
             className="mt-5 w-full rounded-lg bg-[#1E88E5] py-3 font-semibold text-white disabled:opacity-60"
           >
-            {requestingWithdrawal ? "Submitting..." : "Request Withdrawal"}
+            {requestingWithdrawal
+              ? "Verifying..."
+              : "Verify & Request Withdrawal"}
           </button>
         </div>
       </div>
