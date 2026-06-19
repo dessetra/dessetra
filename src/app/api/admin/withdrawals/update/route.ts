@@ -1,5 +1,30 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { sendEmail } from "@/lib/email";
+import {
+  buildWithdrawalApprovedEmail,
+  buildWithdrawalRejectedEmail,
+} from "@/lib/withdrawalEmail";
+
+type DatabaseClient = {
+  from: ReturnType<typeof createClient>["from"];
+};
+type WithdrawalStatus = "approved" | "rejected";
+
+type WithdrawalRecord = {
+  id: string;
+  user_id: string;
+  amount: number | string;
+  currency: string | null;
+  network: string | null;
+  wallet_address: string;
+  status: string;
+};
+
+type ProfileRecord = {
+  full_name: string | null;
+  email: string | null;
+};
 
 async function verifyFounder(request: Request) {
   const authHeader = request.headers.get("authorization") || "";
@@ -43,6 +68,56 @@ async function verifyFounder(request: Request) {
   };
 }
 
+async function sendWithdrawalStatusEmail({
+  adminClient,
+  withdrawal,
+  status,
+  adminNote,
+  txHash,
+}: {
+  adminClient: DatabaseClient;
+  withdrawal: WithdrawalRecord;
+  status: WithdrawalStatus;
+  adminNote: string;
+  txHash: string;
+}) {
+  const { data: profileData } = await adminClient
+    .from("profiles")
+    .select("full_name, email")
+    .eq("id", withdrawal.user_id)
+    .maybeSingle();
+
+  const profile = profileData as ProfileRecord | null;
+
+  if (!profile?.email) return;
+
+  const emailContent =
+    status === "approved"
+      ? buildWithdrawalApprovedEmail({
+          fullName: profile.full_name || "Dessetra Member",
+          amount: Number(withdrawal.amount || 0),
+          currency: withdrawal.currency || "USDT_BEP20",
+          network: withdrawal.network || "BEP20",
+          walletAddress: withdrawal.wallet_address,
+          txHash,
+          adminNote,
+        })
+      : buildWithdrawalRejectedEmail({
+          fullName: profile.full_name || "Dessetra Member",
+          amount: Number(withdrawal.amount || 0),
+          currency: withdrawal.currency || "USDT_BEP20",
+          network: withdrawal.network || "BEP20",
+          walletAddress: withdrawal.wallet_address,
+          adminNote,
+        });
+
+  await sendEmail({
+    to: profile.email,
+    subject: emailContent.subject,
+    html: emailContent.html,
+  });
+}
+
 export async function POST(request: Request) {
   try {
     const verified = await verifyFounder(request);
@@ -69,18 +144,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid status." }, { status: 400 });
     }
 
-    if (status === "approved" && !String(txHash || "").trim()) {
+    const cleanStatus = status as WithdrawalStatus;
+    const cleanAdminNote = String(adminNote || "").trim();
+    const cleanTxHash = String(txHash || "").trim();
+
+    if (cleanStatus === "approved" && !cleanTxHash) {
       return NextResponse.json(
         { error: "Transaction hash is required before approving withdrawal." },
         { status: 400 }
       );
     }
 
-    const { data: withdrawal } = await adminClient
+    const { data: withdrawalData } = await adminClient
       .from("withdrawal_requests")
       .select("*")
       .eq("id", withdrawalId)
       .maybeSingle();
+
+    const withdrawal = withdrawalData as WithdrawalRecord | null;
 
     if (!withdrawal) {
       return NextResponse.json(
@@ -99,9 +180,9 @@ export async function POST(request: Request) {
     const { error: withdrawalUpdateError } = await adminClient
       .from("withdrawal_requests")
       .update({
-        status,
-        admin_note: adminNote || null,
-        tx_hash: status === "approved" ? String(txHash).trim() : null,
+        status: cleanStatus,
+        admin_note: cleanAdminNote || null,
+        tx_hash: cleanStatus === "approved" ? cleanTxHash : null,
         admin_id: founderId,
         processed_at: new Date().toISOString(),
       })
@@ -114,7 +195,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const walletStatus = status === "approved" ? "completed" : "cancelled";
+    const walletStatus =
+      cleanStatus === "approved" ? "completed" : "cancelled";
 
     const { error: walletUpdateError } = await adminClient
       .from("wallet_transactions")
@@ -134,10 +216,22 @@ export async function POST(request: Request) {
       );
     }
 
+    try {
+      await sendWithdrawalStatusEmail({
+        adminClient,
+        withdrawal,
+        status: cleanStatus,
+        adminNote: cleanAdminNote,
+        txHash: cleanTxHash,
+      });
+    } catch (emailError) {
+      console.log("Withdrawal email failed:", emailError);
+    }
+
     return NextResponse.json({
       success: true,
       message:
-        status === "approved"
+        cleanStatus === "approved"
           ? "Withdrawal approved successfully."
           : "Withdrawal rejected successfully.",
     });

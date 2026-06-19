@@ -19,6 +19,10 @@ const navLinks = [
   { label: "Earnings", href: "/dashboard/earnings" },
   { label: "Wallet", href: "/dashboard/wallet" },
   { label: "Profile", href: "/dashboard/profile" },
+  {
+    label: "Support",
+    href: "mailto:support@dessetra.com?subject=Dessetra%20Support%20Request",
+  },
 ];
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
