@@ -40,6 +40,11 @@ export default function WalletPage() {
   const [loading, setLoading] = useState(true);
   const [savingWallet, setSavingWallet] = useState(false);
   const [requestingWithdrawal, setRequestingWithdrawal] = useState(false);
+  const [showWalletOtp, setShowWalletOtp] = useState(false);
+  const [walletOtpCode, setWalletOtpCode] = useState("");
+
+  const [showWithdrawalOtp, setShowWithdrawalOtp] = useState(false);
+  const [withdrawalOtpCode, setWithdrawalOtpCode] = useState("");
 
   const availableBalance = useMemo(() => {
     return transactions.reduce((sum, transaction) => {
@@ -137,175 +142,199 @@ export default function WalletPage() {
     return session?.access_token || null;
   };
 
-  const saveWalletAddress = async () => {
-    const cleanWalletAddress = walletAddress.trim();
+ const saveWalletAddress = async () => {
+  const cleanWalletAddress = walletAddress.trim();
 
-    if (!cleanWalletAddress) {
-      toast.error("Please enter your USDT BEP20 wallet address.");
-      return;
-    }
+  if (!cleanWalletAddress) {
+    toast.error("Please enter your USDT BEP20 wallet address.");
+    return;
+  }
 
-    if (cleanWalletAddress.length < 20) {
-      toast.error("Please enter a valid USDT BEP20 wallet address.");
-      return;
-    }
+  if (cleanWalletAddress.length < 20) {
+    toast.error("Please enter a valid USDT BEP20 wallet address.");
+    return;
+  }
 
-    setSavingWallet(true);
+  setSavingWallet(true);
 
-    const accessToken = await getAccessToken();
+  const accessToken = await getAccessToken();
 
-    if (!accessToken) {
-      toast.error("Please login again.");
-      setSavingWallet(false);
-      return;
-    }
-
-    const otpResponse = await fetch("/api/wallet/send-otp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({
-        purpose: "wallet_save",
-        walletAddress: cleanWalletAddress,
-      }),
-    });
-
-    const otpResult = await otpResponse.json();
-
-    if (!otpResponse.ok) {
-      toast.error(otpResult.error || "Unable to send verification code.");
-      setSavingWallet(false);
-      return;
-    }
-
-    toast.success("Verification code sent to your email.");
-
-    const otpCode = window.prompt(
-      "Enter the 6-digit code sent to your email to save this wallet address."
-    );
-
-    if (!otpCode) {
-      toast.error("Wallet verification cancelled.");
-      setSavingWallet(false);
-      return;
-    }
-
-    const saveResponse = await fetch("/api/wallet/save-wallet", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({
-        otpCode: otpCode.trim(),
-      }),
-    });
-
-    const saveResult = await saveResponse.json();
-
+  if (!accessToken) {
+    toast.error("Please login again.");
     setSavingWallet(false);
+    return;
+  }
 
-    if (!saveResponse.ok) {
-      toast.error(saveResult.error || "Unable to verify wallet address.");
-      return;
-    }
+  const otpResponse = await fetch("/api/wallet/send-otp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      purpose: "wallet_save",
+      walletAddress: cleanWalletAddress,
+    }),
+  });
 
-    setWalletAddress(saveResult.walletAddress || cleanWalletAddress);
-    toast.success("Wallet address verified and saved successfully.");
-    await loadWalletData();
-  };
+  const otpResult = await otpResponse.json();
 
-  const requestWithdrawal = async () => {
-    const amount = Number(withdrawAmount);
+  setSavingWallet(false);
 
-    if (!walletAddress.trim()) {
-      toast.error("Please verify and save your USDT BEP20 wallet address first.");
-      return;
-    }
+  if (!otpResponse.ok) {
+    toast.error(otpResult.error || "Unable to send verification code.");
+    return;
+  }
 
-    if (!amount || amount <= 0) {
-      toast.error("Please enter a valid withdrawal amount.");
-      return;
-    }
+  setWalletOtpCode("");
+  setShowWalletOtp(true);
+  toast.success("Verification code sent to your email.");
+};
 
-    if (amount < MINIMUM_WITHDRAWAL) {
-      toast.error("Minimum withdrawal amount is $20.");
-      return;
-    }
+const confirmWalletOtp = async () => {
+  if (!walletOtpCode.trim()) {
+    toast.error("Please enter the verification code.");
+    return;
+  }
 
-    if (amount > availableBalance) {
-      toast.error("Insufficient wallet balance.");
-      return;
-    }
+  setSavingWallet(true);
 
-    setRequestingWithdrawal(true);
+  const accessToken = await getAccessToken();
 
-    const accessToken = await getAccessToken();
+  if (!accessToken) {
+    toast.error("Please login again.");
+    setSavingWallet(false);
+    return;
+  }
 
-    if (!accessToken) {
-      toast.error("Please login again.");
-      setRequestingWithdrawal(false);
-      return;
-    }
+  const saveResponse = await fetch("/api/wallet/save-wallet", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      otpCode: walletOtpCode.trim(),
+    }),
+  });
 
-    const otpResponse = await fetch("/api/wallet/send-otp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({
-        purpose: "withdrawal",
-        amount,
-      }),
-    });
+  const saveResult = await saveResponse.json();
 
-    const otpResult = await otpResponse.json();
+  setSavingWallet(false);
 
-    if (!otpResponse.ok) {
-      toast.error(otpResult.error || "Unable to send verification code.");
-      setRequestingWithdrawal(false);
-      return;
-    }
+  if (!saveResponse.ok) {
+    toast.error(saveResult.error || "Unable to verify wallet address.");
+    return;
+  }
 
-    toast.success("Withdrawal verification code sent to your email.");
+  setWalletAddress(saveResult.walletAddress || walletAddress.trim());
+  setWalletOtpCode("");
+  setShowWalletOtp(false);
+  toast.success("Wallet address verified and saved successfully.");
+  await loadWalletData();
+};
 
-    const otpCode = window.prompt(
-      "Enter the 6-digit code sent to your email to submit this withdrawal request."
-    );
+ const requestWithdrawal = async () => {
+  const amount = Number(withdrawAmount);
 
-    if (!otpCode) {
-      toast.error("Withdrawal verification cancelled.");
-      setRequestingWithdrawal(false);
-      return;
-    }
+  if (!walletAddress.trim()) {
+    toast.error("Please verify and save your USDT BEP20 wallet address first.");
+    return;
+  }
 
-    const response = await fetch("/api/withdrawals/request-with-otp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({
-        otpCode: otpCode.trim(),
-      }),
-    });
+  if (!amount || amount <= 0) {
+    toast.error("Please enter a valid withdrawal amount.");
+    return;
+  }
 
-    const result = await response.json();
+  if (amount < MINIMUM_WITHDRAWAL) {
+    toast.error("Minimum withdrawal amount is $20.");
+    return;
+  }
 
+  if (amount > availableBalance) {
+    toast.error("Insufficient wallet balance.");
+    return;
+  }
+
+  setRequestingWithdrawal(true);
+
+  const accessToken = await getAccessToken();
+
+  if (!accessToken) {
+    toast.error("Please login again.");
     setRequestingWithdrawal(false);
+    return;
+  }
 
-    if (!response.ok) {
-      toast.error(result.error || "Unable to request withdrawal.");
-      return;
-    }
+  const otpResponse = await fetch("/api/wallet/send-otp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      purpose: "withdrawal",
+      amount,
+    }),
+  });
 
-    setWithdrawAmount("");
-    toast.success("Withdrawal request submitted successfully.");
-    await loadWalletData();
-  };
+  const otpResult = await otpResponse.json();
+
+  setRequestingWithdrawal(false);
+
+  if (!otpResponse.ok) {
+    toast.error(otpResult.error || "Unable to send verification code.");
+    return;
+  }
+
+  setWithdrawalOtpCode("");
+  setShowWithdrawalOtp(true);
+  toast.success("Withdrawal verification code sent to your email.");
+};
+
+const confirmWithdrawalOtp = async () => {
+  if (!withdrawalOtpCode.trim()) {
+    toast.error("Please enter the verification code.");
+    return;
+  }
+
+  setRequestingWithdrawal(true);
+
+  const accessToken = await getAccessToken();
+
+  if (!accessToken) {
+    toast.error("Please login again.");
+    setRequestingWithdrawal(false);
+    return;
+  }
+
+  const response = await fetch("/api/withdrawals/request-with-otp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      otpCode: withdrawalOtpCode.trim(),
+    }),
+  });
+
+  const result = await response.json();
+
+  setRequestingWithdrawal(false);
+
+  if (!response.ok) {
+    toast.error(result.error || "Unable to request withdrawal.");
+    return;
+  }
+
+  setWithdrawAmount("");
+  setWithdrawalOtpCode("");
+  setShowWithdrawalOtp(false);
+  toast.success("Withdrawal request submitted successfully.");
+  await loadWalletData();
+};
 
   const formatDate = (dateValue: string | null) => {
     if (!dateValue) return "Pending";
@@ -412,6 +441,43 @@ export default function WalletPage() {
           >
             {savingWallet ? "Verifying..." : "Verify & Save Wallet Address"}
           </button>
+          {showWalletOtp && (
+  <div className="mt-5 rounded-xl border border-[#D4AF37]/50 bg-[#D4AF37]/10 p-4">
+    <p className="text-sm font-semibold text-[#071A3D]">
+      Enter the 6-digit code sent to your email.
+    </p>
+
+    <input
+      type="text"
+      inputMode="numeric"
+      maxLength={6}
+      placeholder="Enter OTP code"
+      value={walletOtpCode}
+      onChange={(event) => setWalletOtpCode(event.target.value)}
+      className="mt-3 w-full rounded-lg border border-gray-300 p-3 outline-none"
+    />
+
+    <div className="mt-3 flex gap-3">
+      <button
+        type="button"
+        onClick={confirmWalletOtp}
+        disabled={savingWallet}
+        className="flex-1 rounded-lg bg-[#071A3D] py-3 font-semibold text-white disabled:opacity-60"
+      >
+        Confirm Wallet
+      </button>
+
+      <button
+        type="button"
+        onClick={saveWalletAddress}
+        disabled={savingWallet}
+        className="flex-1 rounded-lg border border-[#071A3D] py-3 font-semibold text-[#071A3D] disabled:opacity-60"
+      >
+        Resend Code
+      </button>
+    </div>
+  </div>
+)}
         </div>
 
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
@@ -462,6 +528,44 @@ export default function WalletPage() {
               ? "Verifying..."
               : "Verify & Request Withdrawal"}
           </button>
+           
+           {showWithdrawalOtp && (
+  <div className="mt-5 rounded-xl border border-[#1E88E5]/40 bg-[#1E88E5]/10 p-4">
+    <p className="text-sm font-semibold text-[#071A3D]">
+      Enter the 6-digit withdrawal code sent to your email.
+    </p>
+
+    <input
+      type="text"
+      inputMode="numeric"
+      maxLength={6}
+      placeholder="Enter OTP code"
+      value={withdrawalOtpCode}
+      onChange={(event) => setWithdrawalOtpCode(event.target.value)}
+      className="mt-3 w-full rounded-lg border border-gray-300 p-3 outline-none"
+    />
+
+    <div className="mt-3 flex gap-3">
+      <button
+        type="button"
+        onClick={confirmWithdrawalOtp}
+        disabled={requestingWithdrawal}
+        className="flex-1 rounded-lg bg-[#071A3D] py-3 font-semibold text-white disabled:opacity-60"
+      >
+        Confirm Withdrawal
+      </button>
+
+      <button
+        type="button"
+        onClick={requestWithdrawal}
+        disabled={requestingWithdrawal}
+        className="flex-1 rounded-lg border border-[#071A3D] py-3 font-semibold text-[#071A3D] disabled:opacity-60"
+      >
+        Resend Code
+      </button>
+    </div>
+  </div>
+)}
         </div>
       </div>
 
