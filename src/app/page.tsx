@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Footer from "@/components/shared/Footer";
 
 const sections = [
@@ -50,7 +50,7 @@ function HomeContent() {
   const ref = searchParams.get("ref");
 
   const signupHref = ref
-    ? `/auth/signup?ref=${encodeURIComponent(ref)}`
+    ? `/auth/signup?ref=${encodeURIComponent(ref)}&from=landing`
     : "/auth/signup";
 
   return (

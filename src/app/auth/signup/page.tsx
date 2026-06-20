@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 import { supabase } from "@/lib/supabase";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -67,6 +67,7 @@ const countries = [
 ];
 
 function SignupForm() {
+  const router = useRouter();
   const searchParams = useSearchParams();
 
   const [fullName, setFullName] = useState("");
@@ -78,17 +79,27 @@ function SignupForm() {
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [loading, setLoading] = useState(false);
   const [signupSuccess, setSignupSuccess] = useState(false);
+  const [checkingReferralRedirect, setCheckingReferralRedirect] =
+    useState(true);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   useEffect(() => {
     const ref = searchParams.get("ref");
+    const fromLanding = searchParams.get("from");
+
+    if (ref && fromLanding !== "landing") {
+      router.replace(`/?ref=${encodeURIComponent(ref)}`);
+      return;
+    }
 
     if (ref) {
       setReferralCode(ref);
     }
-  }, [searchParams]);
+
+    setCheckingReferralRedirect(false);
+  }, [router, searchParams]);
 
   const passwordIsValid =
     password.length >= 8 &&
@@ -155,6 +166,14 @@ function SignupForm() {
     "w-full rounded-lg border border-gray-300 p-3 text-[#071A3D] placeholder:text-gray-700 placeholder:font-medium outline-none focus:border-[#1E88E5]";
 
   const labelClass = "mb-1 block text-sm font-semibold text-[#071A3D]";
+
+  if (checkingReferralRedirect) {
+    return (
+      <section className="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-xl">
+        <p className="text-[#071A3D]">Loading signup form...</p>
+      </section>
+    );
+  }
 
   if (signupSuccess) {
     return (
