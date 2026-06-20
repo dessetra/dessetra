@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import Footer from "@/components/shared/Footer";
 
 type DashboardLayoutProps = {
   children: React.ReactNode;
@@ -158,7 +159,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           </button>
         </aside>
 
-        <section className="flex-1 p-4 md:p-6">{children}</section>
+        <section className="flex min-h-screen flex-1 flex-col">
+          <div className="flex-1 p-4 md:p-6">{children}</div>
+
+          <Footer />
+        </section>
       </div>
 
       <Link
