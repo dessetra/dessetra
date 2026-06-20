@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Footer from "@/components/shared/Footer";
 
 const sections = [
@@ -41,7 +45,14 @@ const sections = [
   },
 ];
 
-export default function HomePage() {
+function HomeContent() {
+  const searchParams = useSearchParams();
+  const ref = searchParams.get("ref");
+
+  const signupHref = ref
+    ? `/auth/signup?ref=${encodeURIComponent(ref)}`
+    : "/auth/signup";
+
   return (
     <main className="min-h-screen bg-[#071A3D] text-white">
       <section className="relative overflow-hidden">
@@ -73,7 +84,7 @@ export default function HomePage() {
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="/auth/signup"
+              href={signupHref}
               className="rounded-lg bg-[#D4AF37] px-6 py-3 font-semibold text-[#071A3D]"
             >
               Get Started for Free
@@ -178,7 +189,7 @@ export default function HomePage() {
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
-              href="/auth/signup"
+              href={signupHref}
               className="rounded-lg bg-[#D4AF37] px-6 py-3 font-semibold text-[#071A3D]"
             >
               Create Free Account
@@ -196,5 +207,13 @@ export default function HomePage() {
 
       <Footer />
     </main>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<main className="min-h-screen bg-[#071A3D]" />}>
+      <HomeContent />
+    </Suspense>
   );
 }
