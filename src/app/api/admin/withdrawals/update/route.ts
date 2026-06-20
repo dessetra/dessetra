@@ -198,16 +198,15 @@ export async function POST(request: Request) {
     const walletStatus =
       cleanStatus === "approved" ? "completed" : "cancelled";
 
-    const { error: walletUpdateError } = await adminClient
-      .from("wallet_transactions")
-      .update({
-        status: walletStatus,
-        updated_at: new Date().toISOString(),
-      })
-      .eq("reference_table", "withdrawal_requests")
-      .eq("reference_id", withdrawalId)
-      .eq("transaction_type", "withdrawal")
-      .eq("direction", "debit");
+   const { error: walletUpdateError } = await adminClient
+  .from("wallet_transactions")
+  .update({
+    status: walletStatus,
+  })
+  .eq("reference_table", "withdrawal_requests")
+  .eq("reference_id", withdrawalId)
+  .eq("transaction_type", "withdrawal")
+  .eq("direction", "debit");
 
     if (walletUpdateError) {
       return NextResponse.json(
