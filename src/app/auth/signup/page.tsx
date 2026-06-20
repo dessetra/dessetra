@@ -7,6 +7,65 @@ import toast from "react-hot-toast";
 import { supabase } from "@/lib/supabase";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+const countries = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Angola",
+  "Argentina",
+  "Australia",
+  "Austria",
+  "Belgium",
+  "Benin",
+  "Botswana",
+  "Brazil",
+  "Burkina Faso",
+  "Burundi",
+  "Cameroon",
+  "Canada",
+  "Central African Republic",
+  "Chad",
+  "China",
+  "Congo",
+  "Côte d'Ivoire",
+  "Democratic Republic of the Congo",
+  "Egypt",
+  "Ethiopia",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Germany",
+  "Ghana",
+  "Guinea",
+  "India",
+  "Indonesia",
+  "Italy",
+  "Japan",
+  "Kenya",
+  "Liberia",
+  "Mali",
+  "Morocco",
+  "Mozambique",
+  "Namibia",
+  "Netherlands",
+  "Niger",
+  "Nigeria",
+  "Rwanda",
+  "Senegal",
+  "Sierra Leone",
+  "South Africa",
+  "Spain",
+  "Tanzania",
+  "Togo",
+  "Tunisia",
+  "Uganda",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Zambia",
+  "Zimbabwe",
+];
+
 function SignupForm() {
   const searchParams = useSearchParams();
 
@@ -43,6 +102,11 @@ function SignupForm() {
 
     if (!fullName || !email || !password || !confirmPassword || !country) {
       toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    if (!countries.includes(country.trim())) {
+      toast.error("Please select a valid country from the list.");
       return;
     }
 
@@ -220,11 +284,18 @@ function SignupForm() {
           <label className={labelClass}>Country of Origin</label>
           <input
             type="text"
-            placeholder="Enter your country"
+            list="country-list"
+            placeholder="Select or type your country"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
             className={inputClass}
           />
+
+          <datalist id="country-list">
+            {countries.map((countryName) => (
+              <option key={countryName} value={countryName} />
+            ))}
+          </datalist>
         </div>
 
         <div>
