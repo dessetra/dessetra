@@ -4,9 +4,18 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 
+type WalletTransaction = {
+  amount_usd: number | string;
+  direction: string;
+  status: string;
+};
+
 export default function EarningsPage() {
   const [learningDP, setLearningDP] = useState(0);
   const [referralDP, setReferralDP] = useState(0);
+  const [totalEarnings, setTotalEarnings] = useState(0);
+  const [totalWithdrawn, setTotalWithdrawn] = useState(0);
+  const [availableBalance, setAvailableBalance] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -53,8 +62,45 @@ export default function EarningsPage() {
 
       const totalReferralDP = (count || 0) * 50;
 
+      const { data: walletData } = await supabase
+        .from("wallet_transactions")
+        .select("amount_usd, direction, status")
+        .eq("user_id", user.id);
+
+      const walletRows = (walletData || []) as WalletTransaction[];
+
+      const completedCredits = walletRows.reduce((sum, row) => {
+        if (row.direction === "credit" && row.status === "completed") {
+          return sum + Number(row.amount_usd || 0);
+        }
+
+        return sum;
+      }, 0);
+
+      const completedWithdrawals = walletRows.reduce((sum, row) => {
+        if (row.direction === "debit" && row.status === "completed") {
+          return sum + Number(row.amount_usd || 0);
+        }
+
+        return sum;
+      }, 0);
+
+      const pendingAndCompletedDebits = walletRows.reduce((sum, row) => {
+        if (
+          row.direction === "debit" &&
+          (row.status === "pending" || row.status === "completed")
+        ) {
+          return sum + Number(row.amount_usd || 0);
+        }
+
+        return sum;
+      }, 0);
+
       setLearningDP(totalLearningDP);
       setReferralDP(totalReferralDP);
+      setTotalEarnings(completedCredits);
+      setTotalWithdrawn(completedWithdrawals);
+      setAvailableBalance(completedCredits - pendingAndCompletedDebits);
 
       setLoading(false);
     }
@@ -64,6 +110,13 @@ export default function EarningsPage() {
 
   const totalDP = learningDP + referralDP;
 
+  const formatMoney = (value: number) => {
+    return `$${Number(value || 0).toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })}`;
+  };
+
   return (
     <DashboardLayout>
       <div className="rounded-2xl bg-[#0D2A5E] p-5 shadow-lg md:p-6">
@@ -72,15 +125,14 @@ export default function EarningsPage() {
         </h1>
 
         <p className="mt-2 text-sm text-gray-300 md:text-base">
-          Track your Dessetra Points and future earnings.
+          Track your Dessetra Points, cash earnings, withdrawals, and available
+          balance.
         </p>
       </div>
 
       <div className="mt-6 grid gap-5 md:grid-cols-3">
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-          <h2 className="text-lg font-semibold text-gray-500">
-            Learning DP
-          </h2>
+          <h2 className="text-lg font-semibold text-gray-500">Learning DP</h2>
 
           <p className="mt-3 text-4xl font-bold">
             {loading ? "..." : learningDP}
@@ -88,9 +140,7 @@ export default function EarningsPage() {
         </div>
 
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-          <h2 className="text-lg font-semibold text-gray-500">
-            Referral DP
-          </h2>
+          <h2 className="text-lg font-semibold text-gray-500">Referral DP</h2>
 
           <p className="mt-3 text-4xl font-bold">
             {loading ? "..." : referralDP}
@@ -98,9 +148,7 @@ export default function EarningsPage() {
         </div>
 
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
-          <h2 className="text-lg font-semibold text-gray-500">
-            Total DP
-          </h2>
+          <h2 className="text-lg font-semibold text-gray-500">Total DP</h2>
 
           <p className="mt-3 text-4xl font-bold">
             {loading ? "..." : totalDP}
@@ -108,10 +156,40 @@ export default function EarningsPage() {
         </div>
       </div>
 
+      <div className="mt-6 grid gap-5 md:grid-cols-3">
+        <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
+          <h2 className="text-lg font-semibold text-gray-500">
+            Total Earnings
+          </h2>
+
+          <p className="mt-3 text-4xl font-bold text-green-600">
+            {loading ? "..." : formatMoney(totalEarnings)}
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
+          <h2 className="text-lg font-semibold text-gray-500">
+            Total Withdrawn
+          </h2>
+
+          <p className="mt-3 text-4xl font-bold text-red-600">
+            {loading ? "..." : formatMoney(totalWithdrawn)}
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
+          <h2 className="text-lg font-semibold text-gray-500">
+            Available Balance
+          </h2>
+
+          <p className="mt-3 text-4xl font-bold text-[#1E88E5]">
+            {loading ? "..." : formatMoney(availableBalance)}
+          </p>
+        </div>
+      </div>
+
       <div className="mt-6 rounded-2xl bg-[#0D2A5E] p-6">
-        <h2 className="text-2xl font-bold">
-          Earnings History
-        </h2>
+        <h2 className="text-2xl font-bold">Earnings History</h2>
 
         <div className="mt-6 rounded-xl bg-[#071A3D] p-5">
           <div className="flex justify-between py-2">
@@ -124,9 +202,26 @@ export default function EarningsPage() {
             <span>{loading ? "..." : `${referralDP} DP`}</span>
           </div>
 
-          <div className="mt-3 border-t border-gray-600 pt-3 flex justify-between font-bold">
-            <span>Total</span>
+          <div className="mt-3 flex justify-between border-t border-gray-600 pt-3 font-bold">
+            <span>Total Points</span>
             <span>{loading ? "..." : `${totalDP} DP`}</span>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-xl bg-[#071A3D] p-5">
+          <div className="flex justify-between py-2">
+            <span>Total Cash Earnings</span>
+            <span>{loading ? "..." : formatMoney(totalEarnings)}</span>
+          </div>
+
+          <div className="flex justify-between py-2">
+            <span>Total Withdrawn</span>
+            <span>{loading ? "..." : formatMoney(totalWithdrawn)}</span>
+          </div>
+
+          <div className="mt-3 flex justify-between border-t border-gray-600 pt-3 font-bold">
+            <span>Available Balance</span>
+            <span>{loading ? "..." : formatMoney(availableBalance)}</span>
           </div>
         </div>
       </div>
