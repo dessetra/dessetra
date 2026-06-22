@@ -299,6 +299,32 @@ export default function DashboardPage() {
         </div>
       </div>
 
+<div className="mt-6 rounded-2xl border border-[#D4AF37]/30 bg-[#04122D] p-6 shadow-lg">
+  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D4AF37]">
+    Recommended Exchange
+  </p>
+
+  <h2 className="mt-3 text-2xl font-bold">
+    Start Trading on Bybit
+  </h2>
+
+  <p className="mt-3 text-gray-300">
+    As you progress through Dessetra Academy, you may wish to practice what
+    you learn using one of the world's leading cryptocurrency exchanges.
+    Create your Bybit account and explore spot trading, futures trading,
+    copy trading, and other digital asset opportunities.
+  </p>
+
+  <a
+    href="https://partner.bybit.com/b/159049"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-5 inline-block rounded-lg bg-[#D4AF37] px-5 py-3 font-semibold text-[#071A3D]"
+  >
+    Open Bybit
+  </a>
+</div>
+
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D4AF37]">
