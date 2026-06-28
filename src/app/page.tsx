@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Footer from "@/components/shared/Footer";
+import CountdownTimer from "@/components/shared/CountdownTimer";
 
 const sections = [
   {
@@ -81,6 +82,8 @@ function HomeContent() {
             Learn Web3, crypto, trading, AI tools, and digital wealth skills
             while connecting with opportunities built for the future.
           </p>
+
+          <CountdownTimer />
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
