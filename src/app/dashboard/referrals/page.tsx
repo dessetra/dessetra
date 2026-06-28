@@ -5,10 +5,13 @@ import toast from "react-hot-toast";
 import { supabase } from "@/lib/supabase";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 
+type ReferralStatus = "pending" | "verified" | string;
+
 type ReferralProfile = {
   id: string;
   full_name: string | null;
   email: string | null;
+  status: ReferralStatus;
 };
 
 export default function ReferralsPage() {
@@ -20,10 +23,18 @@ export default function ReferralsPage() {
   );
   const [loading, setLoading] = useState(true);
 
+  const verifiedFirstGeneration = firstGeneration.filter(
+    (person) => person.status === "verified"
+  );
+
+  const pendingFirstGeneration = firstGeneration.filter(
+    (person) => person.status !== "verified"
+  );
+
   const totalFirstGeneration = firstGeneration.length;
   const totalSecondGeneration = secondGeneration.length;
   const totalReferralNetwork = totalFirstGeneration + totalSecondGeneration;
-  const referralRewardDP = totalFirstGeneration * 50;
+  const referralRewardDP = verifiedFirstGeneration.length * 50;
 
   useEffect(() => {
     async function loadReferralData() {
@@ -89,12 +100,28 @@ export default function ReferralsPage() {
     toast.success("Referral link copied.");
   };
 
+  const getReferralStatusLabel = (status: ReferralStatus) => {
+    if (status === "verified") {
+      return "Verified Referral • +50 DP";
+    }
+
+    return "Pending Email Verification • 0 DP";
+  };
+
+  const getReferralStatusClass = (status: ReferralStatus) => {
+    if (status === "verified") {
+      return "text-[#D4AF37]";
+    }
+
+    return "text-orange-600";
+  };
+
   const renderReferralList = (
     title: string,
     description: string,
     people: ReferralProfile[],
     emptyMessage: string,
-    rewardLabel: string
+    isFirstGeneration = false
   ) => {
     return (
       <div className="mt-6 rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
@@ -121,8 +148,16 @@ export default function ReferralsPage() {
                   {person.email || "No email available"}
                 </p>
 
-                <p className="mt-2 text-xs font-semibold text-[#D4AF37]">
-                  {rewardLabel}
+                <p
+                  className={`mt-2 text-xs font-semibold ${getReferralStatusClass(
+                    person.status
+                  )}`}
+                >
+                  {isFirstGeneration
+                    ? getReferralStatusLabel(person.status)
+                    : person.status === "verified"
+                    ? "Verified Second Generation Referral"
+                    : "Pending Second Generation Email Verification"}
                 </p>
               </div>
             ))}
@@ -169,6 +204,11 @@ export default function ReferralsPage() {
           <p className="mt-2 text-3xl font-bold">
             {loading ? "..." : totalFirstGeneration}
           </p>
+          <p className="mt-2 text-xs text-gray-500">
+            {loading
+              ? ""
+              : `${verifiedFirstGeneration.length} verified, ${pendingFirstGeneration.length} pending`}
+          </p>
         </div>
 
         <div className="rounded-xl bg-white p-5 text-[#071A3D] shadow">
@@ -191,7 +231,7 @@ export default function ReferralsPage() {
             {loading ? "..." : `${referralRewardDP} DP`}
           </p>
           <p className="mt-2 text-xs text-gray-500">
-            DP reward currently applies to first generation signups.
+            Only verified first-generation referrals earn +50 DP.
           </p>
         </div>
       </div>
@@ -201,15 +241,14 @@ export default function ReferralsPage() {
         "These are users who signed up directly through your referral link.",
         firstGeneration,
         "You have no first generation referrals yet.",
-        "Direct Referral • +50 DP"
+        true
       )}
 
       {renderReferralList(
         "Second Generation Referrals",
         "These are users referred by your first generation referrals.",
         secondGeneration,
-        "You have no second generation referrals yet.",
-        "Second Generation Referral"
+        "You have no second generation referrals yet."
       )}
     </DashboardLayout>
   );

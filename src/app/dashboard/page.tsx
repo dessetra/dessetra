@@ -310,8 +310,8 @@ export default function DashboardPage() {
 
   <p className="mt-3 text-gray-300">
     As you progress through Dessetra Academy, you may wish to practice what
-    you learn using one of the world's leading cryptocurrency exchanges.
-    Create your Bybit account and explore spot trading, futures trading,
+    you learn using one of the world leading cryptocurrency exchanges
+        Create your Bybit account and explore spot trading, futures trading,
     copy trading, and other digital asset opportunities.
   </p>
 

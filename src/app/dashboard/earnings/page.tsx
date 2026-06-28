@@ -58,7 +58,8 @@ export default function EarningsPage() {
       const { count } = await supabase
         .from("referrals")
         .select("*", { count: "exact", head: true })
-        .eq("referrer_id", user.id);
+        .eq("referrer_id", user.id)
+        .eq("status", "verified");
 
       const totalReferralDP = (count || 0) * 50;
 
@@ -105,7 +106,7 @@ export default function EarningsPage() {
       setLoading(false);
     }
 
-    loadEarnings();
+    void loadEarnings();
   }, []);
 
   const totalDP = learningDP + referralDP;
@@ -144,6 +145,10 @@ export default function EarningsPage() {
 
           <p className="mt-3 text-4xl font-bold">
             {loading ? "..." : referralDP}
+          </p>
+
+          <p className="mt-2 text-xs text-gray-500">
+            Only verified first-generation referrals count.
           </p>
         </div>
 
@@ -201,6 +206,11 @@ export default function EarningsPage() {
             <span>Referral Rewards</span>
             <span>{loading ? "..." : `${referralDP} DP`}</span>
           </div>
+
+          <p className="mt-1 text-xs text-gray-300">
+            Referral DP is awarded only after the referred user confirms their
+            email.
+          </p>
 
           <div className="mt-3 flex justify-between border-t border-gray-600 pt-3 font-bold">
             <span>Total Points</span>
