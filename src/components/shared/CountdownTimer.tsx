@@ -52,8 +52,8 @@ export default function CountdownTimer() {
       </p>
 
       <p className="mt-2 text-sm text-gray-300">
-        Dessetra soft-launches on Saturday, 4th July 2026 at 02:00 Kenyan
-        time.
+        Dessetra soft-launches on Saturday, 4th July 2026 at 00:00 West African
+        Time.
       </p>
 
       <div className="mt-5 grid grid-cols-4 gap-3">
