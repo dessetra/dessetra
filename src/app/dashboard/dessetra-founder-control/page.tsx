@@ -178,6 +178,18 @@ export default function FounderControlPage() {
             </p>
           </Link>
 
+          <Link
+  href="/dashboard/dessetra-founder-control/leadership"
+  className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg transition hover:scale-[1.02]"
+>
+  <h2 className="text-xl font-bold">🏆 Leadership Rewards</h2>
+
+  <p className="mt-2 text-gray-500">
+    Review leadership ranks, reward selections, founder approvals, and wallet
+    credits.
+  </p>
+</Link>
+
           <div className="rounded-2xl bg-white p-6 text-[#071A3D] shadow-lg">
             <h2 className="text-xl font-bold">🤝 Referrals</h2>
             <p className="mt-2 text-gray-500">
