@@ -66,6 +66,65 @@ const countries = [
   "Zimbabwe",
 ];
 
+const countryDialCodes: Record<string, string> = {
+  Afghanistan: "+93",
+  Albania: "+355",
+  Algeria: "+213",
+  Angola: "+244",
+  Argentina: "+54",
+  Australia: "+61",
+  Austria: "+43",
+  Belgium: "+32",
+  Benin: "+229",
+  Botswana: "+267",
+  Brazil: "+55",
+  "Burkina Faso": "+226",
+  Burundi: "+257",
+  Cameroon: "+237",
+  Canada: "+1",
+  "Central African Republic": "+236",
+  Chad: "+235",
+  China: "+86",
+  Congo: "+242",
+  "Côte d'Ivoire": "+225",
+  "Democratic Republic of the Congo": "+243",
+  Egypt: "+20",
+  Ethiopia: "+251",
+  France: "+33",
+  Gabon: "+241",
+  Gambia: "+220",
+  Germany: "+49",
+  Ghana: "+233",
+  Guinea: "+224",
+  India: "+91",
+  Indonesia: "+62",
+  Italy: "+39",
+  Japan: "+81",
+  Kenya: "+254",
+  Liberia: "+231",
+  Mali: "+223",
+  Morocco: "+212",
+  Mozambique: "+258",
+  Namibia: "+264",
+  Netherlands: "+31",
+  Niger: "+227",
+  Nigeria: "+234",
+  Rwanda: "+250",
+  Senegal: "+221",
+  "Sierra Leone": "+232",
+  "South Africa": "+27",
+  Spain: "+34",
+  Tanzania: "+255",
+  Togo: "+228",
+  Tunisia: "+216",
+  Uganda: "+256",
+  "United Arab Emirates": "+971",
+  "United Kingdom": "+44",
+  "United States": "+1",
+  Zambia: "+260",
+  Zimbabwe: "+263",
+};
+
 function SignupForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -75,6 +134,7 @@ function SignupForm() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [country, setCountry] = useState("");
+  const [whatsappNumber, setWhatsappNumber] = useState("");
   const [referralCode, setReferralCode] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -111,10 +171,17 @@ function SignupForm() {
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!fullName || !email || !password || !confirmPassword || !country) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
+    if (
+  !fullName ||
+  !email ||
+  !password ||
+  !confirmPassword ||
+  !country ||
+  !whatsappNumber
+) {
+  toast.error("Please fill in all required fields.");
+  return;
+}
 
     if (!countries.includes(country.trim())) {
       toast.error("Please select a valid country from the list.");
@@ -145,10 +212,11 @@ function SignupForm() {
       password,
       options: {
         data: {
-          full_name: fullName.trim(),
-          country: country.trim(),
-          referral_code: referralCode || null,
-        },
+           full_name: fullName.trim(),
+           country: country.trim(),
+           whatsapp_number: `${countryDialCodes[country] || ""}${whatsappNumber}`,
+           referral_code: referralCode || null,
+       },
       },
     });
 
@@ -316,6 +384,30 @@ function SignupForm() {
             ))}
           </datalist>
         </div>
+
+        <div>
+  <label className={labelClass}>WhatsApp Number</label>
+
+  <div className="flex overflow-hidden rounded-lg border border-gray-300 focus-within:border-[#1E88E5]">
+    <div className="flex items-center bg-gray-100 px-4 font-semibold text-[#071A3D]">
+      {countryDialCodes[country] || "+"}
+    </div>
+
+    <input
+      type="tel"
+      placeholder="Enter your WhatsApp number"
+      value={whatsappNumber}
+      onChange={(e) =>
+        setWhatsappNumber(e.target.value.replace(/\D/g, ""))
+      }
+      className="flex-1 border-0 p-3 text-[#071A3D] outline-none"
+    />
+  </div>
+
+  <p className="mt-1 text-xs text-gray-500">
+    Select your country first. The country code is added automatically.
+  </p>
+</div>
 
         <div>
           <label className={labelClass}>Referral Code</label>
