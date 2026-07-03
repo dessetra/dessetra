@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const launchDate = new Date("2026-07-04T00:00:00+01:00").getTime();
+const launchDate = new Date("2026-07-04T14:00:00+01:00").getTime();
 
 function calculateTimeLeft() {
   const now = new Date().getTime();
@@ -52,7 +52,7 @@ export default function CountdownTimer() {
       </p>
 
       <p className="mt-2 text-sm text-gray-300">
-        Dessetra soft-launches on Saturday, 4th July 2026 at 00:00 West African
+        Dessetra soft-launches on Saturday, 4th July 2026 at 2:00 PM West African
         Time.
       </p>
 
