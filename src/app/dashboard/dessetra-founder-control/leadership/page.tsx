@@ -33,6 +33,18 @@ export default function FounderLeadershipPage() {
   const [rewards, setRewards] = useState<LeadershipReward[]>([]);
   const [loading, setLoading] = useState(true);
   const [updatingId, setUpdatingId] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const [selectedRewardId, setSelectedRewardId] = useState("");
+
+  const [selectedAction, setSelectedAction] = useState<
+  "approve" | "reject"
+>("approve");
+
+  const [adminNote, setAdminNote] = useState("");
+
+  const [selectedReward, setSelectedReward] =
+  useState<LeadershipReward | null>(null);
 
   useEffect(() => {
     async function loadRewards() {
@@ -73,71 +85,75 @@ export default function FounderLeadershipPage() {
     })}`;
   };
 
-  const updateReward = async (
-    userRankId: string,
-    action: "approve" | "reject"
-  ) => {
-    const confirmMessage =
-      action === "approve"
-        ? "Approve this leadership reward and credit the wallet if applicable?"
-        : "Reject this leadership reward?";
+const openRewardModal = (
+  reward: LeadershipReward,
+  action: "approve" | "reject"
+) => {
+  setSelectedReward(reward);
+  setSelectedRewardId(reward.id);
+  setSelectedAction(action);
+  setAdminNote("");
+  setModalOpen(true);
+};
 
-    if (!window.confirm(confirmMessage)) {
-      return;
-    }
+const updateReward = async () => {
+  if (!selectedRewardId) return;
 
-    setUpdatingId(userRankId);
+  setUpdatingId(selectedRewardId);
 
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
 
-    if (!session?.access_token) {
-      toast.error("Your session has expired.");
-      setUpdatingId("");
-      return;
-    }
-
-    const response = await fetch("/api/admin/leadership/rewards/update", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${session.access_token}`,
-      },
-      body: JSON.stringify({
-        userRankId,
-        action,
-      }),
-    });
-
-    const result = await response.json();
-
+  if (!session?.access_token) {
+    toast.error("Your session has expired.");
     setUpdatingId("");
+    return;
+  }
 
-    if (!response.ok) {
-      toast.error(result.error || "Unable to update leadership reward.");
-      return;
-    }
+  const response = await fetch("/api/admin/leadership/rewards/update", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${session.access_token}`,
+    },
+    body: JSON.stringify({
+      userRankId: selectedRewardId,
+      action: selectedAction,
+      adminNote,
+    }),
+  });
 
-    toast.success(result.message || "Leadership reward updated.");
+  const result = await response.json();
 
-    setRewards((currentRewards) =>
-      currentRewards.map((reward) =>
-        reward.id === userRankId
-          ? {
-              ...reward,
-              reward_status: action === "approve" ? "completed" : "rejected",
-              cash_credit_amount_usd:
-                action === "approve"
-                  ? Number(
-                      result.cashAmount || reward.cash_credit_amount_usd || 0
-                    )
-                  : reward.cash_credit_amount_usd,
-            }
-          : reward
-      )
-    );
-  };
+  setUpdatingId("");
+  setModalOpen(false);
+
+  if (!response.ok) {
+    toast.error(result.error || "Unable to update leadership reward.");
+    return;
+  }
+
+  toast.success(result.message || "Leadership reward updated.");
+
+  setRewards((currentRewards) =>
+    currentRewards.map((reward) =>
+      reward.id === selectedRewardId
+        ? {
+            ...reward,
+            reward_status:
+              selectedAction === "approve" ? "completed" : "rejected",
+            cash_credit_amount_usd:
+              selectedAction === "approve"
+                ? Number(
+                    result.cashAmount || reward.cash_credit_amount_usd || 0
+                  )
+                : reward.cash_credit_amount_usd,
+          }
+        : reward
+    )
+  );
+};
 
   const eligibleRewards = rewards.filter(
     (reward) => reward.reward_status === "eligible"
@@ -353,7 +369,7 @@ export default function FounderLeadershipPage() {
                     <div className="flex flex-col gap-3 md:w-48">
                       <button
                         type="button"
-                        onClick={() => updateReward(reward.id, "approve")}
+                        onClick={() => openRewardModal(reward, "approve")}
                         disabled={isUpdating}
                         className="rounded-lg bg-[#D4AF37] px-4 py-3 font-semibold text-[#071A3D] disabled:opacity-60"
                       >
@@ -362,7 +378,7 @@ export default function FounderLeadershipPage() {
 
                       <button
                         type="button"
-                        onClick={() => updateReward(reward.id, "reject")}
+                        onClick={() => openRewardModal(reward, "reject")}
                         disabled={isUpdating}
                         className="rounded-lg border border-red-500 px-4 py-3 font-semibold text-red-600 disabled:opacity-60"
                       >
@@ -427,6 +443,79 @@ export default function FounderLeadershipPage() {
                 <p className="mt-1 text-sm text-red-600">Rejected</p>
               </div>
             ))}
+          </div>
+        </div>
+      )}
+            {modalOpen && selectedReward && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
+          <div className="w-full max-w-lg rounded-2xl bg-white p-6 text-[#071A3D] shadow-2xl">
+            <h2 className="text-2xl font-bold">
+              {selectedAction === "approve"
+                ? "Approve Leadership Reward"
+                : "Reject Leadership Reward"}
+            </h2>
+
+            <p className="mt-3 text-sm text-gray-600">
+              Member:{" "}
+              <strong>
+                {selectedReward.profiles?.full_name || "Unnamed User"}
+              </strong>
+            </p>
+
+            <p className="mt-2 text-sm text-gray-600">
+              Rank:{" "}
+              <strong>
+                {selectedReward.leadership_ranks?.rank_name ||
+                  "Leadership Rank"}
+              </strong>
+            </p>
+
+            <p className="mt-2 text-sm text-gray-600">
+              Reward: <strong>{getRewardChoiceLabel(selectedReward)}</strong>
+            </p>
+
+            <label className="mt-5 block text-sm font-semibold">
+              Founder Note
+            </label>
+
+            <textarea
+              value={adminNote}
+              onChange={(event) => setAdminNote(event.target.value)}
+              placeholder={
+                selectedAction === "approve"
+                  ? "Optional note, e.g. Your reward has been approved and will be processed shortly."
+                  : "Optional reason for rejection."
+              }
+              className="mt-2 h-28 w-full rounded-lg border border-gray-300 p-3 outline-none"
+            />
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <button
+                type="button"
+                onClick={() => setModalOpen(false)}
+                disabled={Boolean(updatingId)}
+                className="rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-700 disabled:opacity-60"
+              >
+                Cancel
+              </button>
+
+              <button
+                type="button"
+                onClick={updateReward}
+                disabled={Boolean(updatingId)}
+                className={`rounded-lg px-5 py-3 font-semibold disabled:opacity-60 ${
+                  selectedAction === "approve"
+                    ? "bg-[#D4AF37] text-[#071A3D]"
+                    : "bg-red-600 text-white"
+                }`}
+              >
+                {updatingId
+                  ? "Processing..."
+                  : selectedAction === "approve"
+                  ? "Approve Reward"
+                  : "Reject Reward"}
+              </button>
+            </div>
           </div>
         </div>
       )}

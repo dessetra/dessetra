@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { sendEmail } from "@/lib/email";
+import {
+  buildLeadershipApprovedEmail,
+  buildLeadershipRejectedEmail,
+} from "@/lib/leadershipRewardEmail";
 
 type RewardChoice = "cash_gift" | "item_reward";
 type RewardAction = "approve" | "reject";
@@ -14,7 +19,13 @@ type LeadershipRewardRecord = {
     rank_name: string;
     cash_gift_usd: number | string;
     item_cash_gift_usd: number | string;
+    reward_item?: string | null;
   } | null;
+};
+
+type ProfileRecord = {
+  full_name: string | null;
+  email: string | null;
 };
 
 async function verifyFounder(request: Request) {
@@ -90,7 +101,8 @@ export async function POST(request: Request) {
         leadership_ranks (
           rank_name,
           cash_gift_usd,
-          item_cash_gift_usd
+          item_cash_gift_usd,
+          reward_item
         )
       `
       )
@@ -133,6 +145,14 @@ export async function POST(request: Request) {
       );
     }
 
+    const { data: profileData } = await adminClient
+      .from("profiles")
+      .select("full_name, email")
+      .eq("id", reward.user_id)
+      .maybeSingle();
+
+    const profile = profileData as ProfileRecord | null;
+
     if (cleanAction === "reject") {
       const { error: rejectError } = await adminClient
         .from("leadership_user_ranks")
@@ -150,6 +170,26 @@ export async function POST(request: Request) {
           { error: rejectError.message },
           { status: 500 }
         );
+      }
+
+      if (profile?.email) {
+        try {
+          const emailContent = buildLeadershipRejectedEmail({
+            fullName: profile.full_name || "Dessetra Member",
+            rankName: rank.rank_name,
+            rewardChoice: reward.reward_choice,
+            cashAmount: 0,
+            adminNote: cleanAdminNote,
+          });
+
+          await sendEmail({
+            to: profile.email,
+            subject: emailContent.subject,
+            html: emailContent.html,
+          });
+        } catch (emailError) {
+          console.log("Leadership rejection email failed:", emailError);
+        }
       }
 
       return NextResponse.json({
@@ -208,6 +248,27 @@ export async function POST(request: Request) {
 
     if (updateError) {
       return NextResponse.json({ error: updateError.message }, { status: 500 });
+    }
+
+    if (profile?.email) {
+      try {
+        const emailContent = buildLeadershipApprovedEmail({
+          fullName: profile.full_name || "Dessetra Member",
+          rankName: rank.rank_name,
+          rewardChoice: reward.reward_choice,
+          rewardItem: rank.reward_item,
+          cashAmount,
+          adminNote: cleanAdminNote,
+        });
+
+        await sendEmail({
+          to: profile.email,
+          subject: emailContent.subject,
+          html: emailContent.html,
+        });
+      } catch (emailError) {
+        console.log("Leadership approval email failed:", emailError);
+      }
     }
 
     return NextResponse.json({
