@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaTelegramPlane,
   FaTiktok,
+  FaYoutube,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -64,6 +65,16 @@ export default function Footer() {
           >
             <FaFacebookF />
           </Link>
+
+          <Link
+            href="https://www.youtube.com/@Dessetra"
+            target="_blank"
+            className="transition hover:text-[#D4AF37]"
+            aria-label="YouTube"
+          >
+            <FaYoutube />
+          </Link>
+
         </div>
       </div>
 
