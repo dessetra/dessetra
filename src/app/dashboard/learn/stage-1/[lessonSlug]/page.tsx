@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
@@ -96,6 +97,36 @@ export default async function LessonPage({ params }: LessonPageProps) {
           lessonSlug={lessonSlug}
         />
       )}
+
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+  <Link
+    href="/dashboard/learn/stage-1"
+    className="rounded-lg border border-[#071A3D]/20 px-5 py-3 text-center font-semibold text-[#071A3D] transition hover:bg-[#071A3D] hover:text-white"
+  >
+    ← Back to Stage
+  </Link>
+
+  <div className="flex flex-col gap-3 sm:flex-row">
+    {previousLesson && (
+      <Link
+        href={previousLesson}
+        className="rounded-lg bg-[#0D2A5E] px-5 py-3 text-center font-semibold text-white transition hover:bg-[#071A3D]"
+      >
+        ← Previous Lesson
+      </Link>
+    )}
+
+    {nextLesson && (
+      <Link
+        href={nextLesson}
+        className="rounded-lg bg-[#D4AF37] px-5 py-3 text-center font-semibold text-[#071A3D] transition hover:brightness-110"
+      >
+        Next Lesson →
+      </Link>
+    )}
+  </div>
+</div>
+
     </DashboardLayout>
   );
 }

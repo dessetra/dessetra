@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 type LessonReaderProps = {
@@ -14,8 +13,6 @@ type LessonReaderProps = {
 export default function LessonReader({
   title,
   content,
-  previousLesson,
-  nextLesson,
   isCompleted = false,
 }: LessonReaderProps) {
   const wordCount = content.trim().split(/\s+/).length;
@@ -131,34 +128,6 @@ export default function LessonReader({
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <Link
-            href="/dashboard/learn/stage-1"
-            className="rounded-lg border border-[#071A3D]/20 bg-white px-5 py-3 text-center font-semibold text-[#071A3D]"
-          >
-            Back to Stage
-          </Link>
-
-          <div className="flex flex-col gap-3 sm:flex-row">
-            {previousLesson && (
-              <Link
-                href={previousLesson}
-                className="rounded-lg bg-[#0D2A5E] px-5 py-3 text-center font-semibold text-white"
-              >
-                ← Previous Lesson
-              </Link>
-            )}
-
-            {nextLesson && (
-              <Link
-                href={nextLesson}
-                className="rounded-lg bg-[#D4AF37] px-5 py-3 text-center font-semibold text-[#071A3D]"
-              >
-                Next Lesson →
-              </Link>
-            )}
-          </div>
-        </div>
       </div>
     </article>
   );
