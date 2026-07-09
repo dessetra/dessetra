@@ -28,9 +28,51 @@ type ReferralProfile = {
 };
 
 const dailyMotivations = [
-  "Never invest in what you don't understand.",
-  "Learn first, grow wisely, and let patience protect your money.",
-  "Your strongest Web3 asset is knowledge before capital.",
+  {
+    quote: "Never invest in what you don't understand.",
+    explanation:
+      "Knowledge is your first investment. Understand every opportunity before committing your money.",
+  },
+  {
+    quote: "Learn first, grow wisely, and let patience protect your money.",
+    explanation:
+      "Learning builds confidence, while patience helps you make better long-term decisions.",
+  },
+  {
+    quote: "Your strongest Web3 asset is knowledge before capital.",
+    explanation:
+      "Money can be lost, but the right knowledge stays with you and continues creating opportunities.",
+  },
+  {
+    quote: "Tokenization is not just technology; it's access.",
+    explanation:
+      "Blockchain opens new opportunities by making ownership and investment more accessible.",
+  },
+  {
+    quote: "Quick profits fade, strong knowledge compounds.",
+    explanation:
+      "Knowledge continues paying dividends long after short-term profits disappear.",
+  },
+  {
+    quote: "A confident investor is an educated investor.",
+    explanation:
+      "Confidence should come from understanding, not from hype or emotions.",
+  },
+  {
+    quote: "Every expert in Web3 started as a beginner.",
+    explanation:
+      "Every successful journey begins with the willingness to learn one lesson at a time.",
+  },
+  {
+    quote: "Risk decreases when understanding increases.",
+    explanation:
+      "The more you understand an opportunity, the better you can manage its risks.",
+  },
+  {
+    quote: "Your future portfolio begins with today's education.",
+    explanation:
+      "The habits and knowledge you build today shape tomorrow's financial future.",
+  },
 ];
 
 function formatDate(dateValue: string | null) {
@@ -217,12 +259,11 @@ export default function DashboardPage() {
         </p>
 
         <h2 className="mt-3 text-2xl font-bold md:text-3xl">
-          “{dailyMotivation}”
+          “{dailyMotivation.quote}”
         </h2>
 
         <p className="mt-3 text-sm text-gray-300">
-          Build knowledge first. Let every step you take in Web3 be guided by
-          understanding, patience, and discipline.
+          {dailyMotivation.explanation}
         </p>
       </div>
 
