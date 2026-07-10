@@ -84,22 +84,50 @@ function HomeContent() {
 
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href={signupHref}
-              className="rounded-lg bg-[#D4AF37] px-6 py-3 font-semibold text-[#071A3D]"
-            >
-              Get Started for Free
-            </Link>
+  <Link
+    href={signupHref}
+    className="rounded-lg bg-[#D4AF37] px-6 py-3 font-semibold text-[#071A3D]"
+  >
+    Get Started for Free
+  </Link>
 
-            <Link
-              href="/auth/login"
-              className="rounded-lg border border-white/30 px-6 py-3 font-semibold text-white"
-            >
-              Login
-            </Link>
-          </div>
+  <Link
+    href="/auth/login"
+    className="rounded-lg border border-white/30 px-6 py-3 font-semibold text-white"
+  >
+    Login
+  </Link>
+</div>
 
-          <div className="mt-12 grid w-full gap-4 md:grid-cols-3">
+<div className="mt-12 w-full max-w-4xl">
+  <div className="rounded-3xl border border-[#D4AF37]/30 bg-white/10 p-6 backdrop-blur-md shadow-2xl">
+    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
+      Discover Dessetra
+    </p>
+
+    <h2 className="mt-3 text-2xl font-bold md:text-3xl">
+      Discover Dessetra in 48 Seconds
+    </h2>
+
+    <p className="mt-3 text-gray-300">
+      Discover how Dessetra helps you learn Web3, connect with opportunities,
+      and build long-term digital wealth—all in under one minute.
+    </p>
+
+    <div className="mt-6 overflow-hidden rounded-2xl shadow-2xl aspect-video">
+      <iframe
+        className="h-full w-full"
+        src="https://www.youtube-nocookie.com/embed/fOauVusYoc0"
+        title="Dessetra Introduction"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
+    </div>
+  </div>
+</div>
+
+<div className="mt-12 grid w-full gap-4 md:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-white/10 p-5">
               <p className="text-3xl font-bold text-[#D4AF37]">Web3</p>
               <p className="mt-2 text-sm text-gray-300">
