@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 1 Quiz - Understanding Artificial Intelligence",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is Artificial Intelligence (AI)?",
+      "options": [
+        "A programming language",
+        "A branch of computer science that enables machines to perform tasks requiring human intelligence",
+        "A type of computer hardware",
+        "A database system"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which type of AI is commonly used today?",
+      "options": [
+        "Super Artificial Intelligence",
+        "General Artificial Intelligence",
+        "Narrow Artificial Intelligence",
+        "Self-Aware Artificial Intelligence"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is an example of AI in everyday life?",
+      "options": [
+        "A paper notebook",
+        "A voice assistant like Siri or Google Assistant",
+        "A printed newspaper",
+        "A USB flash drive"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What does AI primarily learn during training?",
+      "options": [
+        "Passwords",
+        "Patterns in data",
+        "People's private conversations",
+        "Internet connections"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is a prompt?",
+      "options": [
+        "A computer virus",
+        "The instruction or question given to an AI system",
+        "A software license",
+        "A programming error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why can AI sometimes provide incorrect information?",
+      "options": [
+        "Because it intentionally lies",
+        "Because AI is perfect",
+        "Because AI can misunderstand prompts or generate inaccurate responses",
+        "Because computers cannot process text"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which industry commonly uses AI for diagnosing diseases and analyzing medical images?",
+      "options": [
+        "Agriculture",
+        "Healthcare",
+        "Construction",
+        "Tourism"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which statement about AI is TRUE?",
+      "options": [
+        "AI always replaces human workers.",
+        "AI can never make mistakes.",
+        "AI assists people in completing tasks more efficiently.",
+        "Only programmers can use AI."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Which of the following is NOT considered a current type of AI available today?",
+      "options": [
+        "Narrow AI",
+        "General AI",
+        "ChatGPT",
+        "Google Gemini"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What should users do before relying on important AI-generated information?",
+      "options": [
+        "Share it immediately",
+        "Ignore it",
+        "Verify it using reliable sources",
+        "Delete it"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "title": "Challenge 6 Quiz - Trading Psychology & Emotional Discipline",
+  "description": "Test your understanding of trading psychology, emotional control, discipline, patience, consistency and developing a professional trading mindset.",
+  "passingScore": 70,
+  "timeLimit": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "What is the primary objective of trading psychology?",
+      "options": [
+        "Predict every market movement",
+        "Control emotions and improve decision-making",
+        "Increase leverage safely",
+        "Avoid all losing trades"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Trading psychology focuses on recognizing and controlling emotions so decisions remain disciplined."
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Fear of Missing Out (FOMO) usually causes traders to:",
+      "options": [
+        "Wait patiently for confirmation",
+        "Reduce position size",
+        "Chase trades after price has already moved",
+        "Close their trading platform"
+      ],
+      "correctAnswer": 2,
+      "explanation": "FOMO encourages traders to enter late because they fear missing an opportunity."
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Revenge trading normally happens after:",
+      "options": [
+        "A winning streak",
+        "A profitable month",
+        "An emotional loss that the trader wants to recover immediately",
+        "Reading economic news"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Revenge trading is driven by emotion and the desire to recover losses quickly."
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "According to this course, traders should generally aim for an average risk-to-reward ratio of:",
+      "options": [
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The course recommends an average risk-to-reward ratio of approximately 1:3 whenever market conditions support it."
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "What is the maximum total trading risk allowed during one trading session in this course?",
+      "options": [
+        "2%",
+        "5%",
+        "10%",
+        "15%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The course teaches that total session risk must never exceed 5% of trading capital."
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Patience in trading means:",
+      "options": [
+        "Holding every losing trade",
+        "Waiting for valid setups that match the trading plan",
+        "Ignoring stop-losses",
+        "Trading less because of fear"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Patience means waiting for quality opportunities instead of forcing trades."
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Which behaviour best demonstrates trading discipline?",
+      "options": [
+        "Increasing risk after every profitable trade",
+        "Following the trading plan even after a losing trade",
+        "Removing stop-losses when price approaches them",
+        "Changing strategy after every loss"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Discipline means following established rules regardless of recent results."
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Professional traders primarily measure long-term success by:",
+      "options": [
+        "Winning every trade",
+        "Having the biggest account",
+        "Consistent execution, discipline and risk management",
+        "Taking the highest number of trades"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Professionals focus on process and consistency rather than individual trade outcomes."
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "A trading journal is mainly used to:",
+      "options": [
+        "Guarantee future profits",
+        "Record trades and identify behavioural patterns",
+        "Increase leverage",
+        "Predict market reversals"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A journal helps traders review performance, identify mistakes and improve discipline."
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Which statement best reflects a professional trading mindset?",
+      "options": [
+        "Every trade must be profitable.",
+        "Large profits are more important than risk control.",
+        "Capital preservation comes before capital growth.",
+        "The market can always be predicted."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Professional traders focus first on protecting capital, then on growing it responsibly."
+    }
+  ]
+}

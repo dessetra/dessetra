@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 4 Quiz - RWA Markets and Use Cases",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "Which sector is considered one of the largest applications of Real-World Asset tokenization?",
+      "options": [
+        "Real estate",
+        "Video games",
+        "Social media",
+        "Cloud computing"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is one major benefit of tokenized real estate?",
+      "options": [
+        "Fractional ownership",
+        "Guaranteed profits",
+        "Elimination of taxes",
+        "No legal documentation required"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is an example of a commodity that can be tokenized?",
+      "options": [
+        "Gold",
+        "Silver",
+        "Coffee",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why are custodians important in commodity-backed tokenization projects?",
+      "options": [
+        "They securely safeguard the underlying physical assets.",
+        "They create blockchain networks.",
+        "They replace smart contracts.",
+        "They guarantee market prices."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which financial asset can be tokenized?",
+      "options": [
+        "Government bonds",
+        "Corporate bonds",
+        "Business invoices",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is one risk associated with tokenized debt investments?",
+      "options": [
+        "Borrower default",
+        "Credit risk",
+        "Liquidity risk",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which of the following is considered intellectual property?",
+      "options": [
+        "Patents",
+        "Copyrights",
+        "Trademarks",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "In many intellectual property tokenization projects, tokens commonly represent:",
+      "options": [
+        "Royalty or revenue-sharing rights",
+        "Government ownership",
+        "Mining rewards",
+        "Internet bandwidth"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement about tokenization is correct?",
+      "options": [
+        "Blockchain replaces legal ownership.",
+        "Blockchain records digital ownership while legal rights remain governed by applicable laws.",
+        "Tokenization eliminates all investment risks.",
+        "Every token guarantees future profits."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What should investors always do before participating in an RWA project?",
+      "options": [
+        "Perform due diligence by reviewing the asset, legal structure and associated risks.",
+        "Invest immediately before researching.",
+        "Assume blockchain guarantees safety.",
+        "Ignore legal documentation."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

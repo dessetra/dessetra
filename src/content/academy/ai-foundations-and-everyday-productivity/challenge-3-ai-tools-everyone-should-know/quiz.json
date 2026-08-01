@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 3 Quiz - AI Tools Everyone Should Know",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is the primary purpose of AI tools?",
+      "options": [
+        "To replace all human workers",
+        "To help people complete tasks more efficiently",
+        "To eliminate the need for computers",
+        "To increase internet speed"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which category of AI tools is mainly used to create articles, emails and reports?",
+      "options": [
+        "Navigation tools",
+        "Writing assistants",
+        "Gaming tools",
+        "Operating systems"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which AI tool is particularly useful for generating images from text descriptions?",
+      "options": [
+        "Image generation tools",
+        "Spreadsheet software",
+        "Web browsers",
+        "Database servers"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a benefit of AI productivity tools?",
+      "options": [
+        "They eliminate the need for human review.",
+        "They help automate repetitive tasks and save time.",
+        "They guarantee every response is correct.",
+        "They replace all business employees."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is it important to verify AI-generated information?",
+      "options": [
+        "Because AI can sometimes produce inaccurate or outdated information",
+        "Because AI refuses to answer questions",
+        "Because AI never explains its answers",
+        "Because AI only works online"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which factor should you consider when choosing an AI tool?",
+      "options": [
+        "Whether it matches the task you want to complete",
+        "The color of its logo",
+        "How many advertisements it displays",
+        "The number of downloads only"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What should you avoid uploading to AI platforms unless you fully trust their security and privacy policies?",
+      "options": [
+        "Public news articles",
+        "Passwords and confidential personal information",
+        "Shopping lists",
+        "Publicly available images"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which statement about AI tools is TRUE?",
+      "options": [
+        "One AI tool is the best at every task.",
+        "Different AI tools have different strengths.",
+        "AI tools are only useful for programmers.",
+        "Every AI tool provides the same features."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is generally the best strategy for beginners?",
+      "options": [
+        "Install as many AI tools as possible.",
+        "Master a few reliable AI tools before expanding your toolkit.",
+        "Only use paid AI tools.",
+        "Avoid learning new AI features."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is continuous learning important when using AI?",
+      "options": [
+        "Because AI technology evolves rapidly with new tools and features",
+        "Because AI tools stop working after one year",
+        "Because AI can only be used by certified professionals",
+        "Because AI never changes"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

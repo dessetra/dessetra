@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 3 Quiz",
+  "challenge": 3,
+  "passPercentage": 70,
+  "timeLimitMinutes": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What information does every completed candlestick contain?",
+      "options": [
+        "Open, High, Low and Close",
+        "Entry, Stop-Loss, Target and Profit",
+        "Support, Resistance, Volume and Trend",
+        "Buy, Sell, Hold and Exit"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Every completed candlestick contains the opening, highest, lowest and closing prices for its timeframe."
+    },
+    {
+      "id": 2,
+      "question": "What does a long lower wick often indicate?",
+      "options": [
+        "Buyers rejected lower prices",
+        "Sellers rejected higher prices",
+        "The market cannot move again",
+        "The candle has no closing price"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A long lower wick often shows that sellers pushed price lower, but buyers recovered and rejected the lower prices."
+    },
+    {
+      "id": 3,
+      "question": "What is the most important factor when interpreting a candlestick pattern?",
+      "options": [
+        "The colour selected on the trading platform",
+        "The name of the candle",
+        "Its market context and location",
+        "The number of indicators on the chart"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A candlestick pattern becomes useful when its location, trend, support, resistance and market structure support the same idea."
+    },
+    {
+      "id": 4,
+      "question": "Which single candlestick pattern usually has a small body near the top and a long lower wick after a downtrend?",
+      "options": [
+        "Shooting Star",
+        "Hammer",
+        "Gravestone Doji",
+        "Bearish Marubozu"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Hammer usually forms after a downward move and may show rejection of lower prices."
+    },
+    {
+      "id": 5,
+      "question": "What makes a Shooting Star more meaningful?",
+      "options": [
+        "It forms near resistance after an upward move",
+        "It appears anywhere on the chart",
+        "It forms without an upper wick",
+        "It appears during every sideways market"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Shooting Star becomes more significant when it forms near resistance or after an extended upward move."
+    },
+    {
+      "id": 6,
+      "question": "What happens in a Bullish Engulfing pattern?",
+      "options": [
+        "A bearish candle completely covers a bullish candle",
+        "A bullish candle's body covers the previous bearish candle's body",
+        "Two candles form exactly the same high",
+        "Three bullish candles appear after an uptrend"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Bullish Engulfing pattern forms when a bullish candle's body fully covers the body of the previous bearish candle."
+    },
+    {
+      "id": 7,
+      "question": "Which three-candle pattern may indicate a bullish reversal after a downtrend?",
+      "options": [
+        "Evening Star",
+        "Three Black Crows",
+        "Morning Star",
+        "Bear Flag"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A Morning Star consists of a bearish candle, a small indecision candle and a strong bullish candle after a downtrend."
+    },
+    {
+      "id": 8,
+      "question": "What is a Break of Structure?",
+      "options": [
+        "When price breaks an important previous swing point",
+        "When every candle has the same body size",
+        "When a trader removes indicators",
+        "When the market closes for the day"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Break of Structure occurs when price breaks an important swing high or swing low."
+    },
+    {
+      "id": 9,
+      "question": "What normally confirms a Double Top pattern?",
+      "options": [
+        "Price creates a third higher high",
+        "Price breaks below the neckline",
+        "A bullish candle forms above resistance",
+        "Price remains between both highs forever"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Double Top is normally confirmed when price breaks below the neckline or supporting structure."
+    },
+    {
+      "id": 10,
+      "question": "Which statement best describes professional use of candlestick and chart patterns?",
+      "options": [
+        "Every recognized pattern should be traded",
+        "Patterns guarantee the direction of the next move",
+        "Patterns should be combined with context, confirmation and risk management",
+        "Patterns remove the need for stop-loss orders"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Professional traders combine patterns with market structure, support, resistance, confirmation, multiple timeframes and proper risk management."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 1 Quiz - Understanding Real-World Assets",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What does RWA stand for?",
+      "options": [
+        "Real Web Applications",
+        "Real-World Assets",
+        "Registered Wealth Accounts",
+        "Regional Web Assets"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is an example of a Real-World Asset?",
+      "options": [
+        "A residential building",
+        "Gold",
+        "A government bond",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Where do Real-World Assets exist before they are tokenized?",
+      "options": [
+        "Only on blockchain",
+        "Only inside cryptocurrency exchanges",
+        "In the physical world or traditional financial systems",
+        "Only inside smart contracts"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What may a blockchain token represent in an RWA project?",
+      "options": [
+        "Ownership or defined economic rights",
+        "Only a cryptocurrency",
+        "Guaranteed profits",
+        "A bank account"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Owning an RWA token automatically means:",
+      "options": [
+        "You legally own the physical asset in every case.",
+        "You own whatever legal or economic rights are defined by the project's documentation.",
+        "You become the project manager.",
+        "The government transfers the asset into your name."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which category of RWA includes music royalties and patents?",
+      "options": [
+        "Real Estate",
+        "Commodities",
+        "Intellectual Property",
+        "Agriculture"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "One advantage of RWA tokenization is:",
+      "options": [
+        "Improved transparency and fractional ownership",
+        "Guaranteed investment returns",
+        "Elimination of all legal requirements",
+        "Removal of investment risks"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which technology is commonly used to record ownership and transactions for tokenized RWAs?",
+      "options": [
+        "Blockchain",
+        "Email",
+        "Spreadsheet software",
+        "Social media"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following remains important even after tokenization?",
+      "options": [
+        "Legal documentation",
+        "Asset custody",
+        "Regulatory compliance",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why are Real-World Assets becoming important in Web3?",
+      "options": [
+        "They connect blockchain technology with real economic assets.",
+        "They replace every traditional financial system.",
+        "They remove all investment risks.",
+        "They guarantee high profits."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

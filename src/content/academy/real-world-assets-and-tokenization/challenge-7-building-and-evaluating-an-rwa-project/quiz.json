@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 7 Quiz - Building and Evaluating an RWA Project",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is the first step when designing an RWA project?",
+      "options": [
+        "Create blockchain tokens",
+        "Select and verify the asset",
+        "Launch marketing campaigns",
+        "List the tokens on an exchange"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "A project's business model primarily explains:",
+      "options": [
+        "How it creates, delivers and captures value",
+        "How to write smart contracts",
+        "How to design a website",
+        "How to mine cryptocurrency"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following may serve as a revenue source for a tokenized real estate project?",
+      "options": [
+        "Rental income",
+        "Property management fees",
+        "Parking fees",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which factor is most important when evaluating an RWA project?",
+      "options": [
+        "The existence and verification of the underlying asset",
+        "The color of the project's logo",
+        "The number of social media followers",
+        "The length of its website"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is considered a warning sign?",
+      "options": [
+        "Independent audit reports",
+        "Clear legal documentation",
+        "Guaranteed investment profits",
+        "Transparent financial reporting"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why do institutions explore RWA tokenization?",
+      "options": [
+        "To improve efficiency and transparency",
+        "To eliminate all financial regulations",
+        "To replace every traditional bank immediately",
+        "To remove legal ownership requirements"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which industry is actively exploring Real-World Asset tokenization?",
+      "options": [
+        "Banking",
+        "Commercial real estate",
+        "Investment funds",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which principle is essential for long-term institutional adoption?",
+      "options": [
+        "Transparency and compliance",
+        "Anonymous ownership",
+        "Guaranteed returns",
+        "Ignoring regulations"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why is continuous education important in the RWA industry?",
+      "options": [
+        "Because regulations, technology and markets continue to evolve",
+        "Because blockchain never changes",
+        "Because laws remain identical worldwide",
+        "Because token prices never fluctuate"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement best summarizes a successful RWA project?",
+      "options": [
+        "It combines strong legal structures, responsible governance, secure technology and sustainable business operations.",
+        "It only requires blockchain technology.",
+        "It only needs investors.",
+        "It guarantees profits for everyone."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "title": "Final Examination - AI Foundations & Everyday Productivity",
+  "description": "This final examination assesses your understanding of all five challenges in the AI Foundations & Everyday Productivity course. A minimum score of 70% is required to successfully complete the course and qualify for a certificate.",
+  "passingScore": 70,
+  "timeLimitMinutes": 30,
+  "questions": [
+    {
+      "question": "Artificial Intelligence (AI) is best described as:",
+      "options": [
+        "A replacement for all human intelligence",
+        "Technology that enables computers to perform tasks that normally require human intelligence",
+        "A type of internet connection",
+        "A programming language"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which type of AI is designed to perform a single specific task?",
+      "options": [
+        "Artificial General Intelligence",
+        "Artificial Super Intelligence",
+        "Narrow AI",
+        "Quantum AI"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "A prompt is:",
+      "options": [
+        "A computer virus",
+        "An instruction or question given to an AI system",
+        "A database",
+        "A programming framework"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which characteristic usually produces better AI responses?",
+      "options": [
+        "Very vague instructions",
+        "Clear and specific prompts",
+        "Using only one-word prompts",
+        "Leaving out important details"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which AI tool category is mainly used to summarize information and answer research questions?",
+      "options": [
+        "Research assistants",
+        "Media players",
+        "Operating systems",
+        "Spreadsheet software"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is one major benefit of AI productivity tools?",
+      "options": [
+        "They remove the need for human thinking.",
+        "They automate repetitive tasks and improve efficiency.",
+        "They eliminate business costs completely.",
+        "They guarantee perfect decisions."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "An AI workflow is:",
+      "options": [
+        "A computer network",
+        "A structured process where AI assists with different stages of completing a task",
+        "An antivirus application",
+        "A hardware component"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should AI-generated content always be reviewed?",
+      "options": [
+        "Because AI can produce inaccurate or incomplete information",
+        "Because AI cannot generate text",
+        "Because AI only works offline",
+        "Because AI always refuses corrections"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which principle is part of responsible AI usage?",
+      "options": [
+        "Fairness",
+        "Transparency",
+        "Accountability",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which information should generally NOT be shared with AI systems?",
+      "options": [
+        "Public news articles",
+        "Passwords and confidential financial information",
+        "General educational questions",
+        "Public weather information"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is AI bias?",
+      "options": [
+        "When AI performs calculations slowly",
+        "When AI produces unfair or unbalanced results because of limitations in data or design",
+        "When AI updates itself automatically",
+        "When AI loses internet access"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "An AI hallucination is:",
+      "options": [
+        "A hardware failure",
+        "A convincing but incorrect or fabricated AI response",
+        "A software update",
+        "An internet outage"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Plagiarism means:",
+      "options": [
+        "Creating original work",
+        "Presenting someone else's work or ideas as your own without proper acknowledgment",
+        "Using grammar correction software",
+        "Publishing public domain materials"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which human skill remains especially valuable in the AI era?",
+      "options": [
+        "Critical thinking",
+        "Creativity",
+        "Ethical judgment",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is the best way to use AI in education?",
+      "options": [
+        "Use AI to replace studying",
+        "Use AI as a learning assistant while developing your own understanding",
+        "Copy AI answers into every assignment",
+        "Avoid learning independently"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is lifelong learning important?",
+      "options": [
+        "Because AI and technology continue to evolve",
+        "Because certificates expire every year",
+        "Because AI will eventually stop improving",
+        "Because education ends after one course"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is one benefit of using AI for business?",
+      "options": [
+        "Improved productivity",
+        "Better customer support",
+        "Automation of repetitive tasks",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which is a good cybersecurity practice?",
+      "options": [
+        "Using the same password everywhere",
+        "Enabling multi-factor authentication",
+        "Sharing passwords with colleagues",
+        "Ignoring software updates"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "When using AI-generated information for important decisions, you should:",
+      "options": [
+        "Accept it without question",
+        "Verify it using reliable sources",
+        "Only trust social media posts",
+        "Avoid asking follow-up questions"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "The overall purpose of this course is to help learners:",
+      "options": [
+        "Replace human intelligence with AI",
+        "Understand, apply and use AI responsibly in everyday life, education and work",
+        "Become professional programmers immediately",
+        "Depend entirely on AI for decision-making"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

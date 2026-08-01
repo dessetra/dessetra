@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 6 Quiz - RWA Risk, Valuation and Due Diligence",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is market risk in an RWA project?",
+      "options": [
+        "The possibility that asset values change because of market conditions",
+        "The risk of forgetting a wallet password",
+        "The speed of blockchain transactions",
+        "The cost of creating tokens"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Liquidity risk refers to:",
+      "options": [
+        "The possibility that an investment cannot easily be bought or sold",
+        "The amount of water an asset contains",
+        "The number of blockchain validators",
+        "The amount of storage space required"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why is asset valuation important before tokenization?",
+      "options": [
+        "To determine a fair asset value and support accurate token pricing",
+        "To increase blockchain speed",
+        "To eliminate all investment risks",
+        "To avoid legal documentation"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which valuation method estimates value based on expected future income?",
+      "options": [
+        "Income Approach",
+        "Market Comparison",
+        "Cost Approach",
+        "Replacement Method"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is due diligence?",
+      "options": [
+        "Carefully reviewing an investment before making a decision",
+        "Creating blockchain wallets",
+        "Writing smart contracts",
+        "Paying taxes"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which document is commonly reviewed during due diligence for a tokenized property?",
+      "options": [
+        "Property title deed",
+        "Restaurant menu",
+        "Mobile phone receipt",
+        "Social media profile"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Default risk refers to:",
+      "options": [
+        "The possibility that a borrower or project fails to meet its financial obligations",
+        "The loss of an internet connection",
+        "The failure of a computer monitor",
+        "The creation of additional tokens"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Counterparty risk occurs when:",
+      "options": [
+        "Another party involved in the project fails to perform its responsibilities",
+        "A token price increases",
+        "A blockchain network adds more validators",
+        "A smart contract is deployed successfully"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following helps reduce investment risk in an RWA project?",
+      "options": [
+        "Independent audits",
+        "Strong governance",
+        "Transparent reporting",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Before investing in an RWA project, an investor should:",
+      "options": [
+        "Review the asset, legal structure, valuation and associated risks",
+        "Invest immediately without research",
+        "Ignore financial reports",
+        "Assume blockchain removes all risks"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

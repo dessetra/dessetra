@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 5 Quiz - Building an AI-Powered Career",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is freelancing?",
+      "options": [
+        "Working only for one company full-time",
+        "Offering your skills or services to clients on a project or contract basis",
+        "Owning a social media account",
+        "Working only with AI"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "How can AI help freelancers?",
+      "options": [
+        "Generate ideas and first drafts",
+        "Improve productivity",
+        "Automate repetitive tasks",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why is it important to review AI-generated work before delivering it to clients?",
+      "options": [
+        "To ensure quality and accuracy",
+        "Because AI cannot create content",
+        "To increase internet speed",
+        "It is not necessary"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the primary purpose of a professional portfolio?",
+      "options": [
+        "To store personal photographs",
+        "To demonstrate your skills and completed projects",
+        "To replace a résumé completely",
+        "To advertise other businesses"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following could be included in an AI portfolio?",
+      "options": [
+        "AI-generated marketing campaigns",
+        "Writing samples",
+        "Image and video projects",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Successful AI businesses usually begin by:",
+      "options": [
+        "Buying expensive computers",
+        "Solving a real customer problem",
+        "Creating the largest possible company",
+        "Hiring many employees immediately"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is continuous learning important in AI?",
+      "options": [
+        "AI technology changes rapidly",
+        "It guarantees instant success",
+        "It eliminates competition",
+        "It removes the need for practice"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which human skill remains valuable even when using AI?",
+      "options": [
+        "Critical thinking",
+        "Creativity",
+        "Communication",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "A personal AI learning plan should include:",
+      "options": [
+        "Learning goals",
+        "Projects to complete",
+        "Ways to measure progress",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which statement best describes AI's role in your career?",
+      "options": [
+        "AI completely replaces professional skills.",
+        "AI is a tool that enhances productivity while human knowledge and judgment remain essential.",
+        "AI guarantees employment.",
+        "AI removes the need for continuous learning."
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

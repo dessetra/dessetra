@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 5 Quiz - Legal, Compliance and Ownership Structures",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What does legal ownership mean?",
+      "options": [
+        "Owning blockchain tokens only",
+        "Official ownership of an asset recognized under applicable law",
+        "Managing a cryptocurrency wallet",
+        "Holding a project's whitepaper"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "In most RWA projects, token ownership represents:",
+      "options": [
+        "Automatic legal ownership of the physical asset",
+        "Rights defined by the project's legal agreements",
+        "Unlimited control over the company",
+        "Government ownership"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the primary purpose of Know Your Customer (KYC)?",
+      "options": [
+        "To increase token prices",
+        "To verify the identity of customers",
+        "To issue cryptocurrencies",
+        "To reduce blockchain fees"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the main objective of Anti-Money Laundering (AML) regulations?",
+      "options": [
+        "To reduce internet fraud only",
+        "To prevent financial crimes such as money laundering",
+        "To eliminate taxes",
+        "To create new digital currencies"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is a Special Purpose Vehicle (SPV)?",
+      "options": [
+        "A blockchain wallet",
+        "A separate legal entity created for a specific purpose",
+        "A cryptocurrency exchange",
+        "A smart contract standard"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the role of an asset custodian?",
+      "options": [
+        "To safeguard assets and important legal documents",
+        "To develop blockchain software",
+        "To determine market prices",
+        "To issue government licenses"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why are independent audits valuable in RWA projects?",
+      "options": [
+        "They help verify assets, records and compliance",
+        "They guarantee investment profits",
+        "They replace legal agreements",
+        "They eliminate all project risks"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What does jurisdiction determine?",
+      "options": [
+        "The blockchain network being used",
+        "Which laws and regulations apply to a project",
+        "The value of the token",
+        "The speed of transactions"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is an example of a compliance risk?",
+      "options": [
+        "Operating without required licenses",
+        "Failing to perform KYC checks",
+        "Violating securities regulations",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why is compliance important in Real-World Asset projects?",
+      "options": [
+        "It helps protect investors, businesses and the integrity of the financial system",
+        "It guarantees every project will succeed",
+        "It removes all legal obligations",
+        "It replaces smart contracts"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

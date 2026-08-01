@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 8 Quiz - Professional Trading Workflow & Market Preparation",
+  "description": "Test your understanding of market preparation, trading plan execution, trading-day management and professional end-of-day review.",
+  "passingScore": 70,
+  "timeLimit": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the main purpose of pre-market preparation?",
+      "options": [
+        "To predict every market movement",
+        "To identify possible scenarios and prepare a structured response",
+        "To guarantee a profitable trading session",
+        "To enter trades before other traders"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pre-market preparation helps traders understand conditions and prepare for different possibilities rather than predict the market with certainty."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following should be checked before beginning a trading session?",
+      "options": [
+        "Only social media predictions",
+        "The economic calendar, higher-timeframe structure and personal readiness",
+        "Only the account balance",
+        "Only the previous winning trade"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professional preparation includes economic events, broader market structure and the trader's mental and physical readiness."
+    },
+    {
+      "id": 3,
+      "question": "Why should a trader build a focused daily watchlist?",
+      "options": [
+        "To trade as many markets as possible",
+        "To reduce distraction and concentrate on suitable opportunities",
+        "To avoid using a trading plan",
+        "To increase the number of trades"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A focused watchlist helps the trader monitor only markets that match the trading system and current conditions."
+    },
+    {
+      "id": 4,
+      "question": "What should a trader do when an important condition on the pre-trade checklist is missing?",
+      "options": [
+        "Enter with a smaller stop-loss",
+        "Increase the position size",
+        "Wait or avoid the trade",
+        "Enter before the opportunity disappears"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A trade should only be taken when the important conditions of the trading plan are satisfied."
+    },
+    {
+      "id": 5,
+      "question": "According to this course, what average risk-to-reward ratio should traders generally seek when market conditions support it?",
+      "options": [
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:10"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The course generally recommends seeking an average risk-to-reward ratio of approximately 1:3 when the target is technically realistic."
+    },
+    {
+      "id": 6,
+      "question": "What is the maximum total trading session risk allowed in this course?",
+      "options": [
+        "2%",
+        "5%",
+        "10%",
+        "20%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Total risk during one trading session must never exceed 5% of total trading capital."
+    },
+    {
+      "id": 7,
+      "question": "What is revenge trading?",
+      "options": [
+        "Reviewing a losing trade at the end of the day",
+        "Immediately taking another trade in an emotional attempt to recover a loss",
+        "Using a stop-loss on every trade",
+        "Waiting for another valid setup after a loss"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Revenge trading occurs when a trader abandons discipline and tries to recover a loss immediately through another emotional trade."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is a valid reason to end a trading session?",
+      "options": [
+        "The trader wants more excitement",
+        "The maximum session risk has been reached",
+        "Another trader posted a profitable trade",
+        "The trader missed one opportunity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A professional trader should stop when the planned session risk is reached or when discipline, focus or suitable opportunities are no longer present."
+    },
+    {
+      "id": 9,
+      "question": "How should a trader judge the quality of a completed trade?",
+      "options": [
+        "Only by whether it made a profit",
+        "By whether the rules, risk limits and execution process were followed",
+        "Only by the size of the position",
+        "By comparing it with another trader's result"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A losing trade can still be professionally executed, while a winning trade can contain serious rule violations."
+    },
+    {
+      "id": 10,
+      "question": "Which sequence best represents the professional daily trading cycle taught in Challenge 8?",
+      "options": [
+        "Enter → Hope → Increase Risk → Exit",
+        "Prepare → Analyse → Plan → Execute → Manage → Review → Improve",
+        "Watch Social Media → Copy Trade → Close Platform",
+        "Trade → Recover Losses → Trade Again"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professional trading follows a structured cycle of preparation, analysis, planning, execution, management, review and improvement."
+    }
+  ]
+}

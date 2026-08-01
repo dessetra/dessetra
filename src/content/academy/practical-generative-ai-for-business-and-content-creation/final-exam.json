@@ -1,0 +1,308 @@
+{
+  "title": "Final Examination - Practical Generative AI for Business & Content Creation",
+  "description": "This final examination assesses your understanding of AI content creation, image generation, video production, business applications and AI-powered career development. A minimum score of 70% is required to complete the course and qualify for certification.",
+  "passingScore": 70,
+  "timeLimitMinutes": 40,
+  "questions": [
+    {
+      "question": "What is Generative AI primarily designed to do?",
+      "options": [
+        "Repair damaged computer hardware",
+        "Create new content from user instructions",
+        "Increase internet speed",
+        "Replace every human profession"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following can Generative AI create?",
+      "options": [
+        "Written content",
+        "Images and videos",
+        "Audio and computer code",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which prompt is most likely to produce useful marketing content?",
+      "options": [
+        "Write something.",
+        "Marketing.",
+        "Write a professional Facebook post promoting an AI course to entrepreneurs, mention practical skills and end with a registration call to action.",
+        "Create words."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why should the target audience be included in a content prompt?",
+      "options": [
+        "To help AI adjust the language, message and tone",
+        "To increase the user's internet speed",
+        "To prevent the AI from generating text",
+        "To make the prompt less specific"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the purpose of a hook in social media content?",
+      "options": [
+        "To capture the audience's attention",
+        "To provide a password",
+        "To replace the entire post",
+        "To increase image resolution"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the best approach when creating a long blog article with AI?",
+      "options": [
+        "Publish the first response immediately",
+        "Create an outline before expanding each section",
+        "Avoid giving AI any context",
+        "Use only one-word prompts"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is AI image generation?",
+      "options": [
+        "Printing photographs automatically",
+        "Creating images from written descriptions using AI",
+        "Saving images to cloud storage",
+        "Reducing the size of image files"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which details can improve an AI image prompt?",
+      "options": [
+        "Subject and environment",
+        "Visual style and lighting",
+        "Colours and perspective",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why is visual brand consistency important?",
+      "options": [
+        "It helps customers recognize and trust the business",
+        "It guarantees every image will go viral",
+        "It prevents images from being edited",
+        "It removes the need for a business logo"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What should you do when the first AI-generated image does not match your expectations?",
+      "options": [
+        "Use it without reviewing it",
+        "Improve the prompt and generate another version",
+        "Stop using AI permanently",
+        "Remove all details from the prompt"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What should normally be prepared before generating an AI video?",
+      "options": [
+        "A clear goal, script or prompt",
+        "A printed newspaper",
+        "A physical television studio",
+        "A new computer password"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which structure is suitable for a short marketing video?",
+      "options": [
+        "Hook, problem, solution, benefits and call to action",
+        "Call to action, password and conclusion",
+        "Only background music",
+        "Several unrelated messages without a conclusion"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why are captions valuable in social media videos?",
+      "options": [
+        "They improve accessibility and help people watching without sound",
+        "They automatically guarantee more sales",
+        "They reduce the need for a video message",
+        "They increase internet speed"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What should be checked before publishing an AI-generated video?",
+      "options": [
+        "Voiceover accuracy",
+        "Visual quality and pacing",
+        "Captions and call to action",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "How can AI improve customer service?",
+      "options": [
+        "By answering common questions and providing faster support",
+        "By preventing customers from contacting the business",
+        "By removing the need for all human support",
+        "By increasing response delays"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which customer issue should generally be transferred to a human representative?",
+      "options": [
+        "A simple question about opening hours",
+        "A complex complaint or sensitive billing dispute",
+        "A request for a product description",
+        "A frequently asked delivery question"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is business automation?",
+      "options": [
+        "Using technology to perform repetitive business tasks",
+        "Replacing every employee immediately",
+        "Creating only business advertisements",
+        "Opening multiple social media accounts"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is an AI-powered business system?",
+      "options": [
+        "Several AI tools working together to support business processes",
+        "A business that has no human workers",
+        "A single social media page",
+        "A computer without internet access"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why does human oversight remain necessary in AI-powered businesses?",
+      "options": [
+        "Humans must review important decisions, accuracy and sensitive situations",
+        "AI cannot create any business content",
+        "Humans must manually repeat every automated task",
+        "AI systems should never be monitored"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which is an appropriate AI-powered freelance service?",
+      "options": [
+        "AI-assisted content creation",
+        "AI image and video production",
+        "Social media management",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What should a freelancer do before delivering AI-generated work to a client?",
+      "options": [
+        "Review, improve and personalize the work",
+        "Deliver the first output without checking it",
+        "Remove the client's requirements",
+        "Claim that AI guarantees perfect results"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the primary purpose of an AI portfolio?",
+      "options": [
+        "To demonstrate practical skills through completed projects",
+        "To store private passwords",
+        "To replace professional experience with claims",
+        "To collect unrelated AI tools"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which information should accompany a project in an AI portfolio?",
+      "options": [
+        "The project objective",
+        "The tools and skills used",
+        "The final outcome",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is the best foundation for an AI entrepreneurship idea?",
+      "options": [
+        "A real customer problem that AI can help solve",
+        "The most expensive AI subscription",
+        "A business with no target audience",
+        "Using AI only because it is popular"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why is continuous learning important for an AI-powered career?",
+      "options": [
+        "Because AI tools and workplace requirements continue to evolve",
+        "Because one AI tool can never be used twice",
+        "Because human skills are no longer useful",
+        "Because portfolios should remain unchanged"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which combination is most valuable in an AI-powered career?",
+      "options": [
+        "AI skills combined with creativity, communication and critical thinking",
+        "AI tools without human judgment",
+        "Certificates without practical projects",
+        "Automation without responsibility"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement best describes responsible use of Generative AI?",
+      "options": [
+        "AI outputs should be reviewed for accuracy, quality and relevance",
+        "Every AI output should be published immediately",
+        "AI should make every business decision independently",
+        "Confidential customer data can always be shared with any AI tool"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the best way to improve an unsatisfactory AI-generated result?",
+      "options": [
+        "Provide clearer follow-up instructions and refine the output",
+        "Accept the result without changes",
+        "Remove all context from the prompt",
+        "Assume the task cannot be completed"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which workflow best represents professional AI-assisted content creation?",
+      "options": [
+        "Define the goal, write a prompt, generate, review, improve and personalize",
+        "Generate, publish immediately and review later",
+        "Copy existing content and remove the creator's name",
+        "Ask a vague question and accept the first response"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the main purpose of this course?",
+      "options": [
+        "To help learners apply Generative AI to content creation, business and career opportunities",
+        "To replace all human creativity and judgment",
+        "To teach only the history of Artificial Intelligence",
+        "To guarantee immediate income from AI"
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

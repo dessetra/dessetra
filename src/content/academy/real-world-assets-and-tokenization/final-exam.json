@@ -1,0 +1,308 @@
+{
+  "title": "Final Examination - Real-World Assets (RWA) & Tokenization",
+  "description": "Comprehensive examination covering all seven challenges of the Real-World Assets & Tokenization course.",
+  "passingScore": 75,
+  "timeLimitMinutes": 40,
+  "questions": [
+    {
+      "question": "What does RWA stand for?",
+      "options": [
+        "Real-World Assets",
+        "Remote Web Applications",
+        "Registered Wallet Accounts",
+        "Real Wallet Access"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the primary purpose of tokenization?",
+      "options": [
+        "To digitally represent rights related to an asset using blockchain",
+        "To eliminate legal ownership",
+        "To create cryptocurrencies only",
+        "To avoid regulations"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which asset is commonly tokenized?",
+      "options": [
+        "Real estate",
+        "Gold",
+        "Government bonds",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which blockchain feature helps provide a permanent transaction history?",
+      "options": [
+        "Immutability",
+        "Compression",
+        "Caching",
+        "Encryption only"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Smart contracts are primarily used to:",
+      "options": [
+        "Automate predefined blockchain processes",
+        "Replace lawyers completely",
+        "Create physical assets",
+        "Store government records"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which token standard is commonly used for fungible tokens?",
+      "options": [
+        "ERC-20",
+        "ERC-721",
+        "ERC-1155 only",
+        "BEP-2"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "An oracle is responsible for:",
+      "options": [
+        "Providing trusted external data to blockchain applications",
+        "Creating legal contracts",
+        "Holding physical assets",
+        "Managing investor accounts"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the role of a custodian?",
+      "options": [
+        "Safeguarding assets and important legal documents",
+        "Creating tokens",
+        "Approving blockchain transactions",
+        "Setting market prices"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Fractional ownership allows investors to:",
+      "options": [
+        "Own a portion of an asset",
+        "Own every asset completely",
+        "Avoid legal agreements",
+        "Guarantee profits"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which commodity is commonly tokenized?",
+      "options": [
+        "Gold",
+        "Silver",
+        "Coffee",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Tokenized bonds primarily represent:",
+      "options": [
+        "Rights connected to debt investments",
+        "Property ownership only",
+        "Mining rewards",
+        "Voting in elections"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Intellectual property includes:",
+      "options": [
+        "Patents",
+        "Copyrights",
+        "Trademarks",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Legal ownership refers to:",
+      "options": [
+        "Ownership recognized by applicable law",
+        "Owning a blockchain wallet",
+        "Holding cryptocurrency",
+        "Owning social media accounts"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "KYC stands for:",
+      "options": [
+        "Know Your Customer",
+        "Keep Your Coins",
+        "Know Your Crypto",
+        "Key Your Contract"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "The primary purpose of AML regulations is to:",
+      "options": [
+        "Prevent money laundering and financial crime",
+        "Increase token prices",
+        "Reduce internet costs",
+        "Create cryptocurrencies"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "An SPV is:",
+      "options": [
+        "A separate legal entity created for a specific purpose",
+        "A blockchain wallet",
+        "A smart contract",
+        "A mining application"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Jurisdiction determines:",
+      "options": [
+        "Which laws and regulations apply",
+        "Token prices",
+        "Blockchain speed",
+        "Wallet security"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Market risk is mainly caused by:",
+      "options": [
+        "Changes in economic and market conditions",
+        "Computer viruses only",
+        "Internet speed",
+        "Token design"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which valuation method estimates value based on expected income?",
+      "options": [
+        "Income Approach",
+        "Market Comparison",
+        "Cost Approach",
+        "Replacement Method"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Due diligence means:",
+      "options": [
+        "Carefully reviewing an investment before making a decision",
+        "Writing smart contracts",
+        "Creating tokens",
+        "Marketing an investment"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Liquidity risk means:",
+      "options": [
+        "Difficulty buying or selling an investment",
+        "Poor internet connection",
+        "Loss of private keys",
+        "High gas fees"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Counterparty risk occurs when:",
+      "options": [
+        "Another party fails to perform its responsibilities",
+        "A blockchain stops producing blocks",
+        "A wallet is deleted",
+        "A token supply increases"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "A sustainable RWA business model should:",
+      "options": [
+        "Generate real revenue and manage expenses responsibly",
+        "Depend only on attracting new investors",
+        "Guarantee profits",
+        "Ignore operational costs"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which is an important factor when evaluating an RWA project?",
+      "options": [
+        "Verified ownership of the underlying asset",
+        "Logo design",
+        "Number of advertisements",
+        "Office decoration"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which is considered a warning sign?",
+      "options": [
+        "Guaranteed returns with no risk",
+        "Independent audits",
+        "Transparent reporting",
+        "Legal documentation"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Institutional adoption of RWA depends heavily on:",
+      "options": [
+        "Trust, compliance and security",
+        "Celebrity endorsements",
+        "Internet popularity",
+        "Short-term speculation"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which document is commonly reviewed during due diligence for real estate?",
+      "options": [
+        "Property title deed",
+        "Restaurant receipt",
+        "Phone bill",
+        "Travel ticket"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why are independent audits valuable?",
+      "options": [
+        "They verify assets, records and compliance",
+        "They guarantee profits",
+        "They eliminate all risks",
+        "They replace regulators"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement best describes blockchain's role in RWA?",
+      "options": [
+        "It records digital ownership and transactions while supporting legal and business processes",
+        "It replaces every legal system",
+        "It guarantees investment success",
+        "It removes all financial risk"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement best summarizes a successful RWA project?",
+      "options": [
+        "It combines strong legal structures, responsible governance, secure technology and sustainable business operations.",
+        "It only requires blockchain technology.",
+        "It only needs investors.",
+        "It guarantees profits for everyone."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 4 Quiz - AI for Everyday Productivity",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is one of the main benefits of using AI for writing and communication?",
+      "options": [
+        "It completely replaces human creativity.",
+        "It helps improve writing quality and saves time.",
+        "It guarantees every document is error-free.",
+        "It removes the need for proofreading."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "How can AI support students and lifelong learners?",
+      "options": [
+        "By taking examinations on their behalf.",
+        "By acting as a personal tutor that explains concepts and creates practice questions.",
+        "By replacing teachers completely.",
+        "By preventing learners from making mistakes."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is an example of AI helping with organization and time management?",
+      "options": [
+        "Creating schedules and setting reminders.",
+        "Automatically attending meetings for you.",
+        "Making personal decisions without your approval.",
+        "Guaranteeing every task is completed."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "How does AI improve business productivity?",
+      "options": [
+        "By supporting customer service, communication and project management.",
+        "By eliminating the need for employees.",
+        "By making business decisions without human involvement.",
+        "By guaranteeing business success."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is an AI workflow?",
+      "options": [
+        "A computer virus.",
+        "A structured process where AI assists with different steps of completing a task.",
+        "A type of operating system.",
+        "A programming language."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is it important to review AI-generated work before publishing it?",
+      "options": [
+        "Because AI may produce inaccurate, incomplete or unclear information.",
+        "Because AI cannot generate text.",
+        "Because AI always refuses corrections.",
+        "Because AI automatically publishes documents."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is the recommended way to use multiple AI tools?",
+      "options": [
+        "Use each tool for the task it performs best.",
+        "Only use one AI tool for every situation.",
+        "Install every AI tool available.",
+        "Avoid combining different tools."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which habit leads to better long-term productivity?",
+      "options": [
+        "Continuously improving your AI workflow.",
+        "Using AI without reviewing results.",
+        "Depending on AI for every decision.",
+        "Changing tools every day."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement about AI is TRUE?",
+      "options": [
+        "AI should support human decision-making rather than replace it.",
+        "AI should make all important decisions automatically.",
+        "AI never makes mistakes.",
+        "AI eliminates the need for critical thinking."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is one of the most important skills for using AI effectively every day?",
+      "options": [
+        "Building practical workflows and using AI responsibly.",
+        "Memorizing every AI tool available.",
+        "Avoiding human review.",
+        "Using AI only for entertainment."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

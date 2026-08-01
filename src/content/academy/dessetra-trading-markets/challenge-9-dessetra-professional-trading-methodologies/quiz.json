@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 9 Quiz - Dessetra Professional Trading Methodologies",
+  "description": "Test your understanding of the proprietary Dessetra Trading Methodologies, including the Moving Average Rule, Moving Average and MACD Method, Support & Resistance Zones, and Trendline Trading.",
+  "passingScore": 70,
+  "timeLimit": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "According to the Dessetra Moving Average Rule, which EMA alignment correctly represents an uptrend?",
+      "options": [
+        "200 EMA above 50 EMA above 21 EMA",
+        "50 EMA above 200 EMA above 21 EMA",
+        "21 EMA above 50 EMA above 200 EMA",
+        "21 EMA below 50 EMA below 200 EMA"
+      ],
+      "correctAnswer": 2,
+      "explanation": "In a bullish trend, the 21 EMA should be above the 50 EMA, while the 50 EMA remains above the 200 EMA."
+    },
+    {
+      "id": 2,
+      "question": "When using the Dessetra Moving Average Rule, where is the preferred buy entry during an uptrend?",
+      "options": [
+        "Immediately after a large bullish candle",
+        "After price retraces toward the 21 EMA or 50 EMA and provides confirmation",
+        "Whenever price moves above the 200 EMA",
+        "Immediately after opening the chart"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The methodology teaches traders to wait for a retracement to the 21 EMA or 50 EMA before looking for confirmation."
+    },
+    {
+      "id": 3,
+      "question": "What MACD settings are used in the Dessetra Moving Average and MACD Method?",
+      "options": [
+        "12, 26, 9",
+        "5, 20, 10",
+        "3, 9, 16",
+        "10, 20, 30"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Dessetra methodology uses a MACD configuration of Fast 3, Slow 9 and Signal 16."
+    },
+    {
+      "id": 4,
+      "question": "Within the Dessetra methodology, what does an upward MACD Signal Line crossing through the Zero Line indicate?",
+      "options": [
+        "An automatic buy trade",
+        "Potential bullish momentum confirmation",
+        "A signal to close all trades",
+        "The trend has ended"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An upward crossing through the Zero Line is treated as bullish momentum confirmation and should support—not replace—the Moving Average Rule."
+    },
+    {
+      "id": 5,
+      "question": "According to the Dessetra Support and Resistance Method, which market visits are generally preferred for trading?",
+      "options": [
+        "Only the very first visit",
+        "The second and third visit after the zone has already shown a reaction",
+        "The fifth visit only",
+        "Any visit regardless of previous reactions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The methodology often seeks opportunities from the second and third visit because the market has already demonstrated respect for the zone."
+    },
+    {
+      "id": 6,
+      "question": "Why does the Dessetra methodology analyse lower timeframes after identifying a support or resistance zone on a higher timeframe?",
+      "options": [
+        "To ignore the higher timeframe",
+        "To reduce the number of indicators",
+        "To obtain better confirmation and more precise entries",
+        "To find more random trades"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Higher timeframes identify important zones while lower timeframes provide better confirmation and more accurate entries."
+    },
+    {
+      "id": 7,
+      "question": "For an uptrend trendline, how should the line be drawn?",
+      "options": [
+        "Connecting at least two resistance points",
+        "Connecting at least two support points (higher lows)",
+        "Across the middle of the chart",
+        "Connecting random candle closes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An uptrend trendline is drawn by connecting at least two significant higher lows."
+    },
+    {
+      "id": 8,
+      "question": "Which timeframes are most suitable for the Dessetra Trendline Method?",
+      "options": [
+        "1 Minute and 5 Minutes only",
+        "15 Minutes, 1 Hour and 4 Hours",
+        "Daily charts only",
+        "Weekly charts only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The methodology is primarily designed for the 15-minute, 1-hour and 4-hour timeframes."
+    },
+    {
+      "id": 9,
+      "question": "What should a trader do after price retraces back to a valid trendline?",
+      "options": [
+        "Enter immediately without analysis",
+        "Wait for market confirmation before considering an entry",
+        "Increase position size immediately",
+        "Ignore the trendline and trade against it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Trendlines identify potential reaction zones. Confirmation should still be obtained before entering a trade."
+    },
+    {
+      "id": 10,
+      "question": "Which statement best summarizes the Dessetra Professional Trading Methodologies?",
+      "options": [
+        "Every indicator independently guarantees profitable trades",
+        "Trend, confirmation, patience and disciplined risk management should work together before entering a trade",
+        "Only MACD is necessary for professional trading",
+        "Support and resistance should be traded without confirmation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Dessetra methodologies combine trend identification, confirmation, patience and disciplined risk management rather than relying on a single indicator."
+    }
+  ]
+}

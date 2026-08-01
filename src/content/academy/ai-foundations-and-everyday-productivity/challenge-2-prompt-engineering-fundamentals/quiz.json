@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 2 Quiz - Prompt Engineering Fundamentals",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is a prompt?",
+      "options": [
+        "A type of AI software",
+        "An instruction or request given to an AI system",
+        "A programming language",
+        "A computer virus"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is writing a good prompt important?",
+      "options": [
+        "It speeds up your internet connection",
+        "It helps AI generate more accurate and useful responses",
+        "It increases computer storage",
+        "It prevents software updates"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which prompt is better?",
+      "options": [
+        "Tell me something.",
+        "Explain digital marketing to beginners using simple language and five practical examples.",
+        "Business.",
+        "Marketing."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should you provide context in a prompt?",
+      "options": [
+        "To confuse the AI",
+        "To help AI better understand your request",
+        "To make prompts longer",
+        "To reduce internet usage"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following should you specify when writing a prompt?",
+      "options": [
+        "The audience",
+        "The desired format",
+        "The tone",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is a common prompting mistake?",
+      "options": [
+        "Providing clear instructions",
+        "Being specific",
+        "Asking vague questions",
+        "Reviewing the AI response"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "If the AI's first response is not satisfactory, what should you do?",
+      "options": [
+        "Give up immediately",
+        "Delete the conversation",
+        "Refine your prompt or ask the AI to improve its response",
+        "Restart your computer"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why is it important to specify the target audience?",
+      "options": [
+        "It helps AI adjust the language and level of detail",
+        "It makes the response shorter",
+        "It speeds up AI processing",
+        "It is not important"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which task can AI assist with when given a good prompt?",
+      "options": [
+        "Writing articles",
+        "Generating code",
+        "Summarizing documents",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What should you do before using important AI-generated information?",
+      "options": [
+        "Publish it immediately",
+        "Verify its accuracy using reliable sources",
+        "Ignore it",
+        "Assume it is always correct"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

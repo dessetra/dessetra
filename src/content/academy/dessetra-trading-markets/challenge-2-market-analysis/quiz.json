@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 2 Quiz",
+  "challenge": 2,
+  "passPercentage": 70,
+  "timeLimitMinutes": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the main purpose of market analysis?",
+      "options": [
+        "To guarantee profitable trades",
+        "To make informed trading decisions based on evidence",
+        "To predict every market movement",
+        "To eliminate trading risk"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Market analysis helps traders make informed decisions using evidence rather than emotion."
+    },
+    {
+      "id": 2,
+      "question": "Which type of analysis mainly studies charts and historical price movement?",
+      "options": [
+        "Fundamental Analysis",
+        "Sentiment Analysis",
+        "Technical Analysis",
+        "Economic Analysis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Technical analysis focuses primarily on charts, price action, and market structure."
+    },
+    {
+      "id": 3,
+      "question": "Which type of analysis studies interest rates, inflation and GDP?",
+      "options": [
+        "Technical Analysis",
+        "Fundamental Analysis",
+        "Volume Analysis",
+        "Chart Analysis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fundamental analysis evaluates economic and financial factors that influence markets."
+    },
+    {
+      "id": 4,
+      "question": "Which statement best describes market sentiment?",
+      "options": [
+        "The market's historical prices",
+        "The emotions and overall attitude of market participants",
+        "Government regulations",
+        "A technical indicator"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Market sentiment reflects the confidence, fear or optimism of traders and investors."
+    },
+    {
+      "id": 5,
+      "question": "Which timeframe should usually be analyzed first during top-down analysis?",
+      "options": [
+        "1 Minute",
+        "5 Minutes",
+        "15 Minutes",
+        "The higher timeframe"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Professional traders normally begin with higher timeframes before moving to lower ones."
+    },
+    {
+      "id": 6,
+      "question": "Why do traders use multiple timeframe analysis?",
+      "options": [
+        "To make trading more complicated",
+        "To understand the bigger market picture before refining entries",
+        "To remove the need for risk management",
+        "To predict every future price movement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Multiple timeframe analysis helps traders see both the overall trend and precise entry opportunities."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is considered a higher timeframe?",
+      "options": [
+        "1 Minute",
+        "5 Minutes",
+        "Daily",
+        "15 Minutes"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Daily, Weekly and Monthly charts are generally considered higher timeframes."
+    },
+    {
+      "id": 8,
+      "question": "Which principle is true about technical analysis?",
+      "options": [
+        "It guarantees profitable trades",
+        "It improves probability rather than certainty",
+        "It ignores price movement",
+        "It eliminates market risk"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Technical analysis helps improve the probability of good decisions but cannot guarantee outcomes."
+    },
+    {
+      "id": 9,
+      "question": "Why should traders pay attention to central bank announcements?",
+      "options": [
+        "They often influence interest rates and market volatility",
+        "They predict future market prices",
+        "They guarantee profitable trades",
+        "They determine cryptocurrency mining rewards"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Central bank decisions often have a significant impact on currencies and financial markets."
+    },
+    {
+      "id": 10,
+      "question": "Which statement best describes a professional market analysis process?",
+      "options": [
+        "Trade immediately after seeing a price move",
+        "Study the market, confirm the setup, calculate risk, then decide whether to trade",
+        "Always follow social media signals",
+        "Enter every opportunity to avoid missing profits"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professional traders follow a structured process that includes analysis, confirmation and risk management before entering a trade."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 2 Quiz - Foundations of Asset Tokenization",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is asset tokenization?",
+      "options": [
+        "The process of creating digital tokens that represent rights connected to a real-world asset",
+        "Converting physical cash into cryptocurrency",
+        "Creating NFTs for social media",
+        "Selling assets without legal documentation"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following may be represented by a token?",
+      "options": [
+        "Ownership rights",
+        "Income rights",
+        "Debt obligations",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is usually the first step in an asset tokenization project?",
+      "options": [
+        "Issue tokens immediately",
+        "Select the asset to be tokenized",
+        "List the tokens on an exchange",
+        "Distribute rental income"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is ownership verification important before tokenization?",
+      "options": [
+        "To confirm that the asset legally belongs to the owner",
+        "To increase internet speed",
+        "To reduce the blockchain transaction fee",
+        "To create more tokens"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which professional is commonly responsible for preparing legal agreements?",
+      "options": [
+        "Legal advisors",
+        "Social media managers",
+        "Graphic designers",
+        "Video editors"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "A fungible token is best described as:",
+      "options": [
+        "A unique token that cannot be replaced",
+        "A token that is interchangeable with another identical token",
+        "A paper ownership certificate",
+        "A government-issued ID"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which asset is generally better suited to a non-fungible token (NFT)?",
+      "options": [
+        "A specific painting",
+        "Fractional ownership of gold",
+        "Government bonds",
+        "Tokenized cash"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a major benefit of tokenization?",
+      "options": [
+        "Fractional ownership",
+        "Greater transparency",
+        "Improved accessibility",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which statement about liquidity is correct?",
+      "options": [
+        "Every tokenized asset is guaranteed to be easy to sell.",
+        "Liquidity depends on market demand, regulations and available buyers.",
+        "Liquidity is controlled entirely by blockchain technology.",
+        "Liquidity is never important."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which statement best describes asset tokenization?",
+      "options": [
+        "It combines blockchain technology with legal and financial structures to represent rights connected to real-world assets.",
+        "It removes the need for legal ownership.",
+        "It guarantees investment profits.",
+        "It replaces the physical asset completely."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

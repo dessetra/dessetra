@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 1 Quiz",
+  "challenge": 1,
+  "passPercentage": 70,
+  "timeLimitMinutes": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary purpose of a financial market?",
+      "options": [
+        "To connect buyers and sellers of financial assets",
+        "To guarantee profits for investors",
+        "To eliminate investment risk",
+        "To print new currencies"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Financial markets exist to connect buyers and sellers of financial assets."
+    },
+    {
+      "id": 2,
+      "question": "Which factor is mainly responsible for price movement in financial markets?",
+      "options": [
+        "Government announcements only",
+        "Supply and demand",
+        "The age of an asset",
+        "Random computer decisions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Prices move because buyers and sellers continuously affect supply and demand."
+    },
+    {
+      "id": 3,
+      "question": "Which statement best describes trading?",
+      "options": [
+        "Buying and holding assets for several years only",
+        "Buying and selling assets to benefit from price movements",
+        "Depositing money in a savings account",
+        "Owning a business"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Trading focuses on profiting from price movements over various timeframes."
+    },
+    {
+      "id": 4,
+      "question": "Which statement best describes investing?",
+      "options": [
+        "Buying assets for long-term growth",
+        "Opening many trades every minute",
+        "Predicting tomorrow's market direction",
+        "Borrowing money to trade"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Investing focuses on long-term appreciation rather than short-term price movements."
+    },
+    {
+      "id": 5,
+      "question": "Which market operates 24 hours a day, 7 days a week?",
+      "options": [
+        "Forex",
+        "Stock Market",
+        "Cryptocurrency Market",
+        "Commodity Market"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Cryptocurrency markets trade continuously throughout the year."
+    },
+    {
+      "id": 6,
+      "question": "What does Forex primarily involve?",
+      "options": [
+        "Trading company shares",
+        "Trading currencies",
+        "Trading real estate",
+        "Trading commodities only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Forex is the global foreign exchange market where currencies are traded."
+    },
+    {
+      "id": 7,
+      "question": "Who are institutional traders?",
+      "options": [
+        "Only individual retail traders",
+        "Banks, hedge funds, pension funds and large financial organizations",
+        "Only cryptocurrency miners",
+        "Only governments"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Institutions trade large amounts of capital and significantly influence markets."
+    },
+    {
+      "id": 8,
+      "question": "What is the spread?",
+      "options": [
+        "The daily market profit",
+        "The difference between the Bid and Ask prices",
+        "The broker's annual income",
+        "The total trading volume"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The spread is the difference between buying and selling prices."
+    },
+    {
+      "id": 9,
+      "question": "What is liquidity?",
+      "options": [
+        "The amount of money in a bank",
+        "How easily an asset can be bought or sold",
+        "The number of traders online",
+        "The speed of the internet"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Liquidity measures how easily trades can be executed without causing major price changes."
+    },
+    {
+      "id": 10,
+      "question": "Which statement best describes a professional trader?",
+      "options": [
+        "A trader who never loses money",
+        "A trader who follows a plan, manages risk and protects capital",
+        "A trader who always trades with maximum leverage",
+        "A trader who predicts every market movement correctly"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professional traders focus on discipline, consistency and proper risk management rather than winning every trade."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 2 Quiz - AI Image Generation",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is AI image generation?",
+      "options": [
+        "Editing existing photos only",
+        "Creating images from written prompts using artificial intelligence",
+        "Compressing image files",
+        "Removing backgrounds from pictures"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the most important factor in producing a high-quality AI-generated image?",
+      "options": [
+        "Internet speed",
+        "A detailed and clear prompt",
+        "The size of your computer screen",
+        "The number of images already generated"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following should be included in a strong image prompt?",
+      "options": [
+        "Subject",
+        "Style and lighting",
+        "Colours",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which prompt is likely to produce a better result?",
+      "options": [
+        "Create a building.",
+        "Create a modern glass office building with blue lighting, realistic photography and a futuristic design.",
+        "Office.",
+        "Generate something."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is brand consistency important when creating AI images?",
+      "options": [
+        "It helps people recognize and trust the brand.",
+        "It makes AI generate images faster.",
+        "It reduces internet usage.",
+        "It guarantees viral marketing."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a common business use for AI-generated images?",
+      "options": [
+        "Product advertisements",
+        "Website banners",
+        "Social media graphics",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What should you do if the first generated image is not satisfactory?",
+      "options": [
+        "Delete it and give up.",
+        "Improve the prompt and generate another version.",
+        "Use the image anyway.",
+        "Restart your computer."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should AI-generated images be reviewed before publishing?",
+      "options": [
+        "To check for quality, relevance and visual errors",
+        "Because AI cannot create images",
+        "Because images cannot be edited",
+        "There is no need to review them"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which image style could be requested in an AI prompt?",
+      "options": [
+        "Photorealistic",
+        "Watercolour",
+        "Digital art",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Which statement best describes AI image generation?",
+      "options": [
+        "AI replaces all graphic designers.",
+        "AI is a creative assistant that helps users generate and refine visual content.",
+        "AI always produces perfect images on the first attempt.",
+        "AI can only generate cartoon images."
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

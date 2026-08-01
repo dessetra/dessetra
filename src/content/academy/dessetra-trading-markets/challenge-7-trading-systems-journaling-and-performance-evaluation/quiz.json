@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 7 Quiz - Trading Systems, Journaling & Performance Evaluation",
+  "description": "Test your understanding of building trading systems, maintaining professional journals, measuring trading performance and continuously improving your trading process.",
+  "passingScore": 70,
+  "timeLimit": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary purpose of a trading system?",
+      "options": [
+        "To predict every market movement",
+        "To provide a complete set of rules for making trading decisions",
+        "To eliminate all losing trades",
+        "To guarantee profits"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A trading system provides structured, rule-based decision making rather than guaranteeing profits."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following should be included in a professional trading journal?",
+      "options": [
+        "Only profitable trades",
+        "Only losing trades",
+        "Every trade including the reasons, emotions and lessons learned",
+        "Only screenshots"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Professional journals record every trade and the reasoning behind it."
+    },
+    {
+      "id": 3,
+      "question": "According to this course, traders should generally aim for what average risk-to-reward ratio?",
+      "options": [
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:5"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The course recommends seeking an average risk-to-reward ratio of approximately 1:3 whenever market conditions support it."
+    },
+    {
+      "id": 4,
+      "question": "What is the maximum total trading session risk recommended in this course?",
+      "options": [
+        "2%",
+        "5%",
+        "10%",
+        "15%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A trader should never exceed a total trading session risk of 5% of trading capital."
+    },
+    {
+      "id": 5,
+      "question": "Which metric measures how often trades are successful?",
+      "options": [
+        "Drawdown",
+        "Profit Factor",
+        "Win Rate",
+        "Expectancy"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Win rate measures the percentage of trades that are profitable."
+    },
+    {
+      "id": 6,
+      "question": "Why should traders review both winning and losing trades?",
+      "options": [
+        "Only losing trades contain lessons",
+        "Winning trades are always perfect",
+        "Both winning and losing trades provide opportunities to improve",
+        "To increase trading frequency"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Both profitable and losing trades can reveal strengths, weaknesses and areas for improvement."
+    },
+    {
+      "id": 7,
+      "question": "What is strategy hopping?",
+      "options": [
+        "Following one trading system consistently",
+        "Changing trading strategies frequently after short-term results",
+        "Trading multiple currency pairs",
+        "Trading only during one market session"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Strategy hopping prevents traders from collecting enough data to properly evaluate a trading system."
+    },
+    {
+      "id": 8,
+      "question": "Before making major changes to a trading system, a trader should first:",
+      "options": [
+        "Change everything immediately",
+        "Review sufficient trading data and evidence",
+        "Copy another trader's strategy",
+        "Increase position size"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professional traders make improvements based on evidence rather than emotions."
+    },
+    {
+      "id": 9,
+      "question": "Which of the following best describes continuous improvement?",
+      "options": [
+        "Looking for a perfect strategy",
+        "Making small, evidence-based improvements over time",
+        "Changing indicators every week",
+        "Avoiding reviews after profitable trades"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Continuous improvement focuses on gradual, measurable progress rather than constant major changes."
+    },
+    {
+      "id": 10,
+      "question": "Which sequence best represents the professional trading improvement cycle taught in this course?",
+      "options": [
+        "Trade → Hope → Repeat",
+        "Plan → Trade → Journal → Review → Improve → Test → Repeat",
+        "Trade → Increase Risk → Recover Losses",
+        "Analyse → Ignore Journal → Trade Again"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professional traders continually plan, execute, record, review and improve their trading process."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "title": "Challenge 5 Quiz",
+  "challenge": 5,
+  "passPercentage": 70,
+  "timeLimitMinutes": 15,
+  "allowRetake": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the main purpose of a trend-following strategy?",
+      "options": [
+        "To predict every market top and bottom",
+        "To trade in the direction of an established market trend",
+        "To trade only during sideways markets",
+        "To avoid using stop-losses"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Trend-following strategies aim to participate in an established direction rather than predicting every reversal."
+    },
+    {
+      "id": 2,
+      "question": "Which market structure normally represents an uptrend?",
+      "options": [
+        "Lower Highs and Lower Lows",
+        "Equal Highs and Equal Lows",
+        "Higher Highs and Higher Lows",
+        "Higher Highs and Lower Lows"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An uptrend normally produces a sequence of Higher Highs and Higher Lows."
+    },
+    {
+      "id": 3,
+      "question": "Where should a range trader generally look for a buying opportunity?",
+      "options": [
+        "Near confirmed support",
+        "Near confirmed resistance",
+        "In the middle of the range",
+        "Immediately after every large bullish candle"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Range traders generally look for confirmed buying opportunities near the lower support boundary."
+    },
+    {
+      "id": 4,
+      "question": "Which condition provides stronger evidence of a genuine bullish breakout?",
+      "options": [
+        "A small wick above resistance followed by an immediate reversal",
+        "A strong candle close above resistance with momentum and follow-through",
+        "Price touching resistance without closing above it",
+        "A breakout occurring without any important market level"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A strong close above resistance, supported by momentum and follow-through, provides stronger breakout confirmation."
+    },
+    {
+      "id": 5,
+      "question": "What is an entry trigger?",
+      "options": [
+        "The trader's emotional feeling about the market",
+        "The final predefined condition that activates a trade",
+        "The amount deposited into the trading account",
+        "The maximum leverage offered by the broker"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An entry trigger is the specific final condition that must occur before a trade is executed."
+    },
+    {
+      "id": 6,
+      "question": "What is the difference between an entry zone and an entry trigger?",
+      "options": [
+        "There is no difference",
+        "The entry zone is where a setup may form, while the trigger confirms the actual entry",
+        "The entry zone determines leverage, while the trigger determines the broker",
+        "The trigger is always identified before the zone"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An entry zone identifies a possible location, while the entry trigger confirms when the trade should actually be opened."
+    },
+    {
+      "id": 7,
+      "question": "Which order type attempts to execute immediately at the best available current price?",
+      "options": [
+        "Limit order",
+        "Market order",
+        "Stop-limit order",
+        "Pending cancellation order"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A market order attempts to execute immediately at the best available price."
+    },
+    {
+      "id": 8,
+      "question": "What should a trader do when price has already moved far beyond the planned entry and the original risk-to-reward is no longer available?",
+      "options": [
+        "Increase the position size",
+        "Move the stop-loss farther away",
+        "Chase the trade immediately",
+        "Cancel the trade and wait for a new valid setup"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A trader should avoid chasing price and wait for a new setup when the original entry conditions are no longer valid."
+    },
+    {
+      "id": 9,
+      "question": "Which statement best describes a complete trading plan?",
+      "options": [
+        "It only states which market to trade",
+        "It only explains where to place the take-profit",
+        "It defines the full process before, during and after trading",
+        "It guarantees that all trades will be profitable"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A complete trading plan covers market selection, setup rules, risk, execution, management, psychology, journaling and review."
+    },
+    {
+      "id": 10,
+      "question": "According to this course, which risk rule must remain part of every trading strategy?",
+      "options": [
+        "Risk at least 10% during every session",
+        "Avoid calculating correlated exposure",
+        "Never exceed 5% total risk during one trading session",
+        "Always use the maximum leverage available"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The course establishes 5% of total trading capital as the maximum session-risk ceiling."
+    }
+  ]
+}

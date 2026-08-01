@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 4 Quiz - AI for Business Growth",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "How can AI improve customer service?",
+      "options": [
+        "By answering common customer questions automatically",
+        "By replacing every employee",
+        "By increasing product prices",
+        "By slowing down response times"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which of the following is a common AI customer service tool?",
+      "options": [
+        "Chatbot",
+        "Calculator",
+        "Spreadsheet",
+        "Printer"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which task can AI assist with in sales and marketing?",
+      "options": [
+        "Writing promotional emails",
+        "Generating marketing ideas",
+        "Creating social media content",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why is personalized marketing important?",
+      "options": [
+        "It helps deliver more relevant messages to customers",
+        "It increases internet speed",
+        "It removes the need for human review",
+        "It guarantees every customer will buy"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is business automation?",
+      "options": [
+        "Replacing all employees with robots",
+        "Using technology to perform repetitive tasks automatically",
+        "Buying more computers",
+        "Creating business logos"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is an example of a task AI can automate?",
+      "options": [
+        "Appointment scheduling",
+        "Email responses",
+        "Meeting summaries",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why is human oversight still important when using AI?",
+      "options": [
+        "Humans must review important decisions and sensitive situations",
+        "AI never needs supervision",
+        "Humans only operate computers",
+        "It is not important"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "An AI-powered business system combines:",
+      "options": [
+        "Only one AI tool",
+        "Multiple AI tools working together to improve business operations",
+        "Several internet browsers",
+        "Multiple company websites"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What should businesses do after implementing AI systems?",
+      "options": [
+        "Ignore them",
+        "Regularly review and improve their performance",
+        "Turn them off permanently",
+        "Never update them"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which statement best describes the role of AI in business?",
+      "options": [
+        "AI supports people by improving productivity and efficiency.",
+        "AI completely replaces business owners.",
+        "AI guarantees business success.",
+        "AI removes the need for customer service."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

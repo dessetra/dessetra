@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 1 Quiz - Creating Content with AI",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is the main purpose of Generative AI?",
+      "options": [
+        "To repair computer hardware",
+        "To create new content such as text, images and videos",
+        "To increase internet speed",
+        "To replace all human jobs"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is an example of written content that AI can generate?",
+      "options": [
+        "A business email",
+        "A product description",
+        "A social media post",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is a prompt?",
+      "options": [
+        "A computer virus",
+        "An instruction or question given to an AI system",
+        "A software update",
+        "A password"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which prompt is more effective?",
+      "options": [
+        "Write something.",
+        "Write a professional LinkedIn post promoting an AI course for entrepreneurs.",
+        "AI course.",
+        "Business."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should you specify the target audience in your prompt?",
+      "options": [
+        "To help AI generate more relevant content",
+        "To make the AI work slower",
+        "To reduce internet usage",
+        "It is not necessary"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is a hook in social media content?",
+      "options": [
+        "The last sentence",
+        "An opening statement that captures attention",
+        "A hashtag",
+        "A website link"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the purpose of a Call to Action (CTA)?",
+      "options": [
+        "To confuse the reader",
+        "To tell the audience what to do next",
+        "To increase word count",
+        "To make the post longer"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which practice usually produces better blog articles with AI?",
+      "options": [
+        "Writing without a plan",
+        "Generating an outline before expanding the article",
+        "Copying the first AI response immediately",
+        "Ignoring revisions"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should AI-generated content be reviewed before publishing?",
+      "options": [
+        "To verify accuracy and improve quality",
+        "Because AI cannot generate text",
+        "Because AI always writes in another language",
+        "There is no need to review it"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement best describes the role of AI in content creation?",
+      "options": [
+        "AI should replace human creativity completely.",
+        "AI is a helpful assistant, but humans should review and improve the final content.",
+        "AI always produces perfect content.",
+        "AI should never be used for writing."
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

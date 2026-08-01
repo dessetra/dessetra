@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 5 Quiz - Responsible AI Usage",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is the primary goal of AI ethics?",
+      "options": [
+        "To make AI systems faster.",
+        "To ensure AI is developed and used responsibly, fairly and safely.",
+        "To replace all human decision-making.",
+        "To reduce the cost of computers."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following should generally NOT be shared with an AI platform unless you fully understand how it will be handled?",
+      "options": [
+        "Public news articles.",
+        "General knowledge questions.",
+        "Passwords and confidential financial information.",
+        "Public weather forecasts."
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is AI bias?",
+      "options": [
+        "When AI always agrees with the user.",
+        "When AI produces unfair or unbalanced results because of limitations in data or design.",
+        "When AI operates without electricity.",
+        "When AI answers every question perfectly."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is misinformation?",
+      "options": [
+        "Verified information published by official organizations.",
+        "Information that is false or inaccurate.",
+        "Encrypted digital information.",
+        "Computer source code."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "An AI hallucination occurs when AI:",
+      "options": [
+        "Refuses to answer any question.",
+        "Creates convincing but incorrect or fabricated information.",
+        "Disconnects from the internet.",
+        "Automatically corrects every mistake."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why should important AI-generated information be verified?",
+      "options": [
+        "Because AI can sometimes produce inaccurate or outdated information.",
+        "Because AI never answers correctly.",
+        "Because AI cannot understand questions.",
+        "Because AI always copies from books."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "What is plagiarism?",
+      "options": [
+        "Creating original work.",
+        "Presenting someone else's work or ideas as your own without proper acknowledgment.",
+        "Using grammar correction software.",
+        "Writing a research summary."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which statement best reflects responsible AI use in education?",
+      "options": [
+        "Use AI to complete examinations for you.",
+        "Use AI as a learning assistant while developing your own understanding.",
+        "Copy every AI response directly into assignments.",
+        "Allow AI to replace studying completely."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which human skill will remain valuable even as AI continues to advance?",
+      "options": [
+        "Critical thinking.",
+        "Ethical decision-making.",
+        "Creativity.",
+        "All of the above."
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Why is lifelong learning important in the age of AI?",
+      "options": [
+        "Because AI technology and workplace requirements continue to evolve.",
+        "Because learning ends after one course.",
+        "Because AI will eventually stop improving.",
+        "Because certificates never expire."
+      ],
+      "correctAnswer": 0
+    }
+  ]
+}

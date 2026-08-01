@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 3 Quiz - Blockchain Infrastructure for RWA",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is the primary role of blockchain in Real-World Asset (RWA) projects?",
+      "options": [
+        "To physically store real-world assets",
+        "To record ownership, transactions and smart contract activity",
+        "To replace legal ownership documents",
+        "To eliminate the need for asset managers"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following is a key advantage of blockchain technology?",
+      "options": [
+        "Transparency",
+        "Tamper-resistant records",
+        "Improved security",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is a smart contract?",
+      "options": [
+        "A handwritten legal agreement",
+        "A computer program that automatically executes predefined rules on a blockchain",
+        "A government-issued certificate",
+        "A cryptocurrency wallet"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which task can smart contracts automate in an RWA project?",
+      "options": [
+        "Rental income distribution",
+        "Token transfers",
+        "Ownership record updates",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What is the main purpose of a token standard?",
+      "options": [
+        "To determine property values",
+        "To define how blockchain tokens operate and interact",
+        "To replace blockchain networks",
+        "To guarantee investment returns"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which token standard is commonly used for fungible tokens?",
+      "options": [
+        "ERC-721",
+        "ERC-20",
+        "ERC-1155 only",
+        "None of the above"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the role of a blockchain oracle?",
+      "options": [
+        "To store cryptocurrency wallets",
+        "To provide trusted external data to smart contracts",
+        "To issue legal ownership certificates",
+        "To create new blockchain networks"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Who is responsible for safeguarding the underlying asset or important legal documents in many RWA projects?",
+      "options": [
+        "Oracle",
+        "Custodian",
+        "Miner",
+        "Exchange"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Why is some information stored off-chain instead of directly on the blockchain?",
+      "options": [
+        "Because it may be confidential, large or subject to privacy regulations",
+        "Because blockchain cannot store any information",
+        "Because off-chain storage is always free",
+        "Because blockchain only stores images"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which statement best describes blockchain's role in RWA projects?",
+      "options": [
+        "Blockchain replaces legal systems completely.",
+        "Blockchain supports ownership records and automation while working alongside legal, financial and operational systems.",
+        "Blockchain removes all investment risks.",
+        "Blockchain guarantees asset appreciation."
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}

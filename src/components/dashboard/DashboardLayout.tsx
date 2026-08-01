@@ -13,6 +13,7 @@ type DashboardLayoutProps = {
 const navLinks = [
   { label: "Dashboard", href: "/dashboard" },
   { label: "Learn", href: "/dashboard/learn" },
+  { label: "Dessetra Academy", href: "/dashboard/academy" },
   { label: "Subscriptions", href: "/dashboard/subscriptions" },
   { label: "Invest", href: "/dashboard/invest" },
   { label: "Investor Dashboard", href: "/dashboard/investor" },

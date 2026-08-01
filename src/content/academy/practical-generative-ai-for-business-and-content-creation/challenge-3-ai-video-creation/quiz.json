@@ -1,0 +1,107 @@
+{
+  "title": "Challenge 3 Quiz - AI Video Creation",
+  "passingScore": 70,
+  "timeLimitMinutes": 10,
+  "questions": [
+    {
+      "question": "What is one of the main benefits of AI video tools?",
+      "options": [
+        "They eliminate the need for planning.",
+        "They help create professional videos faster.",
+        "They guarantee viral videos.",
+        "They only work for large companies."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which of the following can AI video tools assist with?",
+      "options": [
+        "Voiceovers",
+        "Subtitles",
+        "Video editing",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "What should be prepared before generating an AI video?",
+      "options": [
+        "A clear script or prompt",
+        "A printed storyboard",
+        "A professional camera",
+        "A green screen"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which section should appear first in a marketing video?",
+      "options": [
+        "Call to Action",
+        "Benefits",
+        "Hook",
+        "Conclusion"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Why is a Call to Action important?",
+      "options": [
+        "It tells viewers what to do next.",
+        "It increases the video resolution.",
+        "It improves internet speed.",
+        "It automatically edits the video."
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which type of voice is generally most suitable for a business presentation?",
+      "options": [
+        "Professional",
+        "Cartoon",
+        "Child-like",
+        "Robotic"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Why should captions be added to videos?",
+      "options": [
+        "To improve accessibility and viewer engagement",
+        "To reduce video size",
+        "To increase internet speed",
+        "They are only needed for movies"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Which is considered good practice before publishing an AI-generated video?",
+      "options": [
+        "Publish immediately without watching it.",
+        "Review the visuals, voiceover and captions.",
+        "Delete the original project.",
+        "Remove the call to action."
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Which video length is generally effective for social media promotions?",
+      "options": [
+        "15–60 seconds",
+        "10 minutes",
+        "30 minutes",
+        "2 hours"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "AI video tools are best described as:",
+      "options": [
+        "A replacement for creativity.",
+        "Tools that assist humans in creating and editing videos more efficiently.",
+        "Software that always produces perfect videos.",
+        "Tools that only professional filmmakers can use."
+      ],
+      "correctAnswer": 1
+    }
+  ]
+}
