@@ -16,8 +16,8 @@ type QuizQuestionFile = {
 
 type QuizFile = {
   title: string;
-  passingScore: number;
-  timeLimitMinutes: number;
+  passingScore?: number | null;
+  timeLimitMinutes?: number | null;
   questions: QuizQuestionFile[];
 };
 
@@ -74,6 +74,14 @@ function getBearerToken(request: Request) {
   return authorization.slice(7).trim();
 }
 
+function isOptionalNumberOrNull(value: unknown) {
+  return (
+    value === undefined ||
+    value === null ||
+    (typeof value === "number" && Number.isFinite(value))
+  );
+}
+
 function isValidQuizFile(value: unknown): value is QuizFile {
   if (!value || typeof value !== "object") {
     return false;
@@ -81,14 +89,14 @@ function isValidQuizFile(value: unknown): value is QuizFile {
 
   const quiz = value as Partial<QuizFile>;
 
-  if (
-    typeof quiz.title !== "string" ||
-    typeof quiz.passingScore !== "number" ||
-    typeof quiz.timeLimitMinutes !== "number" ||
-    !Array.isArray(quiz.questions)
-  ) {
-    return false;
-  }
+ if (
+  typeof quiz.title !== "string" ||
+  !isOptionalNumberOrNull(quiz.passingScore) ||
+  !isOptionalNumberOrNull(quiz.timeLimitMinutes) ||
+  !Array.isArray(quiz.questions)
+) {
+  return false;
+}
 
   return quiz.questions.every((question) => {
     return (
