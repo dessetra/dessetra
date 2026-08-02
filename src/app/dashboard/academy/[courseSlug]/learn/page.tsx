@@ -677,6 +677,69 @@ export default function AcademyLearningPage() {
                   );
                 })}
               </div>
+
+              <article className="mt-7 overflow-hidden rounded-3xl border border-[#D4AF37]/40 bg-[#04122D] shadow-2xl">
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                    <div className="max-w-3xl">
+                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+                        Course Final Assessment
+                      </p>
+
+                      <h3 className="mt-3 text-2xl font-bold md:text-3xl">
+                        Final Examination
+                      </h3>
+
+                      <p className="mt-4 text-sm leading-7 text-gray-300">
+                        Complete the final examination after working through all
+                        course challenges and quizzes. Passing this assessment
+                        completes the course and makes you eligible for
+                        certification.
+                      </p>
+
+                      <div className="mt-5 flex flex-wrap gap-3">
+                        <span className="rounded-full bg-[#0D2A5E] px-4 py-2 text-xs font-semibold text-gray-200">
+                          Full-course assessment
+                        </span>
+
+                        <span className="rounded-full bg-[#0D2A5E] px-4 py-2 text-xs font-semibold text-gray-200">
+                          Pass required
+                        </span>
+
+                        {course.certificate_enabled && (
+                          <span className="rounded-full bg-[#0D2A5E] px-4 py-2 text-xs font-semibold text-gray-200">
+                            Certificate eligibility
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="shrink-0">
+                      {courseProgress?.final_exam_passed ? (
+                        <div className="rounded-2xl border border-emerald-400/40 bg-emerald-950/30 p-5 text-center">
+                          <p className="text-sm font-bold text-emerald-200">
+                            Final Examination Passed
+                          </p>
+
+                          <Link
+                            href={`/dashboard/academy/${course.slug}/final-exam`}
+                            className="mt-4 inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
+                          >
+                            Review Final Examination
+                          </Link>
+                        </div>
+                      ) : (
+                        <Link
+                          href={`/dashboard/academy/${course.slug}/final-exam`}
+                          className="inline-flex items-center justify-center rounded-xl bg-[#D4AF37] px-6 py-3 font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
+                        >
+                          Take Final Examination
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </article>
             </section>
 
             <section className="mt-7 grid gap-5 lg:grid-cols-2">
