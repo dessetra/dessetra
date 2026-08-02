@@ -616,6 +616,7 @@ export default function AcademyLearningPage() {
                         {challenge.academy_lessons.map((lesson) => {
                           const progressItem = progressByLessonId.get(lesson.id);
                           const status = progressItem?.status || "not_started";
+
                           return (
                             <div
                               key={lesson.id}
@@ -623,12 +624,14 @@ export default function AcademyLearningPage() {
                             >
                               <div>
                                 <h4 className="font-semibold">{lesson.title}</h4>
+
                                 <p className="mt-2 text-xs text-gray-400">
                                   Lesson {lesson.lesson_number} ·{" "}
                                   {formatStatus(lesson.content_type)} ·{" "}
                                   {formatStatus(status)}
                                 </p>
                               </div>
+
                               <Link
                                 href={`/dashboard/academy/${course.slug}/learn/${challenge.slug}/${lesson.slug}`}
                                 className="rounded-xl bg-white/10 px-4 py-2 text-center text-sm font-semibold transition hover:bg-[#D4AF37] hover:text-[#071A3D]"
@@ -642,6 +645,33 @@ export default function AcademyLearningPage() {
                             </div>
                           );
                         })}
+                      </div>
+
+                      <div className="border-t border-[#D4AF37]/20 bg-[#0D2A5E]/55 p-5 md:px-7 md:py-6">
+                        <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#D4AF37]">
+                              Challenge Assessment
+                            </p>
+
+                            <h4 className="mt-2 text-lg font-bold">
+                              Challenge {challenge.challenge_number} Quiz
+                            </h4>
+
+                            <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-300">
+                              Complete the quiz after studying the lessons in
+                              this challenge. Your score and pass status will be
+                              recorded in your Academy progress.
+                            </p>
+                          </div>
+
+                          <Link
+                            href={`/dashboard/academy/${course.slug}/learn/${challenge.slug}/quiz`}
+                            className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#D4AF37] px-5 py-3 text-sm font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
+                          >
+                            Take Challenge Quiz
+                          </Link>
+                        </div>
                       </div>
                     </article>
                   );
