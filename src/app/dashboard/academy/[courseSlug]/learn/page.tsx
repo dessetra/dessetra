@@ -81,6 +81,15 @@ type LessonProgress = {
   completed_at: string | null;
 };
 
+type CertificateSummary = {
+  id: string;
+  certificateNumber: string;
+  recipientName: string;
+  courseTitle: string;
+  issuedAt: string;
+  isRevoked: boolean;
+};
+
 function formatStatus(value: string) {
   return value
     .split("_")
@@ -116,10 +125,13 @@ export default function AcademyLearningPage() {
     useState<CourseProgress | null>(null);
   const [lessonProgress, setLessonProgress] = useState<LessonProgress[]>([]);
   const [challenges, setChallenges] = useState<AcademyChallenge[]>([]);
+  const [certificate, setCertificate] =
+    useState<CertificateSummary | null>(null);
 
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
   const [accessDenied, setAccessDenied] = useState(false);
+  const [mentorshipActive, setMentorshipActive] = useState(false);
 
   useEffect(() => {
     async function loadLearningPage() {
@@ -132,6 +144,7 @@ export default function AcademyLearningPage() {
       setLoading(true);
       setErrorMessage("");
       setAccessDenied(false);
+      setCertificate(null);
 
       const {
         data: { user },
@@ -225,7 +238,17 @@ export default function AcademyLearningPage() {
       }
 
       const activeEnrollment = enrollmentData as CourseEnrollment;
-      setEnrollment(activeEnrollment);
+setEnrollment(activeEnrollment);
+
+const mentorshipExpiryTime =
+  activeEnrollment.mentorship_expires_at
+    ? new Date(activeEnrollment.mentorship_expires_at).getTime()
+    : null;
+
+setMentorshipActive(
+  mentorshipExpiryTime !== null &&
+    mentorshipExpiryTime > new Date().getTime()
+);
 
       const [
         { data: challengesData, error: challengesError },
@@ -343,14 +366,65 @@ export default function AcademyLearningPage() {
         ),
       }));
 
+      const loadedCourseProgress =
+        (progressData as CourseProgress | null) ?? null;
+
       setChallenges(loadedChallenges);
-      setCourseProgress((progressData as CourseProgress | null) ?? null);
+      setCourseProgress(loadedCourseProgress);
       setLessonProgress((lessonProgressData || []) as LessonProgress[]);
+
+      if (
+        selectedCourse.certificate_enabled &&
+        loadedCourseProgress?.final_exam_passed &&
+        loadedCourseProgress.certificate_eligible
+      ) {
+        try {
+          const {
+            data: { session },
+          } = await supabase.auth.getSession();
+
+          if (session?.access_token) {
+            const certificateResponse = await fetch(
+              `/api/academy/certificate/${encodeURIComponent(
+                selectedCourse.slug
+              )}`,
+              {
+                method: "GET",
+                headers: {
+                  Authorization: `Bearer ${session.access_token}`,
+                },
+                cache: "no-store",
+              }
+            );
+
+            if (certificateResponse.ok) {
+              const certificatePayload = await certificateResponse.json();
+
+              setCertificate(
+                (certificatePayload?.certificate as CertificateSummary | null) ??
+                  null
+              );
+            } else {
+              console.error(
+                "Failed to load Academy certificate status:",
+                await certificateResponse.text()
+              );
+            }
+          }
+        } catch (certificateError) {
+          console.error(
+            "Failed to load Academy certificate status:",
+            certificateError
+          );
+        }
+      }
+
       setLoading(false);
     }
 
     void loadLearningPage();
   }, [courseSlug]);
+
 
   const progressByLessonId = useMemo(() => {
     return new Map(
@@ -406,11 +480,6 @@ export default function AcademyLearningPage() {
       ) || null
     );
   }, [challenges, currentLesson]);
-
-  const mentorshipActive =
-    Boolean(enrollment?.mentorship_expires_at) &&
-    new Date(enrollment!.mentorship_expires_at as string).getTime() >
-      Date.now();
 
   return (
     <DashboardLayout>
@@ -740,6 +809,70 @@ export default function AcademyLearningPage() {
                   </div>
                 </div>
               </article>
+
+              {course.certificate_enabled &&
+                courseProgress?.final_exam_passed &&
+                courseProgress.certificate_eligible && (
+                  <article className="mt-7 overflow-hidden rounded-3xl border border-emerald-400/40 bg-gradient-to-br from-emerald-950/40 to-[#04122D] shadow-2xl">
+                    <div className="p-6 md:p-8">
+                      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                        <div className="max-w-3xl">
+                          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+                            Course Achievement
+                          </p>
+
+                          <h3 className="mt-3 text-2xl font-bold md:text-3xl">
+                            {certificate
+                              ? "Your Certificate Is Ready"
+                              : "Generate Your Certificate"}
+                          </h3>
+
+                          <p className="mt-4 text-sm leading-7 text-gray-300">
+                            {certificate
+                              ? `Your certificate for ${course.title} has been issued successfully. You can view it, verify its details, and download the PDF from the certificate page.`
+                              : "You passed the final examination and completed the course requirements. Confirm your full certificate name to generate your official Dessetra Academy certificate."}
+                          </p>
+
+                          <div className="mt-5 flex flex-wrap gap-3">
+                            <span className="rounded-full bg-emerald-500/15 px-4 py-2 text-xs font-semibold text-emerald-200">
+                              Final examination passed
+                            </span>
+
+                            <span className="rounded-full bg-emerald-500/15 px-4 py-2 text-xs font-semibold text-emerald-200">
+                              Certificate eligible
+                            </span>
+
+                            {certificate && (
+                              <span className="rounded-full bg-[#D4AF37]/15 px-4 py-2 text-xs font-semibold text-[#D4AF37]">
+                                {certificate.isRevoked
+                                  ? "Certificate revoked"
+                                  : "Certificate issued"}
+                              </span>
+                            )}
+                          </div>
+
+                          {certificate && (
+                            <p className="mt-4 text-xs text-gray-400">
+                              Certificate number:{" "}
+                              <span className="font-semibold text-gray-200">
+                                {certificate.certificateNumber}
+                              </span>
+                            </p>
+                          )}
+                        </div>
+
+                        <Link
+                          href={`/dashboard/academy/${course.slug}/certificate`}
+                          className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#D4AF37] px-6 py-3 font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
+                        >
+                          {certificate
+                            ? "View Certificate"
+                            : "Generate Certificate"}
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                )}
             </section>
 
             <section className="mt-7 grid gap-5 lg:grid-cols-2">
