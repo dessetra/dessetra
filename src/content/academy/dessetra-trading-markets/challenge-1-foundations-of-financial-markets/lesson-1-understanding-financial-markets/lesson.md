@@ -23,6 +23,7 @@ These assets can include:
 - market indices
 
 A financial market may operate through a physical location, a digital exchange, a broker, or a decentralized blockchain network.
+![Overview of major financial markets including Forex, cryptocurrencies, stocks, commodities, bonds, futures, and indices](/academy/dessetra-trading-markets/challenge-1/financial-markets-overview.png)
 
 ## Why Financial Markets Exist
 

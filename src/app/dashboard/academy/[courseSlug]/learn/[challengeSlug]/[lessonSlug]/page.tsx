@@ -709,9 +709,9 @@ export default function AcademyLessonViewerPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#1E88E5]">
                   Lesson content
                 </p>
-                <div className="prose prose-slate mt-5 max-w-none prose-headings:scroll-mt-24 prose-headings:text-[#071A3D] prose-h2:mt-10 prose-h2:border-l-4 prose-h2:border-[#D4AF37] prose-h2:pl-4 prose-h3:text-xl prose-p:leading-8 prose-li:leading-8 prose-strong:text-[#071A3D] prose-a:text-[#1E88E5] prose-blockquote:rounded-xl prose-blockquote:border-l-4 prose-blockquote:border-[#D4AF37] prose-blockquote:bg-[#D4AF37]/10 prose-blockquote:px-5 prose-blockquote:py-3 prose-blockquote:not-italic">
-                  <ReactMarkdown>{lessonContent.content}</ReactMarkdown>
-                </div>
+                <div className="prose prose-slate mt-5 max-w-none prose-headings:scroll-mt-24 prose-headings:text-[#071A3D] prose-h2:mt-10 prose-h2:border-l-4 prose-h2:border-[#D4AF37] prose-h2:pl-4 prose-h3:text-xl prose-p:leading-8 prose-li:leading-8 prose-strong:text-[#071A3D] prose-a:text-[#1E88E5] prose-blockquote:rounded-xl prose-blockquote:border-l-4 prose-blockquote:border-[#D4AF37] prose-blockquote:bg-[#D4AF37]/10 prose-blockquote:px-5 prose-blockquote:py-3 prose-blockquote:not-italic prose-img:mx-auto prose-img:my-8 prose-img:w-full prose-img:max-w-4xl prose-img:rounded-2xl prose-img:border prose-img:border-gray-200 prose-img:shadow-xl">
+                <ReactMarkdown>{lessonContent.content}</ReactMarkdown>
+              </div>
               </section>
             ) : (
               <section className="mt-6 rounded-3xl bg-[#0D2A5E] p-6">

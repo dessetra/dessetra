@@ -56,7 +56,6 @@ export default function AcademyCoursePage() {
   const [course, setCourse] = useState<AcademyCourse | null>(null);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
-  const [tradingIntroCompleted, setTradingIntroCompleted] = useState(false);
 
   useEffect(() => {
     async function loadCourse() {
@@ -236,38 +235,12 @@ export default function AcademyCoursePage() {
                   controls
                   playsInline
                   preload="metadata"
-                  onEnded={() => setTradingIntroCompleted(true)}
                   className="aspect-video w-full bg-black"
                 >
                   Your browser does not support video playback.
                 </video>
               </div>
 
-              <div className="flex flex-col gap-3 border-t border-white/10 p-5 md:flex-row md:items-center md:justify-between md:px-8">
-                <div>
-                  <p className="font-semibold">
-                    {tradingIntroCompleted
-                      ? "Introduction completed"
-                      : "Watch the full introduction to continue"}
-                  </p>
-
-                  <p className="mt-1 text-xs leading-5 text-gray-400">
-                    {tradingIntroCompleted
-                      ? "Course plan selection is now available below. You may replay the introduction whenever you wish."
-                      : "The course plans remain visible, but checkout becomes available after the introduction finishes."}
-                  </p>
-                </div>
-
-                <span
-                  className={`inline-flex w-fit rounded-full px-4 py-2 text-xs font-bold ${
-                    tradingIntroCompleted
-                      ? "bg-emerald-500/15 text-emerald-200"
-                      : "bg-[#04122D] text-[#D4AF37]"
-                  }`}
-                >
-                  {tradingIntroCompleted ? "Ready to Continue" : "1-Minute Intro"}
-                </span>
-              </div>
             </section>
           )}
 
@@ -356,23 +329,12 @@ export default function AcademyCoursePage() {
                       </div>
                     </div>
 
-                    {course.course_key === "dessetra_trading_markets" &&
-                    !tradingIntroCompleted ? (
-                      <button
-                        type="button"
-                        disabled
-                        className="mt-6 block w-full cursor-not-allowed rounded-xl bg-[#D4AF37]/50 px-5 py-3 text-center font-bold text-[#071A3D]/70"
-                      >
-                        Watch Intro to Continue
-                      </button>
-                    ) : (
-                      <Link
-                        href={`/dashboard/academy/${course.slug}/checkout?planId=${plan.id}`}
-                        className="mt-6 block w-full rounded-xl bg-[#D4AF37] px-5 py-3 text-center font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
-                      >
-                        Choose This Plan
-                      </Link>
-                    )}
+                   <Link
+  href={`/dashboard/academy/${course.slug}/checkout?planId=${plan.id}`}
+  className="mt-6 block w-full rounded-xl bg-[#D4AF37] px-5 py-3 text-center font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
+>
+  Choose This Plan
+</Link>
                   </article>
                 ))}
               </div>
