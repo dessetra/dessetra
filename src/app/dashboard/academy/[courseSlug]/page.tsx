@@ -56,6 +56,7 @@ export default function AcademyCoursePage() {
   const [course, setCourse] = useState<AcademyCourse | null>(null);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
+  const [tradingIntroCompleted, setTradingIntroCompleted] = useState(false);
 
   useEffect(() => {
     async function loadCourse() {
@@ -210,6 +211,66 @@ export default function AcademyCoursePage() {
             </div>
           </section>
 
+          {course.course_key === "dessetra_trading_markets" && (
+            <section className="mt-7 overflow-hidden rounded-3xl border border-[#D4AF37]/30 bg-[#0D2A5E] shadow-xl">
+              <div className="p-6 md:p-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+                  Course Introduction
+                </p>
+
+                <h2 className="mt-3 text-2xl font-bold md:text-3xl">
+                  Watch the Dessetra Trading Markets Introduction
+                </h2>
+
+                <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-300 md:text-base">
+                  Watch this short introduction to understand the course,
+                  learning structure, and available access options before
+                  choosing your plan. You can replay this video anytime you
+                  return to this page.
+                </p>
+              </div>
+
+              <div className="bg-black">
+                <video
+                  src="/videos/dessetra-trading-markets-intro.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  onEnded={() => setTradingIntroCompleted(true)}
+                  className="aspect-video w-full bg-black"
+                >
+                  Your browser does not support video playback.
+                </video>
+              </div>
+
+              <div className="flex flex-col gap-3 border-t border-white/10 p-5 md:flex-row md:items-center md:justify-between md:px-8">
+                <div>
+                  <p className="font-semibold">
+                    {tradingIntroCompleted
+                      ? "Introduction completed"
+                      : "Watch the full introduction to continue"}
+                  </p>
+
+                  <p className="mt-1 text-xs leading-5 text-gray-400">
+                    {tradingIntroCompleted
+                      ? "Course plan selection is now available below. You may replay the introduction whenever you wish."
+                      : "The course plans remain visible, but checkout becomes available after the introduction finishes."}
+                  </p>
+                </div>
+
+                <span
+                  className={`inline-flex w-fit rounded-full px-4 py-2 text-xs font-bold ${
+                    tradingIntroCompleted
+                      ? "bg-emerald-500/15 text-emerald-200"
+                      : "bg-[#04122D] text-[#D4AF37]"
+                  }`}
+                >
+                  {tradingIntroCompleted ? "Ready to Continue" : "1-Minute Intro"}
+                </span>
+              </div>
+            </section>
+          )}
+
           <section className="mt-7">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
@@ -295,12 +356,23 @@ export default function AcademyCoursePage() {
                       </div>
                     </div>
 
-                    <Link
-  href={`/dashboard/academy/${course.slug}/checkout?planId=${plan.id}`}
-  className="mt-6 block w-full rounded-xl bg-[#D4AF37] px-5 py-3 text-center font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
->
-  Choose This Plan
-</Link>
+                    {course.course_key === "dessetra_trading_markets" &&
+                    !tradingIntroCompleted ? (
+                      <button
+                        type="button"
+                        disabled
+                        className="mt-6 block w-full cursor-not-allowed rounded-xl bg-[#D4AF37]/50 px-5 py-3 text-center font-bold text-[#071A3D]/70"
+                      >
+                        Watch Intro to Continue
+                      </button>
+                    ) : (
+                      <Link
+                        href={`/dashboard/academy/${course.slug}/checkout?planId=${plan.id}`}
+                        className="mt-6 block w-full rounded-xl bg-[#D4AF37] px-5 py-3 text-center font-bold text-[#071A3D] transition hover:scale-[1.01] hover:bg-[#e0bd48]"
+                      >
+                        Choose This Plan
+                      </Link>
+                    )}
                   </article>
                 ))}
               </div>
