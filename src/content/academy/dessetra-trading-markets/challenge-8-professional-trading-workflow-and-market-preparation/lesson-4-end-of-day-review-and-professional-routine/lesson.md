@@ -1,4 +1,4 @@
----
+﻿---
 title: End-of-Day Review & Professional Routine
 lessonNumber: 4
 duration: 30
@@ -22,7 +22,7 @@ Improvement happens during review, not only during trading.
 
 ---
 
-# Why End-of-Day Reviews Matter
+## Why End-of-Day Reviews Matter
 
 Every trading day provides valuable information.
 
@@ -40,7 +40,7 @@ A trader who never reviews is likely to repeat the same mistakes.
 
 ---
 
-# Separate Emotion from Evaluation
+## Separate Emotion from Evaluation
 
 Before reviewing the day, allow emotions to settle.
 
@@ -56,7 +56,7 @@ A calm review is usually more accurate than an emotional one.
 
 ---
 
-# Complete Your Trading Journal
+## Complete Your Trading Journal
 
 Every trade should be fully documented.
 
@@ -76,7 +76,7 @@ Honest records create meaningful improvement.
 
 ---
 
-# Review Every Trade
+## Review Every Trade
 
 Do not review only losing trades.
 
@@ -92,7 +92,7 @@ Every decision teaches something.
 
 ---
 
-# Ask the Right Questions
+## Ask the Right Questions
 
 For every trade ask:
 
@@ -108,7 +108,7 @@ These questions improve consistency.
 
 ---
 
-# Evaluate the Quality of Execution
+## Evaluate the Quality of Execution
 
 A trade should not be judged only by profit.
 
@@ -123,7 +123,7 @@ Good execution should be recognised even when a trade loses.
 
 ---
 
-# Review Your Risk Management
+## Review Your Risk Management
 
 Review every day's risk.
 
@@ -142,7 +142,7 @@ Capital preservation always comes first.
 
 ---
 
-# Evaluate Risk-to-Reward
+## Evaluate Risk-to-Reward
 
 Review whether your trades respected the trading plan.
 
@@ -160,7 +160,7 @@ Reviewing these questions improves future trade management.
 
 ---
 
-# Review Your Emotional Performance
+## Review Your Emotional Performance
 
 Emotions influence trading more than many beginners realise.
 
@@ -177,7 +177,7 @@ Recognising emotional patterns helps prevent repeated mistakes.
 
 ---
 
-# Identify Your Best Decisions
+## Identify Your Best Decisions
 
 Not every review should focus on mistakes.
 
@@ -196,7 +196,7 @@ Repeat successful habits.
 
 ---
 
-# Identify Areas for Improvement
+## Identify Areas for Improvement
 
 Every trader has something to improve.
 
@@ -214,7 +214,7 @@ Improvement begins with honest evaluation.
 
 ---
 
-# Review Missed Opportunities
+## Review Missed Opportunities
 
 Sometimes the best lesson comes from trades you never entered.
 
@@ -230,7 +230,7 @@ Missing a trade is not always a mistake.
 
 ---
 
-# Review Markets You Ignored
+## Review Markets You Ignored
 
 Markets you decided not to trade also deserve review.
 
@@ -244,7 +244,7 @@ Professional traders are proud of good "no trade" decisions.
 
 ---
 
-# Save and Review Chart Screenshots
+## Save and Review Chart Screenshots
 
 Screenshots provide valuable visual records.
 
@@ -259,7 +259,7 @@ Reviewing screenshots often reveals mistakes that numbers cannot show.
 
 ---
 
-# Measure Your Discipline
+## Measure Your Discipline
 
 Rate yourself honestly.
 
@@ -281,7 +281,7 @@ Discipline is more important than today's profit.
 
 ---
 
-# Plan Tomorrow's Improvement
+## Plan Tomorrow's Improvement
 
 Every review should end with one improvement goal.
 
@@ -297,7 +297,7 @@ Small improvements produce long-term success.
 
 ---
 
-# Develop a Professional Routine
+## Develop a Professional Routine
 
 Professional traders follow routines consistently.
 
@@ -322,7 +322,7 @@ Routine creates consistency.
 
 ---
 
-# Protect Your Health
+## Protect Your Health
 
 Trading performance depends on physical and mental health.
 
@@ -338,7 +338,7 @@ A healthy trader usually makes better decisions.
 
 ---
 
-# Continue Learning
+## Continue Learning
 
 Every trading day is part of your education.
 
@@ -354,7 +354,7 @@ Professional traders remain lifelong students.
 
 ---
 
-# Accept Imperfection
+## Accept Imperfection
 
 No trader wins every trade.
 
@@ -366,7 +366,7 @@ Accepting this reduces unnecessary emotional pressure.
 
 ---
 
-# Build Confidence Through Consistency
+## Build Confidence Through Consistency
 
 Confidence should come from:
 
@@ -381,7 +381,7 @@ True confidence develops gradually.
 
 ---
 
-# The Professional Trading Cycle
+## The Professional Trading Cycle
 
 Every trading day should follow this cycle:
 
@@ -399,7 +399,7 @@ This cycle creates continuous growth.
 
 ---
 
-# Example End-of-Day Review
+## Example End-of-Day Review
 
 Today's Summary
 
@@ -433,7 +433,7 @@ Allow winning trades to reach planned targets when market conditions remain vali
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -450,7 +450,7 @@ Professional traders improve because they review honestly.
 
 ---
 
-# Preparing for Advanced Trading
+## Preparing for Advanced Trading
 
 You have now learned:
 
@@ -471,7 +471,7 @@ You will begin learning structured trading methodologies that combine everything
 
 ---
 
-# Key Principle
+## Key Principle
 
 Every trading day should end with greater knowledge than it began.
 
@@ -483,7 +483,7 @@ Growth comes from honest review, disciplined habits and continuous improvement.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 A professional end-of-day routine should include:
 

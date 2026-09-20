@@ -1,4 +1,4 @@
----
+﻿---
 title: Understanding Trading Psychology
 lessonNumber: 1
 duration: 25
@@ -40,7 +40,7 @@ Understanding trading psychology helps the trader identify emotional and mental 
 
 ---
 
-# Why Trading Psychology Matters
+## Why Trading Psychology Matters
 
 Trading decisions are made under uncertainty.
 
@@ -67,7 +67,7 @@ The trader must learn to recognize emotions and prevent them from overriding the
 
 ---
 
-# Trading Is a Decision-Making Activity
+## Trading Is a Decision-Making Activity
 
 Trading is not only chart analysis.
 
@@ -90,7 +90,7 @@ The quality of these decisions determines long-term performance.
 
 ---
 
-# Knowledge Does Not Automatically Produce Discipline
+## Knowledge Does Not Automatically Produce Discipline
 
 A trader may know that:
 
@@ -107,7 +107,7 @@ Psychology becomes important when the trader must apply the rule under pressure.
 
 ---
 
-# The Conflict Between Logic and Emotion
+## The Conflict Between Logic and Emotion
 
 Logical trading may require the trader to:
 
@@ -133,7 +133,7 @@ Impulsive behaviour often represents emotion.
 
 ---
 
-# The Role of Uncertainty
+## The Role of Uncertainty
 
 No strategy wins every trade.
 
@@ -153,7 +153,7 @@ The objective is to make controlled decisions with positive long-term expectancy
 
 ---
 
-# Probability-Based Thinking
+## Probability-Based Thinking
 
 Professional trading is based on probabilities rather than certainty.
 
@@ -175,7 +175,7 @@ Probability-based thinking accepts that:
 
 ---
 
-# Outcome vs Process
+## Outcome vs Process
 
 The outcome is the financial result of a trade.
 
@@ -194,7 +194,7 @@ A losing trade is not automatically a bad trade.
 
 ---
 
-# Good Process, Losing Result
+## Good Process, Losing Result
 
 A good loss may occur when:
 
@@ -210,7 +210,7 @@ This is a normal business expense of trading.
 
 ---
 
-# Bad Process, Winning Result
+## Bad Process, Winning Result
 
 A bad win may occur when the trader:
 
@@ -227,7 +227,7 @@ Rewarding this behaviour can lead to larger future losses.
 
 ---
 
-# Psychological Capital
+## Psychological Capital
 
 Financial capital is the money used for trading.
 
@@ -254,7 +254,7 @@ A trader should protect psychological capital just as carefully as financial cap
 
 ---
 
-# Emotional Awareness
+## Emotional Awareness
 
 Emotional awareness means recognizing what the trader is feeling before and during trading.
 
@@ -273,7 +273,7 @@ Awareness creates an opportunity to pause before acting.
 
 ---
 
-# Emotional Control vs Emotional Suppression
+## Emotional Control vs Emotional Suppression
 
 Emotional control does not mean pretending that emotions do not exist.
 
@@ -291,7 +291,7 @@ The objective is controlled action, not emotional denial.
 
 ---
 
-# Common Emotional States in Trading
+## Common Emotional States in Trading
 
 Trading emotions may include:
 
@@ -312,7 +312,7 @@ Each emotion can influence behaviour differently.
 
 ---
 
-# Fear
+## Fear
 
 Fear may cause the trader to:
 
@@ -329,7 +329,7 @@ Proper position sizing can reduce emotional pressure.
 
 ---
 
-# Greed
+## Greed
 
 Greed may cause the trader to:
 
@@ -345,7 +345,7 @@ Greed often appears after profits or during strong market movement.
 
 ---
 
-# Hope
+## Hope
 
 Hope becomes dangerous when it replaces analysis.
 
@@ -363,7 +363,7 @@ A trade should remain open because the strategy remains valid, not because the t
 
 ---
 
-# Regret
+## Regret
 
 Regret may occur after:
 
@@ -382,7 +382,7 @@ It should not be followed by impulsive action.
 
 ---
 
-# Frustration
+## Frustration
 
 Frustration may develop when:
 
@@ -398,7 +398,7 @@ The trader should step away when frustration begins affecting judgement.
 
 ---
 
-# Excitement
+## Excitement
 
 Excitement may appear after:
 
@@ -414,7 +414,7 @@ The trader may begin to believe that normal risk rules are no longer necessary.
 
 ---
 
-# Boredom
+## Boredom
 
 Boredom may cause the trader to:
 
@@ -430,7 +430,7 @@ No trade is a valid outcome.
 
 ---
 
-# Anxiety
+## Anxiety
 
 Anxiety may cause:
 
@@ -453,7 +453,7 @@ The solution should focus on the cause, not only the feeling.
 
 ---
 
-# Overconfidence
+## Overconfidence
 
 Overconfidence may develop after several winning trades.
 
@@ -471,7 +471,7 @@ Winning streaks should not change risk rules without tested evidence.
 
 ---
 
-# Lack of Confidence
+## Lack of Confidence
 
 Lack of confidence may cause:
 
@@ -495,7 +495,7 @@ Confidence should not come from hope or one successful trade.
 
 ---
 
-# Emotional Triggers
+## Emotional Triggers
 
 An emotional trigger is an event that creates a strong reaction.
 
@@ -515,7 +515,7 @@ The trader should identify personal triggers through journaling.
 
 ---
 
-# Beliefs About Money
+## Beliefs About Money
 
 A trader's beliefs about money can influence behaviour.
 
@@ -534,7 +534,7 @@ Trading requires acceptance of controlled losses.
 
 ---
 
-# The Need to Be Right
+## The Need to Be Right
 
 Some traders become emotionally attached to being correct.
 
@@ -555,7 +555,7 @@ The objective is to manage risk and follow the plan.
 
 ---
 
-# Ego in Trading
+## Ego in Trading
 
 Ego may cause the trader to:
 
@@ -573,7 +573,7 @@ Account protection is more important than appearance.
 
 ---
 
-# Attachment to a Market Opinion
+## Attachment to a Market Opinion
 
 A trader may become attached to a bullish or bearish opinion.
 
@@ -591,7 +591,7 @@ The trader should respond to evidence rather than defend a prediction.
 
 ---
 
-# Confirmation Bias
+## Confirmation Bias
 
 Confirmation bias occurs when the trader searches only for information that supports an existing opinion.
 
@@ -610,7 +610,7 @@ A complete analysis should examine both supporting and opposing evidence.
 
 ---
 
-# Recency Bias
+## Recency Bias
 
 Recency bias occurs when recent events are given too much importance.
 
@@ -625,7 +625,7 @@ Performance should be judged over a meaningful sample.
 
 ---
 
-# Loss Aversion
+## Loss Aversion
 
 Loss aversion means losses may feel more painful than equivalent profits feel rewarding.
 
@@ -641,7 +641,7 @@ A predefined stop-loss reduces emotional negotiation.
 
 ---
 
-# Sunk Cost Fallacy
+## Sunk Cost Fallacy
 
 The sunk cost fallacy occurs when a trader continues supporting a bad decision because time or money has already been committed.
 
@@ -655,7 +655,7 @@ The decision should be based on the current validity of the setup.
 
 ---
 
-# Gambler's Fallacy
+## Gambler's Fallacy
 
 The gambler's fallacy is the belief that a result is due simply because the opposite result occurred repeatedly.
 
@@ -669,7 +669,7 @@ A losing streak does not guarantee an immediate winning trade.
 
 ---
 
-# The Hot-Hand Belief
+## The Hot-Hand Belief
 
 The hot-hand belief is the assumption that recent success guarantees continued success.
 
@@ -683,7 +683,7 @@ Risk rules should remain stable.
 
 ---
 
-# Anchoring
+## Anchoring
 
 Anchoring occurs when the trader becomes fixed on one price or expectation.
 
@@ -700,7 +700,7 @@ The trader must update decisions when evidence changes.
 
 ---
 
-# Overtrading
+## Overtrading
 
 Overtrading means taking more trades than the strategy or trading plan allows.
 
@@ -725,7 +725,7 @@ The trading plan should define the maximum number of trades.
 
 ---
 
-# Undertrading
+## Undertrading
 
 Undertrading means avoiding valid trades because of fear, doubt or hesitation.
 
@@ -743,7 +743,7 @@ The trader should improve clarity, practise execution and reduce risk if necessa
 
 ---
 
-# Impulsive Trading
+## Impulsive Trading
 
 Impulsive trading occurs when a position is opened without completing the normal decision process.
 
@@ -759,7 +759,7 @@ A pre-trade checklist creates a pause between emotion and action.
 
 ---
 
-# Trading Under Financial Pressure
+## Trading Under Financial Pressure
 
 Trading becomes psychologically dangerous when the trader urgently needs profit for:
 
@@ -781,7 +781,7 @@ Trading capital should be separated from essential funds.
 
 ---
 
-# Trading Under Personal Stress
+## Trading Under Personal Stress
 
 Stress outside trading can affect market decisions.
 
@@ -800,7 +800,7 @@ Taking a break can be a professional decision.
 
 ---
 
-# Physical Condition and Trading
+## Physical Condition and Trading
 
 Decision-making may be affected by:
 
@@ -817,7 +817,7 @@ Trading requires concentration and emotional regulation.
 
 ---
 
-# The Psychological Effect of Position Size
+## The Psychological Effect of Position Size
 
 Position size strongly affects emotions.
 
@@ -836,7 +836,7 @@ Risk should remain small enough for the trader to follow the plan calmly.
 
 ---
 
-# Risk Per Trade and Emotional Stability
+## Risk Per Trade and Emotional Stability
 
 Lower risk per trade can help the trader:
 
@@ -853,7 +853,7 @@ The goal is to maintain consistent decision-making.
 
 ---
 
-# Maximum Session Risk
+## Maximum Session Risk
 
 For this course:
 
@@ -872,7 +872,7 @@ Using less risk may provide stronger psychological stability.
 
 ---
 
-# Risk-to-Reward and Psychology
+## Risk-to-Reward and Psychology
 
 For this course, traders should generally seek an average risk-to-reward ratio of approximately:
 
@@ -891,7 +891,7 @@ Risk-to-reward only works when the plan is followed.
 
 ---
 
-# Accepting Losses
+## Accepting Losses
 
 Losses are part of trading.
 
@@ -910,7 +910,7 @@ Each type requires a different response.
 
 ---
 
-# Controlled Losses
+## Controlled Losses
 
 A controlled loss should:
 
@@ -924,7 +924,7 @@ One controlled loss should not determine the next trade.
 
 ---
 
-# Fear of Loss
+## Fear of Loss
 
 Fear of loss may increase when:
 
@@ -944,7 +944,7 @@ The solution may include:
 
 ---
 
-# Winning Streak Psychology
+## Winning Streak Psychology
 
 A winning streak can create:
 
@@ -960,7 +960,7 @@ A winning streak does not remove market uncertainty.
 
 ---
 
-# Losing Streak Psychology
+## Losing Streak Psychology
 
 A losing streak may create:
 
@@ -983,7 +983,7 @@ A losing streak may be statistically normal.
 
 ---
 
-# Emotional Neutrality
+## Emotional Neutrality
 
 Emotional neutrality means avoiding extreme reactions to individual trades.
 
@@ -998,7 +998,7 @@ The focus should remain on the full trading process.
 
 ---
 
-# Detachment From Individual Trades
+## Detachment From Individual Trades
 
 The trader should not attach identity or self-worth to one trade.
 
@@ -1015,7 +1015,7 @@ This approach reduces emotional pressure.
 
 ---
 
-# The Importance of Routine
+## The Importance of Routine
 
 A trading routine creates structure.
 
@@ -1036,7 +1036,7 @@ Routine reduces random decision-making.
 
 ---
 
-# Pre-Session Psychological Check
+## Pre-Session Psychological Check
 
 Before trading, ask:
 
@@ -1054,7 +1054,7 @@ If the trader is not mentally prepared, the session may be postponed.
 
 ---
 
-# Pre-Trade Psychological Check
+## Pre-Trade Psychological Check
 
 Before entering, ask:
 
@@ -1071,7 +1071,7 @@ Before entering, ask:
 
 ---
 
-# During-Trade Psychological Check
+## During-Trade Psychological Check
 
 While the trade is open, ask:
 
@@ -1087,7 +1087,7 @@ The trade should be managed according to the plan, not emotion.
 
 ---
 
-# Post-Trade Psychological Review
+## Post-Trade Psychological Review
 
 After the trade, record:
 
@@ -1103,7 +1103,7 @@ This builds emotional awareness over time.
 
 ---
 
-# Trading Journal for Psychology
+## Trading Journal for Psychology
 
 A psychological trading journal may include:
 
@@ -1122,7 +1122,7 @@ Patterns may become visible after several trades.
 
 ---
 
-# Emotional Rating Scale
+## Emotional Rating Scale
 
 A trader may rate emotions from 1 to 5.
 
@@ -1140,7 +1140,7 @@ The plan may prohibit trading at levels 4 or 5.
 
 ---
 
-# Identifying Personal Patterns
+## Identifying Personal Patterns
 
 Journal review may reveal patterns such as:
 
@@ -1155,7 +1155,7 @@ Once identified, these patterns can be managed with specific rules.
 
 ---
 
-# Creating Psychological Rules
+## Creating Psychological Rules
 
 Examples of psychological rules include:
 
@@ -1171,7 +1171,7 @@ Rules should respond to the trader's personal weaknesses.
 
 ---
 
-# The Pause Technique
+## The Pause Technique
 
 The pause technique creates time between emotion and action.
 
@@ -1188,7 +1188,7 @@ A short pause may prevent a large mistake.
 
 ---
 
-# Breathing and Attention
+## Breathing and Attention
 
 Controlled breathing may help reduce immediate stress.
 
@@ -1205,7 +1205,7 @@ It is a method for restoring decision quality.
 
 ---
 
-# Taking a Break
+## Taking a Break
 
 A trader should consider taking a break when:
 
@@ -1221,7 +1221,7 @@ Stopping is part of professional risk management.
 
 ---
 
-# Environment and Psychology
+## Environment and Psychology
 
 The trading environment can affect behaviour.
 
@@ -1238,7 +1238,7 @@ A focused environment can improve discipline.
 
 ---
 
-# Social Media Influence
+## Social Media Influence
 
 Social media may create:
 
@@ -1254,7 +1254,7 @@ Every setup must pass the trader's own rules.
 
 ---
 
-# Comparing Results With Others
+## Comparing Results With Others
 
 Comparison can cause:
 
@@ -1278,7 +1278,7 @@ The trader should compare current performance with personal rules and previous p
 
 ---
 
-# Signals and Psychological Dependence
+## Signals and Psychological Dependence
 
 Depending completely on signals may prevent the trader from understanding:
 
@@ -1293,7 +1293,7 @@ Personal analysis and risk control remain necessary.
 
 ---
 
-# The Illusion of Control
+## The Illusion of Control
 
 The trader controls:
 
@@ -1318,7 +1318,7 @@ Psychological stability improves when the trader focuses on controllable factors
 
 ---
 
-# Responsibility
+## Responsibility
 
 A professional trader accepts responsibility for:
 
@@ -1334,7 +1334,7 @@ It means taking ownership of controllable decisions.
 
 ---
 
-# Building Self-Trust
+## Building Self-Trust
 
 Self-trust develops when the trader repeatedly follows personal rules.
 
@@ -1350,7 +1350,7 @@ Self-trust can be rebuilt through small consistent actions.
 
 ---
 
-# Confidence From Evidence
+## Confidence From Evidence
 
 Strong trading confidence should come from:
 
@@ -1366,7 +1366,7 @@ Confidence based only on excitement is fragile.
 
 ---
 
-# Discipline Over Motivation
+## Discipline Over Motivation
 
 Motivation changes from day to day.
 
@@ -1383,7 +1383,7 @@ A professional process should not depend entirely on temporary motivation.
 
 ---
 
-# Realistic Expectations
+## Realistic Expectations
 
 Unrealistic expectations may include:
 
@@ -1399,7 +1399,7 @@ Trading skill develops over time.
 
 ---
 
-# Trading as a Business Process
+## Trading as a Business Process
 
 A professional trading mindset treats trading like a business.
 
@@ -1418,7 +1418,7 @@ A controlled losing trade may be treated as a normal operating cost.
 
 ---
 
-# Psychological Warning Signs
+## Psychological Warning Signs
 
 The trader should stop and reassess when:
 
@@ -1437,7 +1437,7 @@ These warning signs indicate that behaviour is becoming unsafe.
 
 ---
 
-# Professional Response to Emotional Pressure
+## Professional Response to Emotional Pressure
 
 When emotional pressure appears:
 
@@ -1452,7 +1452,7 @@ The objective is to protect capital and decision quality.
 
 ---
 
-# Example Psychological Trading Rule Set
+## Example Psychological Trading Rule Set
 
 A trader may use rules such as:
 
@@ -1471,7 +1471,7 @@ These are examples and should be adapted responsibly.
 
 ---
 
-# Psychological Checklist
+## Psychological Checklist
 
 Before trading:
 
@@ -1488,7 +1488,7 @@ Before trading:
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid these mistakes:
 
@@ -1511,7 +1511,7 @@ Avoid these mistakes:
 
 ---
 
-# Key Principle
+## Key Principle
 
 A trader cannot control the outcome of one trade.
 
@@ -1528,7 +1528,7 @@ Long-term improvement begins by focusing on these controllable factors.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Trading psychology refers to the thoughts, emotions, beliefs and behaviours that influence trading decisions.
 

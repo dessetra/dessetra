@@ -1,4 +1,4 @@
----
+﻿---
 title: Measuring Trading Performance
 lessonNumber: 3
 duration: 25
@@ -28,7 +28,7 @@ Performance should always be measured using facts rather than emotions.
 
 ---
 
-# Why Performance Evaluation Matters
+## Why Performance Evaluation Matters
 
 Without evaluation, improvement becomes difficult.
 
@@ -45,7 +45,7 @@ Successful traders improve because they measure their progress.
 
 ---
 
-# Profit Is Not the Only Measurement
+## Profit Is Not the Only Measurement
 
 Profit is important.
 
@@ -63,7 +63,7 @@ Always evaluate both results and behaviour.
 
 ---
 
-# Measuring Consistency
+## Measuring Consistency
 
 Consistency is one of the most valuable qualities of a professional trader.
 
@@ -78,7 +78,7 @@ Consistency produces reliable results over time.
 
 ---
 
-# Win Rate
+## Win Rate
 
 Win rate measures how often trades are successful.
 
@@ -93,7 +93,7 @@ A high win rate is helpful but does not guarantee profitability.
 
 ---
 
-# Why Win Rate Can Be Misleading
+## Why Win Rate Can Be Misleading
 
 Consider these examples.
 
@@ -113,7 +113,7 @@ Always consider other measurements alongside win rate.
 
 ---
 
-# Risk-to-Reward Ratio
+## Risk-to-Reward Ratio
 
 Risk-to-reward compares the amount being risked with the potential reward.
 
@@ -127,7 +127,7 @@ A favourable risk-to-reward ratio can help offset losing trades.
 
 ---
 
-# Average Winning Trade
+## Average Winning Trade
 
 Measure the average size of your winning trades.
 
@@ -140,7 +140,7 @@ Understanding this helps improve trade management.
 
 ---
 
-# Average Losing Trade
+## Average Losing Trade
 
 Measure the average size of your losing trades.
 
@@ -154,7 +154,7 @@ Professional traders keep losses under control.
 
 ---
 
-# Profit Factor
+## Profit Factor
 
 Profit factor compares total profits with total losses.
 
@@ -164,7 +164,7 @@ The goal is continuous improvement rather than chasing perfect numbers.
 
 ---
 
-# Expectancy
+## Expectancy
 
 Expectancy measures what a trading system is expected to produce over many trades.
 
@@ -174,7 +174,7 @@ Professional traders think in terms of large numbers of trades rather than indiv
 
 ---
 
-# Drawdown
+## Drawdown
 
 Drawdown measures how much the trading account declines before recovering.
 
@@ -186,7 +186,7 @@ Large drawdowns make recovery much more difficult.
 
 ---
 
-# Measuring Discipline
+## Measuring Discipline
 
 Discipline can be measured using simple questions.
 
@@ -203,7 +203,7 @@ Discipline often improves before profits improve.
 
 ---
 
-# Measuring Emotional Control
+## Measuring Emotional Control
 
 Evaluate your emotions honestly.
 
@@ -220,7 +220,7 @@ Emotional control is an important part of long-term success.
 
 ---
 
-# Measuring Rule Adherence
+## Measuring Rule Adherence
 
 Every trade should be compared against your written trading system.
 
@@ -236,7 +236,7 @@ Following rules consistently produces meaningful data.
 
 ---
 
-# Measuring Risk Management
+## Measuring Risk Management
 
 Risk management should also be evaluated.
 
@@ -254,7 +254,7 @@ Protecting capital remains the highest priority.
 
 ---
 
-# Measuring Trade Quality
+## Measuring Trade Quality
 
 Not every winning trade is a good trade.
 
@@ -272,7 +272,7 @@ Evaluate quality using:
 
 ---
 
-# Tracking Common Mistakes
+## Tracking Common Mistakes
 
 Record repeated mistakes.
 
@@ -290,7 +290,7 @@ Repeated mistakes should become improvement goals.
 
 ---
 
-# Measuring Improvement
+## Measuring Improvement
 
 Compare current performance with previous weeks or months.
 
@@ -306,7 +306,7 @@ Improvement often happens gradually.
 
 ---
 
-# Comparing Markets
+## Comparing Markets
 
 Some traders perform better in certain markets.
 
@@ -321,7 +321,7 @@ This may reveal where your strengths lie.
 
 ---
 
-# Comparing Trading Sessions
+## Comparing Trading Sessions
 
 Review performance during different market sessions.
 
@@ -335,7 +335,7 @@ Some traders naturally perform better during certain sessions.
 
 ---
 
-# Comparing Setups
+## Comparing Setups
 
 Not every setup performs equally well.
 
@@ -350,7 +350,7 @@ This helps identify your strongest trading opportunities.
 
 ---
 
-# Looking Beyond One Trade
+## Looking Beyond One Trade
 
 One trade proves very little.
 
@@ -362,7 +362,7 @@ Patience is essential.
 
 ---
 
-# Using Charts and Statistics Together
+## Using Charts and Statistics Together
 
 Numbers tell one part of the story.
 
@@ -379,7 +379,7 @@ Combining these provides a complete picture.
 
 ---
 
-# Setting Improvement Goals
+## Setting Improvement Goals
 
 Choose specific goals.
 
@@ -395,7 +395,7 @@ Small improvements create large long-term results.
 
 ---
 
-# Avoid Comparing Yourself to Others
+## Avoid Comparing Yourself to Others
 
 Every trader learns at a different pace.
 
@@ -405,7 +405,7 @@ Continuous self-improvement is more valuable than competition.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -421,7 +421,7 @@ Professional traders improve because they accept responsibility.
 
 ---
 
-# Example Performance Review
+## Example Performance Review
 
 Weekly Review
 
@@ -453,7 +453,7 @@ This type of review creates measurable progress.
 
 ---
 
-# Key Principle
+## Key Principle
 
 What gets measured can be improved.
 
@@ -463,7 +463,7 @@ They rely on accurate records, disciplined evaluation and continuous learning.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Professional traders measure far more than profits.
 

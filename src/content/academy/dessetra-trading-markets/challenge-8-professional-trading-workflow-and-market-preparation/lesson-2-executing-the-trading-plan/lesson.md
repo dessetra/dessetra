@@ -1,4 +1,4 @@
----
+﻿---
 title: Executing the Trading Plan
 lessonNumber: 2
 duration: 30
@@ -29,7 +29,7 @@ Professional execution means following the plan exactly, even when emotions beco
 
 ---
 
-# What Does Execution Mean?
+## What Does Execution Mean?
 
 Execution is the process of applying the trading plan in real market conditions.
 
@@ -47,7 +47,7 @@ Execution should be systematic rather than emotional.
 
 ---
 
-# Preparation and Execution Are Different
+## Preparation and Execution Are Different
 
 Preparation answers:
 
@@ -67,7 +67,7 @@ A good plan still requires disciplined execution.
 
 ---
 
-# Follow the Trading Checklist
+## Follow the Trading Checklist
 
 Before every entry, complete the checklist.
 
@@ -88,7 +88,7 @@ If important conditions are missing, do not enter.
 
 ---
 
-# Wait for the Setup
+## Wait for the Setup
 
 Patience is one of the most important execution skills.
 
@@ -104,7 +104,7 @@ The trader should enter only when the defined setup appears.
 
 ---
 
-# Recognise a Valid Setup
+## Recognise a Valid Setup
 
 A valid setup should match written rules.
 
@@ -123,7 +123,7 @@ It must match the trader's system.
 
 ---
 
-# Wait for Confirmation
+## Wait for Confirmation
 
 Confirmation helps reduce impulsive entries.
 
@@ -140,7 +140,7 @@ The exact confirmation should already be defined in the trading plan.
 
 ---
 
-# Avoid Early Entries
+## Avoid Early Entries
 
 Entering before confirmation may lead to:
 
@@ -154,7 +154,7 @@ It is better to miss a trade than to enter a poor-quality setup.
 
 ---
 
-# Avoid Chasing Price
+## Avoid Chasing Price
 
 Chasing occurs when a trader enters after price has already moved significantly.
 
@@ -170,7 +170,7 @@ If the planned entry is missed, wait for another opportunity.
 
 ---
 
-# Do Not Trade from Fear of Missing Out
+## Do Not Trade from Fear of Missing Out
 
 Fear of missing out can make traders abandon their rules.
 
@@ -186,7 +186,7 @@ Professional traders accept that opportunities will continue to appear.
 
 ---
 
-# Confirm the Entry Price
+## Confirm the Entry Price
 
 Before entering, identify the exact entry condition.
 
@@ -206,7 +206,7 @@ The entry should have a clear reason.
 
 ---
 
-# Calculate Position Size
+## Calculate Position Size
 
 Position size should be calculated before the trade is opened.
 
@@ -221,7 +221,7 @@ Never choose position size based on emotion.
 
 ---
 
-# Respect the Maximum Session Risk
+## Respect the Maximum Session Risk
 
 Before entering a new trade, calculate the total risk already active or taken during the session.
 
@@ -233,7 +233,7 @@ If the session limit has been reached, no additional trade should be taken.
 
 ---
 
-# Confirm Risk-to-Reward
+## Confirm Risk-to-Reward
 
 Before entry, compare the planned risk with the potential reward.
 
@@ -249,7 +249,7 @@ The target must remain technically realistic.
 
 ---
 
-# Place the Stop-Loss Immediately
+## Place the Stop-Loss Immediately
 
 A stop-loss should be planned before entry and placed as part of the trade.
 
@@ -267,7 +267,7 @@ Trading without a stop-loss exposes capital to uncontrolled risk.
 
 ---
 
-# Never Widen the Stop-Loss Emotionally
+## Never Widen the Stop-Loss Emotionally
 
 After entering, price may move against the trade.
 
@@ -281,7 +281,7 @@ Do not change the risk because of hope.
 
 ---
 
-# Place the Take-Profit
+## Place the Take-Profit
 
 The target should also be defined before entry.
 
@@ -298,7 +298,7 @@ The target should match both the strategy and current market conditions.
 
 ---
 
-# Do Not Move the Target from Greed
+## Do Not Move the Target from Greed
 
 When price approaches the target, greed may encourage the trader to demand more.
 
@@ -308,7 +308,7 @@ Follow the trade-management rules already defined.
 
 ---
 
-# Manage the Trade According to the Plan
+## Manage the Trade According to the Plan
 
 Possible trade-management rules include:
 
@@ -322,7 +322,7 @@ Management rules should be written before entry.
 
 ---
 
-# Avoid Constantly Watching Every Price Movement
+## Avoid Constantly Watching Every Price Movement
 
 Watching every small movement may increase:
 
@@ -336,7 +336,7 @@ After entering, allow the trade room to develop according to the plan.
 
 ---
 
-# Use Alerts Where Possible
+## Use Alerts Where Possible
 
 Price alerts can help reduce emotional chart watching.
 
@@ -352,7 +352,7 @@ Alerts help the trader remain focused without staring constantly at the screen.
 
 ---
 
-# Do Not Add to Losing Trades Without a Rule
+## Do Not Add to Losing Trades Without a Rule
 
 Adding to a losing position can increase risk quickly.
 
@@ -366,7 +366,7 @@ Only add to positions when the trading system clearly permits it and total risk 
 
 ---
 
-# Avoid Revenge Trading
+## Avoid Revenge Trading
 
 After a loss, the trader may feel pressure to recover immediately.
 
@@ -384,7 +384,7 @@ The next trade should be taken only if it fully meets the trading plan.
 
 ---
 
-# Handling a Winning Trade
+## Handling a Winning Trade
 
 A winning trade can also create emotional problems.
 
@@ -402,7 +402,7 @@ One win does not justify breaking the rules.
 
 ---
 
-# Handling a Losing Trade
+## Handling a Losing Trade
 
 A planned loss is part of trading.
 
@@ -418,7 +418,7 @@ Do not immediately attempt to recover the loss.
 
 ---
 
-# Know When Not to Enter
+## Know When Not to Enter
 
 Do not trade when:
 
@@ -435,7 +435,7 @@ Not trading is part of professional execution.
 
 ---
 
-# Avoid Overtrading
+## Avoid Overtrading
 
 Overtrading means taking too many trades.
 
@@ -452,7 +452,7 @@ A trading system should define the maximum number of trades allowed during a ses
 
 ---
 
-# Stay Focused on Process
+## Stay Focused on Process
 
 During execution, focus on:
 
@@ -468,7 +468,7 @@ A strong process produces better long-term results.
 
 ---
 
-# Separate Analysis from Emotion
+## Separate Analysis from Emotion
 
 Market analysis should be based on:
 
@@ -490,7 +490,7 @@ Objective analysis improves execution.
 
 ---
 
-# Avoid Changing the Plan Mid-Trade
+## Avoid Changing the Plan Mid-Trade
 
 Once the trade begins, changes should only occur according to predefined rules.
 
@@ -507,7 +507,7 @@ A plan that changes under pressure is not being followed.
 
 ---
 
-# Use One Decision at a Time
+## Use One Decision at a Time
 
 Professional execution can be simplified into three possible decisions:
 
@@ -521,7 +521,7 @@ If the conditions are not complete, the correct decision is usually to wait or a
 
 ---
 
-# Example of Professional Execution
+## Example of Professional Execution
 
 A trader identifies an uptrend on the 4-hour chart.
 
@@ -546,7 +546,7 @@ This is structured execution.
 
 ---
 
-# Example of Poor Execution
+## Example of Poor Execution
 
 A trader sees price rising quickly.
 
@@ -564,7 +564,7 @@ This is emotional execution.
 
 ---
 
-# Execution Scorecard
+## Execution Scorecard
 
 After each trade, rate the execution.
 
@@ -582,7 +582,7 @@ A trade can receive a high execution score even if it loses.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -601,7 +601,7 @@ These mistakes are usually execution problems rather than analysis problems.
 
 ---
 
-# Key Principle
+## Key Principle
 
 A trading plan has value only when it is followed.
 
@@ -617,7 +617,7 @@ Discipline connects knowledge to results.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Executing a trading plan requires the trader to:
 

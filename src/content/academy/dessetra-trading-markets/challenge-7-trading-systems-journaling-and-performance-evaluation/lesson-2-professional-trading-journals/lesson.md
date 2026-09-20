@@ -1,4 +1,4 @@
----
+﻿---
 title: Professional Trading Journals
 lessonNumber: 2
 duration: 30
@@ -22,7 +22,7 @@ Without records, improvement becomes difficult.
 
 ---
 
-# What Is a Trading Journal?
+## What Is a Trading Journal?
 
 A trading journal is a written record of every trading decision.
 
@@ -37,7 +37,7 @@ The journal becomes the trader's personal database.
 
 ---
 
-# Why Every Trader Needs a Journal
+## Why Every Trader Needs a Journal
 
 A journal helps traders:
 
@@ -53,7 +53,7 @@ Without a journal, traders often repeat the same mistakes.
 
 ---
 
-# The Journal Is Not Only About Profit
+## The Journal Is Not Only About Profit
 
 Many beginners record only:
 
@@ -73,7 +73,7 @@ The process is more important than the result.
 
 ---
 
-# Every Trade Should Be Recorded
+## Every Trade Should Be Recorded
 
 Every trade matters.
 
@@ -90,7 +90,7 @@ Even "No Trade" days provide useful information.
 
 ---
 
-# Basic Information to Record
+## Basic Information to Record
 
 Every journal should include:
 
@@ -109,7 +109,7 @@ These details allow later review.
 
 ---
 
-# Risk Information
+## Risk Information
 
 The journal should also record:
 
@@ -126,7 +126,7 @@ For this course:
 
 ---
 
-# Recording the Setup
+## Recording the Setup
 
 Describe why the trade was taken.
 
@@ -143,7 +143,7 @@ The explanation should match the trading system.
 
 ---
 
-# Recording Confirmation
+## Recording Confirmation
 
 Document the confirmation used.
 
@@ -159,7 +159,7 @@ This helps identify which confirmations perform best.
 
 ---
 
-# Recording the Exit
+## Recording the Exit
 
 Explain why the trade ended.
 
@@ -175,7 +175,7 @@ Understanding exits improves future decisions.
 
 ---
 
-# Recording Emotions
+## Recording Emotions
 
 Professional traders monitor emotions.
 
@@ -206,7 +206,7 @@ Emotional patterns often explain repeated mistakes.
 
 ---
 
-# Recording Rule Violations
+## Recording Rule Violations
 
 If a rule was broken, record it honestly.
 
@@ -223,7 +223,7 @@ Honest journals create faster improvement.
 
 ---
 
-# Recording Lessons Learned
+## Recording Lessons Learned
 
 Every trade should teach something.
 
@@ -239,7 +239,7 @@ Learning turns experience into skill.
 
 ---
 
-# Screenshot Journals
+## Screenshot Journals
 
 Many professional traders save screenshots.
 
@@ -254,7 +254,7 @@ Screenshots help explain decisions better than memory alone.
 
 ---
 
-# Annotating Charts
+## Annotating Charts
 
 Charts can include notes such as:
 
@@ -270,7 +270,7 @@ Visual review often reveals patterns quickly.
 
 ---
 
-# Daily Journal Review
+## Daily Journal Review
 
 At the end of each trading day ask:
 
@@ -284,7 +284,7 @@ Daily reviews keep small mistakes from becoming habits.
 
 ---
 
-# Weekly Review
+## Weekly Review
 
 At the end of each week review:
 
@@ -301,7 +301,7 @@ Weekly reviews identify recurring behaviour.
 
 ---
 
-# Monthly Review
+## Monthly Review
 
 Monthly reviews provide a broader picture.
 
@@ -319,7 +319,7 @@ One day is too short to judge long-term progress.
 
 ---
 
-# Finding Behavioural Patterns
+## Finding Behavioural Patterns
 
 Journals often reveal patterns such as:
 
@@ -333,7 +333,7 @@ These patterns can then be corrected.
 
 ---
 
-# Measuring Discipline
+## Measuring Discipline
 
 The journal can track:
 
@@ -347,7 +347,7 @@ Discipline can improve even before profits increase.
 
 ---
 
-# Measuring Consistency
+## Measuring Consistency
 
 Consistency may be measured by:
 
@@ -360,27 +360,27 @@ Consistent behaviour produces reliable data.
 
 ---
 
-# Using a Rating System
+## Using a Rating System
 
 A simple rating system helps identify quality.
 
 Example:
 
-⭐⭐⭐⭐⭐ Excellent
+â­â­â­â­â­ Excellent
 
-⭐⭐⭐⭐ Good
+â­â­â­â­ Good
 
-⭐⭐⭐ Average
+â­â­â­ Average
 
-⭐⭐ Needs Improvement
+â­â­ Needs Improvement
 
-⭐ Poor Discipline
+â­ Poor Discipline
 
 The rating should measure behaviour rather than profit.
 
 ---
 
-# Recording Mistakes
+## Recording Mistakes
 
 Mistakes should never be hidden.
 
@@ -397,7 +397,7 @@ Recording mistakes prevents repeating them.
 
 ---
 
-# Recording Good Decisions
+## Recording Good Decisions
 
 Not every journal entry should focus on mistakes.
 
@@ -413,7 +413,7 @@ Positive habits should be reinforced.
 
 ---
 
-# The Value of Losing Trades
+## The Value of Losing Trades
 
 A losing trade can still be successful.
 
@@ -430,7 +430,7 @@ A journal helps recognize this difference.
 
 ---
 
-# Reviewing Winning Trades
+## Reviewing Winning Trades
 
 Winning trades also deserve review.
 
@@ -445,7 +445,7 @@ Winning trades can still contain mistakes.
 
 ---
 
-# Using the Journal to Improve
+## Using the Journal to Improve
 
 The journal should answer:
 
@@ -459,7 +459,7 @@ Improvement should be evidence-based.
 
 ---
 
-# Digital vs Paper Journals
+## Digital vs Paper Journals
 
 Both methods can work.
 
@@ -480,7 +480,7 @@ Choose the method that will be used consistently.
 
 ---
 
-# Confidentiality
+## Confidentiality
 
 A trading journal is personal.
 
@@ -490,7 +490,7 @@ The purpose is self-improvement, not impressing others.
 
 ---
 
-# Avoid Editing History
+## Avoid Editing History
 
 Never change old journal entries to make results appear better.
 
@@ -500,7 +500,7 @@ Professional traders value truth more than appearance.
 
 ---
 
-# Journal Templates
+## Journal Templates
 
 A simple journal template may include:
 
@@ -535,7 +535,7 @@ A simple journal template may include:
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -549,7 +549,7 @@ Avoid:
 
 ---
 
-# Example Journal Entry
+## Example Journal Entry
 
 Example:
 
@@ -573,7 +573,7 @@ This is a successful journal entry even though the trade lost.
 
 ---
 
-# Key Principle
+## Key Principle
 
 A journal transforms trading from guessing into learning.
 
@@ -583,7 +583,7 @@ Professional traders learn from data rather than memory.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 A professional trading journal records:
 

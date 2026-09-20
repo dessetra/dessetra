@@ -1,4 +1,4 @@
----
+﻿---
 title: Discipline, Patience & Consistency
 lessonNumber: 3
 duration: 25
@@ -26,7 +26,7 @@ A trader may understand market analysis and risk management but still struggle i
 
 ---
 
-# What Is Trading Discipline?
+## What Is Trading Discipline?
 
 Trading discipline is the ability to follow a trading plan regardless of emotion, pressure or short-term results.
 
@@ -46,7 +46,7 @@ Discipline means doing what was planned instead of reacting impulsively.
 
 ---
 
-# Discipline Is Not Prediction
+## Discipline Is Not Prediction
 
 Discipline does not guarantee that every trade will win.
 
@@ -66,7 +66,7 @@ The objective is reliable execution.
 
 ---
 
-# Why Traders Break Rules
+## Why Traders Break Rules
 
 Traders may break rules because of:
 
@@ -86,7 +86,7 @@ That exception may then become a habit.
 
 ---
 
-# Small Rule Violations
+## Small Rule Violations
 
 Examples include:
 
@@ -103,7 +103,7 @@ Over time, they weaken discipline and increase risk.
 
 ---
 
-# Discipline Before the Trade
+## Discipline Before the Trade
 
 Before entering, discipline requires the trader to:
 
@@ -119,7 +119,7 @@ A trade should not be entered until the required conditions are satisfied.
 
 ---
 
-# Discipline During the Trade
+## Discipline During the Trade
 
 While the position is open, discipline requires the trader to:
 
@@ -134,7 +134,7 @@ The original plan should guide the trade.
 
 ---
 
-# Discipline After the Trade
+## Discipline After the Trade
 
 After the trade, discipline requires the trader to:
 
@@ -149,7 +149,7 @@ The period after a trade is often when emotional mistakes begin.
 
 ---
 
-# What Is Patience?
+## What Is Patience?
 
 Patience is the ability to wait for the right opportunity without forcing a trade.
 
@@ -167,7 +167,7 @@ Waiting is part of trading.
 
 ---
 
-# The Pressure to Always Trade
+## The Pressure to Always Trade
 
 Many beginners believe they must open trades every day.
 
@@ -185,7 +185,7 @@ No trade is a valid decision.
 
 ---
 
-# Waiting for Confirmation
+## Waiting for Confirmation
 
 A setup may look attractive before confirmation appears.
 
@@ -201,7 +201,7 @@ Patience allows the market to provide more information.
 
 ---
 
-# Waiting for Price
+## Waiting for Price
 
 A trader should avoid chasing price.
 
@@ -216,7 +216,7 @@ A missed trade is better than a poor entry.
 
 ---
 
-# Patience During Open Trades
+## Patience During Open Trades
 
 Patience is also required after entry.
 
@@ -231,7 +231,7 @@ Closing too early may reduce the benefit of a planned risk-to-reward ratio.
 
 ---
 
-# Patience and Risk-to-Reward
+## Patience and Risk-to-Reward
 
 For this course, traders should generally aim for an average risk-to-reward ratio of approximately:
 
@@ -245,7 +245,7 @@ The trader must avoid closing too early simply because a small profit appears.
 
 ---
 
-# Patience Is Not Passive Hope
+## Patience Is Not Passive Hope
 
 Patience does not mean holding a trade after the setup is invalid.
 
@@ -262,7 +262,7 @@ Hope ignores the plan.
 
 ---
 
-# What Is Consistency?
+## What Is Consistency?
 
 Consistency means applying the same tested process repeatedly.
 
@@ -281,7 +281,7 @@ Without consistency, it becomes difficult to know whether a strategy works.
 
 ---
 
-# Consistency Does Not Mean Identical Results
+## Consistency Does Not Mean Identical Results
 
 Trading results will naturally vary.
 
@@ -297,7 +297,7 @@ Consistency refers to behaviour, not identical financial results.
 
 ---
 
-# The Importance of Repetition
+## The Importance of Repetition
 
 Trading skill improves through repetition.
 
@@ -315,7 +315,7 @@ The trader must be careful about what is practised.
 
 ---
 
-# Process Consistency
+## Process Consistency
 
 A consistent process may include:
 
@@ -333,7 +333,7 @@ The process should remain stable enough to measure.
 
 ---
 
-# Risk Consistency
+## Risk Consistency
 
 Risk should not change emotionally.
 
@@ -352,7 +352,7 @@ Using less than 5% may provide stronger protection.
 
 ---
 
-# Position Size Consistency
+## Position Size Consistency
 
 Position size should be based on:
 
@@ -372,7 +372,7 @@ Consistent sizing reduces emotional pressure.
 
 ---
 
-# Strategy Consistency
+## Strategy Consistency
 
 A trader should avoid changing strategy after every loss.
 
@@ -391,7 +391,7 @@ One or two losses are not enough to judge a strategy.
 
 ---
 
-# The Problem of Strategy Hopping
+## The Problem of Strategy Hopping
 
 Strategy hopping means constantly moving from one method to another.
 
@@ -409,7 +409,7 @@ Every strategy has strengths, weaknesses and losing periods.
 
 ---
 
-# Building a Repeatable Routine
+## Building a Repeatable Routine
 
 A repeatable routine can improve discipline.
 
@@ -441,7 +441,7 @@ Routine reduces random behaviour.
 
 ---
 
-# Pre-Trade Checklist
+## Pre-Trade Checklist
 
 A checklist may include:
 
@@ -460,7 +460,7 @@ If key conditions are missing, the trade should not be entered.
 
 ---
 
-# Following the Checklist Consistently
+## Following the Checklist Consistently
 
 A checklist only works when it is used every time.
 
@@ -479,7 +479,7 @@ Consistency is most important when emotions are strong.
 
 ---
 
-# Creating Trading Rules
+## Creating Trading Rules
 
 Trading rules should be:
 
@@ -501,7 +501,7 @@ Specific rules are easier to follow and review.
 
 ---
 
-# Examples of Discipline Rules
+## Examples of Discipline Rules
 
 Possible rules include:
 
@@ -519,7 +519,7 @@ These rules should match the trader's strategy.
 
 ---
 
-# Session Limits
+## Session Limits
 
 A trading session should have clear limits.
 
@@ -537,7 +537,7 @@ Limits prevent emotional escalation.
 
 ---
 
-# Stopping After Losses
+## Stopping After Losses
 
 A trader may create a rule such as:
 
@@ -551,7 +551,7 @@ It protects capital and decision quality.
 
 ---
 
-# Stopping After Wins
+## Stopping After Wins
 
 Traders may also need limits after profits.
 
@@ -566,7 +566,7 @@ The trader may stop after reaching a predefined session objective or after disci
 
 ---
 
-# Consistency in Journaling
+## Consistency in Journaling
 
 The trading journal should be updated after every trade.
 
@@ -587,7 +587,7 @@ Incomplete records make review less reliable.
 
 ---
 
-# Reviewing Behaviour, Not Only Profit
+## Reviewing Behaviour, Not Only Profit
 
 A session should not be judged only by money.
 
@@ -605,7 +605,7 @@ A losing session with excellent discipline may still be professionally managed.
 
 ---
 
-# Measuring Consistency
+## Measuring Consistency
 
 A trader may track:
 
@@ -620,7 +620,7 @@ These measurements reveal behavioural improvement.
 
 ---
 
-# Discipline Score
+## Discipline Score
 
 A simple score may be used.
 
@@ -637,7 +637,7 @@ A high discipline score can be more useful than one day's profit.
 
 ---
 
-# Weekly Review
+## Weekly Review
 
 At the end of each week, review:
 
@@ -654,7 +654,7 @@ The objective is gradual improvement.
 
 ---
 
-# Monthly Review
+## Monthly Review
 
 A monthly review may include:
 
@@ -671,7 +671,7 @@ Longer reviews reduce the influence of one emotional day.
 
 ---
 
-# Dealing With Slow Progress
+## Dealing With Slow Progress
 
 Trading improvement may be slow.
 
@@ -688,7 +688,7 @@ The goal is sustainable skill, not fast excitement.
 
 ---
 
-# The Danger of Rushing
+## The Danger of Rushing
 
 Rushing may cause:
 
@@ -705,7 +705,7 @@ High risk can also create fast account loss.
 
 ---
 
-# Small Consistent Improvement
+## Small Consistent Improvement
 
 A professional trader may focus on improving one area at a time.
 
@@ -722,7 +722,7 @@ Small improvements compound over time.
 
 ---
 
-# Confidence Through Consistency
+## Confidence Through Consistency
 
 Confidence grows when the trader repeatedly:
 
@@ -737,7 +737,7 @@ This confidence is stronger than confidence created by one lucky trade.
 
 ---
 
-# Self-Trust and Discipline
+## Self-Trust and Discipline
 
 Every time the trader follows a rule, self-trust improves.
 
@@ -755,7 +755,7 @@ Self-trust supports long-term discipline.
 
 ---
 
-# Handling Missed Trades
+## Handling Missed Trades
 
 A missed trade may create frustration.
 
@@ -771,7 +771,7 @@ The market will provide other opportunities.
 
 ---
 
-# Handling Losing Streaks
+## Handling Losing Streaks
 
 During a losing streak:
 
@@ -787,7 +787,7 @@ Consistency is tested most during losing periods.
 
 ---
 
-# Handling Winning Streaks
+## Handling Winning Streaks
 
 During a winning streak:
 
@@ -802,7 +802,7 @@ Success should not remove discipline.
 
 ---
 
-# Discipline and Boredom
+## Discipline and Boredom
 
 Boredom is a major threat to discipline.
 
@@ -818,7 +818,7 @@ A disciplined trader understands that waiting is productive.
 
 ---
 
-# Discipline and Social Pressure
+## Discipline and Social Pressure
 
 Other traders may encourage:
 
@@ -834,7 +834,7 @@ Trading decisions should remain independent.
 
 ---
 
-# Patience With Learning
+## Patience With Learning
 
 Beginners need time to develop:
 
@@ -856,7 +856,7 @@ Professional skill is developed gradually.
 
 ---
 
-# Demo Trading and Discipline
+## Demo Trading and Discipline
 
 Demo trading can be useful for practising:
 
@@ -872,7 +872,7 @@ Practising carelessness in demo trading may create bad habits.
 
 ---
 
-# Transitioning to Real Capital
+## Transitioning to Real Capital
 
 When moving from demo trading to real capital:
 
@@ -887,7 +887,7 @@ Real money can change psychological behaviour.
 
 ---
 
-# Accountability
+## Accountability
 
 Accountability can support discipline.
 
@@ -906,7 +906,7 @@ The purpose is honest evaluation.
 
 ---
 
-# Rewarding Good Behaviour
+## Rewarding Good Behaviour
 
 The trader may recognize good behaviour such as:
 
@@ -920,7 +920,7 @@ Success should include disciplined behaviour, not only profit.
 
 ---
 
-# Correcting Rule Violations
+## Correcting Rule Violations
 
 When a rule is broken:
 
@@ -935,7 +935,7 @@ Ignoring violations allows them to repeat.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid these mistakes:
 
@@ -955,7 +955,7 @@ Avoid these mistakes:
 
 ---
 
-# Practical Discipline Framework
+## Practical Discipline Framework
 
 A simple framework may be:
 
@@ -992,7 +992,7 @@ Improve the process without emotional reaction.
 
 ---
 
-# Example of a Disciplined Trade
+## Example of a Disciplined Trade
 
 A trader identifies an uptrend.
 
@@ -1016,7 +1016,7 @@ Whether the trade wins or loses, the process remains disciplined.
 
 ---
 
-# Example of an Undisciplined Trade
+## Example of an Undisciplined Trade
 
 A trader sees price rising quickly.
 
@@ -1036,7 +1036,7 @@ This is a failure of discipline, patience and consistency.
 
 ---
 
-# Key Principle
+## Key Principle
 
 Discipline protects the trading plan.
 
@@ -1048,7 +1048,7 @@ Together, they help turn trading from emotional guessing into a structured proce
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Trading discipline is the ability to follow rules despite emotion, pressure and short-term results.
 

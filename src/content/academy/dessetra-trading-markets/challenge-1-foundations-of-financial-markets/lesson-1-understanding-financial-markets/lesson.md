@@ -1,209 +1,416 @@
----
-title: Understanding Financial Markets
+﻿---
+
+title: Understanding the Forex Market
 lessonNumber: 1
-duration: 15
+duration: 20
 difficulty: Beginner
-objective: Understand what financial markets are, why they exist, how prices are formed, and how traders participate in them.
+objective: Understand how the Forex market works, how currency pairs are quoted, what buying and selling mean, and how pips, spreads and trading sessions affect a trade.
 video:
 resource:
+---------
+
+# Understanding the Forex Market
+
+Forex stands for **Foreign Exchange**.
+
+It is the global market where currencies are exchanged and traded against one another.
+
+Every Forex transaction involves two currencies. When you buy one currency, you are simultaneously selling another.
+
+For example:
+
+* EUR/USD
+* GBP/USD
+* USD/JPY
+* AUD/USD
+* USD/CAD
+
+The Forex market operates across global financial centres throughout the working week.
+
+According to the Bank for International Settlements' 2025 Triennial Survey, global over-the-counter foreign exchange turnover averaged approximately **$9.5 trillion per day in April 2025**.
+
+This makes Forex one of the world's largest and most actively traded financial markets.
+
 ---
 
-# Understanding Financial Markets
+## Understanding Currency Pairs
 
-Financial markets are organized systems where buyers and sellers exchange financial assets.
+Currencies are quoted in **pairs** because a Forex transaction compares the value of one currency against another.
 
-These assets can include:
+Consider:
 
-- currencies
-- cryptocurrencies
-- company shares
-- commodities
-- bonds
-- futures contracts
-- market indices
+**EUR/USD = 1.1700**
 
-A financial market may operate through a physical location, a digital exchange, a broker, or a decentralized blockchain network.
-![Overview of major financial markets including Forex, cryptocurrencies, stocks, commodities, bonds, futures, and indices](/academy/dessetra-trading-markets/challenge-1/financial-markets-overview.png)
+The pair contains two currencies:
 
-## Why Financial Markets Exist
+* **EUR = Base Currency**
+* **USD = Quote Currency**
 
-Financial markets connect people and institutions that want to buy assets with those who want to sell them.
+The **base currency** is the first currency.
 
-They help businesses, governments, institutions, and individuals to:
+The **quote currency** is the second currency.
 
-- raise capital
-- exchange currencies
-- transfer risk
-- invest money
-- speculate on price changes
-- access liquidity
+The price tells you how much of the quote currency is required to obtain one unit of the base currency.
 
-Without financial markets, buyers and sellers would struggle to find each other and agree on fair prices.
+Therefore:
 
-## What Is a Financial Asset?
+**EUR/USD = 1.1700**
 
-A financial asset is something that represents value and can be bought, sold, or exchanged.
+means that:
 
-Examples include:
+**1 EUR = 1.1700 USD**
 
-- EUR/USD in Forex
-- Bitcoin in the cryptocurrency market
-- shares of a company
-- gold futures contracts
-- government bonds
+If EUR/USD rises, the euro has strengthened relative to the US dollar.
 
-Different assets behave differently because they are influenced by different economic, political, technological, and psychological factors.
+If EUR/USD falls, the euro has weakened relative to the US dollar.
 
-## Buyers and Sellers
+---
 
-Every market transaction requires a buyer and a seller.
+## Buying and Selling Currency Pairs
 
-A buyer believes the asset is worth purchasing at the current price.
+Forex allows traders to take positions based on whether they expect a currency pair to rise or fall.
 
-A seller is willing to release the asset at that price.
+### Buying — Going Long
 
-When both sides agree, a transaction takes place.
+You **BUY** a currency pair when you expect the base currency to strengthen relative to the quote currency.
 
-The constant interaction between buyers and sellers causes prices to move.
+This is also called:
 
-## Supply and Demand
+**Going Long**
 
-Supply is the amount of an asset available for sale.
+Example:
 
-Demand is the amount buyers are willing to purchase.
+You buy EUR/USD at:
 
-When demand becomes stronger than supply, prices may rise.
+**1.1700**
 
-When supply becomes stronger than demand, prices may fall.
+Price later rises to:
 
-This relationship is one of the most important foundations of market movement.
+**1.1750**
 
-## How Market Prices Are Formed
+The market has moved in the direction of your trade.
 
-Market prices are not selected randomly.
+### Selling — Going Short
 
-They are influenced by:
+You **SELL** a currency pair when you expect the base currency to weaken relative to the quote currency.
 
-- buying pressure
-- selling pressure
-- economic news
-- company performance
-- interest rates
-- inflation
-- political events
-- market sentiment
-- liquidity
-- major institutional activity
+This is also called:
 
-The displayed market price usually represents the most recent price at which a buyer and seller completed a transaction.
+**Going Short**
 
-## Liquidity
+Example:
 
-Liquidity describes how easily an asset can be bought or sold without causing a major price change.
+You sell EUR/USD at:
 
-A highly liquid market normally has:
+**1.1700**
 
-- many buyers
-- many sellers
-- frequent transactions
-- smaller differences between buying and selling prices
+Price later falls to:
 
-Major Forex currency pairs are usually highly liquid.
+**1.1650**
 
-Some smaller cryptocurrencies may have low liquidity, which can cause faster and more unpredictable price movements.
+The market has moved in the direction of your trade.
 
-## Volatility
+Remember:
 
-Volatility describes how quickly and strongly the price of an asset moves.
+**LONG = BUY**
 
-High volatility can create more trading opportunities, but it also creates more risk.
+**SHORT = SELL**
 
-Low volatility means prices are moving more slowly and within a smaller range.
+A trader can therefore look for opportunities in both rising and falling markets.
 
-A professional trader does not simply search for volatility. The trader first evaluates whether the potential reward is worth the risk.
+---
 
-## Market Direction
+## What Is a Pip?
 
-A market may move in three main ways.
+Forex traders need a way to measure how far price has moved.
 
-### Uptrend
+This measurement is commonly expressed in **pips**.
 
-An uptrend happens when prices generally move upward.
+For many currency pairs, one pip represents a movement in the **fourth decimal place**.
 
-It is often identified by higher highs and higher lows.
+Example:
 
-### Downtrend
+EUR/USD moves from:
 
-A downtrend happens when prices generally move downward.
+**1.1700 → 1.1701**
 
-It is often identified by lower highs and lower lows.
+The movement is:
 
-### Sideways Market
+**1 pip**
 
-A sideways market happens when price moves within a range without a clear upward or downward direction.
+If EUR/USD moves from:
 
-Understanding the market direction helps a trader avoid entering a trade without context.
+**1.1700 → 1.1750**
 
-## Trading Is Not Guessing
+the movement is:
 
-Trading should not be treated as gambling or random prediction.
+**50 pips**
 
-Professional trading involves:
+For many Japanese-yen pairs, a pip is normally represented by the **second decimal place**.
 
-- market analysis
-- risk management
-- capital management
-- patience
-- discipline
-- a clear trading plan
-- proper entries and exits
-- reviewing past performance
+Example:
 
-A trader cannot control the market.
+USD/JPY:
 
-The trader can only control:
+**150.20 → 150.21**
 
-- when to enter
-- when to exit
-- how much to risk
-- which setup to trade
-- whether to follow the trading plan
+This represents a movement of:
 
-## The Role of a Trader
+**1 pip**
 
-A trader studies market conditions and attempts to benefit from price movements.
+Some modern trading platforms display additional fractional decimal places called **pipettes**. Do not confuse these fractional movements with a full pip.
 
-A trader may:
+Later in this course, pips will become important when calculating:
 
-- buy an asset and later sell it at a higher price
-- sell an asset and later buy it back at a lower price
-- trade short-term price movements
-- hold a position for several days or weeks
-- use technical or fundamental analysis
+* Stop Loss distance
+* Take Profit distance
+* Risk-to-Reward
+* Position size
+* Profit and loss
 
-The goal is not to win every trade.
+---
 
-The goal is to make disciplined decisions and manage losses so that profitable trades can outweigh losing trades over time.
+## Bid, Ask and Spread
 
-## Key Principle
+When you open a Forex trading platform, you normally see two prices for a currency pair.
 
-Before entering any market, understand:
+These are the:
 
-- what is being traded
-- why its price moves
-- who participates in the market
-- how liquid the market is
-- how volatile the market is
-- what risk is involved
+* **Bid**
+* **Ask**
 
-A trader who does not understand the market is more likely to make emotional and uncontrolled decisions.
+### Bid Price
 
-## Lesson Summary
+The **Bid** is the price at which you can sell the base currency.
 
-Financial markets connect buyers and sellers of financial assets.
+### Ask Price
 
-Prices move because of supply, demand, liquidity, news, sentiment, and the actions of market participants.
+The **Ask** is the price at which you can buy the base currency.
 
-Trading requires knowledge, discipline, analysis, and risk control.
+The difference between the Bid and Ask prices is called the:
 
-Understanding how financial markets work is the first foundation of becoming a responsible trader.
+**Spread**
+
+Example:
+
+EUR/USD
+
+**Bid: 1.1700**
+
+**Ask: 1.1702**
+
+The difference is:
+
+**2 pips**
+
+The spread forms part of the cost of entering and exiting a Forex position.
+
+Spreads are not always fixed. They can change depending on factors such as liquidity, market conditions, the currency pair and the broker.
+
+---
+
+## Why Forex Prices Move
+
+Exchange rates change because demand and supply for currencies constantly change.
+
+If demand for a currency increases relative to another currency, its value can rise.
+
+If selling pressure becomes stronger, its value can fall.
+
+Many factors can influence this demand and supply, including:
+
+* Interest-rate decisions
+* Inflation
+* Employment data
+* Economic growth
+* Central-bank policy
+* Political and geopolitical developments
+* Institutional buying and selling
+* Market expectations and sentiment
+
+You do not need to master these factors yet.
+
+For now, understand one important principle:
+
+**Forex prices move because the relative demand and supply for currencies change.**
+
+Later Challenges will teach you how to analyse these movements using price action, market structure and technical confirmation.
+
+---
+
+## Forex Trading Sessions
+
+Forex trading takes place across major financial centres around the world.
+
+Because these centres operate in different time zones, Forex trading continues almost continuously from Monday through Friday.
+
+For this course, remember three major trading regions:
+
+### Asian Session
+
+Important financial centres include:
+
+* Tokyo
+* Sydney
+* Singapore
+* Hong Kong
+
+### London Session
+
+London is one of the world's major Forex trading centres.
+
+The London session is particularly important because significant global currency activity takes place during European trading hours.
+
+### New York Session
+
+The New York session represents a major period of North American market activity.
+
+There are periods when major sessions overlap.
+
+During these overlaps, participation and trading activity can increase.
+
+This means that:
+
+**Forex may be available throughout the working week, but market conditions are not identical at every hour.**
+
+We will later learn how trading sessions affect strategy selection and market preparation.
+
+---
+
+## Practical Exercise — Read Currency Pairs
+
+This exercise must be completed before moving to Lesson 2.
+
+Open **MT5 or TradingView**.
+
+Search for the following currency pairs:
+
+1. EUR/USD
+2. GBP/USD
+3. USD/JPY
+4. AUD/USD
+5. USD/CAD
+
+For each pair, identify the base and quote currency.
+
+| Currency Pair | Base Currency | Quote Currency |
+| ------------- | ------------- | -------------- |
+| EUR/USD       | ______        | ______         |
+| GBP/USD       | ______        | ______         |
+| USD/JPY       | ______        | ______         |
+| AUD/USD       | ______        | ______         |
+| USD/CAD       | ______        | ______         |
+
+---
+
+## Practical Exercise — Think Like a Trader
+
+Choose **one** of the five currency pairs above and open its chart.
+
+Write down:
+
+**Current Pair:**
+
+---
+
+**Current Price:**
+
+---
+
+**Base Currency:**
+
+---
+
+**Quote Currency:**
+
+---
+
+Now answer:
+
+### Scenario 1
+
+You believe the base currency will strengthen against the quote currency.
+
+Would you:
+
+**BUY or SELL?**
+
+---
+
+### Scenario 2
+
+You believe the base currency will weaken against the quote currency.
+
+Would you:
+
+**BUY or SELL?**
+
+---
+
+### Scenario 3
+
+Observe the Bid and Ask prices on your trading platform.
+
+**Bid:**
+
+---
+
+**Ask:**
+
+---
+
+**What is the difference between them called?**
+
+---
+
+---
+
+## Quick Knowledge Check
+
+Before completing the lesson, answer these without looking back:
+
+**1. Why are Forex currencies quoted in pairs?**
+
+**2. In GBP/USD, which currency is the base currency?**
+
+**3. What does going long mean?**
+
+**4. What does going short mean?**
+
+**5. What is a pip used to measure?**
+
+**6. What is the difference between Bid and Ask called?**
+
+**7. Name the three major trading regions introduced in this lesson.**
+
+If you cannot confidently answer these questions, review the relevant section before continuing.
+
+---
+
+## Key Takeaways
+
+* Forex is the global market for exchanging and trading currencies.
+* Every Forex transaction involves one currency being exchanged against another.
+* Currency pairs contain a **base currency** and a **quote currency**.
+* The first currency is the base currency.
+* The second currency is the quote currency.
+* **Buy/Long** means expecting the base currency to strengthen relative to the quote currency.
+* **Sell/Short** means expecting the base currency to weaken relative to the quote currency.
+* Pips are used to measure Forex price movements.
+* The difference between Bid and Ask is the **spread**.
+* Forex trading occurs across global financial centres throughout the working week.
+* Market activity changes across different trading sessions.
+
+---
+
+## Lesson Completion
+
+You are ready for the next lesson when you can look at a common currency pair and immediately identify:
+
+**Base Currency → Quote Currency → Buy Direction → Sell Direction**
+
+You should also be able to locate the pair on MT5 or TradingView and recognize its Bid, Ask and spread.
+
+Next:
+
+**Lesson 2 — Setting Up MT5 & TradingView**

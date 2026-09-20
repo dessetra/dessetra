@@ -1,4 +1,4 @@
----
+﻿---
 title: Trading Trendlines
 lessonNumber: 4
 duration: 30
@@ -28,7 +28,7 @@ These timeframes usually produce cleaner trend structures and more reliable tren
 
 ---
 
-# What is a Trendline?
+## What is a Trendline?
 
 A trendline is a straight line drawn to connect important turning points in the market.
 
@@ -38,7 +38,7 @@ Trendlines should be viewed as dynamic support or resistance rather than exact p
 
 ---
 
-# Trendlines Follow Market Structure
+## Trendlines Follow Market Structure
 
 Markets rarely move in straight lines.
 
@@ -62,7 +62,7 @@ Trendlines help traders visualize these waves.
 
 ---
 
-# Drawing an Uptrend Trendline
+## Drawing an Uptrend Trendline
 
 For an uptrend:
 
@@ -80,7 +80,7 @@ As long as price continues respecting the trendline, the uptrend remains valid.
 
 ---
 
-# Minimum Number of Touches
+## Minimum Number of Touches
 
 Although two points are required to draw a trendline, a third touch greatly increases confidence.
 
@@ -94,7 +94,7 @@ The more genuine reactions a trendline produces without breaking, the more atten
 
 ---
 
-# Buying from an Uptrend Trendline
+## Buying from an Uptrend Trendline
 
 Once the trendline has been established, patience becomes important.
 
@@ -118,7 +118,7 @@ Once confirmation appears, a buy position may be considered.
 
 ---
 
-# Example of an Uptrend Trade
+## Example of an Uptrend Trade
 
 Suppose the market has been making:
 
@@ -139,7 +139,7 @@ This creates a potential buying opportunity.
 
 ---
 
-# Drawing a Downtrend Trendline
+## Drawing a Downtrend Trendline
 
 For a bearish market:
 
@@ -157,7 +157,7 @@ As long as price respects the trendline, the bearish trend remains valid.
 
 ---
 
-# Selling from a Downtrend Trendline
+## Selling from a Downtrend Trendline
 
 After drawing the trendline:
 
@@ -179,7 +179,7 @@ Once confirmation appears, a sell position may be considered.
 
 ---
 
-# Example of a Sell Trade
+## Example of a Sell Trade
 
 Suppose price has been making:
 
@@ -198,7 +198,7 @@ This creates a potential selling opportunity.
 
 ---
 
-# Trendlines Are Dynamic Support and Resistance
+## Trendlines Are Dynamic Support and Resistance
 
 Unlike horizontal support and resistance, trendlines move together with price.
 
@@ -210,7 +210,7 @@ Because markets continue moving, these reaction areas also change over time.
 
 ---
 
-# Timeframe Selection
+## Timeframe Selection
 
 The Dessetra Trendline Method performs best on:
 
@@ -240,7 +240,7 @@ Signals occur less frequently but often carry greater significance.
 
 ---
 
-# Avoid Very Small Timeframes
+## Avoid Very Small Timeframes
 
 Trendlines on extremely small timeframes may produce many false signals because of market noise.
 
@@ -252,7 +252,7 @@ The Dessetra methodology therefore prefers:
 
 ---
 
-# Trendline Breaks
+## Trendline Breaks
 
 Eventually every trend ends.
 
@@ -266,7 +266,7 @@ Always wait for additional confirmation.
 
 ---
 
-# False Breakouts
+## False Breakouts
 
 Markets sometimes move slightly beyond a trendline before reversing.
 
@@ -280,7 +280,7 @@ Patience reduces unnecessary losses.
 
 ---
 
-# Combine Trendlines with Market Structure
+## Combine Trendlines with Market Structure
 
 A trendline should never be analysed alone.
 
@@ -295,7 +295,7 @@ If market structure agrees with the trendline, confidence increases.
 
 ---
 
-# Combine Trendlines with Other Dessetra Methods
+## Combine Trendlines with Other Dessetra Methods
 
 The Trendline Method becomes even stronger when combined with the earlier methodologies taught in this course.
 
@@ -311,7 +311,7 @@ When several independent factors support the same trade idea, confidence in the 
 
 ---
 
-# Risk Management
+## Risk Management
 
 Even perfect-looking trendlines can fail.
 
@@ -327,7 +327,7 @@ For this course:
 
 ---
 
-# Profit Targets
+## Profit Targets
 
 Profit targets should be based on market structure.
 
@@ -344,7 +344,7 @@ Whenever technically realistic, traders should generally seek an average risk-to
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -360,7 +360,7 @@ Avoid:
 
 ---
 
-# Dessetra Trendline Checklist
+## Dessetra Trendline Checklist
 
 Before entering a trade, confirm:
 
@@ -379,7 +379,7 @@ If any important condition is missing, continue waiting.
 
 ---
 
-# Key Principle
+## Key Principle
 
 The Dessetra Trendline Method is built on patience.
 
@@ -389,7 +389,7 @@ This produces more disciplined entries and better risk management.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 The Dessetra Trendline Method uses the Trendline Tool to identify dynamic support and resistance.
 

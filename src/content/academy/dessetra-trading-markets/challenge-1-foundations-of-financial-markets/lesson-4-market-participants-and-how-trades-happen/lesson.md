@@ -1,332 +1,211 @@
----
-title: Market Participants and How Trades Happen
+﻿---
+
+title: Candlesticks & Reading Price
 lessonNumber: 4
-duration: 20
+duration: 15
 difficulty: Beginner
-objective: Learn who participates in financial markets, how orders are executed, and how prices move from one level to another.
+objective: Understand candlestick structure and use candle bodies and wicks to recognize buying pressure, selling pressure, rejection and consolidation.
 video:
 resource:
----
+---------
 
-# Market Participants and How Trades Happen
+# Candlesticks & Reading Price
 
-Every financial market is made up of millions of participants making buying and selling decisions every day.
+Candlesticks help traders understand what price did during a specific period.
 
-Every completed trade requires one buyer and one seller.
+Every candle contains four important prices:
 
-Understanding who these participants are and how trades are executed helps traders better understand why prices move.
+* **Open** â€” where the candle started
+* **High** â€” highest price reached
+* **Low** â€” lowest price reached
+* **Close** â€” where the candle ended
 
----
+Together, these are called:
 
-# Who Participates in Financial Markets?
-
-Financial markets are not controlled by one person.
-
-They consist of many different participants with different objectives.
-
-Some trade for profit.
-
-Some exchange currencies for business.
-
-Others invest for the long term.
-
-Together, all these activities create market movement.
+**OHLC â€” Open, High, Low, Close**
 
 ---
 
-# Retail Traders
+## Bullish and Bearish Candles
 
-Retail traders are individual people trading with their personal accounts.
+A **bullish candle** closes above its opening price.
 
-Examples include:
+It shows that buyers pushed price upward during that period.
 
-- Forex traders
-- Cryptocurrency traders
-- Futures traders
-- Stock traders
+A **bearish candle** closes below its opening price.
 
-Retail traders usually trade through online brokers or cryptocurrency exchanges.
+It shows that sellers pushed price downward.
 
-Although there are millions of retail traders, each individual usually controls relatively small amounts of capital compared to institutions.
+The actual candle colours depend on your chart settings, so learn to read the **Open and Close**, not just colours.
 
 ---
 
-# Institutional Traders
+## Candle Body and Wicks
 
-Institutions trade significantly larger amounts of money.
+A candlestick has two main parts:
 
-Examples include:
+**Body** â€” the area between the Open and Close.
 
-- Commercial banks
-- Investment banks
-- Hedge funds
-- Mutual funds
-- Insurance companies
-- Pension funds
-- Asset management firms
+**Wicks/Shadows** â€” show how far price travelled above or below the body.
 
-Because of their large trading volume, institutional activity can strongly influence market prices.
+### Long Body
 
----
+A relatively long bullish body can indicate strong buying pressure.
 
-# Central Banks
+A relatively long bearish body can indicate strong selling pressure.
 
-Central banks play an important role in the Forex market.
+### Small Body
 
-Examples include:
+A small body shows that the Open and Close were relatively close together.
 
-- Federal Reserve (USA)
-- European Central Bank
-- Bank of England
-- Bank of Japan
-
-Central banks influence currencies through:
-
-- interest rate decisions
-- monetary policy
-- money supply
-- economic intervention
-
-Their announcements often create strong market volatility.
+This can indicate weaker directional movement or indecision.
 
 ---
 
-# Governments
+## Reading Rejection From Wicks
 
-Governments influence markets through:
+Wicks provide useful information about how price behaved before the candle closed.
 
-- taxation
-- regulations
-- trade agreements
-- fiscal policies
-- economic stimulus
-- political decisions
+### Long Lower Wick
 
-Unexpected government announcements may rapidly change market sentiment.
+Price moved downward but was pushed back upward before the candle closed.
 
----
+This shows rejection of lower prices during that candle.
 
-# Companies
+### Long Upper Wick
 
-Large companies also participate in financial markets.
+Price moved upward but was pushed back downward before closing.
 
-For example:
+This shows rejection of higher prices.
 
-- international businesses exchanging currencies
-- technology companies issuing shares
-- mining companies selling commodities
-- corporations managing foreign payments
+A rejection wick alone is **not automatically a Buy or Sell signal**.
 
-Business activity contributes to market liquidity.
+Its location and the surrounding market structure matter.
+
+You will learn this in the next Challenge.
 
 ---
 
-# Cryptocurrency Participants
+## Candle Strength
 
-The cryptocurrency market includes additional participants such as:
+Compare these situations:
 
-- blockchain developers
-- validators
-- miners
-- staking participants
-- decentralized finance users
-- token issuers
-- cryptocurrency exchanges
+**Large bullish body + small wicks**
 
-These participants help maintain blockchain networks while also contributing to market activity.
+â†’ Buyers controlled most of the candle.
 
----
+**Large bearish body + small wicks**
 
-# Brokers and Exchanges
+â†’ Sellers controlled most of the candle.
 
-Most traders do not trade directly with other individuals.
+**Small body + large wicks**
 
-Instead, they use brokers or exchanges.
+â†’ Neither side maintained clear control.
 
-A Forex broker connects traders to the currency market.
-
-A cryptocurrency exchange connects buyers and sellers of digital assets.
-
-A futures exchange facilitates trading of futures contracts.
-
-These platforms process and match orders.
+Do not analyse one candle in isolation. Read it together with the candles around it.
 
 ---
 
-# What Happens When You Buy?
+## Consolidation
 
-Suppose you place a Buy order for Bitcoin.
+Price does not always move strongly upward or downward.
 
-Your order enters the exchange.
+Sometimes it moves sideways within an area.
 
-The exchange searches for someone willing to sell Bitcoin at your requested price.
+This is known as:
 
-If a matching seller exists, the trade is completed almost instantly.
+**Consolidation / Ranging Market**
 
-The same process happens when placing a Sell order.
+During consolidation:
 
----
+* candles may overlap frequently
+* directional movement is limited
+* buyers and sellers may repeatedly push price back and forth
 
-# Order Matching
-
-Modern markets use electronic matching systems.
-
-The system automatically matches:
-
-- buyers
-- sellers
-- prices
-- quantities
-
-This process happens in fractions of a second.
-
-Millions of transactions may occur every day.
+Recognising consolidation helps you avoid assuming that every market is trending.
 
 ---
 
-# Bid and Ask Prices
+## Practical Exercise â€” Read the Chart
 
-Every market normally displays two important prices.
+Open **EURUSD** on TradingView or MT5.
 
-### Bid Price
+Use the:
 
-The Bid is the highest price a buyer is willing to pay.
+**M15 timeframe**
 
-### Ask Price
+Find and identify:
 
-The Ask is the lowest price a seller is willing to accept.
+1. One strong bullish candle
+2. One strong bearish candle
+3. One candle with a long upper wick
+4. One candle with a long lower wick
+5. One area where price is consolidating
 
-The difference between them is called the **Spread**.
+For each candle, ask:
 
----
+**Who appeared stronger â€” buyers or sellers?**
 
-# What Is the Spread?
+and:
 
-The spread represents the difference between:
-
-- Buy price
-- Sell price
-
-Smaller spreads generally occur in highly liquid markets.
-
-Larger spreads may occur during:
-
-- low liquidity
-- major news releases
-- highly volatile markets
-
-Understanding spreads helps traders estimate trading costs.
+**What happened before the candle closed?**
 
 ---
 
-# Why Prices Move
+## Screenshot Exercise
 
-Prices move because buyers and sellers constantly compete.
+Take a screenshot of your chart.
 
-When buying pressure becomes stronger than selling pressure, prices tend to rise.
+Mark or point out:
 
-When selling pressure becomes stronger than buying pressure, prices tend to fall.
+* **Bullish Candle**
+* **Bearish Candle**
+* **Upper-Wick Rejection**
+* **Lower-Wick Rejection**
+* **Consolidation**
 
-This constant interaction creates all market trends.
-
----
-
-# Market Liquidity
-
-Liquidity refers to how easily trades can be executed.
-
-A highly liquid market usually has:
-
-- many buyers
-- many sellers
-- smaller spreads
-- faster execution
-- more stable pricing
-
-Examples include:
-
-- EUR/USD
-- Bitcoin
-- Gold Futures
-
-Lower liquidity may result in larger price swings.
+Keep this screenshot for your practical learning record.
 
 ---
 
-# Slippage
+## Quick Knowledge Check
 
-Sometimes an order is executed at a slightly different price than expected.
+**1. What does OHLC mean?**
 
-This difference is called **Slippage**.
+**2. What makes a candle bullish?**
 
-Slippage may occur because of:
+**3. What makes a candle bearish?**
 
-- fast-moving markets
-- low liquidity
-- major news releases
-- large order sizes
+**4. What does a long upper wick show happened during the candle?**
 
-Slippage can be positive or negative.
+**5. What does a long lower wick show happened?**
 
----
-
-# Why News Affects Markets
-
-News changes expectations.
-
-Examples include:
-
-- interest rate announcements
-- inflation reports
-- employment data
-- company earnings
-- political elections
-- wars
-- natural disasters
-
-When expectations change, traders react by buying or selling.
-
-This creates rapid price movement.
+**6. What is consolidation?**
 
 ---
 
-# Trading Is a Competition
+## Key Takeaways
 
-Every trade represents two different opinions.
-
-One trader believes the price will rise.
-
-Another believes the current price is acceptable for selling.
-
-The market continuously determines which side has greater pressure.
-
-No trader controls the market alone.
+* Candlesticks display Open, High, Low and Close.
+* The body shows the distance between Open and Close.
+* Wicks show price movement beyond the body.
+* Long bodies can indicate stronger buying or selling pressure.
+* Long wicks can show rejection of certain prices.
+* Price can be bullish, bearish or consolidating.
+* A single candle should not be used alone to make a trading decision.
 
 ---
 
-# Key Principle
+## Lesson Completion
 
-A successful trader understands that prices move because of real buying and selling activity.
+You should now be able to open a chart and identify:
 
-Instead of blaming the market, professional traders focus on:
+**Bullish â†’ Bearish â†’ Body â†’ Wick â†’ Rejection â†’ Consolidation**
 
-- following their strategy
-- managing risk
-- protecting capital
-- remaining disciplined
+You have completed the four lessons in:
 
-The market owes no trader a profit.
+**Challenge 1 â€” Forex Foundations & Your Trading Environment**
 
-Consistency comes from following a proven process.
+Next:
 
----
-
-# Lesson Summary
-
-Financial markets consist of millions of participants including retail traders, institutions, banks, governments, companies, brokers, and exchanges.
-
-Every completed trade requires a buyer and a seller.
-
-Prices move because supply and demand constantly change.
-
-Understanding how trades are executed helps traders make informed decisions instead of emotional ones.
+**Challenge 1 Quiz**

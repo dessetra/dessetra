@@ -1,349 +1,191 @@
----
-title: Introduction to Market Analysis
+﻿---
+title: Trends & Market Structure
 lessonNumber: 1
-duration: 20
+duration: 15
 difficulty: Beginner
-objective: Understand what market analysis is, why traders use it, and how technical, fundamental, and sentiment analysis support better trading decisions.
+objective: Identify bullish, bearish and ranging markets using swing highs, swing lows and basic market structure.
 video:
 resource:
 ---
 
-# Introduction to Market Analysis
+# Trends & Market Structure
 
-Market analysis is the process of studying financial markets before making a trading decision.
+Before looking for a trade, first understand what price is doing.
 
-A trader analyzes the market to understand:
+A market can generally be:
 
-- where price may be heading
-- what is influencing price
-- whether buyers or sellers are stronger
-- where a trade may be entered
-- where risk should be controlled
-- whether the opportunity is worth taking
+- **Bullish** â€” moving upward
+- **Bearish** â€” moving downward
+- **Ranging** â€” moving sideways without a clear direction
 
-Market analysis does not guarantee that every trade will succeed.
+---
 
-Its purpose is to help the trader make decisions based on evidence instead of emotion, guessing, or excitement.
+## Bullish Market Structure
 
-## Why Market Analysis Matters
+A bullish trend generally creates:
 
-Without analysis, a trader may enter the market because:
+- **Higher Highs (HH)**
+- **Higher Lows (HL)**
 
-- price is moving quickly
-- someone shared a signal
-- an influencer recommended an asset
-- fear of missing out has developed
-- a previous trade was profitable
-- the trader wants to recover a loss
+Example:
 
-These are emotional reasons, not professional trading reasons.
+**HL â†’ HH â†’ HL â†’ HH**
 
-Proper analysis helps a trader answer important questions before risking capital.
+This shows price progressively moving higher.
 
-Examples include:
+---
 
-- Is the market trending or moving sideways?
-- Is price close to an important support or resistance area?
-- Is there major economic news ahead?
-- Is the market highly volatile?
-- Does the potential reward justify the risk?
-- Does the trade match the trading plan?
+## Bearish Market Structure
 
-## The Three Main Types of Market Analysis
+A bearish trend generally creates:
 
-This course will introduce three major approaches:
+- **Lower Highs (LH)**
+- **Lower Lows (LL)**
 
-1. Technical analysis
-2. Fundamental analysis
-3. Market sentiment analysis
+Example:
 
-A trader may use one approach or combine all three.
+**LH â†’ LL â†’ LH â†’ LL**
 
-## Technical Analysis
+This shows price progressively moving lower.
 
-Technical analysis focuses mainly on price charts and historical market behavior.
+---
 
-A technical trader studies:
+## Ranging Market
 
-- price movement
-- trends
-- support and resistance
-- market structure
-- candlestick patterns
-- chart patterns
-- indicators
-- trading volume
-- momentum
+A ranging market has no clear bullish or bearish structure.
 
-The purpose is to identify possible trading opportunities based on what price is currently doing.
+Price moves sideways between areas where buyers and sellers repeatedly react.
 
-Technical analysis is commonly used in:
+Do not force a trend when the market is clearly consolidating.
 
-- Forex
-- cryptocurrency
-- futures
-- stocks
-- commodities
+---
 
-## Fundamental Analysis
+## Swing Highs & Swing Lows
 
-Fundamental analysis studies the economic, political, financial, and project-related factors that may affect an asset.
+A **Swing High** is an important high where price turns downward.
 
-In Forex, a fundamental trader may study:
+A **Swing Low** is an important low where price turns upward.
 
-- interest rates
-- inflation
-- employment data
-- economic growth
-- central bank decisions
-- political events
+These turning points help you identify:
 
-In cryptocurrency, a trader may study:
+**HH â€” Higher High**  
+**HL â€” Higher Low**  
+**LH â€” Lower High**  
+**LL â€” Lower Low**
 
-- project utility
-- token supply
-- adoption
-- development activity
-- partnerships
-- regulation
-- network usage
+Focus on the important swings rather than every small movement on the chart.
 
-In stocks, an investor or trader may study:
+---
 
-- company revenue
-- profits
-- debt
-- management
-- products
-- growth potential
-- industry performance
+## Impulse & Correction
 
-Fundamental analysis attempts to understand why price may move.
+Price rarely moves in a straight line.
 
-## Market Sentiment Analysis
+A trending market normally moves through:
 
-Market sentiment describes the general attitude and emotions of market participants.
+**Impulse â†’ Correction â†’ Impulse**
 
-Sentiment may be:
+An **impulse** is a stronger movement in the trend direction.
 
-- bullish
-- bearish
-- neutral
-- fearful
-- greedy
-- uncertain
+A **correction**, also called a pullback, is a temporary movement against that direction.
 
-A bullish market generally has stronger buying confidence.
+A correction does not automatically mean that the trend has reversed.
 
-A bearish market generally has stronger selling pressure.
+---
 
-Sentiment can change quickly because of news, rumors, market performance, or major institutional activity.
+## Break of Structure (BOS)
 
-## Analysis Does Not Mean Certainty
+For this course, we will use **Break of Structure (BOS)** to describe price breaking an important previous structural high or low in the direction of the existing trend.
 
-A common mistake is believing that analysis allows a trader to know exactly what will happen.
+### Bullish Example
 
-It does not.
+Price creates:
 
-Market analysis deals with probability.
+**HH â†’ HL â†’ breaks above previous HH**
 
-A trader may identify a strong setup and still lose the trade.
+The new high supports continuation of the bullish structure.
 
-This can happen because:
+### Bearish Example
 
-- unexpected news is released
-- market sentiment changes
-- liquidity suddenly falls
-- large institutions enter the market
-- the setup simply fails
+Price creates:
 
-A failed trade does not always mean the analysis was useless.
+**LL â†’ LH â†’ breaks below previous LL**
 
-It may mean the market produced a different outcome from the expected probability.
+The new low supports continuation of the bearish structure.
 
-## Probability in Trading
+**Important:** A BOS by itself is not an automatic trade entry. We will add other confirmation tools in later lessons.
 
-Professional traders think in probabilities.
+---
 
-They do not ask:
+## Practical Exercise
 
-> Will this trade definitely win?
+Open **EURUSD or XAUUSD** on TradingView.
 
-Instead, they ask:
+Select the **H1 timeframe**.
 
-- Is this a valid setup?
-- Does it match my strategy?
-- Is the risk acceptable?
-- Is the expected reward large enough?
-- What will I do if the market moves against me?
+Find one clear trending section and mark at least four important swing points.
 
-This mindset prevents the trader from becoming emotionally attached to one trade.
+For a bullish market, mark:
 
-## Confirmation
+**HH â†’ HL â†’ HH â†’ HL**
 
-Confirmation means waiting for enough evidence before entering a trade.
+For a bearish market, mark:
 
-For example, a trader may identify support but wait for:
+**LL â†’ LH â†’ LL â†’ LH**
 
-- a bullish candlestick
-- stronger buying volume
-- a break of a nearby resistance level
-- a trend confirmation
-- a suitable entry signal
+Then identify:
 
-Entering before confirmation may expose the trader to unnecessary risk.
+- One impulse
+- One correction
+- One structural break
 
-However, waiting for too many indicators can also create confusion.
+---
 
-The trader should use a clear and repeatable method.
+## Screenshot Assignment
 
-## Confluence
+Submit one screenshot of your marked chart.
 
-Confluence happens when several independent factors support the same trading idea.
+Your screenshot should show:
 
-For example:
+- The instrument and timeframe
+- HH/HL or LH/LL labels
+- One impulse
+- One correction
+- The market labelled **Bullish** or **Bearish**
 
-- price reaches support
-- the higher timeframe is bullish
-- momentum begins to rise
-- a bullish candlestick appears
-- the risk-to-reward ratio is acceptable
+Do not include account passwords or unnecessary personal information.
 
-This does not guarantee success, but it may strengthen the setup.
+---
 
-A trader should avoid entering only because one indicator gives a signal.
+## Quick Knowledge Check
 
-## Top-Down Analysis
+**1. Which two structural points characterize a bullish trend?**
 
-Top-down analysis begins with a larger timeframe before moving to a smaller timeframe.
+**2. Which two structural points characterize a bearish trend?**
 
-For example:
+**3. What is a ranging market?**
 
-1. Study the daily chart to understand the main direction.
-2. Study the four-hour chart to identify important market structure.
-3. Study the one-hour chart to locate a possible setup.
-4. Use a smaller timeframe to refine the entry where appropriate.
+**4. What is the difference between an impulse and a correction?**
 
-This helps prevent the trader from making decisions without understanding the wider market context.
+**5. Does a Break of Structure automatically mean you should enter a trade?**
 
-## Analysis Paralysis
+---
 
-Analysis paralysis happens when a trader studies too many indicators, timeframes, opinions, and news reports until making a decision becomes difficult.
+## Key Takeaways
 
-Common signs include:
+- Bullish structure forms **Higher Highs and Higher Lows**.
+- Bearish structure forms **Lower Highs and Lower Lows**.
+- Ranging markets lack clear directional structure.
+- Swing highs and lows help reveal market structure.
+- Trends move through impulses and corrections.
+- A structural break should be understood in context, not used as an automatic entry.
 
-- constantly changing the trading plan
-- adding more indicators after every loss
-- waiting for impossible perfection
-- receiving conflicting signals
-- entering late because of hesitation
+---
 
-More analysis is not always better.
+## Lesson Completion
 
-The goal is to use enough information to make a clear decision.
+You should now be able to open a chart and identify its basic market structure.
 
-## A Simple Analysis Process
+Next:
 
-Before entering a trade, a beginner can follow this process:
-
-### Step 1: Identify the Market Condition
-
-Determine whether the market is:
-
-- trending upward
-- trending downward
-- moving sideways
-
-### Step 2: Mark Important Areas
-
-Identify:
-
-- support
-- resistance
-- previous highs
-- previous lows
-- important price zones
-
-### Step 3: Check the Higher Timeframe
-
-Confirm whether the wider market direction supports the trade idea.
-
-### Step 4: Check Important News
-
-Make sure no major economic or market event is likely to create unexpected volatility.
-
-### Step 5: Wait for Confirmation
-
-Do not enter only because price has reached an area.
-
-Wait for the setup defined in the trading plan.
-
-### Step 6: Calculate Risk
-
-Know:
-
-- entry price
-- stop-loss
-- profit target
-- amount at risk
-- expected risk-to-reward ratio
-
-### Step 7: Decide Whether to Trade
-
-A trader is not required to take every opportunity.
-
-Sometimes the best decision is not to trade.
-
-## Keep Analysis Objective
-
-Objective analysis is based on evidence.
-
-Subjective analysis is easily influenced by feelings.
-
-A trader should avoid statements such as:
-
-- The market must rise.
-- This asset cannot fall any further.
-- I feel the price will reverse.
-- I need this trade to recover my loss.
-
-The market does not respond to personal needs.
-
-The trader must respond to market conditions.
-
-## Record Your Analysis
-
-A trading journal should record:
-
-- the market being analyzed
-- the date and time
-- the market direction
-- the trade setup
-- the entry
-- the stop-loss
-- the profit target
-- the reason for entering
-- the final result
-- lessons learned
-
-Reviewing past analysis helps the trader identify strengths, weaknesses, and repeated mistakes.
-
-## Key Principle
-
-Good analysis does not mean taking more trades.
-
-It helps the trader avoid weak trades and select opportunities that match a defined strategy.
-
-The purpose of analysis is not to predict every market movement.
-
-The purpose is to make structured decisions while controlling risk.
-
-## Lesson Summary
-
-Market analysis helps traders study price, economic factors, and market sentiment before making decisions.
-
-The three main approaches are technical, fundamental, and sentiment analysis.
-
-Analysis improves decision-making, but it cannot guarantee success.
-
-Professional traders focus on probability, confirmation, confluence, risk management, and consistent execution.
+**Lesson 2 â€” Support & Resistance**

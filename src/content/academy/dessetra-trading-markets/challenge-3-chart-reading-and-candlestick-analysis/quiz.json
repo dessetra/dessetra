@@ -7,123 +7,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "What information does every completed candlestick contain?",
+      "question": "Which EMA reacts fastest to recent price movement in the Dessetra 21/50/200 EMA framework?",
       "options": [
-        "Open, High, Low and Close",
-        "Entry, Stop-Loss, Target and Profit",
-        "Support, Resistance, Volume and Trend",
-        "Buy, Sell, Hold and Exit"
+        "200 EMA",
+        "50 EMA",
+        "21 EMA",
+        "All three react at the same speed"
       ],
-      "correctAnswer": 0,
-      "explanation": "Every completed candlestick contains the opening, highest, lowest and closing prices for its timeframe."
+      "correctAnswer": 2,
+      "explanation": "The 21 EMA is the fastest of the three because it uses fewer periods and therefore responds more quickly to recent price changes."
     },
     {
       "id": 2,
-      "question": "What does a long lower wick often indicate?",
+      "question": "Which arrangement represents bullish EMA alignment?",
       "options": [
-        "Buyers rejected lower prices",
-        "Sellers rejected higher prices",
-        "The market cannot move again",
-        "The candle has no closing price"
+        "200 EMA > 50 EMA > 21 EMA",
+        "21 EMA > 50 EMA > 200 EMA",
+        "50 EMA > 200 EMA > 21 EMA",
+        "21 EMA = 50 EMA = 200 EMA"
       ],
-      "correctAnswer": 0,
-      "explanation": "A long lower wick often shows that sellers pushed price lower, but buyers recovered and rejected the lower prices."
+      "correctAnswer": 1,
+      "explanation": "Bullish alignment occurs when the faster 21 EMA is above the 50 EMA and the 50 EMA is above the slower 200 EMA."
     },
     {
       "id": 3,
-      "question": "What is the most important factor when interpreting a candlestick pattern?",
+      "question": "What does a bullish MACD crossover generally mean?",
       "options": [
-        "The colour selected on the trading platform",
-        "The name of the candle",
-        "Its market context and location",
-        "The number of indicators on the chart"
+        "The MACD Line crosses above the Signal Line",
+        "The 200 EMA crosses above price",
+        "The MACD Line crosses below the Signal Line",
+        "Price has reached a guaranteed market bottom"
       ],
-      "correctAnswer": 2,
-      "explanation": "A candlestick pattern becomes useful when its location, trend, support, resistance and market structure support the same idea."
+      "correctAnswer": 0,
+      "explanation": "A bullish MACD crossover occurs when the MACD Line crosses above the Signal Line. It can indicate increasing bullish momentum but should not be treated as an automatic Buy signal."
     },
     {
       "id": 4,
-      "question": "Which single candlestick pattern usually has a small body near the top and a long lower wick after a downtrend?",
+      "question": "Why should MACD not be used as a standalone entry signal?",
       "options": [
-        "Shooting Star",
-        "Hammer",
-        "Gravestone Doji",
-        "Bearish Marubozu"
+        "MACD only works on daily charts",
+        "MACD cannot show bearish momentum",
+        "MACD is based on historical price data and can lag or produce misleading signals",
+        "MACD cannot be combined with moving averages"
       ],
-      "correctAnswer": 1,
-      "explanation": "A Hammer usually forms after a downward move and may show rejection of lower prices."
+      "correctAnswer": 2,
+      "explanation": "MACD is a lagging indicator and can produce false or conflicting signals, especially in unclear or ranging markets. It is more useful when combined with structure, location and other confirmation."
     },
     {
       "id": 5,
-      "question": "What makes a Shooting Star more meaningful?",
+      "question": "What is the correct order of the Dessetra Confirmation Model?",
       "options": [
-        "It forms near resistance after an upward move",
-        "It appears anywhere on the chart",
-        "It forms without an upper wick",
-        "It appears during every sideways market"
+        "EMA → Entry → Trend → Zone → Momentum → Structure",
+        "Trend → Structure → Zone → EMA → Momentum → Entry Trigger",
+        "Momentum → EMA → Zone → Trend → Entry Trigger → Structure",
+        "Entry Trigger → Stop Loss → EMA → Trend → Zone → Momentum"
       ],
-      "correctAnswer": 0,
-      "explanation": "A Shooting Star becomes more significant when it forms near resistance or after an extended upward move."
+      "correctAnswer": 1,
+      "explanation": "The Dessetra Confirmation Model follows: Trend → Structure → Zone → EMA → Momentum → Entry Trigger."
     },
     {
       "id": 6,
-      "question": "What happens in a Bullish Engulfing pattern?",
+      "question": "A setup has bullish trend, bullish structure, Demand, bullish EMA alignment and improving momentum, but no entry trigger has formed. What should the trader do?",
       "options": [
-        "A bearish candle completely covers a bullish candle",
-        "A bullish candle's body covers the previous bearish candle's body",
-        "Two candles form exactly the same high",
-        "Three bullish candles appear after an uptrend"
+        "Enter immediately before price moves",
+        "Increase the lot size",
+        "Wait for the required entry confirmation",
+        "Automatically place a Sell order"
       ],
-      "correctAnswer": 1,
-      "explanation": "A Bullish Engulfing pattern forms when a bullish candle's body fully covers the body of the previous bearish candle."
+      "correctAnswer": 2,
+      "explanation": "The setup is incomplete without the required entry trigger. The correct response is to wait rather than anticipate confirmation."
     },
     {
       "id": 7,
-      "question": "Which three-candle pattern may indicate a bullish reversal after a downtrend?",
+      "question": "Where should the logical invalidation point of a trade be determined?",
       "options": [
-        "Evening Star",
-        "Three Black Crows",
-        "Morning Star",
-        "Bear Flag"
+        "At a random fixed number of pips from the entry",
+        "Where market behaviour would show that the original trade idea is no longer valid",
+        "At the 21 EMA on every trade",
+        "Exactly halfway between Entry and Take Profit"
       ],
-      "correctAnswer": 2,
-      "explanation": "A Morning Star consists of a bearish candle, a small indecision candle and a strong bullish candle after a downtrend."
+      "correctAnswer": 1,
+      "explanation": "Invalidation should come from the market logic behind the setup. It identifies the point where price behaviour would show that the original trade idea is no longer valid."
     },
     {
       "id": 8,
-      "question": "What is a Break of Structure?",
+      "question": "What does a planned Risk-to-Reward ratio of 1:3 mean?",
       "options": [
-        "When price breaks an important previous swing point",
-        "When every candle has the same body size",
-        "When a trader removes indicators",
-        "When the market closes for the day"
+        "Risk three units to potentially gain one",
+        "Risk and reward are equal",
+        "Risk one unit to potentially gain three",
+        "Three trades must be opened at the same time"
       ],
-      "correctAnswer": 0,
-      "explanation": "A Break of Structure occurs when price breaks an important swing high or swing low."
+      "correctAnswer": 2,
+      "explanation": "A 1:3 R:R means one unit of potential loss is planned against three units of potential reward."
     },
     {
       "id": 9,
-      "question": "What normally confirms a Double Top pattern?",
+      "question": "Why might a technically valid Buy setup still be rejected if major resistance is very close above the planned entry?",
       "options": [
-        "Price creates a third higher high",
-        "Price breaks below the neckline",
-        "A bullish candle forms above resistance",
-        "Price remains between both highs forever"
+        "Resistance means Buy trades are never allowed",
+        "The available reward may be too small relative to the required risk",
+        "MACD cannot operate near resistance",
+        "The 200 EMA must always be above resistance"
       ],
       "correctAnswer": 1,
-      "explanation": "A Double Top is normally confirmed when price breaks below the neckline or supporting structure."
+      "explanation": "A nearby opposing level can limit the realistic target. If the available reward does not justify the required risk, the trade can be rejected even when the directional analysis is valid."
     },
     {
       "id": 10,
-      "question": "Which statement best describes professional use of candlestick and chart patterns?",
+      "question": "What should a trader do if the planned entry is missed and price has already moved far away from the original setup?",
       "options": [
-        "Every recognized pattern should be traded",
-        "Patterns guarantee the direction of the next move",
-        "Patterns should be combined with context, confirmation and risk management",
-        "Patterns remove the need for stop-loss orders"
+        "Enter immediately at the new price",
+        "Increase risk to compensate for the late entry",
+        "Move the Stop Loss farther away and keep the original Take Profit",
+        "Recalculate the setup from the current price and reject it if it no longer meets the rules"
       ],
-      "correctAnswer": 2,
-      "explanation": "Professional traders combine patterns with market structure, support, resistance, confirmation, multiple timeframes and proper risk management."
+      "correctAnswer": 3,
+      "explanation": "Chasing price changes the Entry, Stop Loss distance, potential reward and R:R. The setup should be reassessed from the current price and skipped if it no longer satisfies the trading rules."
     }
   ]
 }

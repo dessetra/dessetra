@@ -1,369 +1,373 @@
 {
   "title": "Dessetra Trading Markets Final Examination",
-  "description": "This final examination assesses the learner's understanding of the complete Dessetra Trading Markets course, including financial market foundations, market analysis, chart reading, risk management, trading psychology, professional workflow and the Dessetra Professional Trading Methodologies.",
+  "description": "This final examination assesses the learner's understanding of the complete Dessetra Trading Markets course, including Forex foundations, market structure and price action, technical confirmation, risk management and trading discipline, strategy development, backtesting and independent trading.",
   "passingScore": 75,
   "timeLimit": 60,
   "allowRetake": true,
   "questions": [
     {
       "id": 1,
-      "question": "What is the main purpose of a financial market?",
+      "question": "In a Forex pair such as EUR/USD, what does buying the pair mean?",
       "options": [
-        "To guarantee profits for every trader",
-        "To connect buyers and sellers of financial assets",
-        "To eliminate all investment risks",
-        "To prevent asset prices from changing"
+        "Buying EUR while selling USD",
+        "Buying both EUR and USD",
+        "Selling both EUR and USD",
+        "Buying USD while selling EUR"
       ],
-      "correctAnswer": 1,
-      "explanation": "A financial market provides an environment where buyers and sellers exchange financial assets such as currencies, cryptocurrencies, commodities and other instruments."
+      "correctAnswer": 0,
+      "explanation": "Buying EUR/USD means buying the base currency, EUR, while selling the quote currency, USD."
     },
     {
       "id": 2,
-      "question": "Which statement best describes the difference between trading and investing?",
+      "question": "Why should a beginner practise trade execution on a demo account before risking real capital?",
       "options": [
-        "Trading generally focuses on shorter-term price movements, while investing usually focuses on longer-term value growth",
-        "Investing always produces profit, while trading always produces loss",
-        "Trading is only possible with cryptocurrencies",
-        "There is no difference between trading and investing"
+        "Because demo trading guarantees future profits",
+        "To become familiar with the platform, orders and execution without risking real money",
+        "Because real Forex accounts do not use Stop Loss orders",
+        "To eliminate the need for risk management"
       ],
-      "correctAnswer": 0,
-      "explanation": "Trading usually focuses on shorter-term market opportunities, while investing commonly involves holding an asset for a longer period."
+      "correctAnswer": 1,
+      "explanation": "A demo account allows the learner to practise platform use and order execution without putting real capital at risk."
     },
     {
       "id": 3,
-      "question": "Why should a beginner learn about the market before risking capital?",
+      "question": "A trader wants to enter immediately at the best currently available price. Which order is appropriate?",
       "options": [
-        "Because education completely removes risk",
-        "Because learning improves decision-making and helps the trader understand possible risks",
-        "Because brokers do not allow beginners to trade",
-        "Because markets only move after a trader completes a course"
+        "Market order",
+        "Pending order only",
+        "Take Profit",
+        "Stop Loss"
       ],
-      "correctAnswer": 1,
-      "explanation": "Education does not eliminate risk, but it helps traders understand market behaviour, risk management and disciplined decision-making."
+      "correctAnswer": 0,
+      "explanation": "A market order instructs the platform to execute at the best available market price."
     },
     {
       "id": 4,
-      "question": "In Forex trading, what is being exchanged?",
+      "question": "Why might the actual execution price differ slightly from the price a trader expected?",
       "options": [
-        "Company shares only",
-        "One national currency against another",
-        "Physical buildings",
-        "Only digital collectibles"
+        "Because Forex prices never change",
+        "Because of factors such as market movement, liquidity, spread and slippage",
+        "Because every broker guarantees one fixed price",
+        "Because candlestick charts calculate account balances"
       ],
       "correctAnswer": 1,
-      "explanation": "Forex trading involves buying one currency while simultaneously selling another through currency pairs."
+      "explanation": "Prices can move between order submission and execution, and trading conditions such as liquidity and spread can affect execution."
     },
     {
       "id": 5,
-      "question": "What is one major characteristic of cryptocurrency markets?",
+      "question": "What information does a candlestick provide for its selected period?",
       "options": [
-        "They never experience volatility",
-        "They are generally available for trading throughout the week",
-        "Their prices are fixed by one global bank",
-        "They can only be traded during one hour each day"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Cryptocurrency markets generally operate continuously, including weekends, although liquidity and volatility may change."
-    },
-    {
-      "id": 6,
-      "question": "What is a futures contract primarily based on?",
-      "options": [
-        "An agreement linked to the future price of an underlying asset",
-        "A guaranteed savings account",
-        "A physical wallet password",
-        "A permanent fixed asset price"
-      ],
-      "correctAnswer": 0,
-      "explanation": "A futures contract derives its value from an underlying asset and involves an agreement connected to a future price or settlement."
-    },
-    {
-      "id": 7,
-      "question": "What is technical analysis mainly concerned with?",
-      "options": [
-        "Studying price charts, market patterns and indicators",
-        "Guaranteeing the next market movement",
-        "Ignoring historical price behaviour",
-        "Studying only company office locations"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Technical analysis studies price behaviour, chart structures, patterns and indicators to evaluate potential market opportunities."
-    },
-    {
-      "id": 8,
-      "question": "What is fundamental analysis mainly used to evaluate?",
-      "options": [
-        "Economic, financial and market-related factors that may influence an asset",
-        "Only the colour of chart candles",
-        "The trader's internet connection",
-        "Random price movements without context"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Fundamental analysis examines economic news, financial conditions, policies and other factors that may affect an asset's value."
-    },
-    {
-      "id": 9,
-      "question": "A trader sees higher highs and higher lows. What market condition does this usually suggest?",
-      "options": [
-        "An uptrend",
-        "A downtrend",
-        "A permanently closed market",
-        "A guaranteed reversal"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Higher highs and higher lows are common characteristics of an uptrend."
-    },
-    {
-      "id": 10,
-      "question": "What does a candlestick body represent?",
-      "options": [
-        "The distance between the opening and closing prices",
-        "Only the highest price",
-        "Only the lowest price",
-        "The trader's account balance"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The body of a candlestick shows the relationship between the opening and closing prices during the selected period."
-    },
-    {
-      "id": 11,
-      "question": "What do the upper and lower wicks of a candlestick show?",
-      "options": [
-        "The highest and lowest prices reached during the candle period",
-        "The trader's total profit",
-        "The broker's commission only",
+        "Open, high, low and close",
+        "Only the opening price",
+        "Only account profit and loss",
         "The next guaranteed market direction"
       ],
       "correctAnswer": 0,
-      "explanation": "Candlestick wicks show the highest and lowest prices reached during the selected period."
+      "explanation": "A candlestick represents the open, high, low and close for its selected timeframe."
+    },
+    {
+      "id": 6,
+      "question": "Why should a candlestick signal not normally be used in isolation?",
+      "options": [
+        "Because candlesticks contain no price information",
+        "Because its meaning depends on context such as structure, location and surrounding price action",
+        "Because only indicators can be used to trade",
+        "Because every candle produces the same signal"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Candlestick behaviour becomes more meaningful when interpreted within market structure and price context."
+    },
+
+    {
+      "id": 7,
+      "question": "Price is consistently forming higher highs and higher lows. What structure does this most strongly indicate?",
+      "options": [
+        "Bullish market structure",
+        "Bearish market structure",
+        "A guaranteed reversal",
+        "No observable structure"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Higher highs and higher lows are characteristic of bullish market structure."
+    },
+    {
+      "id": 8,
+      "question": "During an established uptrend, price temporarily moves downward without invalidating the bullish structure. What is this most likely?",
+      "options": [
+        "A pullback",
+        "A guaranteed trend reversal",
+        "A permanently closed market",
+        "A change in account leverage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A temporary movement against the prevailing trend while structure remains intact is generally considered a pullback."
+    },
+    {
+      "id": 9,
+      "question": "Why should Support and Resistance generally be treated as zones rather than exact single prices?",
+      "options": [
+        "Because price often reacts across an area rather than at one perfectly precise level",
+        "Because support and resistance never affect price",
+        "Because every zone guarantees a reversal",
+        "Because zones eliminate the need for confirmation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Market reactions commonly occur across price areas, so treating Support and Resistance as zones allows for normal variation."
+    },
+    {
+      "id": 10,
+      "question": "Price briefly breaks above Resistance but quickly closes back below the zone. What should the trader consider?",
+      "options": [
+        "It may be a false breakout and requires further confirmation",
+        "It guarantees a new bullish trend",
+        "The trader must buy immediately",
+        "Resistance can never be used again"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A temporary break followed by rejection can indicate a false breakout, so confirmation and context remain important."
+    },
+    {
+      "id": 11,
+      "question": "What does a Fair Value Gap (FVG) primarily represent in price action?",
+      "options": [
+        "An area of price imbalance created by strong movement",
+        "A guaranteed reversal level",
+        "A trader's account margin",
+        "A fixed broker commission"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An FVG represents an imbalance where price moved rapidly and trading activity was uneven across the area."
     },
     {
       "id": 12,
-      "question": "Why should a candlestick pattern be analysed together with market structure?",
+      "question": "In the Dessetra multi-timeframe workflow H4 → H1 → M15 → M5, what is the main purpose of beginning with the higher timeframe?",
       "options": [
-        "Because a candle pattern alone may not provide enough context",
-        "Because market structure has no relationship with price",
-        "Because every candlestick guarantees a trade",
-        "Because candlesticks are only used for decoration"
+        "To establish broader market context before refining the setup and entry",
+        "To guarantee the direction of the next M5 candle",
+        "To avoid analysing market structure",
+        "To calculate the trader's account password"
       ],
       "correctAnswer": 0,
-      "explanation": "The meaning of a candlestick pattern depends heavily on its location, trend and surrounding market structure."
+      "explanation": "Higher timeframes provide broader context, while lower timeframes are used progressively to refine the setup and possible entry."
     },
+
     {
       "id": 13,
-      "question": "A trader has $1,000 and risks $50 on one trade. What percentage of the account is being risked?",
+      "question": "What is the primary role of the 200 EMA in the Dessetra analysis framework?",
       "options": [
-        "2%",
-        "5%",
-        "10%",
-        "50%"
+        "To provide broader trend context rather than an automatic entry signal",
+        "To guarantee every trade taken near it",
+        "To replace market structure completely",
+        "To determine the trader's account balance"
       ],
-      "correctAnswer": 1,
-      "explanation": "$50 divided by $1,000 equals 5%."
+      "correctAnswer": 0,
+      "explanation": "The 200 EMA is used as broader trend context and should not be treated as a standalone trade signal."
     },
     {
       "id": 14,
-      "question": "According to the Dessetra Trading Markets guidance, what is the maximum total risk for one trading session?",
+      "question": "Price touches the 21 EMA during a trend. What should the trader do?",
       "options": [
-        "1% of trading capital",
-        "5% of trading capital",
-        "25% of trading capital",
-        "The entire account balance"
+        "Enter immediately because every EMA touch is valid",
+        "Evaluate structure, zone, momentum and an entry trigger before deciding",
+        "Remove the Stop Loss",
+        "Ignore the broader market direction"
       ],
       "correctAnswer": 1,
-      "explanation": "The course teaches that total trading session risk must never exceed 5% of total trading capital."
+      "explanation": "An EMA touch alone is insufficient. The setup should be evaluated using the complete confirmation process."
     },
     {
       "id": 15,
-      "question": "What does a risk-to-reward ratio of 1:3 mean?",
+      "question": "Why can EMA crossovers produce poor signals in a sideways or compressed market?",
       "options": [
-        "Risking three units to gain one unit",
-        "Risking one unit for a potential gain of three units",
-        "Making three trades every day",
-        "Using three indicators for every trade"
+        "Because moving averages are lagging and can cross repeatedly during choppy price action",
+        "Because moving averages stop calculating",
+        "Because sideways markets have no prices",
+        "Because every crossover guarantees a reversal"
       ],
-      "correctAnswer": 1,
-      "explanation": "A 1:3 risk-to-reward ratio means the trader risks one unit for a potential reward of three units."
+      "correctAnswer": 0,
+      "explanation": "Moving averages lag price, and compressed markets can create repeated crossovers without a sustainable trend."
     },
     {
       "id": 16,
-      "question": "Why is position sizing important?",
+      "question": "What is the appropriate role of MACD in the Dessetra confirmation process?",
       "options": [
-        "It helps control how much capital is exposed to a trade",
-        "It guarantees every trade will win",
-        "It removes the need for a stop-loss",
-        "It allows traders to ignore account size"
+        "Momentum confirmation used together with structure and other conditions",
+        "A standalone guarantee that a trade will win",
+        "A replacement for Stop Loss placement",
+        "A tool for calculating account deposits"
       ],
       "correctAnswer": 0,
-      "explanation": "Position sizing helps ensure that the amount at risk remains within the trader's predetermined limit."
+      "explanation": "MACD is used as momentum confirmation rather than as an independent reason to enter a trade."
     },
     {
       "id": 17,
-      "question": "What is the purpose of a stop-loss?",
+      "question": "Which sequence correctly represents the Dessetra Confirmation Model?",
       "options": [
-        "To limit the loss when a trade idea becomes invalid",
-        "To guarantee a profitable exit",
-        "To increase emotional trading",
-        "To prevent the market from moving"
+        "Trend → Structure → Zone → EMA → Momentum → Entry Trigger",
+        "Entry → Profit → Trend → Zone → Risk → Emotion",
+        "MACD → Entry → Trend → Random Zone → Lot Size → Hope",
+        "Zone → Entry → Trend → Remove Stop Loss → Momentum → Profit"
       ],
       "correctAnswer": 0,
-      "explanation": "A stop-loss helps limit potential losses when the market moves against the trade idea."
+      "explanation": "The framework evaluates Trend, Structure, Zone, EMA, Momentum and finally an Entry Trigger."
     },
     {
       "id": 18,
-      "question": "A trader increases position size immediately after a loss because of anger. What behaviour is this?",
+      "question": "A setup satisfies the broader trend and reaches a valid zone, but no entry trigger has formed. What is the appropriate response?",
       "options": [
-        "Professional risk management",
-        "Revenge trading",
-        "Long-term investing",
-        "Market analysis"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Revenge trading occurs when emotions after a loss cause a trader to enter impulsive or oversized positions."
-    },
-    {
-      "id": 19,
-      "question": "What is one benefit of maintaining a trading journal?",
-      "options": [
-        "It helps review decisions, mistakes and performance patterns",
-        "It guarantees a profitable month",
-        "It removes the need for analysis",
-        "It prevents all losing trades"
+        "Wait for the required confirmation or allow the setup to pass",
+        "Enter because reaching the zone is enough",
+        "Increase the lot size",
+        "Move immediately to a lower timeframe and enter randomly"
       ],
       "correctAnswer": 0,
-      "explanation": "A trading journal helps traders evaluate their decisions, identify mistakes and improve consistency."
+      "explanation": "A setup is not the same as an entry. The required entry conditions should be present before execution."
+    },
+
+    {
+      "id": 19,
+      "question": "A trader has a $1,000 account and the predetermined risk on a trade is $20. What percentage of the account is at risk?",
+      "options": [
+        "1%",
+        "2%",
+        "5%",
+        "20%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "$20 divided by $1,000 equals 2%."
     },
     {
       "id": 20,
-      "question": "What should a trader do after reaching the maximum permitted session loss?",
+      "question": "If a technically valid setup requires a wider Stop Loss while the trader wants to keep the same monetary risk, what should happen to the position size?",
       "options": [
-        "Stop trading and review the session",
-        "Double the next position",
-        "Borrow money and continue",
-        "Remove all stop-losses"
+        "It should decrease",
+        "It should increase",
+        "It must remain unchanged",
+        "The Stop Loss should be removed"
       ],
       "correctAnswer": 0,
-      "explanation": "Once the maximum session loss is reached, the professional response is to stop trading and review what happened."
+      "explanation": "A wider Stop Loss requires a smaller position size when the amount of capital at risk is kept constant."
     },
     {
       "id": 21,
-      "question": "Which activity belongs in a professional pre-market routine?",
+      "question": "According to the Dessetra Trading Markets guidance, what does the 5% session-risk rule represent?",
       "options": [
-        "Checking important market conditions and preparing a trading plan",
-        "Opening random positions immediately",
-        "Changing the strategy before every trade",
-        "Ignoring economic events"
+        "A maximum combined session-risk ceiling, not a target",
+        "A required amount that must be risked every session",
+        "A guaranteed daily profit target",
+        "The minimum risk for every trade"
       ],
       "correctAnswer": 0,
-      "explanation": "Professional preparation includes reviewing market conditions, identifying important levels and planning possible trades before execution."
+      "explanation": "The 5% rule is a maximum ceiling on combined session risk. Traders are not expected to risk 5% simply because the ceiling exists."
     },
     {
       "id": 22,
-      "question": "What should a trader do at the end of the trading day?",
+      "question": "A trader suffers three consecutive losses during the same trading day. According to the course discipline rule, what should happen next?",
       "options": [
-        "Review trades, record results and evaluate rule compliance",
-        "Delete all losing trades from the journal",
-        "Immediately begin another session",
-        "Judge performance only by profit"
+        "Stop trading for the day",
+        "Double the next position to recover",
+        "Remove the Stop Loss from the next trade",
+        "Continue until the 5% ceiling is necessarily reached"
       ],
       "correctAnswer": 0,
-      "explanation": "An end-of-day review should evaluate both results and whether the trader followed the trading plan."
+      "explanation": "The course uses three consecutive losses as a stop-for-the-day discipline rule, independently of whether the 5% session ceiling has been reached."
     },
     {
       "id": 23,
-      "question": "Which EMA alignment represents a valid bullish trend in the Dessetra Moving Average Rule?",
+      "question": "A trader planned a 1:3 risk-to-reward trade, but market structure provides a realistic target of only 1:1.2. What is the better response?",
       "options": [
-        "200 EMA above 50 EMA above 21 EMA",
-        "21 EMA above 50 EMA above 200 EMA",
-        "50 EMA above 21 EMA above 200 EMA",
-        "All EMAs crossing repeatedly"
+        "Reject or reassess the setup rather than forcing an unrealistic 1:3 target",
+        "Move the target beyond structure simply to obtain 1:3",
+        "Remove the Stop Loss",
+        "Increase risk until the ratio becomes 1:3"
       ],
-      "correctAnswer": 1,
-      "explanation": "A bullish alignment requires the 21 EMA above the 50 EMA and the 50 EMA above the 200 EMA."
+      "correctAnswer": 0,
+      "explanation": "The course prefers approximately 1:3 when market structure realistically supports it. Reward targets should not be forced beyond reasonable structure."
     },
     {
       "id": 24,
-      "question": "Which EMA alignment represents a valid bearish trend in the Dessetra Moving Average Rule?",
+      "question": "A trade follows every rule but closes at the planned Stop Loss. How should it be reviewed?",
       "options": [
-        "21 EMA below 50 EMA below 200 EMA",
-        "21 EMA above 50 EMA above 200 EMA",
-        "200 EMA below 21 EMA below 50 EMA",
-        "All EMAs moving sideways"
+        "As a possible good-process trade with a losing outcome",
+        "Automatically as a trading mistake",
+        "As proof the strategy can never work",
+        "As a reason to revenge trade"
       ],
       "correctAnswer": 0,
-      "explanation": "A bearish alignment requires the 21 EMA below the 50 EMA and the 50 EMA below the 200 EMA."
+      "explanation": "Trading process and outcome must be evaluated separately. A correctly executed setup can still produce a normal loss."
     },
+
     {
       "id": 25,
-      "question": "During a valid bullish EMA alignment, where should a trader preferably look for an entry?",
+      "question": "Which sequence best represents building a complete rule-based strategy?",
       "options": [
-        "After price retraces toward the 21 EMA or 50 EMA and gives confirmation",
-        "After price has moved far above all EMAs",
-        "Whenever the 200 EMA changes colour",
-        "Immediately after opening the chart"
+        "Market → Timeframe → Condition → Setup → Confirmation → Entry → Invalidation → Risk → Target → Management",
+        "Entry → Emotion → Profit → Indicator → Risk",
+        "Target → Entry → Random Indicator → Leverage",
+        "Market → Profit Goal → Maximum Lot Size → Entry"
       ],
       "correctAnswer": 0,
-      "explanation": "The Dessetra method prefers retracement entries near the 21 EMA or 50 EMA after appropriate confirmation."
+      "explanation": "A structured strategy defines its market, timeframe, conditions, setup, confirmation, entry, invalidation, risk, target and management rules."
     },
     {
       "id": 26,
-      "question": "What MACD configuration is used in the Dessetra Moving Average and MACD Method?",
+      "question": "During a backtest, several losing trades appear. What should the trader do if the strategy rules were defined before testing?",
       "options": [
-        "12, 26, 9",
-        "3, 9, 16",
-        "21, 50, 200",
-        "5, 10, 20"
+        "Record all qualifying setups and complete the test without changing rules to hide losses",
+        "Delete the losing trades",
+        "Add a new indicator after every loss",
+        "Count only winning setups"
       ],
-      "correctAnswer": 1,
-      "explanation": "The methodology uses MACD settings of 3, 9 and 16."
+      "correctAnswer": 0,
+      "explanation": "Backtesting should use frozen rules and include all qualifying setups to reduce cherry-picking and hindsight bias."
     },
     {
       "id": 27,
-      "question": "The EMA alignment is bullish and the MACD Signal Line crosses upward through the Zero Line. What does this provide?",
+      "question": "A backtest records 8 winning trades from 20 total trades. What is the win rate?",
       "options": [
-        "Potential bullish momentum confirmation",
-        "A guaranteed winning trade",
-        "A reason to ignore price structure",
-        "Confirmation of a bearish setup"
+        "20%",
+        "40%",
+        "60%",
+        "80%"
       ],
-      "correctAnswer": 0,
-      "explanation": "An upward Zero Line crossing may confirm bullish momentum, but the trader must still evaluate retracement, structure and risk."
+      "correctAnswer": 1,
+      "explanation": "8 divided by 20 equals 0.40, or a 40% win rate."
     },
     {
       "id": 28,
-      "question": "A support zone appears on the 4-hour chart. What can the 15-minute chart help the trader identify?",
+      "question": "A strategy wins 40% of trades with an average winner of 3R and loses 60% with an average loss of 1R. What is its expectancy?",
       "options": [
-        "Repeated lower-timeframe reactions and a more precise entry",
-        "A guaranteed reversal",
-        "The trader's account password",
-        "A permanent fixed price"
+        "+0.6R per trade",
+        "-0.6R per trade",
+        "+3R per trade",
+        "0R per trade"
       ],
       "correctAnswer": 0,
-      "explanation": "The lower timeframe can reveal several reactions occurring inside one higher-timeframe zone and support more precise entries."
+      "explanation": "Expectancy = (0.40 × 3R) - (0.60 × 1R) = 1.2R - 0.6R = +0.6R per trade."
     },
     {
       "id": 29,
-      "question": "According to the Dessetra Support and Resistance Method, why are the second and third visits to a zone important?",
+      "question": "What is the main difference between backtesting and forward testing?",
       "options": [
-        "They may show that buyers or sellers have already defended the area",
-        "They guarantee the zone can never break",
-        "They remove the need for confirmation",
-        "They allow unlimited position sizes"
+        "Backtesting evaluates rules on historical price data, while forward testing applies them to unfolding market conditions",
+        "Backtesting uses real money while forward testing cannot use charts",
+        "There is no difference",
+        "Forward testing guarantees future profitability"
       ],
       "correctAnswer": 0,
-      "explanation": "Repeated visits may show that the zone has already attracted meaningful buyer or seller activity, although confirmation is still required."
+      "explanation": "Backtesting studies historical data, while forward testing observes how the strategy performs as new market conditions unfold."
     },
     {
       "id": 30,
-      "question": "How should an uptrend trendline be used in the Dessetra Trendline Method?",
+      "question": "Which sequence best represents the independent trading workflow taught at the end of the course?",
       "options": [
-        "Connect at least two support points, wait for price to retrace toward the line and look for buy confirmation",
-        "Connect random resistance points and sell immediately",
-        "Draw the line through every candle body",
-        "Use the line without considering market direction"
+        "Prepare → Analyse → Qualify → Calculate Risk → Execute → Record → Review",
+        "Execute → Hope → Increase Risk → Review",
+        "Analyse → Enter → Remove Stop Loss → Chase Price",
+        "Prepare → Predict → Guarantee Profit → Execute"
       ],
       "correctAnswer": 0,
-      "explanation": "In an uptrend, the trader connects at least two support points and waits for price to return to the trendline zone before considering a confirmed buy."
+      "explanation": "Independent trading is structured around preparation, analysis, qualification, risk calculation, execution, recording and review."
     }
   ]
 }

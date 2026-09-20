@@ -1,1083 +1,860 @@
----
-title: Trend Following Strategies
+﻿---
+title: Build Your Strategy
 lessonNumber: 1
-duration: 25
+duration: 30
 difficulty: Intermediate
-objective: Learn how to identify trends, enter continuation trades, manage pullbacks, use confirmation, and apply disciplined risk management to trend-following strategies.
+objective: Build a clear rule-based trading strategy by defining the market, timeframe, setup, confirmation, entry, invalidation, risk, target and trade-management rules before testing it.
 video:
 resource:
 ---
 
-# Trend Following Strategies
+# Build Your Strategy
 
-Trend following is a trading approach that attempts to participate in an established market direction.
+You have now learned how to:
 
-The basic principle is:
+- understand the Forex market
+- read price and candlesticks
+- identify market structure
+- mark important zones
+- use multiple timeframes
+- apply EMA and MACD confirmation
+- construct a trade setup
+- calculate risk
+- control trading psychology
+- use a trading plan and journal
 
-**Trade in the direction of the dominant trend until evidence suggests that the trend has weakened or changed.**
+Now these skills must become one repeatable process.
 
-A trend-following trader does not attempt to predict every top or bottom.
+That process is your **trading strategy**.
 
-Instead, the trader waits for evidence that buyers or sellers are already in control.
+A strategy should answer:
 
-The trader then looks for a suitable entry that follows that direction.
-
----
-
-# What Is a Trend?
-
-A trend is the general direction in which price moves over time.
-
-Markets may move in three broad directions:
-
-- upward
-- downward
-- sideways
-
-An upward market is called an uptrend.
-
-A downward market is called a downtrend.
-
-A sideways market may be described as a range or consolidation.
-
-Trend-following strategies are most effective when the market is moving clearly in one direction.
+**What exactly must happen before I take a trade?**
 
 ---
 
-# Uptrend Structure
+## What Is a Trading Strategy?
 
-An uptrend normally produces:
+A trading strategy is a defined set of rules for identifying, entering, managing and exiting trades.
 
-- Higher Highs
-- Higher Lows
+It should specify:
 
-A Higher High forms when price rises above a previous swing high.
+- what you trade
+- when you trade
+- what market conditions you require
+- what creates a setup
+- what confirms the setup
+- what triggers the entry
+- where the trade becomes invalid
+- how much you risk
+- where you take profit
+- how you manage the position
+- what cancels the trade
 
-A Higher Low forms when a pullback stops above the previous major swing low.
-
-This structure suggests that buyers remain in control.
-
-A trend-following trader generally looks for buying opportunities during an uptrend.
-
----
-
-# Downtrend Structure
-
-A downtrend normally produces:
-
-- Lower Highs
-- Lower Lows
-
-A Lower Low forms when price falls below a previous swing low.
-
-A Lower High forms when a recovery stops below the previous major swing high.
-
-This structure suggests that sellers remain in control.
-
-A trend-following trader generally looks for selling opportunities during a downtrend.
+The purpose is to reduce random decision-making.
 
 ---
 
-# Sideways Market Structure
+## Keep It Simple
 
-A sideways market moves between support and resistance without producing a clear sequence of Higher Highs or Lower Lows.
+A strategy does not become better simply because it contains more indicators.
 
-During a range:
+Too many conditions can:
 
-- price repeatedly changes direction
-- trend-following signals may fail
-- false breakouts may occur
-- momentum may be weak
+- create conflicting signals
+- make decisions difficult
+- encourage constant rule changes
+- make backtesting harder
 
-A trader should first determine whether the market is trending before applying a trend-following strategy.
+A simple strategy with clear rules is easier to:
 
----
+**Execute â†’ Record â†’ Test â†’ Review â†’ Improve**
 
-# Why Trend Following Works
+The objective is not to create the most complicated strategy.
 
-Markets may trend because of:
-
-- economic changes
-- interest-rate expectations
-- institutional buying or selling
-- changing supply and demand
-- market sentiment
-- political events
-- technological developments
-- strong news catalysts
-
-Once a strong directional move begins, more participants may join it.
-
-This can cause the trend to continue for longer than beginners expect.
+The objective is to create one you can follow consistently.
 
 ---
 
-# Trend Following Does Not Mean Chasing Price
+## The Strategy-Building Process
 
-Following a trend does not mean entering after every large candle.
+For this course, build your strategy in this order:
 
-Entering after price has already moved too far may produce:
+**Market â†’ Timeframe â†’ Condition â†’ Setup â†’ Confirmation â†’ Entry â†’ Invalidation â†’ Risk â†’ Target â†’ Management**
 
-- poor entry price
-- larger stop-loss distance
-- weak risk-to-reward
-- increased probability of a pullback
+Every component should have a written rule.
 
-Professional traders often wait for a pullback, consolidation or confirmed continuation setup.
+Let's build them one by one.
 
 ---
 
-# Identifying the Dominant Trend
+## Step 1 â€” Choose Your Market
 
-Before entering, examine:
+First define the instrument or small group of instruments you will trade.
 
-- market structure
-- swing highs and swing lows
-- higher timeframes
-- trendlines
-- support and resistance
-- moving averages, where applicable
-- momentum
-- breakout behaviour
+Examples:
 
-No single tool should be used alone.
+- EURUSD
+- GBPUSD
+- XAUUSD
 
-The strongest trend assessment comes from several factors supporting the same direction.
+Avoid starting with too many markets.
+
+Learning how a smaller number of instruments behave can make analysis and review easier.
+
+Write:
+
+**My market(s): __________**
 
 ---
 
-# Higher-Timeframe Trend
+## Step 2 â€” Choose Your Trading Timeframes
 
-The higher timeframe helps identify the dominant market direction.
+Your timeframe should match how you intend to trade.
+
+From our multi-timeframe framework, you might use:
+
+**H4 â†’ H1 â†’ M15 â†’ M5**
 
 For example:
 
-- Daily chart: bullish
-- Four-hour chart: bullish
-- One-hour chart: temporary pullback
+**H4:** broader direction
 
-A trader may use the lower timeframe to search for a buy entry that follows the higher-timeframe bullish direction.
+**H1:** structure and important zones
 
-This is called multiple-timeframe alignment.
+**M15:** setup development
 
----
+**M5:** entry confirmation
 
-# Lower-Timeframe Entry
+This is only a framework.
 
-The lower timeframe may help the trader find:
+Your strategy must clearly define what each timeframe does.
 
-- a precise entry
-- candlestick confirmation
-- a pullback ending
-- a break of local structure
-- a smaller stop-loss distance
+Write:
 
-However, lower timeframes contain more noise.
+**Direction timeframe: __________**
 
-The lower timeframe should support the higher-timeframe analysis rather than contradict it.
+**Structure timeframe: __________**
+
+**Setup timeframe: __________**
+
+**Entry timeframe: __________**
 
 ---
 
-# Trendlines
+## Step 3 â€” Define the Market Condition
 
-An upward trendline connects important Higher Lows.
+Your strategy should identify the conditions in which it is allowed to trade.
 
-A downward trendline connects important Lower Highs.
+Possible conditions include:
 
-Trendlines may help identify:
+- bullish trend
+- bearish trend
+- range
+- breakout
+- pullback
+- reversal environment
 
-- pullback areas
-- continuation zones
-- possible trend weakness
-- breakout points
+Do not use the same strategy automatically in every market condition.
 
-A trendline should connect meaningful swing points.
+For example, a trend-pullback strategy may perform poorly when price is moving sideways.
 
-It should not be forced through random candles.
+Your first question should therefore be:
 
----
-
-# Moving Averages
-
-A moving average calculates the average price over a selected period.
-
-It may help traders identify:
-
-- trend direction
-- momentum
-- dynamic support
-- dynamic resistance
-
-Common examples include:
-
-- 20-period moving average
-- 50-period moving average
-- 100-period moving average
-- 200-period moving average
-
-Moving averages are lagging tools because they are calculated from historical price.
-
-They should support price action rather than replace it.
+**What type of market is this strategy designed for?**
 
 ---
 
-# Moving Average Direction
+## Step 4 â€” Define the Setup
 
-A rising moving average may support a bullish trend.
+A setup describes the market situation you are waiting for.
 
-A falling moving average may support a bearish trend.
+Example:
 
-Price trading above an important moving average may suggest bullish strength.
+> H4 is bullish, H1 structure shows Higher Highs and Higher Lows, and price pulls back toward an important Demand or Support zone.
 
-Price trading below it may suggest bearish strength.
+That creates an area of interest.
 
-However, moving averages may provide poor signals during sideways markets.
+But:
 
----
+**Setup â‰  Entry**
 
-# Moving Average Alignment
+The setup tells you to pay attention.
 
-Some traders compare multiple moving averages.
-
-A bullish alignment may appear when:
-
-- the shorter moving average is above the longer moving average
-- both averages are rising
-- price remains above both averages
-
-A bearish alignment may appear when:
-
-- the shorter moving average is below the longer moving average
-- both averages are falling
-- price remains below both averages
-
-Moving-average alignment is confirmation, not a guarantee.
+You still need confirmation.
 
 ---
 
-# Trend Strength
+## Step 5 â€” Define Confirmation
 
-A strong trend may show:
+Use the confirmation framework developed in Challenge 3:
 
-- clear directional structure
-- strong momentum candles
-- shallow pullbacks
-- repeated continuation
-- successful breakouts
-- support holding in an uptrend
-- resistance holding in a downtrend
+**Trend â†’ Structure â†’ Zone â†’ EMA â†’ Momentum â†’ Entry Trigger**
 
-A weak trend may show:
+For a bullish setup, you might require:
 
-- deep pullbacks
-- repeated failed breakouts
-- overlapping candles
-- frequent structure breaks
-- loss of momentum
+- bullish higher-timeframe structure
+- pullback into Support or Demand
+- appropriate EMA positioning or reaction
+- MACD supporting momentum
+- bullish entry trigger
 
-Trend strength affects entry quality.
+For a bearish setup, the logic is reversed.
+
+Confirmation helps prevent you from entering merely because price touched an interesting level.
 
 ---
 
-# Momentum Candles
+## Step 6 â€” Define the Entry Trigger
 
-Momentum candles have relatively large bodies and often close near their extremes.
+Your strategy must state the final event that allows execution.
 
-Bullish momentum candles may suggest strong buying pressure.
+Possible triggers include:
 
-Bearish momentum candles may suggest strong selling pressure.
-
-A momentum candle can support continuation, but entering after an extended candle may be risky.
-
-The trader should consider whether the move is already overextended.
-
----
-
-# Pullbacks
-
-A pullback is a temporary move against the dominant trend.
-
-In an uptrend, price temporarily moves downward.
-
-In a downtrend, price temporarily moves upward.
-
-Pullbacks may provide better entries than chasing an extended move.
-
-However, not every pullback will continue the original trend.
-
-Confirmation is still required.
-
----
-
-# Healthy Pullback in an Uptrend
-
-A healthy bullish pullback may show:
-
-- price remains above an important Higher Low
-- bearish momentum weakens
-- support holds
-- rejection forms
-- buyers return
-- bullish structure resumes
-
-The trader may then look for a buying opportunity.
-
----
-
-# Healthy Pullback in a Downtrend
-
-A healthy bearish pullback may show:
-
-- price remains below an important Lower High
-- bullish momentum weakens
-- resistance holds
-- rejection forms
-- sellers return
-- bearish structure resumes
-
-The trader may then look for a selling opportunity.
-
----
-
-# Deep Pullbacks
-
-A deep pullback approaches or breaks an important structural level.
-
-It may indicate:
-
-- weakening trend
-- reduced momentum
-- possible reversal
-- temporary liquidity sweep
-- transition into a range
-
-A trader should not assume that every deep pullback will continue the trend.
-
----
-
-# Pullback Entry Strategy
-
-A basic pullback strategy may follow these steps:
-
-1. Identify the higher-timeframe trend.
-2. Mark important support or resistance.
-3. Wait for price to pull back.
-4. Observe whether the pullback respects market structure.
-5. Wait for candlestick or structural confirmation.
-6. Enter in the direction of the dominant trend.
-7. Place the stop-loss beyond the invalidation point.
-8. Select a realistic target.
-9. Confirm acceptable risk-to-reward.
-
-The entry must follow a written plan.
-
----
-
-# Bullish Pullback Example
-
-Suppose the market forms:
-
-- Higher High
-- Higher Low
-- New Higher High
-- Pullback toward support
-
-At support, price forms:
-
-- long lower wick
-- bullish engulfing candle
-- break above local resistance
-
-This may provide confirmation that buyers are returning.
-
-The stop-loss may be placed below the pullback low.
-
-The take-profit may be placed near the next resistance or at a realistic 1:3 risk-to-reward target.
-
----
-
-# Bearish Pullback Example
-
-Suppose the market forms:
-
-- Lower Low
-- Lower High
-- New Lower Low
-- Recovery toward resistance
-
-At resistance, price forms:
-
-- long upper wick
-- bearish engulfing candle
-- break below local support
-
-This may provide confirmation that sellers are returning.
-
-The stop-loss may be placed above the pullback high.
-
-The target may be placed near the next support or a realistic 1:3 risk-to-reward objective.
-
----
-
-# Breakout Continuation Strategy
-
-A breakout continuation strategy attempts to enter when price breaks an important level in the direction of the trend.
-
-In an uptrend, the trader may watch for price to break above resistance.
-
-In a downtrend, the trader may watch for price to break below support.
-
-However, breakouts may fail.
-
-Confirmation remains important.
-
----
-
-# Confirming a Breakout
-
-Possible breakout confirmation includes:
-
-- strong candle close beyond the level
-- increased momentum
-- increased volume, where available
-- successful retest
-- continuation after the breakout
-- higher-timeframe alignment
-
-A wick beyond a level without a strong close may be a false breakout.
-
----
-
-# Breakout and Retest Strategy
-
-A breakout and retest occurs when:
-
-1. Price breaks an important level.
-2. Price returns to test the broken level.
-3. The level holds in its new role.
-4. Price resumes in the breakout direction.
-
-Old resistance may become support after a bullish breakout.
-
-Old support may become resistance after a bearish breakout.
-
-The retest may provide a more controlled entry.
-
----
-
-# Bullish Breakout and Retest
-
-A bullish breakout and retest may show:
-
-- resistance breaks
-- price closes above it
-- price returns toward the level
-- the level holds as support
-- bullish confirmation appears
-- price begins rising again
-
-The stop-loss may be placed below the retest structure.
-
----
-
-# Bearish Breakout and Retest
-
-A bearish breakout and retest may show:
-
-- support breaks
-- price closes below it
-- price returns toward the level
-- the level holds as resistance
-- bearish confirmation appears
-- price begins falling again
-
-The stop-loss may be placed above the retest structure.
-
----
-
-# Trend Continuation Patterns
-
-Patterns that may support trend continuation include:
-
-- Bull Flag
-- Bear Flag
-- Pennant
-- Rectangle
-- Ascending Triangle
-- Descending Triangle
-- Channel pullback
-- Inside Bar breakout
-
-The pattern should agree with the broader market structure.
-
----
-
-# Bull Flag Strategy
-
-A Bull Flag may form after a strong upward move.
-
-The market then consolidates or pulls back slightly.
-
-A possible strategy is:
-
-1. Confirm the higher-timeframe uptrend.
-2. Identify the strong bullish impulse.
-3. Wait for the controlled consolidation.
-4. Mark the flag resistance.
-5. Wait for a confirmed bullish breakout.
-6. Enter according to the plan.
-7. Place the stop below the flag structure.
-8. Target the next resistance or measured objective.
-
----
-
-# Bear Flag Strategy
-
-A Bear Flag may form after a strong downward move.
-
-The market then consolidates or recovers slightly.
-
-A possible strategy is:
-
-1. Confirm the higher-timeframe downtrend.
-2. Identify the bearish impulse.
-3. Wait for the controlled recovery.
-4. Mark the flag support.
-5. Wait for a confirmed bearish breakout.
-6. Enter according to the plan.
-7. Place the stop above the flag structure.
-8. Target the next support or measured objective.
-
----
-
-# Moving Average Pullback Strategy
-
-A moving average may act as dynamic support or resistance during a trend.
-
-A bullish setup may occur when:
-
-- market structure is bullish
-- price remains above the moving average
-- price pulls back toward it
-- support or structure aligns with the area
-- bullish confirmation appears
-
-A bearish setup may occur when:
-
-- market structure is bearish
-- price remains below the moving average
-- price recovers toward it
-- resistance or structure aligns with the area
-- bearish confirmation appears
-
-The moving average should not be used alone.
-
----
-
-# Trendline Pullback Strategy
-
-A trendline pullback strategy may involve:
-
-1. Identifying a valid trend.
-2. Drawing a trendline through meaningful swing points.
-3. Waiting for price to approach the trendline.
-4. Checking for support, resistance or structure confluence.
-5. Waiting for confirmation.
-6. Entering in the trend direction.
-
-Trendlines may break temporarily.
-
-The trader should not enter solely because price touches a line.
-
----
-
-# Support and Resistance Continuation Strategy
-
-In an uptrend, previous resistance may become support.
-
-In a downtrend, previous support may become resistance.
-
-This creates potential continuation zones.
-
-A stronger setup may combine:
-
-- higher-timeframe trend
-- previous market structure
-- support or resistance
-- candlestick confirmation
-- acceptable risk-to-reward
-
----
-
-# Confluence
-
-Confluence occurs when several independent factors support the same trading idea.
-
-A strong bullish setup may combine:
-
-- higher-timeframe uptrend
-- Higher Low
-- support zone
-- trendline
-- moving average
-- bullish candlestick confirmation
-- favourable risk-to-reward
-
-A strong bearish setup may combine:
-
-- higher-timeframe downtrend
-- Lower High
-- resistance zone
-- trendline
-- moving average
-- bearish candlestick confirmation
-- favourable risk-to-reward
-
-More confluence may improve setup quality, but no setup is guaranteed.
-
----
-
-# Entry Confirmation
-
-Possible confirmation for a trend-following trade includes:
-
-- bullish or bearish engulfing candle
-- rejection wick
-- pin bar
-- break of local structure
+- confirmed rejection candle
 - breakout and retest
-- momentum candle
-- continuation pattern
-- volume expansion, where available
+- lower-timeframe structure break
+- EMA rejection with supporting structure
+- completed confirmation candle
 
-Confirmation helps reduce premature entries.
+For example:
+
+> Enter Buy only after price reaches the planned zone and a completed bullish confirmation candle forms while the other strategy conditions remain valid.
+
+The trigger should be specific enough that you can later determine whether you followed it.
 
 ---
 
-# Aggressive Entry
+## Entry Zone vs Entry Trigger
 
-An aggressive entry occurs before full confirmation.
+These are not the same.
+
+### Entry Zone
+
+Where you expect a potential opportunity.
+
+### Entry Trigger
+
+What must happen before you actually execute.
+
+Price entering your zone does not automatically mean:
+
+**BUY or SELL.**
+
+It means:
+
+**WATCH FOR CONFIRMATION.**
+
+---
+
+## Step 7 â€” Define Invalidation
+
+Before entering, ask:
+
+**What market behaviour would prove my trade idea wrong?**
+
+For example:
+
+A Buy setup based on a Higher Low may become invalid if price decisively breaks below the structure supporting that Higher Low.
+
+Your invalidation point helps determine your Stop Loss.
+
+Do not determine invalidation based on how much money you want to lose.
+
+Determine it from the market idea.
+
+Then adjust the **position size** to control monetary risk.
+
+---
+
+## Step 8 â€” Define Your Risk
+
+Every strategy must contain risk rules.
+
+Your strategy should specify:
+
+- normal risk per trade
+- maximum session exposure
+- position-sizing method
+- consecutive-loss rule
+- conditions for reducing or stopping risk
+
+Remember our Dessetra rule:
+
+**Maximum combined session risk = 5% of trading capital**
+
+This is a **ceiling**, not a target.
+
+You do not need to risk 5%.
+
+---
+
+## Risk Before Lot Size
+
+The process remains:
+
+**Account Risk â†’ Stop Loss â†’ Position Size**
+
+Not:
+
+**Lot Size â†’ Hope**
 
 Example:
 
-A trader buys immediately when price reaches support in an uptrend.
+Account:
 
-Possible advantage:
+**$1,000**
 
-- better entry price
+Chosen risk:
 
-Possible disadvantage:
+**1% = $10**
 
-- higher probability of entering before the pullback ends
-
-Aggressive entries require strict rules and experience.
+The position size should then be calculated using the Stop Loss distance so the planned loss remains approximately $10 if the SL is reached.
 
 ---
 
-# Conservative Entry
+## Step 9 â€” Define Your Target
 
-A conservative entry waits for stronger confirmation.
+Your strategy should explain how targets are selected.
 
-Example:
-
-A trader waits for:
-
-- bullish rejection
-- break above local resistance
-- retest
-- continuation
-
-Possible advantage:
-
-- more confirmation
-
-Possible disadvantage:
-
-- later entry
-- reduced reward distance
-- missed opportunity
-
-The choice should be defined in the strategy.
-
----
-
-# Stop-Loss Placement
-
-For a bullish trend trade, the stop-loss may be placed:
-
-- below the pullback low
-- below support
-- below the Higher Low
-- below the continuation pattern
-- beyond the setup invalidation point
-
-For a bearish trend trade, the stop-loss may be placed:
-
-- above the pullback high
-- above resistance
-- above the Lower High
-- above the continuation pattern
-- beyond the setup invalidation point
-
-The stop should be logical, not emotional.
-
----
-
-# Take-Profit Placement
-
-Possible targets include:
+Possible target references include:
 
 - previous swing high
 - previous swing low
-- next support
-- next resistance
-- channel boundary
-- measured pattern target
-- risk-to-reward target
+- Support or Resistance
+- Supply or Demand
+- liquidity area
+- structural objective
 
-The target should have enough space and should not ignore major obstacles.
+Then evaluate Risk-to-Reward.
 
----
+Dessetra generally seeks approximately:
 
-# Risk-to-Reward
+**1:3 R:R when market structure realistically supports it.**
 
-For this course, traders should generally aim for an average risk-to-reward ratio of approximately:
+Do not force 1:3 when the chart does not provide enough room.
 
-**1:3**
+A trade may be technically valid but still fail the R:R requirement.
 
-This means risking one unit to potentially gain three units.
-
-However, the target must remain realistic.
-
-A trader should not force a 1:3 target when major support or resistance blocks the path.
+That trade can be rejected.
 
 ---
 
-# Position Sizing
+## Step 10 â€” Define Trade Management
 
-Position size must be calculated from:
+Your strategy should explain what happens **after entry**.
 
-- account balance
-- acceptable risk percentage
-- stop-loss distance
+Possible approaches include:
 
-The strength of the trend does not justify excessive risk.
+- fixed Stop Loss and Take Profit
+- break-even adjustment
+- partial profit
+- trailing Stop Loss
+- structure-based exit
+- time-based exit
 
-No setup is certain.
+Do not randomly switch management methods during a trade.
 
----
-
-# Session Risk
-
-For this course:
-
-**Total risk during one trading session must never exceed 5% of trading capital.**
-
-This is a maximum limit, not a target.
-
-The trader must consider all open positions together.
+If you choose a method, define the rule before execution and later test whether it works.
 
 ---
 
-# Correlated Trend Trades
+## Fixed Stop and Target
 
-Several markets may trend in the same direction because of one underlying factor.
+The simplest management method is:
 
-Examples include:
+**Enter â†’ Leave SL and TP at their planned levels â†’ Allow the trade to resolve**
 
-- several cryptocurrencies rising together
-- multiple currency pairs reacting to the same currency
-- stock indices responding to the same economic event
+Possible advantages:
 
-Opening several correlated trades can create excessive exposure.
+- simple
+- consistent
+- easier to test
+- reduces emotional interference
 
-Each position must be included in total risk calculations.
-
----
-
-# When Not to Use Trend Following
-
-Trend-following strategies may perform poorly when:
-
-- price is ranging
-- structure is unclear
-- volatility is unusually low
-- the trend is overextended
-- major news is approaching
-- price is near strong opposing structure
-- false breakouts are frequent
-
-A trader should avoid forcing a trend where none exists.
+This can be useful while learning because it prevents constant interference with an open position.
 
 ---
 
-# Overextended Trends
+## Break-Even Rule
 
-A trend may become overextended after a rapid move.
+If your strategy uses break-even, define exactly when it is allowed.
 
-Warning signs include:
+For example:
 
-- unusually large candles
-- price far from moving averages
-- repeated failed continuation
-- momentum weakening
-- major support or resistance nearby
-- exhaustion candlestick patterns
+Move the Stop Loss to entry only after:
 
-Entering late may produce poor risk-to-reward.
+- price reaches a predefined level
+- favourable structure develops
+- or another tested condition occurs
 
-Waiting for a pullback may be safer.
+Do not move to break-even simply because you become afraid of losing.
 
----
-
-# Trend Weakness
-
-An uptrend may be weakening when:
-
-- Higher Highs become smaller
-- pullbacks become deeper
-- Higher Lows begin failing
-- bullish momentum declines
-- resistance repeatedly rejects price
-
-A downtrend may be weakening when:
-
-- Lower Lows become smaller
-- recoveries become deeper
-- Lower Highs begin failing
-- bearish momentum declines
-- support repeatedly rejects price
-
-Weakness does not automatically mean reversal.
-
-It means the trader should become more cautious.
+Moving too early can close an otherwise valid trade during normal price movement.
 
 ---
 
-# Trend Reversal Warning
+## Partial Profit
 
-Possible reversal warning signs include:
+A strategy may allow part of the position to close before the final target.
 
-- Break of Structure against the trend
-- Change of Character
-- failed continuation
-- major reversal pattern
-- loss of momentum
-- strong opposing breakout
-- higher-timeframe support or resistance
+If you use this method, define:
 
-A trend follower should not remain committed after the strategy's invalidation conditions appear.
+- percentage to close
+- level for partial profit
+- what happens to the remaining Stop Loss
+- final target
 
----
+Remember:
 
-# Exiting a Trend Trade
+Partial profit changes the overall reward profile of the trade.
 
-A trader may exit when:
-
-- take-profit is reached
-- stop-loss is reached
-- trailing stop is triggered
-- structure changes
-- trend weakness appears
-- management rules require partial profit
-- major news risk becomes unacceptable
-
-Exit rules should be planned before entry.
+Therefore, it must be tested.
 
 ---
 
-# Trailing the Stop
+## Trailing Stop
 
-A trailing stop may follow:
+A trailing Stop Loss may follow:
 
-- new Higher Lows in an uptrend
-- new Lower Highs in a downtrend
-- trendline structure
-- moving average
-- fixed distance
-- percentage distance
+- Higher Lows
+- Lower Highs
+- an EMA
+- another predefined structure rule
 
-Trailing too closely may close the trade during normal market movement.
+Again:
 
-Trailing too far may return too much profit.
+**Consistency matters.**
 
----
-
-# Partial Profit
-
-A trader may close part of the position at one target and allow the remainder to continue.
-
-Example:
-
-- close part at 1:2
-- move the stop according to predefined rules
-- hold the remainder toward 1:3 or the next structural target
-
-Partial exits must be tested because they change the average reward.
+Do not trail one trade aggressively, leave another untouched and manage the next one differently simply because of emotion.
 
 ---
 
-# Trend-Following Trade Checklist
+## Step 11 â€” Define Cancellation Rules
 
-Before entering, confirm:
+A professional strategy also tells you when **not** to enter.
 
-1. Is the market clearly trending?
-2. What is the higher-timeframe direction?
-3. Is structure producing Higher Highs and Higher Lows or Lower Highs and Lower Lows?
-4. Is the trend strong or weakening?
-5. Is price pulling back or breaking out?
-6. Is the entry near meaningful structure?
-7. Is there confirmation?
-8. Where does the trade become invalid?
-9. Is the stop-loss logical?
-10. Is the target realistic?
-11. Does the setup offer acceptable risk-to-reward?
-12. Does the position size match the planned risk?
-13. Is total session risk below 5%?
-14. Are other open trades correlated?
-15. Is major news approaching?
+Cancel the setup when, for example:
+
+- confirmation fails
+- market structure changes
+- price moves too far beyond the planned entry
+- Stop Loss distance becomes unacceptable
+- R:R becomes poor
+- session-risk limit has been reached
+- the setup expires
+- market conditions no longer match the strategy
+
+Not entering is a valid trading decision.
 
 ---
 
-# Example Bullish Strategy
+## Missed Trade Rule
 
-Market condition:
+Suppose your setup was valid at:
 
-Clear uptrend
+**Entry = 1.1000**
 
-Higher timeframe:
+But you missed it.
 
-Bullish
+Price is now:
 
-Setup:
+**1.1050**
 
-Pullback into previous resistance that has become support
+Do not assume the original analysis means you must enter.
 
-Confirmation:
+Recalculate:
 
-Bullish engulfing candle and break above local structure
+- current entry
+- invalidation
+- Stop Loss distance
+- target
+- R:R
 
-Entry:
+If the trade no longer qualifies:
 
-After confirmation
+**CANCEL IT.**
 
-Stop-loss:
-
-Below the pullback low
-
-Target:
-
-Next resistance or realistic 1:3 risk-to-reward level
-
-Risk:
-
-Calculated before entry
-
-Invalidation:
-
-Price breaks below the Higher Low and support zone
+Do not chase.
 
 ---
 
-# Example Bearish Strategy
+## News Rule
 
-Market condition:
+Your strategy should define how important scheduled economic events affect execution.
 
-Clear downtrend
+For example, you may decide to:
 
-Higher timeframe:
+- check the economic calendar before trading
+- avoid opening new short-term trades around major scheduled announcements
+- cancel pending orders when the underlying setup becomes unsuitable
 
-Bearish
+There is no single timing rule appropriate for every strategy.
 
-Setup:
+The important point is:
 
-Recovery into previous support that has become resistance
-
-Confirmation:
-
-Bearish rejection and break below local structure
-
-Entry:
-
-After confirmation
-
-Stop-loss:
-
-Above the pullback high
-
-Target:
-
-Next support or realistic 1:3 risk-to-reward level
-
-Risk:
-
-Calculated before entry
-
-Invalidation:
-
-Price breaks above the Lower High and resistance zone
+**Define your rule before the event rather than improvising during volatility.**
 
 ---
 
-# Common Beginner Mistakes
+## Your First Strategy
 
-Avoid these mistakes:
+For this exercise, keep the strategy simple.
 
-- trading against the dominant trend without a reversal strategy
-- assuming every market is trending
-- chasing extended price
-- entering before a pullback ends
-- using moving averages without price action
-- forcing trendlines
-- ignoring higher timeframes
-- entering without confirmation
-- placing stops randomly
-- risking more because the trend appears strong
-- opening several correlated trades
-- holding after market structure changes
-- forcing unrealistic profit targets
-- exceeding the 5% session risk limit
+You may build around:
 
----
+### Option A â€” Trend Pullback
 
-# Key Principle
+Trade in the broader direction after price pulls back into a meaningful area and produces confirmation.
 
-Trend following is not about predicting the entire market move.
+### Option B â€” Breakout and Retest
 
-It is about identifying an established direction, waiting for a controlled opportunity, confirming the setup, and managing risk professionally.
+Wait for price to break important structure, then evaluate a retest and confirmation.
+
+### Option C â€” Range Boundary
+
+Evaluate confirmed reactions around established range boundaries rather than entering in the middle.
+
+Choose **one**.
+
+Do not combine several strategies yet.
 
 ---
 
-# Lesson Summary
+## Example â€” Dessetra Trend Pullback Strategy
 
-Trend-following strategies attempt to participate in an established market direction.
+This is an educational example, not a guaranteed profitable system.
 
-An uptrend produces Higher Highs and Higher Lows.
+### Market
 
-A downtrend produces Lower Highs and Lower Lows.
+EURUSD
 
-Common trend-following approaches include:
+### Direction
 
-- pullback entries
-- breakout continuation
-- breakout and retest
-- moving-average pullbacks
-- trendline pullbacks
-- support and resistance continuation
-- flags and pennants
+H4
 
-A strong trend trade should combine:
+### Structure
 
-- higher-timeframe alignment
-- clear market structure
-- meaningful entry location
-- confirmation
-- logical stop-loss
-- realistic take-profit
-- disciplined position sizing
+H1
 
-For this course, the trader should generally aim for an average risk-to-reward ratio of approximately 1:3 while never exceeding 5% total risk during one trading session.
+### Setup
 
-No trend lasts forever.
+M15
 
-A professional trader follows the trend while it remains valid and exits when the trading plan indicates that the setup has failed or the trend has changed.
+### Entry
+
+M5
+
+### Buy Conditions
+
+1. H4 direction is bullish.
+2. H1 maintains bullish structure.
+3. Price pulls back into Support or Demand.
+4. EMA context supports the direction.
+5. MACD does not strongly contradict the setup.
+6. A valid bullish entry trigger forms.
+7. Stop Loss can be placed beyond logical invalidation.
+8. Available target provides acceptable R:R.
+
+If any required condition is absent:
+
+**WAIT or REJECT.**
+
+---
+
+## Sell Conditions
+
+Reverse the logic:
+
+1. H4 direction is bearish.
+2. H1 maintains bearish structure.
+3. Price retraces into Resistance or Supply.
+4. EMA context supports the bearish direction.
+5. MACD supports or does not strongly contradict the setup.
+6. A valid bearish trigger forms.
+7. Stop Loss is beyond logical invalidation.
+8. Available target provides acceptable R:R.
+
+Again:
+
+**No complete setup = No trade.**
+
+---
+
+## Strategy Rules Must Be Testable
+
+Avoid rules such as:
+
+> "Buy when the chart looks strong."
+
+How would you backtest **looks strong**?
+
+Instead:
+
+> "Buy only when the defined bullish structure, zone and confirmation conditions are present."
+
+A useful strategy rule should allow you to look at a historical chart and determine:
+
+**QUALIFIES**
+
+or
+
+**DOES NOT QUALIFY**
+
+This becomes extremely important in Lesson 2.
+
+---
+
+## Do Not Change the Strategy During a Trade
+
+Once a trade is open, do not rewrite the rules to protect the position.
+
+For example:
+
+Original rule:
+
+> Stop below invalidation.
+
+Price approaches Stop Loss.
+
+New emotional rule:
+
+> I'll move it farther because price might reverse.
+
+That is not strategy improvement.
+
+That is rule-breaking.
+
+Strategy changes should happen **after reviewing evidence**, not while money is at risk.
+
+---
+
+## One Strategy at a Time
+
+A beginner may constantly switch between:
+
+- scalping
+- trend following
+- breakouts
+- reversals
+- indicators
+- different timeframes
+
+This makes evaluation difficult.
+
+For the remaining Challenge, choose:
+
+**ONE strategy**
+
+and keep its rules stable while testing it.
+
+You need consistent rules before the results can tell you anything useful.
+
+---
+
+## Practical Exercise â€” Build Your Strategy
+
+Complete the following.
+
+## Strategy Identity
+
+**Strategy Name:**  
+________________________
+
+**Market(s):**  
+________________________
+
+**Market Condition:**  
+________________________
+
+---
+
+## Timeframes
+
+**Direction:**  
+________________________
+
+**Structure:**  
+________________________
+
+**Setup:**  
+________________________
+
+**Entry:**  
+________________________
+
+---
+
+## Setup Rules
+
+**Trend requirement:**  
+________________________
+
+**Structure requirement:**  
+________________________
+
+**Zone requirement:**  
+________________________
+
+**EMA requirement:**  
+________________________
+
+**MACD requirement:**  
+________________________
+
+---
+
+## Entry
+
+**Entry trigger:**  
+________________________
+
+**Entry order type:**  
+________________________
+
+---
+
+## Risk
+
+**Normal risk per trade:**  
+________________________
+
+**Maximum session risk:**  
+________________________
+
+**Stop Loss rule:**  
+________________________
+
+**Position-sizing rule:**  
+________________________
+
+---
+
+## Profit
+
+**Target rule:**  
+________________________
+
+**Minimum acceptable R:R:**  
+________________________
+
+---
+
+## Management
+
+**Break-even rule:**  
+________________________
+
+**Partial-profit rule:**  
+________________________
+
+**Trailing rule:**  
+________________________
+
+If you do not use one of these methods, write:
+
+**Not used.**
+
+---
+
+## Cancellation
+
+**I cancel the setup when:**  
+________________________
+
+---
+
+## Screenshot Assignment
+
+Open a historical chart on **TradingView or MT5**.
+
+Find one example that appears to satisfy your newly written strategy.
+
+Mark:
+
+- higher-timeframe direction
+- market structure
+- important zone
+- EMA context
+- entry trigger
+- proposed entry
+- Stop Loss
+- Take Profit
+
+Submit the screenshot.
+
+Under it, write:
+
+**Strategy Name:**  
+________________________
+
+**Why the setup qualifies:**  
+________________________
+
+**Entry:**  
+________________________
+
+**Stop Loss:**  
+________________________
+
+**Take Profit:**  
+________________________
+
+**Planned R:R:**  
+________________________
+
+Do not worry yet about whether the trade eventually won.
+
+We are first checking whether your **rules are clear enough to identify the setup**.
+
+---
+
+## Quick Knowledge Check
+
+**1. What is the difference between a setup and an entry trigger?**
+
+**2. Why should position size be calculated after determining the Stop Loss?**
+
+**3. Why should trade-management rules be defined before entry?**
+
+**4. Why is a simple strategy often easier to evaluate than one containing many changing rules?**
+
+**5. What should happen when the original R:R is no longer available after you miss an entry?**
+
+**6. Why should strategy rules be written in a way that can be tested historically?**
+
+---
+
+## Key Takeaways
+
+- A trading strategy converts analysis into repeatable rules.
+- Define the market and timeframe before defining entries.
+- Identify the market condition your strategy is designed for.
+- A setup is not automatically an entry.
+- Confirmation and an entry trigger should be clearly defined.
+- Determine invalidation before calculating position size.
+- Risk rules belong inside the strategy.
+- The Dessetra maximum session-risk ceiling remains 5%.
+- Seek approximately 1:3 R:R only when structure realistically supports it.
+- Define trade management before execution.
+- Define conditions that cancel a setup.
+- Never chase a missed entry.
+- Keep your first strategy simple.
+- Test one consistent set of rules before making major changes.
+- A strategy should be specific enough that another person could determine whether a setup qualifies.
+
+---
+
+## Lesson Completion
+
+You have now created the first version of your own rule-based trading strategy.
+
+But writing a strategy does not prove that it works.
+
+The next question is:
+
+**What happens when these exact rules are applied repeatedly to historical market data?**
+
+Next:
+
+**Lesson 2 â€” Backtesting**

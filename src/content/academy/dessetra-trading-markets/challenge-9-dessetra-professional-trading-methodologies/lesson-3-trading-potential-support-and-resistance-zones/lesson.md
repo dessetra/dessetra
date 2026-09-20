@@ -1,4 +1,4 @@
----
+﻿---
 title: Trading Potential Support and Resistance Zones
 lessonNumber: 3
 duration: 30
@@ -20,7 +20,7 @@ The Dessetra methodology focuses on identifying these zones and waiting for pric
 
 ---
 
-# What is a Support Zone?
+## What is a Support Zone?
 
 A support zone is an area where buyers are likely to enter the market.
 
@@ -37,7 +37,7 @@ Support should always be treated as a zone instead of a single price.
 
 ---
 
-# What is a Resistance Zone?
+## What is a Resistance Zone?
 
 A resistance zone is an area where sellers are likely to become active.
 
@@ -54,7 +54,7 @@ Like support, resistance is also a zone rather than one exact price.
 
 ---
 
-# Why Do These Zones Work?
+## Why Do These Zones Work?
 
 Support and resistance exist because many traders notice the same important price areas.
 
@@ -69,7 +69,7 @@ This often creates noticeable reactions in the market.
 
 ---
 
-# Think in Zones, Not Lines
+## Think in Zones, Not Lines
 
 Many beginners draw one horizontal line.
 
@@ -83,7 +83,7 @@ This is why we refer to them as support and resistance **zones**.
 
 ---
 
-# Market Memory
+## Market Memory
 
 Financial markets have memory.
 
@@ -95,7 +95,7 @@ This repeated behaviour is what creates potential trading opportunities.
 
 ---
 
-# Multiple Timeframe Analysis
+## Multiple Timeframe Analysis
 
 The Dessetra methodology places strong emphasis on analysing more than one timeframe.
 
@@ -107,7 +107,7 @@ Both should work together.
 
 ---
 
-# Example Using the 4-Hour Chart
+## Example Using the 4-Hour Chart
 
 Suppose the market reaches an important support area on the 4-hour chart.
 
@@ -121,7 +121,7 @@ This provides much more information about buyer activity.
 
 ---
 
-# The Importance of Lower Timeframes
+## The Importance of Lower Timeframes
 
 A higher timeframe compresses many smaller price movements into one candle.
 
@@ -133,7 +133,7 @@ This helps traders understand the strength of the area.
 
 ---
 
-# Repeated Reactions Increase Confidence
+## Repeated Reactions Increase Confidence
 
 One reaction alone is usually not enough.
 
@@ -149,7 +149,7 @@ The more times a zone has produced meaningful reactions without breaking, the mo
 
 ---
 
-# Trading the Second and Third Visit
+## Trading the Second and Third Visit
 
 One important principle of this methodology is patience.
 
@@ -163,7 +163,7 @@ Repeated reactions increase confidence in the zone.
 
 ---
 
-# Example of a Support Zone
+## Example of a Support Zone
 
 Imagine price reaches an important support area.
 
@@ -182,7 +182,7 @@ If price later returns for a third visit and buyers continue defending the zone,
 
 ---
 
-# Example of a Resistance Zone
+## Example of a Resistance Zone
 
 Price reaches an important resistance area.
 
@@ -199,7 +199,7 @@ When price returns a third time and selling pressure appears again, the trader m
 
 ---
 
-# Combining Timeframes
+## Combining Timeframes
 
 A major advantage of this methodology is combining higher and lower timeframes.
 
@@ -221,7 +221,7 @@ This creates a structured trading process.
 
 ---
 
-# Another Example
+## Another Example
 
 Suppose a resistance zone is identified on the Daily chart.
 
@@ -241,7 +241,7 @@ The entry can then be planned with greater precision.
 
 ---
 
-# Confirmation is Still Required
+## Confirmation is Still Required
 
 Support and resistance zones are not automatic entry signals.
 
@@ -259,7 +259,7 @@ Confirmation reduces unnecessary risk.
 
 ---
 
-# False Breakouts
+## False Breakouts
 
 Sometimes price moves beyond a support or resistance zone before reversing.
 
@@ -273,7 +273,7 @@ Waiting for confirmation often improves decision-making.
 
 ---
 
-# Strong Zones
+## Strong Zones
 
 A strong support or resistance zone often has:
 
@@ -287,7 +287,7 @@ The stronger these characteristics become, the more attention the zone deserves.
 
 ---
 
-# Weak Zones
+## Weak Zones
 
 Weak zones often display:
 
@@ -301,7 +301,7 @@ Weak zones should be treated with caution.
 
 ---
 
-# Avoid Guessing
+## Avoid Guessing
 
 Never assume every horizontal area will become support or resistance.
 
@@ -313,7 +313,7 @@ They do not predict without evidence.
 
 ---
 
-# Risk Management
+## Risk Management
 
 Even the strongest support or resistance zone can fail.
 
@@ -329,7 +329,7 @@ For this course:
 
 ---
 
-# Profit Targets
+## Profit Targets
 
 Profit targets should be based on market structure.
 
@@ -341,7 +341,7 @@ Do not force unrealistic targets simply to achieve the ratio.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -356,7 +356,7 @@ Avoid:
 
 ---
 
-# Dessetra Support & Resistance Checklist
+## Dessetra Support & Resistance Checklist
 
 Before entering a trade, ask:
 
@@ -376,7 +376,7 @@ If important conditions are missing, continue waiting.
 
 ---
 
-# Key Principle
+## Key Principle
 
 The Dessetra methodology does not trade every support or resistance level.
 
@@ -386,7 +386,7 @@ Patience creates better trading decisions.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Support zones are areas where buyers are likely to enter the market.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Building a Complete Trading System
 lessonNumber: 1
 duration: 25
@@ -34,7 +34,7 @@ A trading system removes unnecessary guesswork.
 
 ---
 
-# What Is a Trading System?
+## What Is a Trading System?
 
 A trading system is a complete set of written rules that guide every trading decision.
 
@@ -50,7 +50,7 @@ Professional traders trust their systems more than their emotions.
 
 ---
 
-# Why Every Trader Needs a System
+## Why Every Trader Needs a System
 
 Without a trading system, traders often:
 
@@ -67,7 +67,7 @@ Consistency allows improvement.
 
 ---
 
-# A Trading System Is Not an Indicator
+## A Trading System Is Not an Indicator
 
 Many beginners believe buying an indicator creates a trading system.
 
@@ -79,7 +79,7 @@ A complete trading system combines several components into one organized process
 
 ---
 
-# Characteristics of a Good Trading System
+## Characteristics of a Good Trading System
 
 A professional trading system should be:
 
@@ -96,7 +96,7 @@ Complicated systems are often harder to follow consistently.
 
 ---
 
-# Components of a Complete Trading System
+## Components of a Complete Trading System
 
 A complete trading system normally includes:
 
@@ -120,7 +120,7 @@ Every component should work together.
 
 ---
 
-# Choosing Markets
+## Choosing Markets
 
 Not every market behaves the same way.
 
@@ -151,7 +151,7 @@ Trying to trade every market usually reduces focus.
 
 ---
 
-# Choosing Trading Sessions
+## Choosing Trading Sessions
 
 Markets behave differently throughout the day.
 
@@ -171,7 +171,7 @@ This creates routine.
 
 ---
 
-# Choosing Timeframes
+## Choosing Timeframes
 
 Every trading system should define the timeframes used.
 
@@ -196,7 +196,7 @@ The important point is consistency.
 
 ---
 
-# Trend Identification
+## Trend Identification
 
 Before looking for entries, the trader should determine:
 
@@ -210,7 +210,7 @@ The rules for identifying trend should be written.
 
 ---
 
-# Defining Valid Setups
+## Defining Valid Setups
 
 The system should clearly describe what qualifies as a trading opportunity.
 
@@ -225,7 +225,7 @@ The trader should know exactly what a valid setup looks like.
 
 ---
 
-# Entry Rules
+## Entry Rules
 
 Entry rules should be specific.
 
@@ -241,7 +241,7 @@ Vague rules create inconsistent decisions.
 
 ---
 
-# Confirmation Rules
+## Confirmation Rules
 
 Confirmation helps improve trade quality.
 
@@ -257,7 +257,7 @@ Confirmation reduces impulsive entries.
 
 ---
 
-# Stop-Loss Rules
+## Stop-Loss Rules
 
 Every trade should have a predefined stop-loss.
 
@@ -272,7 +272,7 @@ It should never be placed randomly.
 
 ---
 
-# Take-Profit Rules
+## Take-Profit Rules
 
 Take-profit should also be planned before entry.
 
@@ -288,7 +288,7 @@ The target should be realistic.
 
 ---
 
-# Risk-to-Reward Planning
+## Risk-to-Reward Planning
 
 For this course, traders should generally seek an average risk-to-reward ratio of approximately:
 
@@ -300,7 +300,7 @@ Planning the trade before entry reduces emotional decisions.
 
 ---
 
-# Position Sizing
+## Position Sizing
 
 Every system should explain how position size is calculated.
 
@@ -314,7 +314,7 @@ Position size should never depend on emotion.
 
 ---
 
-# Risk Management Rules
+## Risk Management Rules
 
 Risk management protects trading capital.
 
@@ -331,7 +331,7 @@ The system should also define:
 
 ---
 
-# Trade Management
+## Trade Management
 
 The trading system should explain how trades are managed after entry.
 
@@ -347,7 +347,7 @@ Management rules should be planned before trading begins.
 
 ---
 
-# Exit Rules
+## Exit Rules
 
 Every exit should have a reason.
 
@@ -363,7 +363,7 @@ Exits should not be based only on emotion.
 
 ---
 
-# Rules for No Trade
+## Rules for No Trade
 
 A professional system should also explain when NOT to trade.
 
@@ -380,7 +380,7 @@ Knowing when not to trade is just as important as knowing when to trade.
 
 ---
 
-# Building a Trading Checklist
+## Building a Trading Checklist
 
 A checklist improves consistency.
 
@@ -401,7 +401,7 @@ Every answer should be "Yes" before entering.
 
 ---
 
-# Keeping Rules Simple
+## Keeping Rules Simple
 
 Complex systems often become difficult to follow.
 
@@ -416,7 +416,7 @@ Simple systems are easier to improve.
 
 ---
 
-# Testing the Trading System
+## Testing the Trading System
 
 A system should never be trusted immediately.
 
@@ -432,7 +432,7 @@ Testing builds confidence.
 
 ---
 
-# Reviewing the System
+## Reviewing the System
 
 After enough trades, review:
 
@@ -447,7 +447,7 @@ Review should be based on evidence rather than emotion.
 
 ---
 
-# Avoid Constantly Changing the System
+## Avoid Constantly Changing the System
 
 Many beginners change systems after a few losses.
 
@@ -459,7 +459,7 @@ One losing streak does not automatically mean the system is poor.
 
 ---
 
-# Personalizing the System
+## Personalizing the System
 
 Every trader eventually develops personal preferences.
 
@@ -475,7 +475,7 @@ The system should fit the trader while still following sound risk management pri
 
 ---
 
-# Recording Every Trade
+## Recording Every Trade
 
 A trading system is incomplete without record keeping.
 
@@ -491,7 +491,7 @@ We will study professional trading journals in the next lesson.
 
 ---
 
-# Example of a Simple Trading System
+## Example of a Simple Trading System
 
 Example only:
 
@@ -512,7 +512,7 @@ Each trader should eventually build a system that matches their strategy.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid these mistakes:
 
@@ -529,7 +529,7 @@ Avoid these mistakes:
 
 ---
 
-# Key Principle
+## Key Principle
 
 A trading system does not guarantee profits.
 
@@ -539,7 +539,7 @@ Over time, disciplined execution of a well-tested system provides the foundation
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 A trading system is a complete set of written rules that guide every trading decision.
 

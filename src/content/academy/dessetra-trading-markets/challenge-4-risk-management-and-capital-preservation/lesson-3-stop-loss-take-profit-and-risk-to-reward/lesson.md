@@ -1,840 +1,651 @@
----
-title: Stop-Loss, Take-Profit & Risk-to-Reward
+﻿---
+title: Psychology & Discipline
 lessonNumber: 3
 duration: 25
-difficulty: Beginner
-objective: Learn how to place logical stop-loss and take-profit levels, calculate risk-to-reward, and avoid emotional trade management.
+difficulty: Intermediate
+objective: Recognize the emotions and behaviours that damage trading decisions, and develop practical rules for controlling fear, greed, FOMO, revenge trading and overtrading.
 video:
 resource:
 ---
 
-# Stop-Loss, Take-Profit & Risk-to-Reward
+# Psychology & Discipline
 
-Every trade should have a clear plan before entry.
+A trader can understand market structure, identify good setups and calculate risk correctly â€” yet still make poor trading decisions.
 
-That plan should answer three important questions:
+Why?
 
-- Where will I enter?
-- Where will I exit if the trade fails?
-- Where will I exit if the trade succeeds?
+Because trading involves money, uncertainty and emotion.
 
-These three points form the foundation of responsible trade management.
+A trading strategy tells you **what you should do**.
 
-The stop-loss controls the possible loss.
-
-The take-profit defines the intended reward.
-
-The risk-to-reward ratio compares both.
+Discipline determines whether you actually do it.
 
 ---
 
-# What Is a Stop-Loss?
+## Trading Psychology
 
-A stop-loss is an order designed to close a trade when price reaches a predetermined level.
+Trading psychology refers to the thoughts, emotions and behaviours that influence your decisions in the market.
 
-It helps limit the amount of money that may be lost.
+These become especially important when:
 
-A stop-loss should be placed where the trading idea becomes invalid.
+- a trade moves against you
+- you experience several losses
+- you miss a profitable move
+- you make an unusually large profit
+- price approaches your Stop Loss
+- you feel pressure to make money
+- you want to recover a previous loss
 
-It should not be placed randomly.
+The objective is not to become emotionless.
 
----
-
-# Why Stop-Losses Matter
-
-A stop-loss helps traders:
-
-- control losses
-- protect trading capital
-- reduce emotional decisions
-- calculate position size
-- define trade invalidation
-- survive unexpected market movements
-
-Without a stop-loss, a small planned loss can become a major uncontrolled loss.
+The objective is to prevent emotions from controlling execution.
 
 ---
 
-# A Stop-Loss Is Not a Guarantee
+## Process Over Individual Results
 
-A stop-loss reduces risk, but it does not always guarantee an exact closing price.
+A good trade can lose.
 
-During high volatility, price gaps or low liquidity, the trade may close at a worse price.
+A poor trade can sometimes win.
 
-This is called slippage.
+Suppose you:
 
-Traders must still use suitable position sizes and avoid excessive exposure.
+- followed the Dessetra Confirmation Model
+- entered at your planned level
+- calculated your risk correctly
+- respected your Stop Loss
+- followed your management rules
 
----
+and the trade loses.
 
-# Where Should a Stop-Loss Be Placed?
+That does not automatically mean your decision was poor.
 
-A stop-loss should be placed beyond a logical market level.
+Trading involves probability.
 
-Possible locations include:
+One result should not determine whether a trading process is good or bad.
 
-- below support for a buy trade
-- above resistance for a sell trade
-- below a recent swing low
-- above a recent swing high
-- beyond a trendline
-- outside a chart pattern
-- beyond the invalidation point of the setup
+Judge yourself first by:
 
-The purpose is to give the trade enough space while still limiting loss.
+**Did I follow my rules?**
 
 ---
 
-# Stop-Loss Placement for Buy Trades
+## Fear
 
-In a buy trade, the stop-loss is normally placed below the entry price.
+Fear often appears when a trader focuses heavily on losing money.
 
-Possible placements include:
+It may cause the trader to:
 
-- below a support zone
-- below the most recent Higher Low
-- below a bullish reversal pattern
-- below the breakout structure
-- below the neckline after a confirmed bullish reversal
+- avoid a valid setup
+- enter too late
+- close a profitable trade too early
+- move to break-even too quickly
+- reduce or change the trade without a planned reason
+- hesitate after previous losses
 
-If price reaches that level, the original bullish idea may no longer be valid.
+Some fear is useful because it reminds you that trading contains risk.
 
----
-
-# Stop-Loss Placement for Sell Trades
-
-In a sell trade, the stop-loss is normally placed above the entry price.
-
-Possible placements include:
-
-- above a resistance zone
-- above the most recent Lower High
-- above a bearish reversal pattern
-- above the breakout structure
-- above the neckline after a confirmed bearish reversal
-
-If price reaches that level, the original bearish idea may no longer be valid.
+The problem begins when fear overrides your trading plan.
 
 ---
 
-# Structural Stop-Loss
+## Fear After a Losing Trade
 
-A structural stop-loss is placed according to market structure.
+Imagine you take a valid setup.
+
+The Stop Loss is reached.
+
+Later, another valid setup appears.
+
+But you refuse to enter because:
+
+> "The last trade lost, so this one will probably lose too."
+
+The previous trade does not determine the outcome of the next setup.
+
+Evaluate the new opportunity using the same rules:
+
+**Trend â†’ Structure â†’ Zone â†’ EMA â†’ Momentum â†’ Entry Trigger**
+
+If it qualifies, evaluate its risk.
+
+If it does not qualify, reject it.
+
+The previous result should not replace the confirmation process.
+
+---
+
+## Greed
+
+Greed occurs when the desire for more profit begins to override the trading plan.
+
+It may cause a trader to:
+
+- increase lot size without justification
+- exceed planned risk
+- open too many positions
+- ignore the Take Profit
+- continue trading after reaching a session objective
+- enter weak setups because they want more profit
+- increase leverage after winning trades
+
+A winning streak can therefore become dangerous.
+
+Success can create overconfidence.
+
+Discipline must remain the same after both wins and losses.
+
+---
+
+## FOMO
+
+**FOMO â€” Fear of Missing Out** occurs when a trader sees price moving and feels pressure to enter before the opportunity disappears.
+
+Typical thoughts include:
+
+> "It's moving without me."
+
+> "I need to enter now."
+
+> "If I wait for confirmation, I'll miss everything."
+
+This can cause:
+
+- late entries
+- chasing price
+- entering without confirmation
+- poor R:R
+- oversized positions
+- ignoring nearby Support or Resistance
+
+Remember:
+
+**Missing a trade is not the same as losing money.**
+
+There will be other market opportunities.
+
+---
+
+## What to Do When You Miss an Entry
+
+Suppose your planned Buy entry was reached but you did not execute.
+
+Price then moves strongly upward.
+
+Do not automatically chase it.
+
+Instead, reassess:
+
+1. Where is price now?
+2. Where would the new Stop Loss belong?
+3. Where is the logical target?
+4. What is the new R:R?
+5. Is the original setup still valid?
+6. Is there a new retest or confirmation opportunity?
+
+If the setup no longer satisfies your rules:
+
+**LET IT GO.**
+
+A missed opportunity is better than an undisciplined trade.
+
+---
+
+## Revenge Trading
+
+Revenge trading occurs when a trader enters another position primarily because they want to recover a previous loss quickly.
 
 Example:
 
-A trader buys during an uptrend after price forms a Higher Low.
+Trade 1 loses:
 
-The stop-loss may be placed below that Higher Low.
+**-$20**
 
-If price breaks below it, the market structure may have changed.
+The trader becomes frustrated.
 
-Structural stop-losses are usually more logical than choosing an arbitrary number of points.
+Instead of waiting for another confirmed setup, they immediately open Trade 2 with a larger position because:
 
----
+> "I need my $20 back."
 
-# Volatility-Based Stop-Loss
+The second trade is no longer being selected purely because of market conditions.
 
-Some markets move more aggressively than others.
+It is being driven by the previous loss.
 
-A stop-loss that is suitable in a quiet market may be too tight during high volatility.
-
-Volatility-based stop-loss placement considers:
-
-- recent candle sizes
-- average market movement
-- news conditions
-- asset behaviour
-- trading timeframe
-
-A wider stop-loss requires a smaller position size to maintain the same monetary risk.
+That is revenge trading.
 
 ---
 
-# Fixed-Distance Stop-Loss
+## Signs of Revenge Trading
 
-A fixed-distance stop-loss uses the same number of points, pips or percentage distance for each trade.
+Watch for:
 
-This method is simple but may ignore market structure and volatility.
+- entering immediately after being stopped out
+- increasing lot size after a loss
+- abandoning confirmation rules
+- taking low-quality setups
+- opening more trades than normal
+- removing or widening Stop Losses
+- trying to recover everything in one trade
+- feeling angry at the market
+
+When you notice these behaviours:
+
+**Stop. Do not increase risk.**
+
+---
+
+## The Three-Loss Rule
+
+*Trading Made Simple* includes a practical discipline rule:
+
+**After three consecutive losses, stop trading for the day.**
+
+For this course, we will keep that as an additional behavioural safeguard.
+
+It does **not replace** the Dessetra 5% maximum session-risk ceiling.
+
+Trading stops when **either** your predefined session-loss/risk limit is reached **or** you reach the three-consecutive-loss safeguard.
+
+The purpose is not to suggest that the fourth trade must lose.
+
+The purpose is to interrupt emotional decision-making after a difficult sequence.
+
+Use the break to:
+
+- leave the chart
+- review the trades
+- check whether the setups were valid
+- check whether your execution changed
+- identify any rule violations
+
+Do not use the break to immediately search another market for a trade.
+
+---
+
+## Overtrading
+
+Overtrading means taking more trades than your strategy or trading plan reasonably justifies.
+
+It can happen because of:
+
+- boredom
+- greed
+- revenge
+- FOMO
+- trying to hit a profit target
+- trying to recover losses
+- believing more trades automatically means more profit
+
+But:
+
+**More trades do not automatically create more opportunity.**
+
+If no valid setup exists, the correct trading decision is:
+
+**NO TRADE.**
+
+---
+
+## Do Not Force Opportunities
+
+One of the habits emphasized in *Trading Made Simple* is not to force an opportunity where one does not exist.
+
+This connects directly with the Dessetra Confirmation Model.
+
+Suppose:
+
+- trend is unclear
+- structure is ranging
+- price is not at a meaningful zone
+- EMAs are compressed
+- momentum is mixed
+- there is no entry trigger
+
+The correct decision is not:
+
+> "I'll enter anyway."
+
+It is:
+
+**WAIT or REJECT.**
+
+Patience is part of execution.
+
+---
+
+## Loss Aversion
+
+A trader may find accepting a loss emotionally difficult.
+
+This can lead to:
+
+- holding losing trades too long
+- moving Stop Losses farther away
+- removing Stop Losses
+- closing winning trades too early
+- avoiding valid setups after a previous loss
+
+Remember:
+
+A planned Stop Loss defines where the trade idea becomes invalid.
+
+If that point is reached, accepting the controlled loss protects the account from a potentially larger one.
+
+---
+
+## Recency Bias
+
+Recency bias occurs when recent results receive too much importance.
 
 For example:
 
-A 20-pip stop may be reasonable in one setup but inappropriate in another.
+### After three wins
 
-Fixed-distance stops should only be used when supported by tested strategy rules.
+A trader thinks:
 
----
+> "My strategy can't lose."
 
-# Percentage-Based Stop-Loss
+They increase position size.
 
-A percentage-based stop-loss is placed a certain percentage away from the entry price.
+### After three losses
 
-Example:
+The same trader thinks:
 
-Entry price:
+> "My strategy doesn't work."
 
-$100
+They abandon the rules.
 
-Stop-loss distance:
+Neither conclusion is justified by such a small sample alone.
 
-2%
+A trading method should be evaluated across a meaningful collection of properly executed trades.
 
-Stop-loss:
-
-$98 for a buy trade
-
-This method can be useful in some markets, but it should still consider market structure.
+We will address this more deeply when we work with backtesting and performance review.
 
 ---
 
-# Common Stop-Loss Mistakes
+## Winning Streak Psychology
 
-Avoid these mistakes:
+Losses are not the only psychological danger.
 
-- entering without a stop-loss
-- placing the stop-loss too close
-- placing it too far away
-- choosing it only to support a larger position
-- moving it farther after entry
-- removing it completely
-- placing it exactly on obvious support or resistance
-- ignoring spread and volatility
-- using the same stop distance in every market
+Winning repeatedly may cause:
 
----
+- overconfidence
+- excessive position sizes
+- weaker entry standards
+- excessive leverage
+- unnecessary trades
+- rule-breaking
 
-# Moving the Stop-Loss
+Do not increase risk merely because recent trades were profitable.
 
-A stop-loss should not be moved farther away simply because the trader does not want to accept a loss.
-
-Moving the stop farther increases risk after the trade has already failed to behave as expected.
-
-A stop may be adjusted only according to a predefined management rule.
-
-Examples include:
-
-- trailing behind new structure
-- moving to break-even after specific confirmation
-- reducing risk after partial profit
-
-The adjustment must follow the plan, not emotion.
+The next trade still contains uncertainty.
 
 ---
 
-# What Is Break-Even?
+## Strategy Loss vs Execution Mistake
 
-Break-even occurs when the stop-loss is moved near the entry price.
+After a losing trade, identify what actually happened.
 
-If price reverses and reaches the stop, the trade may close with little or no loss.
+## Strategy Loss
 
-Break-even can protect capital, but moving too early may cause a good trade to close before it develops.
+You followed the rules correctly.
 
-A trader should define when break-even is allowed.
+The setup was valid.
 
----
+Risk was correct.
 
-# Trailing Stop-Loss
+The market simply moved against the trade.
 
-A trailing stop follows price as the trade moves into profit.
+That is part of trading.
 
-Its purpose is to:
+## Execution Mistake
 
-- lock in profit
-- reduce risk
-- remain in a strong trend
+You violated your rules.
 
-A trailing stop may follow:
+Examples:
 
-- swing highs or swing lows
-- support or resistance
-- a fixed distance
-- percentage movement
-- market structure
+- entered before confirmation
+- chased price
+- used the wrong lot size
+- ignored the Stop Loss
+- entered from FOMO
+- traded emotionally
+- exceeded risk limits
 
-Trailing too closely may close the trade during a normal pullback.
+The lesson from these two losses is different.
 
----
+Do not change a strategy because of an execution mistake.
 
-# What Is a Take-Profit?
-
-A take-profit is an order or planned level where a profitable trade is closed.
-
-It helps traders:
-
-- define realistic objectives
-- avoid greed
-- measure risk-to-reward
-- secure profit
-- follow a trading plan
-
-A take-profit should be selected before entering the trade.
+Fix the execution mistake.
 
 ---
 
-# Where Should a Take-Profit Be Placed?
+## Control What You Can Control
 
-A take-profit may be placed near:
+You cannot control:
 
-- previous resistance for a buy trade
-- previous support for a sell trade
-- a major swing high or swing low
-- a chart-pattern target
-- a trendline or channel boundary
-- a predefined risk-to-reward target
-- a higher-timeframe market level
+- the next candle
+- whether a trade wins
+- sudden volatility
+- how far price ultimately travels
 
-The target should be realistic and supported by market structure.
+You can control:
 
----
+- whether you enter
+- whether confirmation exists
+- your position size
+- your Stop Loss
+- your risk
+- whether you chase price
+- whether you follow your plan
+- whether you stop trading
 
-# Take-Profit for Buy Trades
-
-For a buy trade, possible targets include:
-
-- the next resistance zone
-- a previous swing high
-- the upper boundary of a channel
-- a measured chart-pattern target
-- a predefined reward multiple
-
-Price must have enough room to reach the target.
+Focus your discipline on the variables you actually control.
 
 ---
 
-# Take-Profit for Sell Trades
+## A Simple Emotional Check
 
-For a sell trade, possible targets include:
+Before placing a trade, ask:
 
-- the next support zone
-- a previous swing low
-- the lower boundary of a channel
-- a measured chart-pattern target
-- a predefined reward multiple
+**Why am I entering this trade?**
 
-The target should not be placed beyond a major obstacle without a clear reason.
+Acceptable answer:
 
----
+> "The setup satisfies my trading rules."
 
-# Partial Take-Profit
+Warning answers:
 
-A trader may close part of the position at one target and keep the rest open.
+> "I just lost."
 
-Example:
+> "I need money today."
 
-- Close 50% at the first target.
-- Move the stop according to the plan.
-- Allow the remaining position to continue.
+> "Price is running away."
 
-Possible benefits include:
+> "Everyone seems to be buying."
 
-- securing some profit
-- reducing emotional pressure
-- remaining in a strong trend
+> "I need to reach today's target."
 
-However, partial exits may reduce the average reward.
+> "I don't want to miss this."
+
+If your primary reason is emotional rather than analytical:
+
+**Do not execute yet.**
 
 ---
 
-# Multiple Profit Targets
+## The 10-Minute Reset
 
-Some traders define more than one target.
+When you notice strong emotion during a trading session:
 
-For example:
+1. Stop looking for new entries.
+2. Step away from the chart for at least 10 minutes.
+3. Do not modify positions impulsively.
+4. Return to your written rules.
+5. Recheck your risk.
+6. Continue only if you can evaluate the market objectively.
 
-- Target 1: nearby resistance
-- Target 2: major swing high
-- Target 3: extended trend objective
+If the emotional pressure remains high:
 
-This approach should be planned before entry.
+**End the session.**
 
-It should not be improvised while the trade is active.
-
----
-
-# What Is Risk-to-Reward?
-
-Risk-to-reward compares the possible loss with the possible profit.
-
-It is commonly written as:
-
-**Risk : Reward**
-
-For example:
-
-**1:3**
-
-This means the trader risks 1 unit to potentially gain 3 units.
+Protecting your decision-making is part of protecting capital.
 
 ---
 
-# Understanding 1:3 Risk-to-Reward
+## Discipline Checklist
 
-A 1:3 risk-to-reward ratio means:
+Before executing, confirm:
 
-- Risk $10 to potentially make $30.
-- Risk $50 to potentially make $150.
-- Risk $100 to potentially make $300.
+- I am not chasing price.
+- I am not trying to recover a loss.
+- I am not increasing risk because of recent wins.
+- The setup satisfies my confirmation rules.
+- My Stop Loss is defined.
+- My position size is calculated.
+- My R:R is acceptable.
+- My combined session risk remains within limits.
+- I am prepared to accept the planned loss.
+- I can walk away if the setup disappears.
 
-For this course, traders should generally aim for an average risk-to-reward ratio of approximately:
-
-**1:3**
-
-This is a preferred benchmark, not a guarantee that every setup will provide exactly the same ratio.
-
----
-
-# How to Calculate Risk-to-Reward
-
-Use this formula:
-
-**Risk-to-Reward = Potential Reward ÷ Potential Risk**
-
-Example:
-
-Entry:
-
-$100
-
-Stop-loss:
-
-$95
-
-Take-profit:
-
-$115
-
-Risk:
-
-$100 - $95 = $5
-
-Reward:
-
-$115 - $100 = $15
-
-Risk-to-reward:
-
-$15 ÷ $5 = 3
-
-The trade offers a 1:3 risk-to-reward ratio.
+If several answers are **No**, do not enter.
 
 ---
 
-# Buy Trade Example
+## Practical Exercise â€” Identify the Emotion
 
-Entry price:
+For each scenario, identify the main psychological problem and the disciplined response.
 
-1.2000
+### Scenario 1
 
-Stop-loss:
+You miss an XAUUSD Buy entry.
 
-1.1950
+Price moves strongly upward.
 
-Take-profit:
+You feel an urge to enter immediately at the current price.
 
-1.2150
+**Emotion/Behaviour:** ?
 
-Risk:
+**Disciplined Response:** ?
 
-50 pips
+### Scenario 2
 
-Reward:
+You lose two trades.
 
-150 pips
+A third setup appears but does not satisfy your confirmation model.
 
-Risk-to-reward:
+You want to enter because you want your money back.
 
-1:3
+**Emotion/Behaviour:** ?
 
-If the trader risks $20, the potential reward is approximately $60.
+**Disciplined Response:** ?
 
----
+### Scenario 3
 
-# Sell Trade Example
+You win four trades in a row.
 
-Entry price:
+You decide to double your normal risk because you believe you are trading extremely well.
 
-2,000
+**Emotion/Behaviour:** ?
 
-Stop-loss:
+**Disciplined Response:** ?
 
-2,020
+### Scenario 4
 
-Take-profit:
+A valid trade reaches your planned Stop Loss.
 
-1,940
+You move the SL farther away because you do not want to accept the loss.
 
-Risk:
+**Emotion/Behaviour:** ?
 
-20 points
-
-Reward:
-
-60 points
-
-Risk-to-reward:
-
-1:3
-
-If the trader risks $50, the potential reward is approximately $150.
+**Disciplined Response:** ?
 
 ---
 
-# The Importance of Market Space
+## Practical Exercise â€” Observe Yourself
 
-A trade may appear to offer 1:3 mathematically but still be unrealistic.
+During your next **demo trading session**, record your emotional state before every attempted trade.
 
-For example:
+Use:
 
-A buy trade may have strong resistance before the take-profit level.
+**Calm / Fearful / Excited / Frustrated / Impatient / Confident**
 
-That resistance may reduce the probability of reaching the target.
+Then record:
 
-Before entering, ask:
+- Did the setup meet the rules?
+- Did you execute?
+- Did you feel pressure to enter?
+- Did you change your risk?
+- Did you follow the Stop Loss?
+- Did you follow the plan?
 
-- Is there enough space to the target?
-- Is support or resistance blocking the trade?
-- Does the higher timeframe support the direction?
-- Is the target realistic?
+The purpose is not to judge yourself.
 
-Good risk-to-reward must also make structural sense.
-
----
-
-# Risk-to-Reward and Win Rate
-
-A trader does not need to win every trade to be profitable.
-
-Consider 10 trades:
-
-- 4 winning trades
-- 6 losing trades
-- Risk per trade: 1 unit
-- Reward per winner: 3 units
-
-Total from winners:
-
-4 × 3 = 12 units
-
-Total from losses:
-
-6 × 1 = 6 units
-
-Possible net result:
-
-6 units profit
-
-This shows how a favourable risk-to-reward ratio can support profitability despite a lower win rate.
+The purpose is to identify patterns between emotions and decisions.
 
 ---
 
-# Break-Even Win Rate
+## Screenshot Assignment
 
-The break-even win rate is the minimum win rate needed before costs to avoid losing money.
+Using your **demo account**, submit one screenshot of a setup you deliberately **did not trade** because it failed your rules or because entering would have meant chasing price.
 
-For a 1:1 risk-to-reward ratio, the break-even win rate is approximately 50%.
+Under the screenshot, explain:
 
-For a 1:2 ratio, it is approximately 33.3%.
+**1. What made you consider the trade?**
 
-For a 1:3 ratio, it is approximately 25%.
+**2. Which rule was missing or violated?**
 
-Trading costs and slippage may increase the required win rate.
+**3. What emotion could have pushed you to enter anyway?**
 
----
+**4. Why was avoiding the trade the disciplined decision?**
 
-# High Reward Does Not Always Mean a Good Trade
+This assignment teaches an important skill:
 
-A very large target may create an attractive risk-to-reward ratio on paper.
-
-However, the target may be unrealistic.
-
-A good setup requires:
-
-- logical entry
-- logical stop-loss
-- realistic target
-- supporting structure
-- acceptable probability
-
-Do not increase the target simply to force a 1:3 ratio.
+**Sometimes the best executed trade is the trade you did not take.**
 
 ---
 
-# When a Trade Does Not Offer 1:3
+## Quick Knowledge Check
 
-Some setups may not provide enough space for a 1:3 ratio.
+**1. What is the difference between having emotions and trading emotionally?**
 
-The trader may:
+**2. What is FOMO and how can it damage an entry?**
 
-- wait for a better entry
-- reduce the target only if the strategy permits
-- avoid the trade
-- look for another setup
+**3. What is revenge trading?**
 
-Skipping a poor trade is part of professional discipline.
+**4. Why can a winning streak also become dangerous?**
 
----
+**5. What should you do after three consecutive losses under the course's behavioural safeguard?**
 
-# Reward-to-Risk vs Risk-to-Reward
-
-These expressions are sometimes written differently.
-
-Risk-to-reward:
-
-1:3
-
-Reward-to-risk:
-
-3:1
-
-Both describe the same relationship.
-
-In this course, we will use:
-
-**Risk-to-Reward = 1:3**
+**6. What is the difference between a strategy loss and an execution mistake?**
 
 ---
 
-# Stop-Loss Hunting
+## Key Takeaways
 
-The term stop-loss hunting is often used when price moves beyond an obvious level and then reverses.
-
-This may happen because:
-
-- many orders are placed around obvious levels
-- liquidity is concentrated there
-- volatility temporarily increases
-- the initial breakout fails
-
-This does not mean traders should stop using stop-losses.
-
-Instead, stop-losses should be placed beyond logical zones with enough space for normal market movement.
-
----
-
-# Spread and Stop-Loss Placement
-
-The spread can affect when a stop-loss is triggered.
-
-A stop placed too close to the entry may be activated by normal spread movement.
-
-This is especially important during:
-
-- market openings
-- news events
-- low-liquidity periods
-- volatile sessions
-
-Always understand how the trading platform displays bid and ask prices.
+- Trading psychology affects how well you execute your strategy.
+- The goal is not to remove emotion but to prevent it from controlling decisions.
+- A properly executed trade can still lose.
+- Fear can create hesitation and premature exits.
+- Greed can create excessive risk and unnecessary trades.
+- FOMO often leads to chasing price and poor R:R.
+- Revenge trading attempts to recover losses emotionally.
+- Overtrading creates trades where valid opportunities may not exist.
+- Never force a setup.
+- Winning streaks can create overconfidence just as losing streaks can create fear.
+- Evaluate whether a loss came from the strategy or from breaking your rules.
+- After three consecutive losses, use the course's stop-for-the-day safeguard.
+- The Dessetra maximum session-risk ceiling still applies independently.
+- Discipline means executing predefined rules even when emotions encourage something different.
 
 ---
 
-# News and Trade Management
+## Lesson Completion
 
-Before entering a trade, check whether major news is approaching.
+You now understand that successful execution requires more than identifying the market correctly.
 
-News may cause:
+You must also manage **your own decisions**.
 
-- sharp price movement
-- expanded spreads
-- slippage
-- false breakouts
-- sudden reversals
+Next:
 
-A trader may decide to:
-
-- avoid entering
-- reduce position size
-- close before the event
-- follow a tested news-trading plan
-
-The decision must be made before emotional pressure begins.
-
----
-
-# Setting the Trade Before Entry
-
-A complete trade plan should include:
-
-1. Entry price
-2. Stop-loss level
-3. Take-profit level
-4. Monetary risk
-5. Position size
-6. Risk-to-reward ratio
-7. Trade reason
-8. Invalidation condition
-9. Management rules
-10. News considerations
-
-A trade should not be entered until these are clear.
-
----
-
-# Example of a Complete Trade Plan
-
-Account balance:
-
-$2,000
-
-Risk percentage:
-
-1%
-
-Maximum risk:
-
-$20
-
-Trade direction:
-
-Buy
-
-Entry:
-
-$50
-
-Stop-loss:
-
-$48
-
-Risk per unit:
-
-$2
-
-Take-profit:
-
-$56
-
-Reward per unit:
-
-$6
-
-Risk-to-reward:
-
-1:3
-
-Position size:
-
-10 units
-
-Total risk:
-
-10 × $2 = $20
-
-Potential reward:
-
-10 × $6 = $60
-
-This trade remains within the planned 1% account risk.
-
----
-
-# Managing a Winning Trade
-
-When a trade moves into profit, avoid:
-
-- closing immediately because of fear
-- extending the target because of greed
-- moving the stop without rules
-- adding a larger position emotionally
-
-Follow the predefined management plan.
-
-A disciplined exit is as important as a disciplined entry.
-
----
-
-# Managing a Losing Trade
-
-When a trade moves toward the stop-loss:
-
-- do not increase the risk
-- do not remove the stop
-- do not add emotionally
-- do not immediately open another trade
-- accept the planned outcome
-
-A controlled loss is a normal business expense in trading.
-
----
-
-# Risk-to-Reward and Session Risk
-
-Even with a 1:3 setup, the amount at risk must remain controlled.
-
-For this course:
-
-- Average target: approximately 1:3
-- Maximum total session risk: 5% of trading capital
-
-A favourable reward ratio does not justify excessive position size.
-
----
-
-# Pre-Trade Checklist
-
-Before opening a trade, confirm:
-
-- The setup follows the strategy.
-- The entry is clearly defined.
-- The stop-loss is at a logical invalidation point.
-- The take-profit is realistic.
-- The trade has enough market space.
-- The risk-to-reward is acceptable.
-- The position size matches the planned risk.
-- Total open risk remains controlled.
-- Session risk remains below 5%.
-- Major news has been considered.
-- The possible loss is emotionally acceptable.
-
----
-
-# Common Beginner Mistakes
-
-Avoid these mistakes:
-
-- entering before setting a stop-loss
-- choosing the target after entry
-- moving the stop farther away
-- placing stops randomly
-- using unrealistic profit targets
-- forcing every trade to produce 1:3
-- risking more because the setup looks certain
-- closing profitable trades too early
-- allowing losing trades to run
-- ignoring spread, slippage and volatility
-- increasing the target because of greed
-- continuing to trade after reaching the session risk limit
-
----
-
-# Key Principle
-
-The stop-loss protects the account.
-
-The take-profit defines the objective.
-
-The risk-to-reward ratio helps determine whether the opportunity is worth taking.
-
-All three should be planned before entry.
-
----
-
-# Lesson Summary
-
-A stop-loss closes a trade when the trading idea becomes invalid.
-
-A take-profit defines where profit may be secured.
-
-Risk-to-reward compares the possible loss with the possible gain.
-
-For this course, traders should generally aim for an average risk-to-reward ratio of approximately 1:3.
-
-This means risking one unit to potentially gain three units.
-
-However, every target must remain realistic and supported by market structure.
-
-Traders should never move a stop-loss farther away because of emotion.
-
-They should also ensure total session risk never exceeds 5% of trading capital.
-
-Professional trade management begins before the trade is opened.
+**Lesson 4 â€” Trading Plan & Journal**

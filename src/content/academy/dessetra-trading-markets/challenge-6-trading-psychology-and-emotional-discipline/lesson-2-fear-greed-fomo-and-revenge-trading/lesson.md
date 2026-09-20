@@ -1,4 +1,4 @@
----
+﻿---
 title: Fear, Greed, FOMO & Revenge Trading
 lessonNumber: 2
 duration: 30
@@ -29,7 +29,7 @@ They are successful because they have learned how to manage them.
 
 ---
 
-# Why These Four Emotions Matter
+## Why These Four Emotions Matter
 
 These emotions affect almost every trading decision.
 
@@ -48,7 +48,7 @@ When uncontrolled, these emotions can destroy months of disciplined trading with
 
 ---
 
-# Understanding Fear
+## Understanding Fear
 
 Fear is the emotional response to the possibility of loss.
 
@@ -60,7 +60,7 @@ It becomes dangerous when it changes the trader's behaviour.
 
 ---
 
-# Common Causes of Fear
+## Common Causes of Fear
 
 Fear may develop because of:
 
@@ -78,7 +78,7 @@ Identifying the source of fear helps determine the appropriate solution.
 
 ---
 
-# Fear Before Entering
+## Fear Before Entering
 
 Before entry, fear may cause a trader to:
 
@@ -95,7 +95,7 @@ This often creates regret.
 
 ---
 
-# Fear During a Trade
+## Fear During a Trade
 
 While a trade is open, fear may cause the trader to:
 
@@ -110,7 +110,7 @@ Short-term price movement often creates emotional pressure.
 
 ---
 
-# Fear After a Loss
+## Fear After a Loss
 
 Following a losing trade, fear may cause:
 
@@ -124,7 +124,7 @@ One controlled loss should never determine future decisions.
 
 ---
 
-# Healthy Fear vs Unhealthy Fear
+## Healthy Fear vs Unhealthy Fear
 
 Healthy fear encourages:
 
@@ -147,7 +147,7 @@ The objective is to prevent fear from controlling decisions.
 
 ---
 
-# Reducing Fear
+## Reducing Fear
 
 Fear can often be reduced by:
 
@@ -163,7 +163,7 @@ Confidence grows through preparation rather than prediction.
 
 ---
 
-# Understanding Greed
+## Understanding Greed
 
 Greed is the desire to earn more than the trading plan allows.
 
@@ -173,7 +173,7 @@ Instead of following the plan, the trader begins seeking additional profit regar
 
 ---
 
-# Signs of Greed
+## Signs of Greed
 
 Possible signs include:
 
@@ -189,7 +189,7 @@ Greed usually encourages the trader to believe that "one more trade" will produc
 
 ---
 
-# Why Greed Is Dangerous
+## Why Greed Is Dangerous
 
 Greed often leads to:
 
@@ -203,7 +203,7 @@ Many accounts are damaged not after losing streaks, but after profitable periods
 
 ---
 
-# Controlling Greed
+## Controlling Greed
 
 A trader can reduce greed by:
 
@@ -218,7 +218,7 @@ Discipline should remain unchanged during winning periods.
 
 ---
 
-# Understanding Fear of Missing Out (FOMO)
+## Understanding Fear of Missing Out (FOMO)
 
 Fear of Missing Out (FOMO) occurs when the trader feels compelled to enter because price is already moving.
 
@@ -234,7 +234,7 @@ FOMO often appears during:
 
 ---
 
-# Signs of FOMO
+## Signs of FOMO
 
 A trader experiencing FOMO may:
 
@@ -250,7 +250,7 @@ The decision becomes emotional rather than analytical.
 
 ---
 
-# The Cost of Chasing
+## The Cost of Chasing
 
 Chasing price often produces:
 
@@ -264,7 +264,7 @@ By the time many traders enter emotionally, early participants may already be ta
 
 ---
 
-# Recognising FOMO
+## Recognising FOMO
 
 Ask yourself:
 
@@ -278,7 +278,7 @@ If the answer is no, the trade should usually be avoided.
 
 ---
 
-# Preventing FOMO
+## Preventing FOMO
 
 Practical methods include:
 
@@ -293,7 +293,7 @@ Missing one trade is better than forcing a poor trade.
 
 ---
 
-# Understanding Revenge Trading
+## Understanding Revenge Trading
 
 Revenge trading occurs when the trader attempts to recover losses emotionally rather than logically.
 
@@ -303,7 +303,7 @@ This is one of the most destructive behaviours in trading.
 
 ---
 
-# Why Revenge Trading Happens
+## Why Revenge Trading Happens
 
 Common causes include:
 
@@ -319,7 +319,7 @@ Instead of accepting uncertainty, the trader attempts to defeat the market.
 
 ---
 
-# Warning Signs of Revenge Trading
+## Warning Signs of Revenge Trading
 
 Possible warning signs include:
 
@@ -335,7 +335,7 @@ The trader no longer behaves according to the trading plan.
 
 ---
 
-# The Revenge Trading Cycle
+## The Revenge Trading Cycle
 
 A common cycle is:
 
@@ -351,7 +351,7 @@ Breaking this cycle requires stopping before step three.
 
 ---
 
-# How to Prevent Revenge Trading
+## How to Prevent Revenge Trading
 
 Possible rules include:
 
@@ -366,7 +366,7 @@ Recovery should come from discipline, not emotion.
 
 ---
 
-# Emotional Recovery After a Loss
+## Emotional Recovery After a Loss
 
 After a losing trade:
 
@@ -381,7 +381,7 @@ A controlled loss is part of professional trading.
 
 ---
 
-# Combining Fear and Greed
+## Combining Fear and Greed
 
 Fear and greed often alternate.
 
@@ -401,7 +401,7 @@ Emotional extremes often replace consistent decision-making.
 
 ---
 
-# Emotional Balance
+## Emotional Balance
 
 The goal is emotional balance.
 
@@ -417,7 +417,7 @@ Balance produces consistency.
 
 ---
 
-# The Role of Position Size
+## The Role of Position Size
 
 Position size strongly affects emotional behaviour.
 
@@ -432,7 +432,7 @@ Smaller, controlled risk allows clearer thinking.
 
 ---
 
-# Risk Management Supports Psychology
+## Risk Management Supports Psychology
 
 Psychology and risk management work together.
 
@@ -447,7 +447,7 @@ These limits help reduce emotional decision-making.
 
 ---
 
-# Practical Emotional Rules
+## Practical Emotional Rules
 
 A trader may create rules such as:
 
@@ -462,7 +462,7 @@ These rules should become part of the written trading plan.
 
 ---
 
-# Emotional Pause Technique
+## Emotional Pause Technique
 
 Before entering an emotional trade:
 
@@ -477,7 +477,7 @@ A pause often prevents expensive mistakes.
 
 ---
 
-# Learning From Emotional Mistakes
+## Learning From Emotional Mistakes
 
 Every emotional mistake should become a lesson.
 
@@ -492,7 +492,7 @@ Mistakes become valuable only when they improve future behaviour.
 
 ---
 
-# Building Emotional Discipline
+## Building Emotional Discipline
 
 Emotional discipline grows through:
 
@@ -510,7 +510,7 @@ Like technical analysis, psychological discipline improves with deliberate pract
 
 ---
 
-# Key Principle
+## Key Principle
 
 The market will always create opportunities.
 
@@ -520,7 +520,7 @@ A trader who allows fear, greed, FOMO or revenge trading to control decisions ma
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Fear encourages hesitation and premature exits.
 

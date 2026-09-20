@@ -1,404 +1,413 @@
----
-title: Introduction to Candlestick Charts
+﻿---
+title: Moving Averages
 lessonNumber: 1
 duration: 20
-difficulty: Beginner
-objective: Learn how candlestick charts are formed, understand the meaning of candle bodies and wicks, and begin interpreting the struggle between buyers and sellers.
+difficulty: Intermediate
+objective: Understand Exponential Moving Averages and use the 21, 50 and 200 EMA to identify trend direction, trend strength, pullbacks and areas of dynamic support or resistance.
 video:
 resource:
 ---
 
-# Introduction to Candlestick Charts
+# Moving Averages
 
-Candlestick charts are one of the most widely used tools in technical analysis.
+Price constantly moves up and down, which can make the underlying direction difficult to see.
 
-They help traders understand how price moved during a specific period and provide visual information about the activity of buyers and sellers.
+A **Moving Average (MA)** smooths price data over a selected number of periods so that the general direction becomes clearer.
 
-Each candlestick tells a small part of the market story.
+Moving averages can help traders identify:
 
-When several candlesticks are studied together, they help traders understand:
+- trend direction
+- short-term versus long-term movement
+- pullbacks
+- possible dynamic support and resistance
+- changes in market direction
 
-- market direction
-- momentum
-- rejection
-- hesitation
-- buying pressure
-- selling pressure
-- possible continuation
-- possible reversal
-
-Candlesticks do not predict the future with certainty.
-
-They help traders interpret price behaviour and make probability-based decisions.
+In this course, our focus will be on the **Exponential Moving Average (EMA).**
 
 ---
 
-# What Is a Candlestick?
+## SMA vs EMA
 
-A candlestick represents the price movement of an asset during a selected timeframe.
+Two common types of moving averages are:
+
+### Simple Moving Average â€” SMA
+
+The SMA calculates the average price over a selected number of periods.
+
+Each price receives equal weighting.
+
+### Exponential Moving Average â€” EMA
+
+The EMA gives greater weight to more recent prices.
+
+Because recent prices receive more importance, the EMA normally reacts faster to current price movement than an SMA using the same period.
+
+This responsiveness is useful, but it also means a faster EMA can react to short-term market noise.
+
+---
+
+## Understanding EMA Periods
+
+The number attached to an EMA represents how many periods are included in its calculation.
 
 For example:
 
-- On a 1-minute chart, each candle represents 1 minute.
-- On a 15-minute chart, each candle represents 15 minutes.
-- On a 1-hour chart, each candle represents 1 hour.
-- On a Daily chart, each candle represents one trading day.
+**21 EMA** = based on 21 periods
 
-Every completed candlestick contains four important prices:
+**50 EMA** = based on 50 periods
 
-- Open
-- High
-- Low
-- Close
+**200 EMA** = based on 200 periods
 
-These are commonly called OHLC data.
+The meaning of a period depends on your chart timeframe.
 
----
+On M5, a period represents a 5-minute candle.
 
-# The Opening Price
+On H1, a period represents a 1-hour candle.
 
-The opening price is the price at which the selected period began.
-
-For example, on a 1-hour chart, it is the price at the beginning of that hour.
-
-The opening price helps traders understand where the struggle between buyers and sellers started.
+Therefore, the same EMA can behave differently across different timeframes.
 
 ---
 
-# The Highest Price
+## Our Three EMAs
 
-The high is the highest price reached during the candle's timeframe.
+The Dessetra framework will use:
 
-It shows the furthest point buyers were able to push the market upward during that period.
+- **21 EMA â€” Fast**
+- **50 EMA â€” Medium**
+- **200 EMA â€” Slow**
 
----
-
-# The Lowest Price
-
-The low is the lowest price reached during the candle's timeframe.
-
-It shows the furthest point sellers were able to push the market downward.
+These three averages allow us to compare short-term, medium-term and longer-term price direction.
 
 ---
 
-# The Closing Price
+## 21 EMA â€” Fast Trend
 
-The closing price is the final price when the candle's period ends.
+The **21 EMA** reacts fastest of the three.
 
-Many traders consider the closing price especially important because it shows where the market settled after the battle between buyers and sellers.
+It stays relatively close to current price and can help us observe:
 
----
+- short-term momentum
+- smaller pullbacks
+- changes in immediate direction
+- possible continuation areas
 
-# The Candle Body
+Because it reacts quickly, it can also produce more false signals in choppy markets.
 
-The body is the thick section between the opening and closing prices.
-
-It helps show which side had more control during that period.
-
-A large body may indicate strong momentum.
-
-A small body may indicate:
-
-- weak momentum
-- hesitation
-- balance between buyers and sellers
-- uncertainty
-
-The meaning of the body depends on its location and surrounding market structure.
+Never trade simply because price touches the 21 EMA.
 
 ---
 
-# The Wick
+## 50 EMA â€” Medium Trend
 
-The thin lines above and below the candle body are called wicks.
+The **50 EMA** reacts more slowly than the 21 EMA.
 
-They may also be called shadows.
+It helps us observe the broader movement behind short-term price fluctuations.
 
-The upper wick shows how far price moved above the candle body.
+During a healthy trend, price may sometimes pull back beyond the 21 EMA but continue reacting around the 50 EMA.
 
-The lower wick shows how far price moved below the candle body.
+This makes the 50 EMA useful when judging whether a pullback is still occurring inside the larger trend.
 
-Wicks may indicate rejection.
+---
+
+## 200 EMA â€” Larger Trend Filter
+
+The **200 EMA** is the slowest EMA in our framework.
+
+It helps us understand the broader directional context.
+
+A market trading consistently above a rising 200 EMA provides different context from a market trading consistently below a falling 200 EMA.
+
+The 200 EMA should therefore be treated mainly as a **trend filter**, not as an automatic Buy or Sell signal.
+
+---
+
+## Bullish EMA Alignment
+
+Our strongest bullish alignment occurs when the EMAs are arranged:
+
+**21 EMA**
+
+**50 EMA**
+
+**200 EMA**
+
+from top to bottom.
+
+In other words:
+
+**21 EMA > 50 EMA > 200 EMA**
+
+This shows that shorter-term price movement is stronger than the medium and longer-term averages.
+
+Ideally, market structure should also be bullish:
+
+**HH â†’ HL â†’ HH**
+
+The EMA alignment supports the market structure rather than replacing it.
+
+---
+
+## Bearish EMA Alignment
+
+Our bearish alignment is the opposite:
+
+**200 EMA**
+
+**50 EMA**
+
+**21 EMA**
+
+from top to bottom.
+
+In other words:
+
+**21 EMA < 50 EMA < 200 EMA**
+
+Ideally, this should appear together with bearish structure:
+
+**LL â†’ LH â†’ LL**
+
+Again, EMA alignment provides confirmation of the trend rather than creating a complete trade setup by itself.
+
+---
+
+## EMA Crossovers
+
+A crossover occurs when one EMA crosses another.
 
 For example:
 
-- A long upper wick may show that buyers pushed price upward but sellers forced it back down.
-- A long lower wick may show that sellers pushed price downward but buyers forced it back up.
+### Possible Bullish Shift
 
-A wick should not be interpreted alone.
+The 21 EMA crosses above the 50 EMA.
 
-Its location and market context are important.
+If bullish momentum continues, both may eventually move above the 200 EMA.
 
----
+### Possible Bearish Shift
 
-# Bullish Candlestick
+The 21 EMA crosses below the 50 EMA.
 
-A bullish candlestick forms when the closing price is higher than the opening price.
+Continued weakness may eventually place both below the 200 EMA.
 
-This means buyers gained control during that period.
+Crossovers can help identify changes in direction, but they are **lagging signals** because moving averages are calculated from historical prices.
 
-A bullish candle generally shows upward price movement.
-
-However, one bullish candle does not automatically mean that a long-term uptrend has started.
+Do not assume every crossover begins a new trend.
 
 ---
 
-# Bearish Candlestick
+## Dynamic Support & Resistance
 
-A bearish candlestick forms when the closing price is lower than the opening price.
+Unlike the horizontal zones studied in Challenge 2, an EMA moves as new price data appears.
 
-This means sellers gained control during that period.
+Because of this, traders sometimes observe EMAs acting as **dynamic support or resistance**.
 
-A bearish candle generally shows downward price movement.
+### Bullish Example
 
-Like a bullish candle, one bearish candle should not be used alone to make a trading decision.
+Price is trending upward.
 
----
+The EMAs are bullishly aligned.
 
-# Large Candles
+Price pulls back toward the 21 or 50 EMA and then buyers regain control.
 
-A large candle body may indicate strong market momentum.
+The EMA area may be supporting the continuation of the trend.
 
-A large bullish candle may show:
+### Bearish Example
 
-- aggressive buying
-- strong demand
-- breakout momentum
-- market confidence
+Price is trending downward.
 
-A large bearish candle may show:
+The EMAs are bearishly aligned.
 
-- aggressive selling
-- strong supply
-- panic
-- bearish momentum
+Price pulls back upward toward an EMA and sellers regain control.
 
-Large candles should be studied together with support, resistance, trend and volume.
+The EMA area may act as dynamic resistance.
 
 ---
 
-# Small Candles
+## EMA Rejection
 
-A small candle body may indicate:
+An EMA rejection occurs when price approaches or crosses an EMA but fails to continue through it and then moves back in the trend direction.
 
-- indecision
-- low volatility
-- weak momentum
-- market hesitation
-- temporary balance between buyers and sellers
+However:
 
-Small candles often appear before major market movement, but they do not guarantee that a breakout will occur.
+**Touching an EMA is not enough.**
 
----
-
-# Long Upper Wick
-
-A long upper wick may indicate that price moved upward but was rejected.
-
-This means buyers initially pushed price higher, but sellers later became stronger.
-
-A long upper wick may be more significant when it appears:
-
-- near resistance
-- after a strong uptrend
-- at the end of a bullish move
-- during a failed breakout
-
-Context determines its importance.
-
----
-
-# Long Lower Wick
-
-A long lower wick may indicate that price moved downward but was rejected.
-
-This means sellers initially pushed price lower, but buyers later became stronger.
-
-A long lower wick may be more significant when it appears:
-
-- near support
-- after a downtrend
-- at the end of a bearish move
-- during a failed breakdown
-
-It should still be confirmed with other analysis.
-
----
-
-# No or Very Small Wicks
-
-A candle with little or no wick may show strong control from one side of the market.
-
-For example:
-
-- A strong bullish candle with little upper wick may show that buyers remained in control until the close.
-- A strong bearish candle with little lower wick may show that sellers remained in control until the close.
-
-These candles often show momentum, but traders must still consider location and trend.
-
----
-
-# Candlestick Colour
-
-Trading platforms use different candle colours.
-
-Common combinations include:
-
-- Green for bullish and red for bearish
-- White for bullish and black for bearish
-- Blue for bullish and red for bearish
-
-The colour itself is not what matters.
-
-What matters is whether the candle closed above or below its opening price.
-
----
-
-# Completed and Active Candles
-
-A completed candle has reached the end of its timeframe.
-
-An active candle is still forming.
-
-The shape of an active candle can change before it closes.
-
-For example, a candle may appear strongly bullish at first and become bearish before the period ends.
-
-Professional traders are careful about making decisions based on incomplete candles.
-
-Waiting for candle closure can provide clearer confirmation.
-
----
-
-# Candlestick Context
-
-A candlestick should never be analyzed in isolation.
-
-The same candle may have different meanings depending on where it appears.
-
-Important questions include:
-
-- Is the market trending upward or downward?
-- Is price near support?
-- Is price near resistance?
-- Is the candle forming after a strong move?
-- Has price broken an important level?
-- Does the higher timeframe agree?
-- Is major news affecting the market?
-
-Location is often more important than the candle shape itself.
-
----
-
-# Candlesticks and Market Psychology
-
-Candlesticks visually represent the battle between buyers and sellers.
-
-For example:
-
-A long bullish body may show strong confidence from buyers.
-
-A long upper wick may show that sellers rejected higher prices.
-
-A long lower wick may show that buyers rejected lower prices.
-
-A small body may show uncertainty.
-
-Understanding this struggle helps traders interpret the behaviour behind price movement.
-
----
-
-# Candlestick Charts and Timeframes
-
-The meaning of a candle depends partly on its timeframe.
-
-A bullish candle on the 5-minute chart may be only a small movement inside a larger Daily downtrend.
-
-A rejection candle on the Daily chart may carry more significance than one on the 1-minute chart.
-
-Higher timeframe candles generally contain more market information than lower timeframe candles.
-
-This is why candlestick analysis should be combined with multiple timeframe analysis.
-
----
-
-# Candlestick Analysis Is Not a Complete Strategy
-
-Candlestick patterns alone are not enough to build a complete trading strategy.
-
-A professional trading decision may also include:
+Before considering the rejection meaningful, look at:
 
 - market structure
 - trend direction
-- support
-- resistance
-- entry rules
-- stop-loss placement
-- take-profit target
-- risk-to-reward ratio
-- position sizing
-- fundamental events
+- the location of Support/Resistance or Supply/Demand
+- candle behaviour
+- whether the EMA is rising, falling or flat
 
-Candlesticks are one part of the analysis process.
+The EMA should provide additional evidenceâ€”not the entire reason for a trade.
 
 ---
 
-# Common Beginner Mistakes
+## Trending vs Ranging Markets
 
-Avoid these mistakes:
+Moving averages are easier to interpret when the market is trending.
 
-- Memorizing candle names without understanding market context
-- Trading every candlestick pattern
-- Entering before the candle closes
-- Ignoring support and resistance
-- Ignoring the higher timeframe
-- Assuming one candle guarantees a reversal
-- Using candlestick patterns without risk management
-- Changing candle colours and mistaking them for different signals
+### Trending Market
 
-The objective is not to memorize every candle.
+The EMAs may become clearly separated and point in the same direction.
 
-The objective is to understand what buyers and sellers are doing.
+Example:
 
----
+**21 > 50 > 200**
 
-# A Simple Candlestick Reading Process
+with all three rising.
 
-Before interpreting a candle, ask:
+### Ranging Market
 
-1. What is the current trend?
-2. Where is the candle forming?
-3. Is price near support or resistance?
-4. Is the candle completed?
-5. Is the body large or small?
-6. Are the wicks long or short?
-7. Which side appears stronger?
-8. Does the next candle confirm the idea?
-9. Does the setup match my trading plan?
-10. Is the potential reward worth the risk?
+The EMAs may become:
 
-This process encourages discipline instead of emotional reaction.
+- flat
+- compressed
+- repeatedly crossing each other
+- surrounded by price moving back and forth
+
+This is a warning that trend-following EMA signals may become unreliable.
+
+Do not force EMA trades in a market with no clear direction.
 
 ---
 
-# Key Principle
+## Combine EMA With Market Structure
 
-The shape of a candlestick shows what happened during one period.
+Never allow an indicator to make you ignore price.
 
-Its location explains why that information may matter.
+For example:
 
-Professional traders study both.
+### Stronger Bullish Context
+
+- H4/H1 trend is bullish
+- Price forms Higher Highs and Higher Lows
+- 21 EMA is above 50 EMA
+- 50 EMA is above 200 EMA
+- Price pulls back toward an important area
+- Buyers begin responding
+
+This provides more evidence than simply seeing price touch the 21 EMA.
+
+The same logic applies in reverse for bearish setups.
 
 ---
 
-# Lesson Summary
+## Practical Exercise â€” Configure Your EMAs
 
-Candlestick charts display the opening, highest, lowest and closing prices of an asset during a selected timeframe.
+Open **TradingView**.
 
-The body shows the distance between the opening and closing prices, while the wicks show the highest and lowest points reached.
+Choose **EURUSD or XAUUSD**.
 
-Bullish candles indicate that price closed above its opening price, while bearish candles indicate that price closed below it.
+Add three Exponential Moving Averages:
 
-Candlesticks help traders understand market psychology, momentum, rejection and indecision.
+- EMA 21
+- EMA 50
+- EMA 200
 
-However, candlestick analysis should always be combined with market structure, support, resistance, multiple timeframe analysis and proper risk management.
+Use three clearly distinguishable colours.
+
+Now switch between:
+
+**H4 â†’ H1 â†’ M15 â†’ M5**
+
+Observe how the EMA relationships change across timeframes.
+
+---
+
+## Practical Exercise â€” Find EMA Alignment
+
+Find:
+
+### One Bullish Example
+
+Look for:
+
+- 21 EMA above 50 EMA
+- 50 EMA above 200 EMA
+- bullish market structure
+- a pullback toward an EMA
+
+### One Bearish Example
+
+Look for:
+
+- 21 EMA below 50 EMA
+- 50 EMA below 200 EMA
+- bearish market structure
+- a pullback toward an EMA
+
+Do not place a trade.
+
+The objective is to learn how the averages behave around price.
+
+---
+
+## Screenshot Assignment
+
+Submit **two annotated screenshots**.
+
+### Screenshot 1 â€” Bullish
+
+Label:
+
+- 21 EMA
+- 50 EMA
+- 200 EMA
+- Higher High
+- Higher Low
+- one EMA pullback or rejection
+
+### Screenshot 2 â€” Bearish
+
+Label:
+
+- 21 EMA
+- 50 EMA
+- 200 EMA
+- Lower High
+- Lower Low
+- one EMA pullback or rejection
+
+Under the screenshots, briefly explain:
+
+**Which EMA reacted fastest to price and which reacted slowest?**
+
+---
+
+## Quick Knowledge Check
+
+**1. What is the main difference between an SMA and EMA?**
+
+**2. Which of our three EMAs reacts fastest to price movement?**
+
+**3. What is the bullish order of the 21, 50 and 200 EMA?**
+
+**4. What does it suggest when the EMAs become flat, compressed and repeatedly cross each other?**
+
+**5. Why should an EMA rejection not be used as an automatic trade entry?**
+
+---
+
+## Key Takeaways
+
+- Moving averages smooth price movement to make trend direction easier to observe.
+- EMA gives greater weight to recent prices than SMA.
+- The **21 EMA** represents the fastest movement in our framework.
+- The **50 EMA** provides medium-term trend context.
+- The **200 EMA** acts as our broader trend filter.
+- Bullish alignment is **21 > 50 > 200**.
+- Bearish alignment is **21 < 50 < 200**.
+- EMAs can behave as dynamic support and resistance.
+- Moving averages lag price and can produce false signals.
+- Always combine EMA information with market structure and price context.
+
+---
+
+## Lesson Completion
+
+You should now be able to configure the 21, 50 and 200 EMA and use them to evaluate trend direction and pullbacks.
+
+Next:
+
+**Lesson 2 â€” MACD & Momentum**

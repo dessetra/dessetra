@@ -7,123 +7,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the main purpose of market analysis?",
+      "question": "Which market structure normally represents a bullish trend?",
       "options": [
-        "To guarantee profitable trades",
-        "To make informed trading decisions based on evidence",
-        "To predict every market movement",
-        "To eliminate trading risk"
+        "Lower Highs and Lower Lows",
+        "Higher Highs and Higher Lows",
+        "Higher Highs and Lower Lows",
+        "Equal Highs and Equal Lows"
       ],
       "correctAnswer": 1,
-      "explanation": "Market analysis helps traders make informed decisions using evidence rather than emotion."
+      "explanation": "A bullish market structure generally forms Higher Highs (HH) and Higher Lows (HL)."
     },
     {
       "id": 2,
-      "question": "Which type of analysis mainly studies charts and historical price movement?",
+      "question": "What is a correction or pullback?",
       "options": [
-        "Fundamental Analysis",
-        "Sentiment Analysis",
-        "Technical Analysis",
-        "Economic Analysis"
+        "A temporary movement against the current trend",
+        "A guaranteed reversal of the trend",
+        "A period when the market is closed",
+        "A movement that only occurs on M5"
       ],
-      "correctAnswer": 2,
-      "explanation": "Technical analysis focuses primarily on charts, price action, and market structure."
+      "correctAnswer": 0,
+      "explanation": "A correction is a temporary movement against the current trend and does not automatically mean the trend has reversed."
     },
     {
       "id": 3,
-      "question": "Which type of analysis studies interest rates, inflation and GDP?",
+      "question": "How should support and resistance generally be marked?",
       "options": [
-        "Technical Analysis",
-        "Fundamental Analysis",
-        "Volume Analysis",
-        "Chart Analysis"
+        "As exact guaranteed reversal prices",
+        "As zones where price has previously reacted",
+        "Only at the current market price",
+        "Only on the M5 timeframe"
       ],
       "correctAnswer": 1,
-      "explanation": "Fundamental analysis evaluates economic and financial factors that influence markets."
+      "explanation": "Support and resistance are better treated as zones because price does not always react at one exact price."
     },
     {
       "id": 4,
-      "question": "Which statement best describes market sentiment?",
+      "question": "What is a false breakout?",
       "options": [
-        "The market's historical prices",
-        "The emotions and overall attitude of market participants",
-        "Government regulations",
-        "A technical indicator"
+        "Price remains inside a range without moving",
+        "Price breaks an important area and continues strongly",
+        "Price moves beyond an important area but then returns back",
+        "Price creates a new candlestick"
       ],
-      "correctAnswer": 1,
-      "explanation": "Market sentiment reflects the confidence, fear or optimism of traders and investors."
+      "correctAnswer": 2,
+      "explanation": "A false breakout occurs when price moves beyond an important support or resistance area but fails to continue and returns."
     },
     {
       "id": 5,
-      "question": "Which timeframe should usually be analyzed first during top-down analysis?",
+      "question": "Which description best matches a Demand Zone?",
       "options": [
-        "1 Minute",
-        "5 Minutes",
-        "15 Minutes",
-        "The higher timeframe"
+        "An area from which strong buying previously moved price upward",
+        "An area where price must always reverse downward",
+        "Any previous market high",
+        "An area containing only bearish candles"
       ],
-      "correctAnswer": 3,
-      "explanation": "Professional traders normally begin with higher timeframes before moving to lower ones."
+      "correctAnswer": 0,
+      "explanation": "A Demand Zone is an area from which strong buying previously entered the market and moved price upward."
     },
     {
       "id": 6,
-      "question": "Why do traders use multiple timeframe analysis?",
+      "question": "In the FVG model taught in this course, how many candles are used to identify the gap?",
       "options": [
-        "To make trading more complicated",
-        "To understand the bigger market picture before refining entries",
-        "To remove the need for risk management",
-        "To predict every future price movement"
+        "Two",
+        "Three",
+        "Four",
+        "Five"
       ],
       "correctAnswer": 1,
-      "explanation": "Multiple timeframe analysis helps traders see both the overall trend and precise entry opportunities."
+      "explanation": "The Fair Value Gap framework used in this course identifies an imbalance using a three-candle sequence."
     },
     {
       "id": 7,
-      "question": "Which of the following is considered a higher timeframe?",
+      "question": "Why can previous swing highs and lows become important liquidity areas?",
       "options": [
-        "1 Minute",
-        "5 Minutes",
-        "Daily",
-        "15 Minutes"
+        "Because price is guaranteed to reverse there",
+        "Because trading orders may accumulate around obvious market levels",
+        "Because brokers prevent price from crossing them",
+        "Because they only exist on higher timeframes"
       ],
-      "correctAnswer": 2,
-      "explanation": "Daily, Weekly and Monthly charts are generally considered higher timeframes."
+      "correctAnswer": 1,
+      "explanation": "Previous highs and lows are closely watched areas where stop-loss, breakout and other trading orders may accumulate."
     },
     {
       "id": 8,
-      "question": "Which principle is true about technical analysis?",
+      "question": "What is the main purpose of starting analysis on a higher timeframe?",
       "options": [
-        "It guarantees profitable trades",
-        "It improves probability rather than certainty",
-        "It ignores price movement",
-        "It eliminates market risk"
+        "To guarantee the direction of the next candle",
+        "To determine the larger trend and market context",
+        "To avoid using market structure",
+        "To find the smallest possible Stop Loss"
       ],
       "correctAnswer": 1,
-      "explanation": "Technical analysis helps improve the probability of good decisions but cannot guarantee outcomes."
+      "explanation": "Higher timeframes help establish the larger trend, structure and important market areas before lower-timeframe analysis."
     },
     {
       "id": 9,
-      "question": "Why should traders pay attention to central bank announcements?",
+      "question": "In the course's top-down analysis process, which sequence is used?",
       "options": [
-        "They often influence interest rates and market volatility",
-        "They predict future market prices",
-        "They guarantee profitable trades",
-        "They determine cryptocurrency mining rewards"
+        "M5 → M15 → H1 → H4",
+        "H1 → M5 → H4 → M15",
+        "H4 → H1 → M15 → M5",
+        "M15 → H4 → M5 → H1"
       ],
-      "correctAnswer": 0,
-      "explanation": "Central bank decisions often have a significant impact on currencies and financial markets."
+      "correctAnswer": 2,
+      "explanation": "The course uses H4 → H1 → M15 → M5, moving from higher-timeframe context toward lower-timeframe execution."
     },
     {
       "id": 10,
-      "question": "Which statement best describes a professional market analysis process?",
+      "question": "H4 is bearish, but M5 is currently bullish. What should the trader consider first?",
       "options": [
-        "Trade immediately after seeing a price move",
-        "Study the market, confirm the setup, calculate risk, then decide whether to trade",
-        "Always follow social media signals",
-        "Enter every opportunity to avoid missing profits"
+        "The H4 trend has definitely reversed",
+        "The M5 move may be a correction within the larger bearish structure",
+        "The H4 chart should always be ignored",
+        "A Buy trade must be entered immediately"
       ],
       "correctAnswer": 1,
-      "explanation": "Professional traders follow a structured process that includes analysis, confirmation and risk management before entering a trade."
+      "explanation": "A bullish lower-timeframe movement can be a correction inside a larger bearish trend, so higher-timeframe context should be considered before making a decision."
     }
   ]
 }

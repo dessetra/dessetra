@@ -1,334 +1,304 @@
----
-title: Fundamental Analysis
+﻿---
+title: Supply, Demand, Liquidity & FVG
 lessonNumber: 3
 duration: 20
-difficulty: Beginner
-objective: Learn how economic events, financial data, company performance, blockchain fundamentals, and global developments influence financial markets.
+difficulty: Intermediate
+objective: Learn how to identify supply and demand zones, understand liquidity, recognize Fair Value Gaps, and combine these concepts with market structure.
 video:
 resource:
 ---
 
-# Fundamental Analysis
+# Supply, Demand, Liquidity & FVG
 
-Fundamental analysis is the process of studying the underlying factors that influence the value of an asset.
+Price movement is driven by the interaction between buyers and sellers.
 
-Instead of focusing mainly on charts, fundamental analysis asks:
+When buying pressure becomes stronger than selling pressure, price can rise.
 
-- Why is the price moving?
-- What events are affecting the market?
-- Is the asset becoming stronger or weaker over time?
-- What information could influence future prices?
+When selling pressure becomes stronger than buying pressure, price can fall.
 
-Professional traders often combine technical and fundamental analysis to improve decision-making.
+These movements can leave important areas on the chart that traders monitor when price returns.
 
 ---
 
-# Why Fundamental Analysis Matters
+## Demand Zones
 
-Financial markets do not move only because of chart patterns.
+A **Demand Zone** is an area where strong buying previously entered the market and price moved significantly upward.
 
-Markets also react to:
+Instead of treating it as one exact price, mark the area from which the strong bullish movement began.
 
-- economic growth
-- inflation
-- interest rates
-- government policies
-- company performance
-- technological innovation
-- political events
-- investor confidence
-- global crises
+When price later returns to this area, traders watch to see whether buyers become active again.
 
-Understanding these factors helps traders avoid being surprised by major market movements.
+### Look for:
 
----
+- a clear area before a strong bullish move
+- strong bullish candles leaving the area
+- an imbalance or FVG
+- a break of previous market structure
 
-# Economic Indicators
-
-Economic indicators measure the health of an economy.
-
-Some of the most important indicators include:
-
-- Gross Domestic Product (GDP)
-- Inflation
-- Employment
-- Interest Rates
-- Consumer Spending
-- Manufacturing Activity
-- Retail Sales
-
-These reports are released regularly and often create significant market volatility.
+A demand zone is an **area of interest**, not an automatic Buy signal.
 
 ---
 
-# Gross Domestic Product (GDP)
+## Supply Zones
 
-GDP measures the total value of goods and services produced within a country.
+A **Supply Zone** is an area where strong selling previously entered the market and price moved significantly downward.
 
-A growing GDP generally suggests:
+It represents an area where sellers previously overwhelmed buyers.
 
-- economic expansion
-- stronger business activity
-- improved employment
-- increased consumer spending
+### Look for:
 
-Weak GDP growth may indicate economic slowdown.
+- a clear area before a strong bearish move
+- strong bearish candles leaving the area
+- an imbalance or FVG
+- a break of previous market structure
 
-Currencies often react when GDP results differ from expectations.
+When price returns to supply, traders observe whether selling pressure appears again.
 
----
-
-# Inflation
-
-Inflation measures how quickly prices increase over time.
-
-Moderate inflation is normal.
-
-Very high inflation reduces purchasing power and may weaken economic stability.
-
-Very low inflation may indicate weak economic activity.
-
-Inflation reports are closely monitored by traders because they often influence central bank decisions.
+A supply zone is not an automatic Sell signal.
 
 ---
 
-# Interest Rates
+## Strong Departure From a Zone
 
-Interest rates represent the cost of borrowing money.
+Pay attention to **how price leaves an area**.
 
-Central banks adjust interest rates to help control inflation and support economic stability.
+A weak movement away from a zone may show little imbalance between buyers and sellers.
 
-Higher interest rates often attract foreign investment, which may strengthen a country's currency.
-
-Lower interest rates may encourage borrowing and spending but can weaken a currency.
-
-Interest rate announcements are among the most important events for Forex traders.
-
----
-
-# Employment Reports
-
-Employment reports show the strength of a country's labor market.
-
-Examples include:
-
-- unemployment rate
-- new jobs created
-- wage growth
-
-Strong employment generally suggests a healthier economy.
-
-Weak employment may indicate slowing economic activity.
-
-Major employment reports can create sharp market movements.
-
----
-
-# Central Banks
-
-Central banks play a major role in financial markets.
-
-Examples include:
-
-- Federal Reserve (United States)
-- European Central Bank
-- Bank of England
-- Bank of Japan
-- Swiss National Bank
-
-Central bank decisions influence:
-
-- interest rates
-- money supply
-- inflation control
-- investor confidence
-
-Professional traders pay close attention to central bank meetings and speeches.
-
----
-
-# Political Events
-
-Politics can influence financial markets through:
-
-- elections
-- wars
-- trade agreements
-- sanctions
-- taxation
-- government spending
-- regulatory changes
-
-Unexpected political developments often increase uncertainty and volatility.
-
----
-
-# Company Performance
-
-In the stock market, company performance is one of the most important fundamental factors.
-
-Investors study:
-
-- revenue
-- profit
-- expenses
-- debt
-- cash flow
-- market share
-- leadership
-- future growth plans
-
-Strong financial performance may increase investor confidence.
-
-Weak performance may reduce demand for a company's shares.
-
----
-
-# Cryptocurrency Fundamentals
-
-Fundamental analysis also applies to cryptocurrencies.
-
-Instead of company reports, traders evaluate blockchain projects.
-
-Important factors include:
-
-- real-world utility
-- blockchain security
-- development activity
-- active users
-- partnerships
-- adoption
-- transaction volume
-- token supply
-- token distribution
-- regulatory environment
-
-Projects with strong long-term fundamentals may attract more investors.
-
----
-
-# Tokenomics
-
-Tokenomics describes how a cryptocurrency is designed economically.
-
-Important questions include:
-
-- How many tokens exist?
-- Can new tokens be created?
-- Is the supply limited?
-- Are tokens burned?
-- How are tokens distributed?
-- What gives the token value?
-
-Understanding tokenomics helps investors evaluate long-term sustainability.
-
----
-
-# News and Market Reactions
-
-Markets often react immediately to important news.
-
-Examples include:
-
-- central bank announcements
-- inflation reports
-- employment data
-- company earnings
-- security breaches
-- exchange listings
-- blockchain upgrades
-- regulatory decisions
-
-Professional traders distinguish between:
-
-- rumors
-- expectations
-- confirmed news
-
-They avoid making emotional decisions based solely on headlines.
-
----
-
-# Market Expectations
-
-Sometimes markets react more strongly to expectations than to the actual news.
+A strong movement containing large directional candles shows more aggressive price movement.
 
 For example:
 
-If investors expect interest rates to rise but they remain unchanged, markets may react negatively even though rates did not fall.
+**Demand â†’ Strong Bullish Move â†’ Structure Break**
 
-Traders therefore compare actual results with market expectations.
+or:
 
----
+**Supply â†’ Strong Bearish Move â†’ Structure Break**
 
-# Long-Term vs Short-Term Impact
-
-Not every news event has the same effect.
-
-Some events influence prices for only a few minutes.
-
-Others affect markets for months or even years.
-
-Professional traders learn to identify which events are likely to have lasting impact.
+This gives the zone more context than simply drawing rectangles around every previous high or low.
 
 ---
 
-# Combining Technical and Fundamental Analysis
+## Imbalance
 
-Many experienced traders combine both approaches.
+Markets do not always move smoothly.
+
+Sometimes price moves rapidly because one side of the market temporarily dominates the other.
+
+This can create an **imbalance**, also referred to in our trading framework as an **inefficiency**.
+
+One form of imbalance we will identify is the **Fair Value Gap (FVG).**
+
+---
+
+## Fair Value Gap â€” FVG
+
+For this course, an FVG is identified using a **three-candle sequence**.
+
+When price moves strongly, the wick of Candle 1 and the wick of Candle 3 may fail to overlap.
+
+The space between them forms the Fair Value Gap.
+
+### Bullish FVG
+
+A strong bullish move occurs and:
+
+**Candle 1 High < Candle 3 Low**
+
+The space between those prices forms a bullish FVG.
+
+### Bearish FVG
+
+A strong bearish move occurs and:
+
+**Candle 1 Low > Candle 3 High**
+
+The space between those prices forms a bearish FVG.
+
+The large middle candle normally represents the strong displacement that created the imbalance.
+
+---
+
+## Why Traders Mark FVGs
+
+After a strong movement, price may later return toward an imbalance before continuing.
+
+This makes the FVG an **area to monitor**.
+
+However:
+
+**An FVG is not a guaranteed reversal point.**
+
+Do not enter a trade simply because price reaches an FVG.
+
+Combine it with market structure, supply/demand and later confirmation tools.
+
+---
+
+## Understanding Liquidity
+
+In practical trading, **liquidity** refers to the availability of orders in the market.
+
+Orders often accumulate around obvious areas traders are watching.
+
+These may include:
+
+- previous highs
+- previous lows
+- support and resistance
+- swing highs
+- swing lows
+
+Stop-loss and pending orders may also be positioned around such areas.
+
+---
+
+## Liquidity Around Highs and Lows
+
+Imagine price has repeatedly failed near the same high.
+
+Some traders may sell from that area and place Stop Loss orders above the high.
+
+Other traders may place Buy Stop orders above it expecting a breakout.
+
+This makes the area above the high important to watch.
+
+The same principle can apply below an obvious market low.
+
+This does **not** mean we know exactly where every market order is located. We use visible price structure to identify areas where liquidity may reasonably be concentrated.
+
+---
+
+## Liquidity Sweep
+
+Sometimes price moves beyond an obvious previous high or low and then quickly reverses.
+
+In this course, we will call this a **liquidity sweep**.
+
+Example:
+
+**Previous High â†’ Price trades above it â†’ Price rejects â†’ Moves downward**
+
+or:
+
+**Previous Low â†’ Price trades below it â†’ Price rejects â†’ Moves upward**
+
+Do not assume every break of a high or low is a liquidity sweep.
+
+Wait to see what price does after reaching the area.
+
+---
+
+## Connecting the Concepts
+
+A stronger area of interest may contain several pieces of evidence.
 
 For example:
 
-Technical analysis identifies:
+### Bullish Scenario
 
-- trend
-- support
-- resistance
-- entry
-- exit
+1. Price moves below an important low.
+2. Buyers enter aggressively.
+3. Price leaves a Demand Zone.
+4. The strong movement creates an FVG.
+5. Price breaks a previous structural high.
+6. Price later returns toward the Demand/FVG area.
 
-Fundamental analysis explains:
+Instead of buying automatically, the trader waits for confirmation.
 
-- why the market is moving
-- whether the trend has strong economic support
-- whether major news could invalidate a setup
+### Bearish Scenario
 
-Using both methods together often provides a more complete view of the market.
+1. Price moves above an important high.
+2. Sellers enter aggressively.
+3. Price leaves a Supply Zone.
+4. The movement creates an FVG.
+5. Price breaks a previous structural low.
+6. Price later returns toward the Supply/FVG area.
 
----
-
-# Common Beginner Mistakes
-
-Avoid these mistakes:
-
-- Ignoring major economic news
-- Trading during high-impact announcements without a plan
-- Believing every news headline
-- Following social media rumors
-- Ignoring project fundamentals
-- Investing without research
-- Assuming good news always causes prices to rise
-
-Markets are influenced by expectations, not just headlines.
+Again, the zone provides **context**, not a guaranteed entry.
 
 ---
 
-# Key Principle
+## Practical Exercise
 
-Charts show what the market is doing.
+Open **EURUSD or XAUUSD** on TradingView.
 
-Fundamental analysis helps explain why it may be happening.
+Start with the **H1 timeframe**.
 
-Neither approach is perfect on its own.
+Find:
 
-Professional traders often combine both while maintaining proper risk management.
+- one Demand Zone
+- one Supply Zone
+- one Bullish or Bearish FVG
+- one previous significant high or low
+- one Break of Structure
+
+Now observe how these areas relate to each other.
+
+Ask:
+
+**Did price leave the zone strongly?**
+
+**Was an imbalance created?**
+
+**Did the move break structure?**
+
+**Was liquidity located near a previous high or low?**
 
 ---
 
-# Lesson Summary
+## Screenshot Assignment
 
-Fundamental analysis studies the economic, political, financial, and project-related factors that influence asset prices.
+Submit **one annotated chart screenshot**.
 
-Important areas include GDP, inflation, interest rates, employment, central banks, company performance, cryptocurrency fundamentals, tokenomics, and major news events.
+Your chart should clearly label:
 
-Combining fundamental analysis with technical analysis gives traders a stronger foundation for making informed decisions.
+- **Supply Zone**
+- **Demand Zone**
+- **FVG**
+- **Previous High or Low**
+- **BOS**
+
+If you can identify a clear liquidity sweep, label it too.
+
+Under the screenshot, write **2â€“3 sentences** explaining why you selected the Supply or Demand Zone.
+
+The goal is not to predict the next trade correctly.
+
+The goal is to demonstrate that you can identify and explain the concepts on a real chart.
+
+---
+
+## Quick Knowledge Check
+
+**1. What is the difference between a Supply Zone and a Demand Zone?**
+
+**2. What does imbalance tell us about a price movement?**
+
+**3. How many candles are used to identify the FVG taught in this course?**
+
+**4. Why can previous highs and lows become important liquidity areas?**
+
+**5. Should a trader automatically enter whenever price reaches an FVG or Supply/Demand Zone? Explain why.**
+
+---
+
+## Key Takeaways
+
+- Demand represents an area from which strong buying previously occurred.
+- Supply represents an area from which strong selling previously occurred.
+- Strong displacement can create an imbalance.
+- An FVG is identified from a three-candle price sequence.
+- Previous highs and lows can represent important liquidity areas.
+- BOS helps connect Supply/Demand with market structure.
+- A zone or FVG is an area of interest, not an automatic trade entry.
+- Combining several pieces of market evidence provides better context than relying on one concept alone.
+
+---
+
+## Lesson Completion
+
+You should now be able to identify Supply, Demand, FVG and important liquidity areas and relate them to market structure.
+
+Next:
+
+**Lesson 4 â€” Multi-Timeframe Analysis**

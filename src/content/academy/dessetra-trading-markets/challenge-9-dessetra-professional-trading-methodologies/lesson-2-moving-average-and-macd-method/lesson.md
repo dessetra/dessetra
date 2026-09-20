@@ -1,4 +1,4 @@
----
+﻿---
 title: Moving Average and MACD Method
 lessonNumber: 2
 duration: 30
@@ -28,7 +28,7 @@ Instead, it acts as a confirmation tool.
 
 ---
 
-# Purpose of the MACD
+## Purpose of the MACD
 
 The purpose of adding the MACD is to help confirm that momentum agrees with the direction shown by the moving averages.
 
@@ -40,7 +40,7 @@ When both indicators agree, confidence in the setup becomes stronger.
 
 ---
 
-# MACD Configuration
+## MACD Configuration
 
 For the Dessetra Trading Methodology, configure the MACD as follows:
 
@@ -52,7 +52,7 @@ These settings should remain consistent whenever this methodology is applied.
 
 ---
 
-# Understanding the MACD
+## Understanding the MACD
 
 The MACD consists of:
 
@@ -66,7 +66,7 @@ The relationship between the MACD and the Zero Line helps determine whether buyi
 
 ---
 
-# The Zero Line
+## The Zero Line
 
 The Zero Line separates bullish momentum from bearish momentum.
 
@@ -78,7 +78,7 @@ The Zero Line therefore becomes an important confirmation level.
 
 ---
 
-# Buy Confirmation
+## Buy Confirmation
 
 A potential buy confirmation occurs when:
 
@@ -92,7 +92,7 @@ It should only confirm what the Moving Average Rule is already showing.
 
 ---
 
-# Sell Confirmation
+## Sell Confirmation
 
 A potential sell confirmation occurs when:
 
@@ -104,7 +104,7 @@ Again, this should confirm an existing Moving Average setup rather than replace 
 
 ---
 
-# The First Rule
+## The First Rule
 
 Always analyse the Moving Averages first.
 
@@ -120,7 +120,7 @@ Only after answering these questions should the MACD be consulted.
 
 ---
 
-# Bullish Conditions
+## Bullish Conditions
 
 For a bullish setup, confirm:
 
@@ -134,7 +134,7 @@ When these conditions occur together, the probability of a quality setup may imp
 
 ---
 
-# Bearish Conditions
+## Bearish Conditions
 
 For a bearish setup, confirm:
 
@@ -148,7 +148,7 @@ When all conditions agree, the trader may consider a sell opportunity.
 
 ---
 
-# Why Use Both Indicators?
+## Why Use Both Indicators?
 
 Each indicator provides different information.
 
@@ -164,7 +164,7 @@ When both agree, they provide stronger confirmation than either indicator alone.
 
 ---
 
-# Waiting for Retracement
+## Waiting for Retracement
 
 Do not buy simply because the MACD crosses upward.
 
@@ -179,7 +179,7 @@ The retracement remains an important part of the Dessetra methodology.
 
 ---
 
-# Importance of Confirmation
+## Importance of Confirmation
 
 Confirmation helps avoid emotional trading.
 
@@ -195,7 +195,7 @@ to work together.
 
 ---
 
-# Example of a Buy Setup
+## Example of a Buy Setup
 
 Suppose the 5-minute chart shows:
 
@@ -217,7 +217,7 @@ A buy opportunity may now be considered after normal entry confirmation.
 
 ---
 
-# Example of a Sell Setup
+## Example of a Sell Setup
 
 Suppose the market shows:
 
@@ -239,7 +239,7 @@ A sell opportunity may now be considered.
 
 ---
 
-# When to Ignore the MACD
+## When to Ignore the MACD
 
 Do not rely on MACD if:
 
@@ -252,7 +252,7 @@ The Moving Average Rule remains the primary decision-making tool.
 
 ---
 
-# Avoid Trading Every MACD Cross
+## Avoid Trading Every MACD Cross
 
 Many beginners trade every MACD crossover.
 
@@ -264,7 +264,7 @@ Always begin with market structure.
 
 ---
 
-# The Role of Risk Management
+## The Role of Risk Management
 
 Even when every condition appears perfect, losses can still occur.
 
@@ -276,7 +276,7 @@ For this course:
 
 ---
 
-# Position Sizing
+## Position Sizing
 
 Before entering:
 
@@ -288,7 +288,7 @@ Never decide position size emotionally.
 
 ---
 
-# Profit Targets
+## Profit Targets
 
 Profit targets should continue to follow market structure.
 
@@ -296,11 +296,11 @@ Whenever technically realistic, traders should generally seek an average risk-to
 
 **1:3**
 
-The market should determine the target—not emotion.
+The market should determine the targetâ€”not emotion.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -317,7 +317,7 @@ Remember that MACD is a confirmation tool, not a standalone trading system.
 
 ---
 
-# Dessetra Moving Average + MACD Checklist
+## Dessetra Moving Average + MACD Checklist
 
 Before entering a trade, confirm:
 
@@ -336,7 +336,7 @@ Only when these questions are answered positively should a trade be considered.
 
 ---
 
-# Key Principle
+## Key Principle
 
 The MACD strengthens the Moving Average Rule.
 
@@ -350,7 +350,7 @@ Together they help traders identify higher-quality trading opportunities while m
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 The Dessetra Moving Average and MACD Method combines:
 

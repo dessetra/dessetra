@@ -1,4 +1,4 @@
----
+﻿---
 title: Continuous Improvement & System Optimization
 lessonNumber: 4
 duration: 30
@@ -24,7 +24,7 @@ Improvement is a continuous journey.
 
 ---
 
-# What Is Continuous Improvement?
+## What Is Continuous Improvement?
 
 Continuous improvement is the process of making small, meaningful changes based on evidence.
 
@@ -36,7 +36,7 @@ Small improvements made consistently often produce significant long-term results
 
 ---
 
-# Why Improvement Is Important
+## Why Improvement Is Important
 
 Every trader has areas that can improve.
 
@@ -54,7 +54,7 @@ Improving just one area can positively affect overall performance.
 
 ---
 
-# Improve Yourself Before Changing the Strategy
+## Improve Yourself Before Changing the Strategy
 
 Many beginners immediately blame their strategy after a losing streak.
 
@@ -68,11 +68,11 @@ Ask yourself:
 - Did I follow my trading checklist?
 - Did I control my emotions?
 
-Sometimes the trader needs improvement—not the strategy.
+Sometimes the trader needs improvementâ€”not the strategy.
 
 ---
 
-# Review Before Making Changes
+## Review Before Making Changes
 
 Never change a trading system because of one losing trade.
 
@@ -86,7 +86,7 @@ Professional traders make decisions using evidence.
 
 ---
 
-# Avoid Strategy Hopping
+## Avoid Strategy Hopping
 
 Strategy hopping means constantly moving from one strategy to another.
 
@@ -103,7 +103,7 @@ No strategy wins every trade.
 
 ---
 
-# Understand Losing Streaks
+## Understand Losing Streaks
 
 Every professional trader experiences losses.
 
@@ -119,7 +119,7 @@ The important question is whether the trading system was followed correctly.
 
 ---
 
-# Build Confidence Through Testing
+## Build Confidence Through Testing
 
 Confidence comes from testing.
 
@@ -135,7 +135,7 @@ The more evidence you collect, the more confidence you build.
 
 ---
 
-# Backtesting
+## Backtesting
 
 Backtesting means applying your trading rules to historical market data.
 
@@ -150,7 +150,7 @@ Backtesting should follow the trading rules exactly.
 
 ---
 
-# Forward Testing
+## Forward Testing
 
 Forward testing means applying the strategy in current market conditions.
 
@@ -165,7 +165,7 @@ Forward testing confirms whether a strategy performs as expected.
 
 ---
 
-# Using Your Trading Journal
+## Using Your Trading Journal
 
 Your journal is one of your most valuable improvement tools.
 
@@ -183,7 +183,7 @@ The journal provides objective evidence for improvement.
 
 ---
 
-# Reviewing Winning Trades
+## Reviewing Winning Trades
 
 Winning trades deserve careful review.
 
@@ -199,7 +199,7 @@ Winning does not always mean the trade was executed well.
 
 ---
 
-# Reviewing Losing Trades
+## Reviewing Losing Trades
 
 Losing trades also provide valuable lessons.
 
@@ -215,7 +215,7 @@ Learning from losses accelerates improvement.
 
 ---
 
-# Identifying Weaknesses
+## Identifying Weaknesses
 
 Examples of weaknesses include:
 
@@ -230,7 +230,7 @@ Weaknesses should become improvement goals.
 
 ---
 
-# Building on Strengths
+## Building on Strengths
 
 Do not focus only on mistakes.
 
@@ -248,7 +248,7 @@ Build upon what already works well.
 
 ---
 
-# Optimize One Thing at a Time
+## Optimize One Thing at a Time
 
 Avoid changing many parts of a trading system at once.
 
@@ -263,7 +263,7 @@ Making several changes at once makes it difficult to know which change produced 
 
 ---
 
-# Set Measurable Goals
+## Set Measurable Goals
 
 Improvement goals should be clear.
 
@@ -279,7 +279,7 @@ Clear goals are easier to measure.
 
 ---
 
-# Review Weekly
+## Review Weekly
 
 Every week ask:
 
@@ -293,7 +293,7 @@ Weekly reviews keep improvement continuous.
 
 ---
 
-# Review Monthly
+## Review Monthly
 
 Monthly reviews provide a broader perspective.
 
@@ -311,7 +311,7 @@ Monthly reviews help identify long-term trends.
 
 ---
 
-# Avoid Emotional Decisions
+## Avoid Emotional Decisions
 
 Never optimize your trading system while:
 
@@ -326,7 +326,7 @@ Emotion often leads to poor changes.
 
 ---
 
-# Continue Learning
+## Continue Learning
 
 Markets constantly evolve.
 
@@ -342,7 +342,7 @@ Lifelong learning keeps traders adaptable.
 
 ---
 
-# Ask for Feedback
+## Ask for Feedback
 
 Learning from experienced traders can reveal blind spots.
 
@@ -357,19 +357,19 @@ Accept feedback with an open mind.
 
 ---
 
-# Maintain Realistic Expectations
+## Maintain Realistic Expectations
 
 There is no perfect trading system.
 
 No strategy wins every trade.
 
-The objective is long-term consistency—not perfection.
+The objective is long-term consistencyâ€”not perfection.
 
 Accepting this helps reduce emotional pressure.
 
 ---
 
-# Protect Your Capital
+## Protect Your Capital
 
 Capital is your business inventory.
 
@@ -384,7 +384,7 @@ Protecting capital ensures you remain in the market long enough to improve.
 
 ---
 
-# Example Improvement Plan
+## Example Improvement Plan
 
 Week 1 Goal:
 
@@ -406,7 +406,7 @@ Small improvements accumulate over time.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -422,7 +422,7 @@ Professional traders improve gradually.
 
 ---
 
-# Continuous Improvement Cycle
+## Continuous Improvement Cycle
 
 A professional trading cycle looks like this:
 
@@ -440,7 +440,7 @@ It is one of the foundations of professional trading.
 
 ---
 
-# Key Principle
+## Key Principle
 
 Great traders are not created by finding a perfect strategy.
 
@@ -450,7 +450,7 @@ Progress is built one improvement at a time.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Continuous improvement requires traders to:
 

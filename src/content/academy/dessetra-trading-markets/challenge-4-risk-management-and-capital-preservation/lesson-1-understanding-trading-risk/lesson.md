@@ -1,463 +1,624 @@
----
-title: Position Sizing & Capital Management
-lessonNumber: 2
+﻿---
+title: Protecting Capital
+lessonNumber: 1
 duration: 25
-difficulty: Beginner
-objective: Learn how to calculate proper position size, manage trading capital responsibly, avoid overexposure, and build consistency through disciplined money management.
+difficulty: Intermediate
+objective: Understand how risk, drawdown, leverage, margin and account exposure affect trading capital, and learn to protect the account before focusing on growth.
 video:
 resource:
 ---
 
-# Position Sizing & Capital Management
+# Protecting Capital
 
-Many traders spend months learning trading strategies but very little time learning how much they should actually trade.
+Trading is not only about finding profitable opportunities.
 
-Position sizing is one of the biggest differences between gambling and professional trading.
+A trader must also remain financially capable of taking the next opportunity.
 
-A good trading strategy combined with poor position sizing can still destroy an account.
+This makes capital protection one of the most important parts of trading.
 
-A simple strategy combined with disciplined position sizing may survive long enough to become consistently profitable.
+The objective is not to avoid every loss.
 
----
+Losses are part of trading.
 
-# What Is Position Sizing?
-
-Position sizing is the process of deciding how much capital to commit to a single trade.
-
-It answers one simple question:
-
-**"How large should this trade be?"**
-
-The answer should never depend on emotions.
-
-It should depend on:
-
-- account size
-- acceptable risk
-- stop-loss distance
-- market conditions
-- trading plan
+The objective is to prevent normal losses from becoming destructive.
 
 ---
 
-# Why Position Size Matters
+## Capital Preservation
 
-Imagine two traders with identical trading strategies.
+**Capital preservation** means protecting your trading account from losses large enough to seriously damage your ability to continue trading.
 
-Trader A risks half of the account on one trade.
+It includes:
 
-Trader B risks only a small percentage.
+- controlling risk
+- using Stop Losses
+- controlling leverage
+- avoiding excessive exposure
+- respecting session limits
+- accepting controlled losses
+- avoiding emotional recovery trades
 
-If both trades lose:
+Think of trading capital as your working resource.
 
-Trader A may struggle to recover.
+If the capital is destroyed, even an excellent future setup cannot benefit the account.
 
-Trader B can continue trading calmly because most of the capital remains available.
+Therefore:
 
-Protecting capital gives traders more opportunities to succeed over time.
-
----
-
-# Capital Preservation
-
-Capital preservation means protecting your trading account from large losses.
-
-Every decision should help answer:
-
-- Can my account survive this trade?
-- Can I continue trading after several losses?
-- Am I protecting future opportunities?
-
-Without capital, no trader can continue participating in the markets.
+**Protect capital first. Pursue growth second.**
 
 ---
 
-# Trading Capital
+## Balance and Equity
 
-Trading capital is the money specifically set aside for trading activities.
+Two important numbers appear in a trading account:
 
-It should not include money needed for:
+## Balance
 
-- rent
-- food
-- school fees
-- emergency expenses
-- debt repayment
-- household bills
+Your **Balance** represents the account value after closed trades have been recorded.
 
-Trading should only be done with capital that can reasonably be exposed to market risk.
+If you have:
 
----
+**Balance = $1,000**
 
-# Account Balance vs Available Capital
+and no trades are open, your account value is $1,000.
 
-Your account balance shows the total funds in your account.
+## Equity
 
-Available capital may be lower because some funds are already committed to open trades.
+**Equity** reflects the account's current value while open profits and losses are included.
 
-Before opening another position, traders should consider:
+For example:
 
-- current balance
-- unrealized profit or loss
-- margin in use
-- total open risk
+Balance:
 
----
+**$1,000**
 
-# Risk Percentage Per Trade
+Open trade loss:
 
-Professional traders usually define risk as a percentage of account capital.
+**-$50**
 
-Examples include:
+Current Equity:
 
-- 0.5%
-- 1%
-- 2%
+**$950**
 
-The important point is consistency.
+If the open trade instead has a $40 floating profit:
 
-Changing risk percentage emotionally often creates inconsistent results.
+Current Equity:
+
+**$1,040**
+
+This is why monitoring only the balance can be misleading when positions are still open.
 
 ---
 
-# Example
+## Risk Is Part of Trading
 
-Account balance:
+Every trade contains uncertainty.
 
-$2,000
+No technical setup, indicator or strategy guarantees that price will move as expected.
 
-Risk per trade:
+The trader therefore asks:
 
-1%
+**If this trade fails, how much am I prepared to lose?**
 
-Maximum acceptable loss:
+This question should be answered **before** entering the trade.
 
-$20
+Risk management is not something added after a position begins losing.
 
-No matter what asset is traded, the position size should be adjusted so that the planned loss remains close to $20 if the stop-loss is reached.
-
----
-
-# Position Size Depends on Stop-Loss
-
-Many beginners choose position size first.
-
-Professionals usually do the opposite.
-
-The correct order is:
-
-1. Find the trading setup.
-2. Identify where the trade becomes invalid.
-3. Place the stop-loss.
-4. Calculate the amount to risk.
-5. Determine the appropriate position size.
-
-The stop-loss determines the position size—not the other way around.
+It is part of the trade plan before execution.
 
 ---
 
-# Small Stop-Loss vs Large Stop-Loss
+## Risk Per Trade
 
-A tighter stop-loss generally allows a larger position size.
+Risk per trade is the amount of trading capital that can be lost if a planned Stop Loss is reached.
 
-A wider stop-loss usually requires a smaller position size.
+Suppose your account contains:
 
-The amount of money at risk should remain consistent.
+**$1,000**
 
-The goal is to control monetary risk rather than focusing only on lot size or number of units.
+If your planned risk is:
 
----
+**1%**
 
-# Overexposure
+then the maximum planned loss is:
 
-Overexposure occurs when too much capital is committed to one trade or several related trades.
+**$10**
 
-Examples include:
+Calculation:
 
-- risking too much on one position
-- opening several trades on highly correlated assets
-- increasing position size after a loss
-- adding repeatedly to losing positions
+**$1,000 Ã— 1% = $10**
 
-Overexposure increases the likelihood of large account drawdowns.
+If the account contains $5,000:
 
----
+**$5,000 Ã— 1% = $50**
 
-# Diversification
+The percentage risk determines the money you are prepared to expose.
 
-Diversification means spreading exposure instead of concentrating all capital in one idea.
+The position size will later be calculated using that monetary risk and the distance to the Stop Loss.
 
-Examples include:
-
-- different asset classes
-- different sectors
-- different currencies
-- different trading opportunities
-
-However, diversification should be meaningful.
-
-Buying several highly correlated assets may still create one large combined risk.
+We will practise this in Lesson 2.
 
 ---
 
-# Correlated Positions
-
-Correlation means two or more markets often move together.
-
-Examples include:
-
-- several cryptocurrency assets
-- multiple Forex pairs containing the same currency
-- stock indices during major economic events
-
-Opening several correlated positions may unintentionally multiply total account risk.
-
-Always calculate combined exposure.
-
----
-
-# Scaling Into Positions
-
-Some traders divide one planned trade into smaller entries.
-
-Advantages may include:
-
-- improved average entry price
-- flexibility
-- gradual exposure
-
-However:
-
-Every additional entry increases total account exposure.
-
-Scaling should follow a written trading plan rather than emotional decision-making.
-
----
-
-# Scaling Out of Positions
-
-Scaling out means closing part of a position while allowing the remainder to continue.
-
-Possible advantages include:
-
-- securing partial profits
-- reducing emotional pressure
-- allowing participation if the trend continues
-
-Scaling out should also follow predefined rules.
-
----
-
-# Fixed Risk vs Fixed Position Size
-
-A fixed position size means trading exactly the same size every time.
-
-This can create inconsistent monetary risk because stop-loss distances vary.
-
-A fixed risk approach adjusts position size so that the monetary loss remains relatively consistent.
-
-Professional traders generally focus on fixed risk rather than fixed position size.
-
----
-
-# Winning Streaks
-
-Winning several trades in a row may create overconfidence.
-
-Common mistakes include:
-
-- doubling position size
-- ignoring the trading plan
-- taking poor-quality trades
-- believing losses cannot occur
-
-Every trade should be evaluated independently.
-
-Past profits do not guarantee future success.
-
----
-
-# Losing Streaks
-
-Losing several trades consecutively can affect confidence.
-
-Common emotional reactions include:
-
-- revenge trading
-- increasing risk
-- removing stop-losses
-- abandoning the strategy
-
-Professional traders understand that losing streaks occur naturally.
-
-Position size should remain consistent instead of becoming emotional.
-
----
-
-# Compounding
-
-Compounding occurs when profits gradually increase account size.
-
-As account balance grows, position size may increase naturally while maintaining the same percentage risk.
-
-Example:
-
-Account:
-
-$1,000
-
-Risk:
-
-1%
-
-Maximum risk:
-
-$10
-
-Later account:
-
-$2,000
-
-Risk:
-
-1%
-
-Maximum risk:
-
-$20
-
-The percentage remains unchanged while the monetary value grows.
-
----
-
-# Drawdown Awareness
-
-Every trader experiences drawdowns.
-
-Large position sizes create larger drawdowns.
-
-Smaller position sizes help keep drawdowns manageable.
-
-Protecting capital during difficult periods allows traders to benefit when market conditions improve.
-
----
-
-# Emotional Discipline
-
-Position sizing should never change because of:
-
-- excitement
-- fear
-- anger
-- boredom
-- greed
-- social media
-- pressure from others
-
-It should only change because:
-
-- account size changed
-- trading plan specifies it
-- risk calculations require it
-
----
-
-# Session Risk
-
-Each trade contributes toward total session risk.
+## Dessetra Maximum Session Risk
 
 For this course:
 
-A trader should never expose more than **5% of total trading capital during one trading session.**
+**Never expose more than 5% of total trading capital to planned trading risk during one trading session.**
+
+This is a **maximum ceiling â€” not a target.**
+
+You do not need to risk 5%.
+
+A trader may operate well below this limit.
+
+The purpose of the ceiling is to prevent several trades from quietly creating excessive combined exposure.
+
+---
+
+## Combined Risk Matters
+
+Suppose you have a:
+
+**$1,000 account**
+
+and open three positions.
+
+Trade 1 risk:
+
+**$20**
+
+Trade 2 risk:
+
+**$15**
+
+Trade 3 risk:
+
+**$15**
+
+Total planned risk:
+
+**$50**
+
+That represents:
+
+**5% of the $1,000 account.**
+
+You have reached the course's maximum session-risk ceiling.
+
+Opening another position with additional risk would break the rule.
+
+Risk should therefore be viewed across the **whole session**, not only one trade at a time.
+
+---
+
+## What Is Drawdown?
+
+**Drawdown** is the decline in an account from a previous peak.
 
 Example:
 
+Account peak:
+
+**$1,000**
+
+Current account value:
+
+**$900**
+
+Decline:
+
+**$100**
+
+Drawdown:
+
+**10%**
+
+Drawdown shows how much the account has fallen from its previous high.
+
+---
+
+## Why Drawdown Matters
+
+The deeper the drawdown, the harder recovery becomes.
+
+Consider:
+
+Starting account:
+
+**$1,000**
+
+After a 20% loss:
+
+**$800 remains**
+
+To return to $1,000, the account must gain:
+
+**$200**
+
+But $200 is now:
+
+**25% of $800**
+
+Therefore:
+
+**20% loss â†’ 25% gain required to recover**
+
+Now consider a 50% loss.
+
+Starting account:
+
+**$1,000**
+
+Remaining:
+
+**$500**
+
+To return to $1,000:
+
+**$500 profit is required**
+
+That means:
+
+**50% loss â†’ 100% gain required to recover**
+
+This is why protecting the downside matters.
+
+---
+
+## Small Losses Are Easier to Recover
+
+Compare:
+
+| Account Loss | Approximate Gain Required to Recover |
+|---|---:|
+| 5% | 5.3% |
+| 10% | 11.1% |
+| 20% | 25% |
+| 30% | 42.9% |
+| 50% | 100% |
+
+As losses become larger, the required recovery grows disproportionately.
+
+A trader should therefore avoid thinking:
+
+**"I can always make it back later."**
+
+Preventing severe drawdown is easier than recovering from it.
+
+---
+
+## Losing Streaks Will Happen
+
+Even a strategy that performs well over many trades can experience consecutive losses.
+
+This is one reason risk should remain controlled.
+
+Suppose two traders experience several losing trades.
+
+### Trader A
+
+Risks a small percentage on each trade.
+
+Losses occur, but most of the account remains intact.
+
+### Trader B
+
+Uses large position sizes and excessive risk.
+
+The same losing streak can create a severe drawdown.
+
+The difference is not necessarily the trading strategy.
+
+It is **exposure**.
+
+Your risk plan should allow the account to survive periods when the strategy is not winning.
+
+---
+
+## Understanding Leverage
+
+**Leverage** allows a trader to control a position larger than the cash available in the trading account.
+
+For example, leverage may allow a relatively small amount of capital to control a much larger market position.
+
+This increases exposure.
+
+Leverage can magnify profits.
+
+It can also magnify losses.
+
+Therefore:
+
+**Available leverage is not the same as acceptable risk.**
+
+Just because the trading platform allows you to open a large position does not mean you should.
+
+---
+
+## Understanding Margin
+
+**Margin** is the amount of account funds required to open and maintain a leveraged position.
+
+When a position is opened, part of the account may be committed as margin.
+
+Your platform may display terms such as:
+
+- Balance
+- Equity
+- Used Margin
+- Free Margin
+- Margin Level
+
+The exact labels and calculations can vary between brokers and platforms.
+
+The important principle is simple:
+
+**Do not confuse available margin with money you should risk.**
+
+---
+
+## Margin and Equity
+
+Imagine your account has open losing positions.
+
+As those losses increase:
+
+**Equity decreases.**
+
+If too much of the account has been committed to leveraged positions, available margin can become dangerously low.
+
+Depending on the broker's rules, this can eventually lead to positions being automatically reduced or closed.
+
+This is another reason excessive leverage is dangerous.
+
+The trader should control exposure long before reaching that situation.
+
+---
+
+## Overleveraging
+
+**Overleveraging** occurs when a trader takes position sizes that expose too much of the account to market movement.
+
+Common signs include:
+
+- very large positions relative to account size
+- several highly exposed positions at once
+- little free margin remaining
+- small price movements causing large account changes
+- increasing leverage after losses
+- using maximum available broker leverage simply because it is available
+
+Overleveraging can turn an ordinary market movement into a serious account loss.
+
+---
+
+## Stop Loss and Capital Protection
+
+A Stop Loss is part of the capital-protection process.
+
+As learned in Challenge 3, the Stop Loss should be connected to the point where the trade idea becomes invalid.
+
+But there is another important relationship:
+
+**Stop Loss distance + acceptable monetary risk determine position size.**
+
+You should not choose a huge position first and then force the Stop Loss to fit the position.
+
+Instead:
+
+1. Identify the setup.
+2. Identify the invalidation point.
+3. Determine the Stop Loss.
+4. Decide how much capital can be risked.
+5. Calculate the appropriate position size.
+
+We will calculate this properly in Lesson 2.
+
+---
+
+## Do Not Remove the Stop Loss to Avoid a Loss
+
+Suppose price approaches your Stop Loss.
+
+Moving or removing the SL simply because you do not want to accept the loss changes the original trade plan.
+
+A controlled planned loss can then become a much larger unplanned loss.
+
+If the market reaches the point where your setup is invalidated, accept the result according to your plan.
+
+---
+
+## Session Loss Limits
+
+Risk control should also define when trading must stop.
+
+For Dessetra:
+
+**Maximum total session risk = 5% of trading capital.**
+
+Once your predefined session loss limit has been reached, stop trading for that session.
+
+Do not:
+
+- increase lot size
+- immediately search for another trade
+- remove confirmation rules
+- chase the lost money
+- increase leverage
+
+The objective after a difficult session is not immediate recovery.
+
+It is preventing additional damage.
+
+---
+
+## Never Chase Recovery
+
+After losing money, a trader may feel pressure to recover it immediately.
+
+This can lead to:
+
+- larger positions
+- unnecessary trades
+- weaker setups
+- ignored Stop Losses
+- excessive leverage
+- emotional decisions
+
+This behaviour increases risk exactly when discipline is most needed.
+
+Recovery should come from future trades that satisfy the trading plan â€” not from desperation.
+
+---
+
+## Survival Before Growth
+
+The order should be:
+
+**1. Protect capital**
+
+**2. Build consistency**
+
+**3. Improve execution**
+
+**4. Grow gradually**
+
+Rapid growth means little if one uncontrolled session can destroy months of progress.
+
+Trading should be approached as a long-term process.
+
+---
+
+## Practical Exercise â€” Calculate Your Risk
+
+Complete the following without placing a live trade.
+
+### Scenario 1
+
 Account:
 
-$5,000
+**$500**
 
-Maximum session risk:
+Risk:
 
-$250
+**1%**
 
-Once this limit is reached, trading should stop for that session.
+Maximum planned loss:
 
-This rule helps prevent emotional decision-making.
+**?**
 
----
+### Scenario 2
 
-# Capital Growth Is Gradual
+Account:
 
-Many beginners attempt to double their accounts quickly.
+**$2,000**
 
-Professional traders usually focus on:
+Risk:
 
-- consistency
-- disciplined execution
-- protecting capital
-- long-term growth
+**2%**
 
-Large gains achieved through excessive risk are rarely sustainable.
+Maximum planned loss:
 
----
+**?**
 
-# A Position Sizing Routine
+### Scenario 3
 
-Before entering every trade:
+Account:
 
-1. Check current account balance.
-2. Determine the acceptable percentage risk.
-3. Calculate the maximum monetary loss.
-4. Identify the stop-loss location.
-5. Measure stop-loss distance.
-6. Calculate the appropriate position size.
-7. Check total open exposure.
-8. Confirm session risk remains below the maximum.
-9. Execute only if the trade matches the trading plan.
+**$5,000**
 
-Following the same routine improves consistency.
+Three planned trades risk:
 
----
+- Trade A = $75
+- Trade B = $100
+- Trade C = $75
 
-# Common Beginner Mistakes
+Calculate:
 
-Avoid these mistakes:
-
-- Using the same position size for every trade regardless of stop-loss distance
-- Risking too much because of confidence
-- Increasing size after losses
-- Doubling position size to recover losses
-- Ignoring correlated trades
-- Trading with borrowed or essential money
-- Failing to calculate total exposure
-- Chasing rapid account growth
-- Ignoring the 5% maximum session risk
-
-Good traders manage risk before managing profit.
+1. Total monetary risk
+2. Total percentage risk
+3. Whether this reaches the Dessetra maximum session-risk ceiling
 
 ---
 
-# Key Principle
+## Practical Exercise â€” Explore MT5
 
-Position size should always be determined by acceptable risk—not by emotion, excitement or the desire for larger profits.
+Open your **demo MT5 account**.
 
-Consistent position sizing protects capital and allows long-term participation in the markets.
+Locate:
+
+- Balance
+- Equity
+- Margin
+- Free Margin
+- Margin Level
+
+Open a small demo position and observe how the values change as price moves.
+
+Then close the position.
+
+The objective is to understand how an open position affects the account â€” **not to make a profit.**
 
 ---
 
-# Lesson Summary
+## Screenshot Assignment
 
-Position sizing determines how much capital is committed to a trade while keeping risk under control.
+Submit one screenshot of your **demo MT5 account** showing:
 
-Professional traders calculate position size after identifying the stop-loss and acceptable monetary risk.
+- Balance
+- Equity
+- Margin
+- Free Margin
+- Margin Level
 
-Good capital management includes:
+Then answer:
 
-- protecting trading capital
-- controlling exposure
-- understanding correlation
-- avoiding emotional position sizing
-- maintaining consistent percentage risk
-- respecting the maximum 5% trading session risk
+**1. What is the difference between your Balance and Equity?**
 
-Successful trading is built on disciplined risk management long before large profits are achieved.
+**2. Why can excessive leverage be dangerous?**
+
+**3. What is the maximum total session-risk ceiling used in this course?**
+
+**4. Why should 5% be treated as a ceiling rather than a target?**
+
+---
+
+## Quick Knowledge Check
+
+**1. What is capital preservation?**
+
+**2. What is the difference between Balance and Equity?**
+
+**3. What is drawdown?**
+
+**4. If an account falls 50%, what percentage gain is required to recover to its original value?**
+
+**5. Why should available broker leverage not determine how much you risk?**
+
+---
+
+## Key Takeaways
+
+- Trading always involves risk.
+- Capital preservation comes before account growth.
+- Balance records closed results; Equity also reflects open profits and losses.
+- Risk should be defined before entering a trade.
+- Small controlled risks help an account survive losing streaks.
+- Drawdowns become progressively harder to recover from as they deepen.
+- Leverage increases market exposure and can magnify both profits and losses.
+- Margin enables leveraged positions but should not be confused with acceptable risk.
+- Avoid overleveraging and excessive account exposure.
+- Stop Losses are part of capital protection.
+- Never increase risk simply to recover previous losses.
+- Dessetra's **5% session-risk rule is a maximum ceiling, not a target.**
+
+---
+
+## Lesson Completion
+
+You now understand why protecting trading capital comes before pursuing profits.
+
+Next:
+
+**Lesson 2 â€” Lot Size, Stop Loss & R:R**

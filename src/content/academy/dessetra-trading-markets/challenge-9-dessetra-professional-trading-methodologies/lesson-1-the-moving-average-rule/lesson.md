@@ -1,4 +1,4 @@
----
+﻿---
 title: The Moving Average Rule
 lessonNumber: 1
 duration: 30
@@ -28,7 +28,7 @@ The trader must first confirm that the EMAs are correctly aligned and that the m
 
 ---
 
-# What Is an Exponential Moving Average?
+## What Is an Exponential Moving Average?
 
 An Exponential Moving Average is a technical indicator that tracks the average price of a market over a selected number of periods.
 
@@ -40,7 +40,7 @@ In this methodology, three EMAs are used together.
 
 ---
 
-# The Three EMAs
+## The Three EMAs
 
 The Moving Average Rule uses:
 
@@ -52,7 +52,7 @@ Each EMA has a specific role.
 
 ---
 
-# EMA Configuration
+## EMA Configuration
 
 Configure the indicators as follows:
 
@@ -92,7 +92,7 @@ It is the slowest EMA in the setup.
 
 ---
 
-# Increasing Line Thickness
+## Increasing Line Thickness
 
 The three EMAs should be configured with increasing thickness.
 
@@ -108,7 +108,7 @@ It also helps the trader quickly distinguish the fast, medium and slow moving av
 
 ---
 
-# Recommended Timeframe
+## Recommended Timeframe
 
 This method is most appropriate for scalping on the:
 
@@ -125,7 +125,7 @@ The methodology may be observed on other timeframes, but the Dessetra Moving Ave
 
 ---
 
-# The Basic Principle
+## The Basic Principle
 
 The method follows a simple principle:
 
@@ -137,7 +137,7 @@ They must appear in the correct order.
 
 ---
 
-# Uptrend Alignment
+## Uptrend Alignment
 
 The market is considered to be in a valid bullish alignment when:
 
@@ -147,7 +147,7 @@ The market is considered to be in a valid bullish alignment when:
 
 The correct order is:
 
-**21 EMA → 50 EMA → 200 EMA**
+**21 EMA â†’ 50 EMA â†’ 200 EMA**
 
 From top to bottom:
 
@@ -159,7 +159,7 @@ This arrangement shows that short-term price movement is stronger than the mediu
 
 ---
 
-# Visual Structure of an Uptrend
+## Visual Structure of an Uptrend
 
 A clear uptrend should display:
 
@@ -173,7 +173,7 @@ The clearer the alignment, the stronger the trend structure may appear.
 
 ---
 
-# Bullish Entry Principle
+## Bullish Entry Principle
 
 In an uptrend, the trader should not chase price while it is already moving far above the EMAs.
 
@@ -185,7 +185,7 @@ In a bullish market, this means price moves downward toward one or more of the E
 
 ---
 
-# Preferred Bullish Entry Areas
+## Preferred Bullish Entry Areas
 
 The most important retracement zones are:
 
@@ -200,7 +200,7 @@ The 200 EMA may also act as a reaction area, but a retracement that reaches it s
 
 ---
 
-# Bullish Entry Example
+## Bullish Entry Example
 
 Assume the 5-minute chart shows:
 
@@ -225,7 +225,7 @@ The trader may then consider a buy entry in the direction of the existing uptren
 
 ---
 
-# Downtrend Alignment
+## Downtrend Alignment
 
 The market is considered to be in a valid bearish alignment when:
 
@@ -235,7 +235,7 @@ The market is considered to be in a valid bearish alignment when:
 
 The correct order is:
 
-**200 EMA → 50 EMA → 21 EMA**
+**200 EMA â†’ 50 EMA â†’ 21 EMA**
 
 From top to bottom:
 
@@ -247,7 +247,7 @@ This shows that short-term price movement is weaker than the medium-term average
 
 ---
 
-# Visual Structure of a Downtrend
+## Visual Structure of a Downtrend
 
 A clear downtrend should display:
 
@@ -261,7 +261,7 @@ The clearer the bearish alignment, the stronger the downtrend structure may appe
 
 ---
 
-# Bearish Entry Principle
+## Bearish Entry Principle
 
 In a downtrend, the trader should avoid selling after price has already moved too far below the EMAs.
 
@@ -271,7 +271,7 @@ This allows the trader to look for an entry closer to the moving averages rather
 
 ---
 
-# Preferred Bearish Entry Areas
+## Preferred Bearish Entry Areas
 
 The most important retracement zones are:
 
@@ -286,7 +286,7 @@ A retracement toward the 200 EMA should be treated carefully because it may indi
 
 ---
 
-# Bearish Entry Example
+## Bearish Entry Example
 
 Assume the 5-minute chart shows:
 
@@ -311,7 +311,7 @@ The trader may then consider a sell entry in the direction of the existing downt
 
 ---
 
-# Why Retracement Entries Are Preferred
+## Why Retracement Entries Are Preferred
 
 Entering after a retracement may provide:
 
@@ -327,7 +327,7 @@ Confirmation remains important.
 
 ---
 
-# The Role of the 21 EMA
+## The Role of the 21 EMA
 
 The 21 EMA is the fastest indicator in the setup.
 
@@ -343,7 +343,7 @@ In a strong trend, price may repeatedly react around the 21 EMA.
 
 ---
 
-# The Role of the 50 EMA
+## The Role of the 50 EMA
 
 The 50 EMA is slower than the 21 EMA.
 
@@ -359,7 +359,7 @@ When price reaches the 50 EMA, the trader should examine whether the wider trend
 
 ---
 
-# The Role of the 200 EMA
+## The Role of the 200 EMA
 
 The 200 EMA represents the broadest trend in this setup.
 
@@ -377,7 +377,7 @@ The 200 EMA may also act as a major dynamic support or resistance area.
 
 ---
 
-# Dynamic Support and Resistance
+## Dynamic Support and Resistance
 
 Moving averages can behave like dynamic support and resistance.
 
@@ -395,7 +395,7 @@ These areas should be treated as zones rather than exact points.
 
 ---
 
-# Do Not Enter on Touch Alone
+## Do Not Enter on Touch Alone
 
 A common beginner mistake is entering immediately when price touches an EMA.
 
@@ -412,7 +412,7 @@ The trader should wait for confirmation that the EMA zone is being respected.
 
 ---
 
-# Valid Confirmation
+## Valid Confirmation
 
 Possible confirmation may include:
 
@@ -427,7 +427,7 @@ The exact confirmation should be consistent with the trader's written rules.
 
 ---
 
-# Avoid Trading When the EMAs Are Mixed
+## Avoid Trading When the EMAs Are Mixed
 
 Do not apply this method when the EMAs are arranged randomly.
 
@@ -443,7 +443,7 @@ These conditions may indicate consolidation or an unclear market direction.
 
 ---
 
-# Avoid Flat Moving Averages
+## Avoid Flat Moving Averages
 
 When all three EMAs are flat, the market may lack clear momentum.
 
@@ -458,7 +458,7 @@ The Moving Average Rule works best when the EMAs have a clear direction and prop
 
 ---
 
-# Avoid Late Entries
+## Avoid Late Entries
 
 Do not enter when price has moved too far away from the EMAs.
 
@@ -473,7 +473,7 @@ The correct approach is to wait for price to return toward the moving averages.
 
 ---
 
-# Avoid Trading Every EMA Touch
+## Avoid Trading Every EMA Touch
 
 Not every touch of the 21 EMA or 50 EMA is a valid opportunity.
 
@@ -491,7 +491,7 @@ The setup should be complete before entry.
 
 ---
 
-# Stop-Loss Placement
+## Stop-Loss Placement
 
 The stop-loss should be placed at the point where the trade idea becomes invalid.
 
@@ -506,7 +506,7 @@ The stop-loss should not be placed randomly.
 
 ---
 
-# Take-Profit Planning
+## Take-Profit Planning
 
 The profit target should be based on market structure and a realistic continuation objective.
 
@@ -526,7 +526,7 @@ This should only be used when the target remains technically realistic.
 
 ---
 
-# Risk Management
+## Risk Management
 
 The Moving Average Rule does not remove risk.
 
@@ -540,7 +540,7 @@ The trader should also calculate position size before entry.
 
 ---
 
-# Example of a Bullish Setup
+## Example of a Bullish Setup
 
 Market:
 
@@ -567,7 +567,7 @@ Possible action:
 
 ---
 
-# Example of a Bearish Setup
+## Example of a Bearish Setup
 
 Market:
 
@@ -594,7 +594,7 @@ Possible action:
 
 ---
 
-# Signs the Trend May Be Weakening
+## Signs the Trend May Be Weakening
 
 A trend may be weakening when:
 
@@ -609,7 +609,7 @@ When these signs appear, avoid forcing a trade.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -628,7 +628,7 @@ The method is a structured decision-making tool, not a guarantee.
 
 ---
 
-# The Dessetra Moving Average Checklist
+## The Dessetra Moving Average Checklist
 
 Before entering, confirm:
 
@@ -652,7 +652,7 @@ If important conditions are missing, wait.
 
 ---
 
-# Key Principle
+## Key Principle
 
 The Moving Average Rule does not encourage traders to chase price.
 
@@ -668,13 +668,13 @@ The quality of the setup is more important than the number of trades taken.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 The Dessetra Moving Average Rule uses three EMAs:
 
-- 21 EMA — red
-- 50 EMA — yellow
-- 200 EMA — blue
+- 21 EMA â€” red
+- 50 EMA â€” yellow
+- 200 EMA â€” blue
 
 They should be displayed with increasing thickness.
 

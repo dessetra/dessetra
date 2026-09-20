@@ -1,1126 +1,908 @@
----
-title: Range Trading & Breakout Strategies
+﻿---
+title: Backtesting
 lessonNumber: 2
-duration: 25
+duration: 30
 difficulty: Intermediate
-objective: Learn how to identify range-bound markets, trade support and resistance, recognize genuine breakouts, avoid false breakouts, and manage risk when applying range and breakout strategies.
+objective: Backtest a rule-based trading strategy on historical market data, record results consistently, calculate key performance metrics and use evidence to evaluate the strategy without changing its rules after every result.
 video:
 resource:
 ---
 
-# Range Trading & Breakout Strategies
+# Backtesting
 
-Not every market is trending.
+In Lesson 1, you built a trading strategy.
 
-Sometimes price moves sideways between support and resistance for an extended period.
+You defined:
 
-This condition is called a range.
+- market
+- timeframes
+- market condition
+- setup
+- confirmation
+- entry trigger
+- invalidation
+- Stop Loss
+- position sizing
+- target
+- trade management
+- cancellation rules
 
-A range trader attempts to buy near support and sell near resistance while the range remains valid.
+But writing good-looking rules does not tell you how those rules would have performed.
 
-A breakout trader waits for price to move beyond the range and begin a new directional move.
+Now you must test them.
 
-Both strategies can be effective when they are applied under the correct market conditions.
+This process is called:
 
-The most important skill is knowing whether price is still respecting the range or beginning to break away from it.
-
----
-
-# What Is a Range?
-
-A range is a market condition where price moves sideways between two main boundaries.
-
-The lower boundary is support.
-
-The upper boundary is resistance.
-
-Price may repeatedly move:
-
-- upward from support
-- downward from resistance
-- sideways within the range
-
-A range forms when buyers and sellers are temporarily balanced.
-
-Neither side has enough strength to create a sustained trend.
+**Backtesting**
 
 ---
 
-# Range Structure
+## What Is Backtesting?
 
-A range usually contains:
+Backtesting means applying your trading strategy to **historical market data** as though you were trading at that time.
 
-- horizontal support
-- horizontal resistance
-- repeated price rejection
-- overlapping candles
-- reduced directional momentum
-- failed attempts to continue higher or lower
+You move through previous price action and ask:
 
-Unlike an uptrend, a range does not consistently create Higher Highs and Higher Lows.
+> "According to my written rules, would I have taken this trade?"
 
-Unlike a downtrend, it does not consistently create Lower Highs and Lower Lows.
+You then record what would have happened.
 
----
+Backtesting can help you evaluate:
 
-# Why Markets Range
+- how often setups appear
+- how often trades win or lose
+- average reward
+- losing streaks
+- drawdown
+- whether the rules are clear
+- whether the strategy suits the selected market
+- whether the strategy deserves further testing
 
-Markets may enter a range because:
+Backtesting does **not** guarantee future profitability.
 
-- traders are waiting for major news
-- buyers and sellers are balanced
-- a strong trend is resting
-- institutional positions are being accumulated
-- institutional positions are being distributed
-- market participation is low
-- price has reached an important higher-timeframe zone
+Market conditions can change.
 
-A range may last for minutes, hours, days or longer depending on the timeframe.
+It provides evidence about how your rules behaved in the historical sample you tested.
 
 ---
 
-# Identifying Support
+## Why Backtest?
 
-Support is the lower area of a range where buying pressure has previously appeared.
+Without testing, a trader may create a strategy because:
 
-Possible signs of support include:
+> "It looks good on the chart."
 
-- repeated rejection of lower prices
-- long lower wicks
-- bullish candlestick patterns
-- increased buying activity
-- failure to close below the level
-- previous resistance becoming support
+But seeing good examples after they have already happened is easy.
 
-Support is usually a zone, not one exact price.
+The real question is:
 
----
+**What happens when the same rules are applied consistently across many opportunities?**
 
-# Identifying Resistance
-
-Resistance is the upper area of a range where selling pressure has previously appeared.
-
-Possible signs of resistance include:
-
-- repeated rejection of higher prices
-- long upper wicks
-- bearish candlestick patterns
-- increased selling activity
-- failure to close above the level
-- previous support becoming resistance
-
-Resistance should also be treated as a zone.
+A strategy should not be judged from one attractive chart.
 
 ---
 
-# Confirming a Valid Range
+## Test the Rules You Actually Wrote
 
-A possible range becomes more reliable when:
+Before starting, open the strategy you created in Lesson 1.
 
-- price has reacted at support more than once
-- price has reacted at resistance more than once
-- both boundaries are visible
-- price repeatedly returns toward the middle
-- no clear trend structure exists
-- candles overlap frequently
+Do not improve it while backtesting.
 
-Two touches may suggest a possible boundary.
+If your rule says:
 
-Three or more reactions may provide stronger confirmation.
+> "Enter only after a completed confirmation candle."
 
----
+You cannot later say:
 
-# The Middle of the Range
+> "This one would have won, so I'll pretend I entered before confirmation."
 
-The midpoint is the area between support and resistance.
+That corrupts the test.
 
-It may act as a temporary balance zone.
+Backtest:
 
-The middle of the range is often a poor entry area because:
+**Version 1.0 exactly as written.**
 
-- reward potential may be limited
-- direction is less clear
-- stop placement may be difficult
-- price may move toward either boundary
+Record weaknesses separately.
 
-Range traders often prefer entries near the edges rather than in the middle.
+Improve the strategy **after** completing and reviewing the sample.
 
 ---
 
-# Basic Range Trading Principle
+## Avoid Hindsight Bias
 
-A basic range strategy is:
+When viewing historical charts, you already have access to what happened next.
 
-- look for buy opportunities near support
-- look for sell opportunities near resistance
-- avoid entering near the middle
-- exit before or near the opposite boundary
-- stop trading the range when the structure breaks
+This creates a major problem:
 
-The trader must wait for confirmation rather than entering only because price touches a zone.
+**Hindsight bias.**
 
----
+Suppose you see that price eventually rallied strongly.
 
-# Buying Near Range Support
+It becomes easy to think:
 
-A possible buy setup may form when:
+> "I definitely would have bought there."
 
-1. Price approaches support.
-2. Selling pressure weakens.
-3. Lower prices are rejected.
-4. Bullish confirmation appears.
-5. Price begins moving away from support.
+But at that moment in real trading, the future candles did not exist.
 
-Possible confirmation includes:
+A better backtesting process hides future price action whenever possible.
 
-- Hammer
-- Bullish Engulfing pattern
-- long lower wick
-- Double Bottom
-- bullish break of local structure
-- strong bullish close
+Reveal the chart gradually.
 
-The stop-loss may be placed below the support zone or below the setup invalidation point.
+Ask:
+
+**Would my rules permit an entry based only on the information available at this moment?**
 
 ---
 
-# Selling Near Range Resistance
+## Candle-by-Candle Testing
 
-A possible sell setup may form when:
+A useful manual method is:
 
-1. Price approaches resistance.
-2. Buying pressure weakens.
-3. Higher prices are rejected.
-4. Bearish confirmation appears.
-5. Price begins moving away from resistance.
+1. Select an earlier date.
+2. Hide future price action where your platform allows it.
+3. Move forward candle by candle.
+4. Analyse the market using your strategy.
+5. Wait for a complete setup.
+6. Record the entry when your trigger appears.
+7. Record Stop Loss and Take Profit.
+8. Continue moving forward.
+9. Record the result.
+10. Repeat.
 
-Possible confirmation includes:
-
-- Shooting Star
-- Bearish Engulfing pattern
-- long upper wick
-- Double Top
-- bearish break of local structure
-- strong bearish close
-
-The stop-loss may be placed above the resistance zone or above the setup invalidation point.
+Do not skip losing setups simply because you can already see where price eventually went.
 
 ---
 
-# Range Trade Example
+## Keep the Strategy Constant
 
-Suppose price is moving between:
+During one backtest, keep these rules stable:
 
-Support:
+- market
+- timeframes
+- setup
+- confirmation
+- entry
+- Stop Loss
+- target
+- risk assumptions
+- management
 
-$90
+Otherwise you are testing several strategies at once.
 
-Resistance:
+If you discover a possible improvement, write it under:
 
-$100
+**Future Improvement**
 
-A trader may wait for price to approach $90.
-
-At support, price forms a bullish rejection candle and then breaks above a nearby lower-timeframe resistance.
-
-Possible plan:
-
-- Entry near $91
-- Stop-loss below support at $88
-- Take-profit near $99
-
-Risk:
-
-$3 per unit
-
-Potential reward:
-
-$8 per unit
-
-The trade offers more than 1:2 but less than 1:3.
-
-The trader must decide whether this meets the strategy's minimum requirement.
-
-A trade should not be forced if the available range is too small.
+Do not immediately change the current test.
 
 ---
 
-# Risk-to-Reward in a Range
+## What Should Be Recorded?
 
-Range trades may have limited profit potential because the opposite boundary is nearby.
+For every qualifying setup, record:
 
-Before entering, calculate:
+| Field | Record |
+|---|---|
+| Trade Number | |
+| Date | |
+| Instrument | |
+| Buy/Sell | |
+| Market Condition | |
+| Entry Price | |
+| Stop Loss | |
+| Take Profit | |
+| Planned R:R | |
+| Result | |
+| Result in R | |
+| Rules Followed? | |
+| Screenshot | |
+| Notes | |
 
-- distance to stop-loss
-- distance to target
-- spread
-- transaction costs
-- available space inside the range
-
-A setup may look attractive but still provide poor risk-to-reward.
-
-For this course, traders should generally seek an average risk-to-reward ratio of approximately 1:3.
-
-However, the target must remain realistic.
-
----
-
-# Stop-Loss Placement in a Range
-
-For a buy trade near support, a stop-loss may be placed:
-
-- below the support zone
-- below the rejection wick
-- below the Double Bottom structure
-- beyond the invalidation point
-
-For a sell trade near resistance, a stop-loss may be placed:
-
-- above the resistance zone
-- above the rejection wick
-- above the Double Top structure
-- beyond the invalidation point
-
-The stop should not be placed exactly on the most obvious boundary without considering normal volatility.
+The journal should include **every qualifying trade**, not only the attractive ones.
 
 ---
 
-# Take-Profit Placement in a Range
+## Record Results in R
 
-Possible profit targets include:
+Using **R** makes different trades easier to compare.
 
-- the middle of the range
-- the opposite boundary
-- an area before the opposite boundary
-- a fixed risk-to-reward target
+If your planned risk is:
 
-Some traders take partial profit at the midpoint and close the remainder near the opposite side.
+**1R**
 
-However, taking partial profit changes the overall reward and should be tested.
+A full Stop Loss may produce:
 
----
+**-1R**
 
-# False Range Entries
+A trade reaching twice the amount risked:
 
-A range entry may fail when:
+**+2R**
 
-- price breaks the boundary strongly
-- momentum increases against the trade
-- a major news event occurs
-- the range is already weakening
-- the entry is placed without confirmation
-- the range boundary has been tested too many times
+A trade reaching three times the amount risked:
 
-Repeated testing of one boundary may weaken it.
-
----
-
-# Boundary Weakness
-
-A support zone may weaken when:
-
-- price repeatedly tests it
-- bullish reactions become smaller
-- price spends more time near support
-- lower highs form inside the range
-- selling pressure increases
-
-A resistance zone may weaken when:
-
-- price repeatedly tests it
-- bearish reactions become smaller
-- price spends more time near resistance
-- higher lows form inside the range
-- buying pressure increases
-
-Boundary weakness may warn that a breakout is approaching.
-
----
-
-# Range Compression
-
-Compression occurs when price gradually presses toward one boundary.
-
-Bullish compression may show:
-
-- repeated resistance tests
-- rising lows
-- reduced pullbacks
-- increasing buying pressure
-
-Bearish compression may show:
-
-- repeated support tests
-- falling highs
-- reduced recoveries
-- increasing selling pressure
-
-Compression may increase breakout probability.
-
----
-
-# What Is a Breakout?
-
-A breakout occurs when price moves beyond an important support or resistance zone.
-
-A bullish breakout moves above resistance.
-
-A bearish breakout moves below support.
-
-A breakout may begin:
-
-- a new trend
-- a continuation of an existing trend
-- a temporary false move
-
-The trader must distinguish genuine breakouts from false breakouts.
-
----
-
-# Why Breakouts Occur
-
-Breakouts may occur because:
-
-- one side gains control
-- large institutional orders enter
-- major news changes expectations
-- accumulated orders are triggered
-- stop-losses provide liquidity
-- volatility increases
-- a range becomes exhausted
-
-Breakouts often occur after periods of low volatility or consolidation.
-
----
-
-# Bullish Breakout
-
-A bullish breakout may show:
-
-- strong close above resistance
-- increased momentum
-- large bullish candle
-- rising volume, where available
-- successful retest
-- continuation after the break
-
-A wick above resistance without a strong close may not be enough.
-
----
-
-# Bearish Breakout
-
-A bearish breakout may show:
-
-- strong close below support
-- increased selling momentum
-- large bearish candle
-- rising volume, where available
-- successful retest
-- continuation after the break
-
-A wick below support without a strong close may be a liquidity sweep or false breakout.
-
----
-
-# Breakout Confirmation
-
-Possible breakout confirmation includes:
-
-- candle close beyond the boundary
-- strong body relative to recent candles
-- increased volume
-- follow-through candle
-- retest of the broken level
-- lower-timeframe structure shift
-- higher-timeframe agreement
-
-The more confirmation present, the stronger the setup may become.
-
-No confirmation guarantees success.
-
----
-
-# Breakout Entry Methods
-
-Common breakout entry methods include:
-
-- immediate breakout entry
-- candle-close entry
-- breakout and retest entry
-- lower-timeframe confirmation entry
-
-Each method has advantages and disadvantages.
-
----
-
-# Immediate Breakout Entry
-
-An immediate entry occurs as price moves through the level.
-
-Possible advantage:
-
-- early participation
-- larger profit potential
-
-Possible disadvantage:
-
-- higher false-breakout risk
-- slippage
-- poor execution during volatility
-
-Immediate entries are more aggressive.
-
----
-
-# Candle-Close Entry
-
-A candle-close entry waits for the breakout candle to close beyond the level.
-
-Possible advantage:
-
-- confirms that price remained beyond the boundary
-
-Possible disadvantage:
-
-- later entry
-- wider stop-loss
-- reduced risk-to-reward
-
-The closing timeframe must be defined in the strategy.
-
----
-
-# Breakout and Retest Entry
-
-A breakout and retest entry waits for price to return to the broken level.
-
-Bullish example:
-
-1. Resistance breaks.
-2. Price closes above it.
-3. Price returns to the zone.
-4. The zone holds as support.
-5. Bullish confirmation appears.
-6. The trader enters.
-
-Bearish example:
-
-1. Support breaks.
-2. Price closes below it.
-3. Price returns to the zone.
-4. The zone holds as resistance.
-5. Bearish confirmation appears.
-6. The trader enters.
-
-This method may provide a more controlled entry.
-
----
-
-# Retest Does Not Always Happen
-
-Some strong breakouts continue without returning to the broken level.
-
-A trader waiting for a retest may miss the trade.
-
-This is acceptable.
-
-Missing a trade is better than entering without following the strategy.
-
-Professional trading is based on repeatable rules, not participation in every move.
-
----
-
-# Breakout Momentum Entry
-
-A momentum entry may occur when price breaks with:
-
-- strong candle body
-- little opposing wick
-- increased volume
-- clear higher-timeframe direction
-- enough space to the next major level
-
-The trader must avoid entering when the breakout candle is already overextended.
-
----
-
-# False Breakout
-
-A false breakout occurs when price moves beyond a boundary but fails to continue.
-
-Price then returns into the range.
-
-False breakouts are common because:
-
-- liquidity is concentrated beyond obvious levels
-- traders enter too early
-- stop-loss orders are triggered
-- large participants reverse the move
-- the market lacks real momentum
-
-False breakouts can trap breakout traders.
-
----
-
-# Signs of a False Breakout
-
-Possible warning signs include:
-
-- long wick beyond the level
-- weak candle close
-- immediate return into the range
-- low volume
-- lack of follow-through
-- breakout against the higher-timeframe direction
-- major opposing support or resistance nearby
-- breakout during poor liquidity
-
-One sign alone may not be enough.
-
----
-
-# Bull Trap
-
-A bull trap occurs when price breaks above resistance, attracts buyers, and then falls back below the level.
-
-Possible signs include:
-
-- breakout wick above resistance
-- weak close
-- bearish reversal candle
-- failure to hold the retest
-- strong move back into the range
-
-A bull trap may lead to a bearish opportunity if the strategy confirms it.
-
----
-
-# Bear Trap
-
-A bear trap occurs when price breaks below support, attracts sellers, and then moves back above the level.
-
-Possible signs include:
-
-- breakout wick below support
-- weak close
-- bullish reversal candle
-- failure to hold below support
-- strong move back into the range
-
-A bear trap may lead to a bullish opportunity if the strategy confirms it.
-
----
-
-# Failed Breakout Strategy
-
-A failed breakout strategy attempts to trade price back into the range after a breakout fails.
-
-Bullish failed breakdown example:
-
-1. Price breaks below support.
-2. Price quickly returns above support.
-3. Bullish confirmation appears.
-4. Price breaks local resistance.
-5. Trader enters long.
-
-Bearish failed breakout example:
-
-1. Price breaks above resistance.
-2. Price quickly returns below resistance.
-3. Bearish confirmation appears.
-4. Price breaks local support.
-5. Trader enters short.
-
-This strategy requires strict confirmation because failed breakouts can reverse again.
-
----
-
-# Liquidity Sweep
-
-A liquidity sweep occurs when price moves beyond an obvious high or low, triggers orders, and then reverses.
-
-Possible targets include:
-
-- equal highs
-- equal lows
-- range boundaries
-- previous swing highs
-- previous swing lows
-
-A liquidity sweep may resemble a false breakout.
-
-Traders should wait for price to reclaim the level and confirm direction.
-
----
-
-# Breakout Volume
-
-Volume measures trading activity.
-
-A breakout accompanied by increased volume may have stronger participation.
-
-A breakout with weak volume may be more likely to fail.
-
-However:
-
-- volume data may differ between platforms
-- Forex spot volume is often estimated using tick activity
-- volume should not be used alone
-
-Price structure remains important.
-
----
-
-# Volatility Expansion
-
-Ranges often show reduced volatility.
-
-A breakout may create volatility expansion.
-
-Signs include:
-
-- larger candles
-- faster movement
-- wider trading range
-- increased volume
-- stronger momentum
-
-Volatility expansion may improve breakout continuation but can also increase slippage.
-
----
-
-# News Breakouts
-
-Major news can cause powerful breakouts.
-
-It can also create false moves.
-
-Possible risks include:
-
-- spread expansion
-- slippage
-- rapid reversal
-- poor order execution
-- stop-loss gaps
-
-A trader should know whether important news is approaching before trading a range breakout.
-
----
-
-# Breakout Stop-Loss Placement
-
-For a bullish breakout, a stop-loss may be placed:
-
-- below the broken resistance
-- below the retest low
-- below the breakout candle structure
-- beyond the setup invalidation point
-
-For a bearish breakout, a stop-loss may be placed:
-
-- above the broken support
-- above the retest high
-- above the breakout candle structure
-- beyond the setup invalidation point
-
-The stop must consider volatility.
-
----
-
-# Breakout Take-Profit Placement
-
-Possible targets include:
-
-- next resistance
-- next support
-- previous swing point
-- measured range target
-- chart-pattern target
-- predefined risk-to-reward level
-
-A measured range target may estimate the height of the range and project it from the breakout.
-
-This is an estimate, not a guarantee.
-
----
-
-# Measured Move Example
-
-Suppose a range has:
-
-Support:
-
-$100
-
-Resistance:
-
-$110
-
-Range height:
-
-$10
-
-If price breaks above $110, a projected bullish target may be:
-
-$120
-
-If price breaks below $100, a projected bearish target may be:
-
-$90
-
-The trader must still consider higher-timeframe structure and market obstacles.
-
----
-
-# Range Size and Trade Quality
-
-A very narrow range may not provide enough space to cover:
-
-- spread
-- fees
-- slippage
-- stop-loss distance
-- target distance
-
-A range trade should only be taken when the available space supports the trading plan.
-
----
-
-# Higher-Timeframe Context
-
-A lower-timeframe range may form inside a higher-timeframe trend.
+**+3R**
 
 Example:
 
-Daily chart:
+Trade 1: **+3R**
 
-Bullish
+Trade 2: **-1R**
 
-One-hour chart:
+Trade 3: **-1R**
 
-Sideways consolidation
+Trade 4: **+3R**
 
-A bullish breakout from the one-hour range may align with the daily trend.
+Total:
 
-A bearish breakout may have lower probability unless it signals a larger reversal.
+**+4R**
 
-Higher-timeframe context helps determine which breakout direction may be stronger.
-
----
-
-# Range Continuation Pattern
-
-A range may act as a continuation pattern.
-
-Examples include:
-
-- Bull Flag
-- Bear Flag
-- Rectangle
-- Pennant
-- consolidation after momentum
-
-The prior market direction may influence the probability of the next move.
-
-However, the trader should wait for confirmation.
+This allows strategy performance to be studied without depending entirely on account size.
 
 ---
 
-# Range Reversal Context
+## Sample Size Matters
 
-A range may also form near the end of a trend.
+Do not judge your strategy after:
 
-Possible warning signs include:
+**2 trades**
 
-- trend exhaustion
-- repeated failure to continue
-- momentum loss
-- major higher-timeframe support or resistance
-- Change of Character
-- reversal pattern
+or:
 
-In this case, the breakout may begin a new trend.
+**5 trades**
 
----
+Small samples can be heavily influenced by chance.
 
-# Range Trading Checklist
+A useful review might examine:
 
-Before taking a range trade, confirm:
+- 20 trades
+- 50 trades
+- 100 trades
+- different market conditions
 
-1. Is the market clearly ranging?
-2. Are support and resistance visible?
-3. Has price reacted at both boundaries?
-4. Is the entry near a boundary?
-5. Is there confirmation?
-6. Is the middle of the range being avoided?
-7. Is the stop-loss beyond the invalidation point?
-8. Is the target realistic?
-9. Is risk-to-reward acceptable?
-10. Is one boundary becoming weak?
-11. Is major news approaching?
-12. Is total session risk below 5%?
+The appropriate sample depends on how frequently the strategy generates valid setups.
+
+For this course, we will begin with a **20-trade backtest**.
+
+This is not enough to prove future profitability.
+
+It is enough to begin learning how the strategy behaves and whether its rules are usable.
 
 ---
 
-# Breakout Trading Checklist
+## Win Rate
 
-Before taking a breakout trade, confirm:
+Win rate measures the percentage of trades that were profitable.
 
-1. Is the boundary important?
-2. Is the market compressing or consolidating?
-3. Did price close beyond the level?
-4. Is momentum strong?
-5. Is volume supportive, where available?
-6. Is the breakout aligned with the higher timeframe?
-7. Is there enough space to the next obstacle?
-8. Will the strategy enter immediately or wait for a retest?
-9. Is the stop-loss logical?
-10. Is the target realistic?
-11. Does the setup offer acceptable risk-to-reward?
-12. Is total session risk below 5%?
-13. Is major news approaching?
+Formula:
 
----
+**Win Rate = Winning Trades Ã· Total Trades Ã— 100**
 
-# Example Range Buy Strategy
+Example:
 
-Market condition:
+20 trades
 
-Clear horizontal range
+8 winners
 
-Location:
+12 losers
 
-Near support
+**Win Rate = 8 Ã· 20 Ã— 100 = 40%**
 
-Confirmation:
+A 40% win rate does not automatically mean the strategy is poor.
 
-Bullish rejection candle followed by break of local resistance
-
-Entry:
-
-After confirmation
-
-Stop-loss:
-
-Below the support zone
-
-Target:
-
-Before resistance or at a realistic structural target
-
-Invalidation:
-
-Price closes strongly below support
-
-Risk:
-
-Calculated before entry
+You must also examine how much the winners make compared with the losers.
 
 ---
 
-# Example Range Sell Strategy
+## Win Rate Is Not Everything
 
-Market condition:
+Consider two strategies.
 
-Clear horizontal range
+### Strategy A
 
-Location:
+Wins:
 
-Near resistance
+**70%**
 
-Confirmation:
+Average win:
 
-Bearish rejection candle followed by break of local support
+**+0.5R**
 
-Entry:
+Average loss:
 
-After confirmation
+**-2R**
 
-Stop-loss:
+### Strategy B
 
-Above resistance
+Wins:
 
-Target:
+**40%**
 
-Before support or at a realistic structural target
+Average win:
 
-Invalidation:
+**+3R**
 
-Price closes strongly above resistance
+Average loss:
 
-Risk:
+**-1R**
 
-Calculated before entry
+Which is better?
 
----
+You cannot answer from win rate alone.
 
-# Example Bullish Breakout Strategy
+The relationship between wins and losses matters.
 
-Market condition:
+This is why we also calculate:
 
-Consolidation below resistance
+**Average Win**
 
-Higher timeframe:
+and:
 
-Bullish
-
-Confirmation:
-
-Strong candle close above resistance
-
-Entry:
-
-After breakout close or successful retest
-
-Stop-loss:
-
-Below the retest low or broken resistance
-
-Target:
-
-Next resistance or measured range objective
-
-Invalidation:
-
-Price returns into the range and fails to recover
+**Average Loss**
 
 ---
 
-# Example Bearish Breakout Strategy
+## Average Win
 
-Market condition:
+Add the results of all winning trades and divide by the number of winners.
 
-Consolidation above support
+Example:
 
-Higher timeframe:
+Winning trades:
 
-Bearish
++3R  
++2R  
++3R  
++1R  
++3R
 
-Confirmation:
+Total:
 
-Strong candle close below support
+**12R**
 
-Entry:
+Number of winners:
 
-After breakout close or successful retest
+**5**
 
-Stop-loss:
+Average Win:
 
-Above the retest high or broken support
-
-Target:
-
-Next support or measured range objective
-
-Invalidation:
-
-Price returns into the range and fails to continue lower
+**12R Ã· 5 = 2.4R**
 
 ---
 
-# Combining Range and Breakout Strategies
+## Average Loss
 
-A trader may prepare for two possible outcomes.
+Add the size of all losing trades and divide by the number of losses.
 
-While price remains inside the range:
+Suppose:
 
-- trade confirmed reactions at the boundaries
+-1R  
+-1R  
+-0.5R  
+-1R  
+-1R
 
-When price breaks and confirms:
+Total loss:
 
-- stop range trading
-- consider breakout or retest opportunities
+**4.5R**
 
-The trader should not continue buying support after support has clearly failed.
+Number of losses:
 
-The strategy must adapt to the new structure.
+**5**
 
----
+Average Loss:
 
-# Position Sizing
+**0.9R**
 
-Position size should be based on:
-
-- account balance
-- acceptable risk
-- stop-loss distance
-- market volatility
-
-A strong-looking breakout does not justify excessive risk.
-
-No breakout is guaranteed.
+These figures help show how much the strategy tends to make when correct compared with how much it loses when wrong.
 
 ---
 
-# Maximum Session Risk
+## Expectancy
 
-For this course:
+Expectancy estimates the average result the strategy produced per trade across the tested sample.
 
-**Total risk during one trading session must never exceed 5% of trading capital.**
+A simplified formula is:
 
-This includes all open range and breakout trades.
+**Expectancy = (Win Rate Ã— Average Win) - (Loss Rate Ã— Average Loss)**
 
-The 5% level is a maximum ceiling, not a required target.
+Suppose:
 
----
+Win Rate:
 
-# Common Beginner Mistakes
+**40%**
 
-Avoid these mistakes:
+Average Win:
 
-- buying in the middle of a range
-- selling in the middle of a range
-- treating support and resistance as exact lines
-- entering every touch without confirmation
-- continuing to trade a range after it breaks
-- entering on a wick alone
-- chasing an overextended breakout
-- ignoring false-breakout risk
-- placing stops directly on obvious boundaries
-- ignoring spread and slippage
-- forcing a 1:3 target without enough space
-- trading during major news without a plan
-- opening several correlated breakout trades
-- exceeding the 5% session risk limit
+**3R**
 
----
+Loss Rate:
 
-# Key Principle
+**60%**
 
-Range trading works while price respects the boundaries.
+Average Loss:
 
-Breakout trading begins when price leaves those boundaries with sufficient confirmation.
+**1R**
 
-The trader must recognize when one market condition has ended and another has begun.
+Calculation:
+
+**(0.40 Ã— 3R) - (0.60 Ã— 1R)**
+
+**1.2R - 0.6R = +0.6R**
+
+In this simplified historical sample, the strategy produced positive expectancy.
+
+That does not mean every future trade should make 0.6R.
+
+It describes the average result of the tested sample.
 
 ---
 
-# Lesson Summary
+## Negative Expectancy
 
-A range forms when price moves between support and resistance without a clear directional trend.
+Suppose:
 
-Range traders generally:
+Win Rate:
 
-- buy near confirmed support
-- sell near confirmed resistance
-- avoid the middle
-- exit near the opposite boundary
-- stop trading the range when structure breaks
+**50%**
 
-Breakout traders generally wait for:
+Average Win:
 
-- a meaningful boundary
-- a strong close beyond the level
-- momentum
-- volume support, where available
-- higher-timeframe alignment
-- a successful retest or follow-through
+**0.8R**
 
-False breakouts may occur when price briefly moves beyond a boundary and returns into the range.
+Average Loss:
 
-For this course, traders should generally aim for an average risk-to-reward ratio of approximately 1:3 when market structure realistically supports it.
+**1R**
 
-Total risk during one trading session must never exceed 5% of trading capital.
+Expectancy:
 
-Successful range and breakout trading depends on patience, confirmation, realistic targets and disciplined risk management.
+**(0.50 Ã— 0.8R) - (0.50 Ã— 1R)**
+
+**0.4R - 0.5R = -0.1R**
+
+The tested sample has negative expectancy.
+
+That tells you the strategy may require further investigation before progressing.
+
+Do not simply increase risk to compensate.
+
+---
+
+## Losing Streaks
+
+Backtesting can also reveal sequences of consecutive losses.
+
+For example:
+
+W â†’ L â†’ L â†’ W â†’ L â†’ L â†’ L â†’ W
+
+The longest losing streak here is:
+
+**3**
+
+This information matters psychologically and financially.
+
+A strategy can have positive overall results while still experiencing several consecutive losses.
+
+Knowing this helps you understand why risk management remains necessary even when a strategy has historically performed well.
+
+---
+
+## Drawdown
+
+Drawdown measures the decline from a previous equity peak.
+
+Suppose the backtest reaches:
+
+**+10R**
+
+Then several losses reduce the result to:
+
+**+5R**
+
+The strategy experienced a:
+
+**5R drawdown from its previous peak.**
+
+Large drawdowns may indicate:
+
+- excessive risk
+- poor market suitability
+- long losing sequences
+- weak strategy rules
+- unstable performance
+
+Drawdown should be reviewed together with the other metrics.
+
+---
+
+## Profit Factor
+
+Another useful metric is **Profit Factor**.
+
+Formula:
+
+**Profit Factor = Total Gross Profit Ã· Total Gross Loss**
+
+Suppose:
+
+Total winning trades:
+
+**+24R**
+
+Total losing trades:
+
+**-12R**
+
+Profit Factor:
+
+**24 Ã· 12 = 2.0**
+
+This means the historical sample produced twice as much gross profit as gross loss.
+
+A value above 1 means gross profit exceeded gross loss in that sample.
+
+But one metric should never be evaluated alone.
+
+---
+
+## What Should You Evaluate?
+
+After completing your sample, examine:
+
+- total trades
+- wins
+- losses
+- win rate
+- average win
+- average loss
+- net R
+- expectancy
+- profit factor
+- maximum drawdown
+- longest losing streak
+- rule compliance
+- market conditions
+
+Do not focus only on:
+
+**How much money would I have made?**
+
+You are trying to understand **how the strategy behaves**.
+
+---
+
+## Strategy vs Execution
+
+Backtesting can expose two different problems.
+
+## Strategy Problem
+
+You followed the written rules correctly, but the rules consistently produced poor results.
+
+Possible issue:
+
+**The strategy itself may require adjustment.**
+
+## Execution Problem
+
+The written rules were clear, but you repeatedly ignored them during testing.
+
+Possible issue:
+
+**Your execution process needs improvement.**
+
+Do not confuse these two problems.
+
+---
+
+## Screenshot Every Trade
+
+For every backtested trade, save a chart screenshot showing:
+
+- structure
+- setup zone
+- confirmation
+- entry
+- Stop Loss
+- Take Profit
+
+Screenshots make later review much easier.
+
+You may discover that losing trades repeatedly share a particular characteristic.
+
+Without visual records, that pattern may be difficult to identify.
+
+---
+
+## Do Not Delete Losing Trades
+
+Suppose your first results are:
+
+L  
+L  
+W  
+L  
+W  
+L
+
+Do not restart the backtest because the results look unattractive.
+
+That creates biased evidence.
+
+Record the results honestly.
+
+A useful backtest must contain:
+
+**wins + losses + missed setups + uncomfortable results**
+
+---
+
+## Test Different Market Conditions
+
+After obtaining enough trades, look at the environment in which they occurred.
+
+For example:
+
+Did the strategy perform differently during:
+
+- strong trends
+- weak trends
+- consolidation
+- high volatility
+- low volatility
+
+You may discover that your strategy works better under specific conditions.
+
+That information can later become part of the strategy rules.
+
+---
+
+## Do Not Optimize Every Losing Trade
+
+After reviewing a loss, it is tempting to add another rule.
+
+For example:
+
+> "If I add another indicator, that loss would disappear."
+
+Then another loss appears.
+
+Another rule is added.
+
+Eventually the strategy becomes designed to perfectly explain historical data.
+
+That does not guarantee it will perform better in future markets.
+
+Changes should solve **repeated problems supported by evidence**, not individual losing trades.
+
+---
+
+## One Change at a Time
+
+If your backtest reveals a genuine weakness:
+
+1. Identify the problem.
+2. Propose one adjustment.
+3. Save the original strategy.
+4. Create a new version.
+5. Test the adjusted version.
+6. Compare results.
+
+For example:
+
+**Strategy Version 1.0**
+
+becomes:
+
+**Strategy Version 1.1**
+
+Record:
+
+- what changed
+- why it changed
+- what evidence supported the change
+- what result you expect
+
+Changing several rules simultaneously makes it difficult to know which change affected performance.
+
+---
+
+## Backtesting Is Not Live Trading
+
+Historical testing has limitations.
+
+During backtesting:
+
+- you already know you are viewing the past
+- execution pressure is lower
+- emotional pressure is different
+- actual fills may differ
+- spreads and slippage may vary
+- future market conditions may differ
+
+Therefore:
+
+**A successful backtest is not the final test.**
+
+It is evidence that the strategy may deserve the next stage:
+
+**forward testing on a demo account.**
+
+---
+
+## Practical Assignment â€” 20-Trade Backtest
+
+Use the strategy you created in Lesson 1.
+
+Backtest:
+
+**20 qualifying historical trades**
+
+using TradingView or MT5 historical charts.
+
+Do not change your strategy rules during these 20 trades.
+
+For every trade record:
+
+| Field | Required |
+|---|---|
+| Trade Number | Yes |
+| Date | Yes |
+| Instrument | Yes |
+| Buy/Sell | Yes |
+| Entry | Yes |
+| Stop Loss | Yes |
+| Take Profit | Yes |
+| Planned R:R | Yes |
+| Result | Yes |
+| Result in R | Yes |
+| Screenshot | Yes |
+| Rule Violation | Yes/No |
+| Notes | Yes |
+
+---
+
+## Calculate Your Results
+
+After all 20 trades, calculate:
+
+**Total Trades:**  
+__________
+
+**Winning Trades:**  
+__________
+
+**Losing Trades:**  
+__________
+
+**Win Rate:**  
+__________
+
+**Average Win:**  
+__________ R
+
+**Average Loss:**  
+__________ R
+
+**Net Result:**  
+__________ R
+
+**Expectancy:**  
+__________ R per trade
+
+**Profit Factor:**  
+__________
+
+**Longest Losing Streak:**  
+__________
+
+**Maximum Drawdown:**  
+__________ R
+
+---
+
+## Strategy Review
+
+Answer:
+
+**1. Which market conditions produced your strongest results?**
+
+________________________
+
+**2. Which conditions produced your weakest results?**
+
+________________________
+
+**3. Were the strategy rules easy to identify historically?**
+
+________________________
+
+**4. Which rule created the most confusion?**
+
+________________________
+
+**5. Did you violate any rules during the test?**
+
+________________________
+
+**6. What repeated weakness did you identify?**
+
+________________________
+
+**7. Does the evidence justify changing anything before demo testing? Why?**
+
+________________________
+
+---
+
+## Screenshot Assignment
+
+Submit screenshots of:
+
+- **3 winning trades**
+- **3 losing trades**
+
+Each screenshot should clearly show:
+
+- setup
+- confirmation
+- entry
+- Stop Loss
+- Take Profit
+- final outcome
+
+Do not submit only your best trades.
+
+We need evidence from both sides of the strategy.
+
+---
+
+## Quick Knowledge Check
+
+**1. What is backtesting?**
+
+**2. Why should future candles be hidden where possible during manual backtesting?**
+
+**3. Why should strategy rules remain unchanged during the initial sample?**
+
+**4. Can a strategy with a 40% win rate still produce positive expectancy?**
+
+**5. Why should losing trades remain in the backtest?**
+
+**6. What should happen before changing a strategy rule?**
+
+---
+
+## Key Takeaways
+
+- Backtesting applies strategy rules to historical market data.
+- Backtesting provides evidence, not guarantees.
+- Test the strategy exactly as written.
+- Avoid using future price information when making historical decisions.
+- Record every qualifying trade.
+- Do not remove losing trades.
+- Sample size matters.
+- Win rate alone does not determine strategy quality.
+- Average win and average loss matter.
+- Expectancy estimates the average historical result per trade.
+- Drawdown and losing streaks reveal important risk characteristics.
+- Screenshots help identify repeated patterns.
+- Change rules based on evidence, not individual losses.
+- Change one important variable at a time.
+- A promising backtest should still be tested in current market conditions.
+
+---
+
+## Lesson Completion
+
+You have now tested your strategy against historical market data.
+
+Historical testing is only the first stage.
+
+The next challenge is different:
+
+**Can you follow the same rules while the market is moving and you do not know what the next candle will do?**
+
+Next:
+
+**Lesson 3 â€” Live-Market Demo Challenge**

@@ -7,123 +7,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the primary purpose of risk management in trading?",
+      "question": "A trader has a $2,000 account and plans to risk 1% on a trade. What is the maximum planned monetary risk?",
       "options": [
-        "To guarantee profits",
-        "To eliminate all losses",
-        "To protect trading capital while taking calculated risks",
-        "To increase leverage"
+        "$10",
+        "$20",
+        "$50",
+        "$200"
       ],
-      "correctAnswer": 2,
-      "explanation": "Risk management focuses on protecting trading capital and ensuring losses remain controlled while pursuing profitable opportunities."
+      "correctAnswer": 1,
+      "explanation": "1% of $2,000 is $20. Position size should then be calculated so that the planned loss at the Stop Loss remains approximately $20."
     },
     {
       "id": 2,
-      "question": "According to this course, what is the maximum amount of total trading capital that should be risked during one trading session?",
+      "question": "What should primarily determine where a Stop Loss is placed?",
       "options": [
-        "2%",
-        "5%",
-        "10%",
-        "20%"
+        "The lot size the trader wants to use",
+        "A fixed number of pips used on every trade",
+        "The point where the trade idea becomes invalid",
+        "The amount of profit made on the previous trade"
       ],
-      "correctAnswer": 1,
-      "explanation": "The course recommends never risking more than 5% of total trading capital during a single trading session."
+      "correctAnswer": 2,
+      "explanation": "The Stop Loss should be connected to market structure and the point where the original trade idea becomes invalid, rather than an arbitrary distance."
     },
     {
       "id": 3,
-      "question": "What determines the correct position size for a trade?",
+      "question": "Two trades have the same monetary risk, but Trade B requires a much wider Stop Loss than Trade A. What should generally happen to Trade B's position size?",
       "options": [
-        "How confident the trader feels",
-        "The amount of recent profits",
-        "The planned monetary risk and stop-loss distance",
-        "The broker's leverage"
+        "It should be increased",
+        "It should generally be reduced",
+        "It must remain exactly the same",
+        "The Stop Loss should be removed"
       ],
-      "correctAnswer": 2,
-      "explanation": "Professional traders calculate position size using acceptable monetary risk and the stop-loss distance."
+      "correctAnswer": 1,
+      "explanation": "For the same monetary risk, a wider Stop Loss generally requires a smaller position size. This keeps the planned financial loss controlled."
     },
     {
       "id": 4,
-      "question": "A stop-loss should normally be placed:",
+      "question": "A trade risks $15 for a potential profit of $45. What is its Risk-to-Reward ratio?",
       "options": [
-        "At a random distance from the entry",
-        "Where the trading idea becomes invalid",
-        "Exactly at the entry price",
-        "As far away as possible"
+        "1:1",
+        "1:2",
+        "1:3",
+        "3:1"
       ],
-      "correctAnswer": 1,
-      "explanation": "A stop-loss should be placed beyond a logical market level where the original trade idea would no longer be valid."
+      "correctAnswer": 2,
+      "explanation": "$45 potential reward divided by $15 risk equals 3, giving a Risk-to-Reward ratio of 1:3."
     },
     {
       "id": 5,
-      "question": "What does a 1:3 risk-to-reward ratio mean?",
+      "question": "A setup has a 20-pip Stop Loss, so a trader wants a 60-pip target for 1:3 R:R. However, major Resistance is only 25 pips above the entry. What is the most disciplined response?",
       "options": [
-        "Risk $30 to make $10",
-        "Risk 3 units to gain 1 unit",
-        "Risk 1 unit to potentially gain 3 units",
-        "Win three trades for every loss"
+        "Ignore the Resistance and keep the 60-pip target",
+        "Remove the Stop Loss so the trade has more room",
+        "Increase the lot size to compensate for the smaller target",
+        "Reassess or reject the trade because market structure does not support the planned 1:3"
       ],
-      "correctAnswer": 2,
-      "explanation": "A 1:3 risk-to-reward ratio means risking one unit for the opportunity to earn three units."
+      "correctAnswer": 3,
+      "explanation": "Risk-to-Reward should not be manufactured by ignoring market structure. If a logical obstacle prevents an acceptable target, the setup can be rejected."
     },
     {
       "id": 6,
-      "question": "What is drawdown?",
+      "question": "A trader is stopped out and immediately enters a weak setup with a larger lot size because they want to recover the loss quickly. What behaviour does this demonstrate?",
       "options": [
-        "The amount of leverage used",
-        "The decline in account value from a previous peak",
-        "The spread charged by a broker",
-        "The profit earned during a winning streak"
+        "Backtesting",
+        "Revenge trading",
+        "Position sizing",
+        "Capital preservation"
       ],
       "correctAnswer": 1,
-      "explanation": "Drawdown measures the reduction in account value from its previous highest point."
+      "explanation": "Revenge trading occurs when the desire to recover a previous loss begins driving the next trading decision instead of the trading rules."
     },
     {
       "id": 7,
-      "question": "Why should traders avoid revenge trading?",
+      "question": "A trader misses a planned entry and price moves strongly in the expected direction. What should the trader do next?",
       "options": [
-        "Because it usually follows emotional decisions after losses",
-        "Because brokers prohibit it",
-        "Because it guarantees a losing trade",
-        "Because it reduces leverage automatically"
+        "Enter immediately before price moves farther",
+        "Double the position because the direction was correct",
+        "Recalculate the setup at the current price and reject it if the rules no longer qualify",
+        "Enter without a Stop Loss because confirmation already occurred"
       ],
-      "correctAnswer": 0,
-      "explanation": "Revenge trading is emotionally driven and often results in poor decisions that increase losses."
+      "correctAnswer": 2,
+      "explanation": "A missed entry should not automatically be chased. The trader should reassess entry, invalidation, target and R:R at the current price and trade only if the setup still satisfies the rules."
     },
     {
       "id": 8,
-      "question": "Which action is generally recommended after reaching the maximum session loss limit?",
+      "question": "Under the Challenge 4 behavioural safeguard, what should a trader do after three consecutive losses?",
       "options": [
-        "Double the next position size",
-        "Immediately recover the losses",
-        "Stop trading and review the session",
-        "Increase leverage"
+        "Increase risk on the next trade",
+        "Change strategy immediately",
+        "Stop trading for the day and review the trades",
+        "Continue until the losses are recovered"
       ],
       "correctAnswer": 2,
-      "explanation": "Stopping trading after reaching the session loss limit helps prevent emotional decision-making."
+      "explanation": "The course uses three consecutive losses as a stop-for-the-day behavioural safeguard. The trader should stop and review rather than attempting an emotional recovery."
     },
     {
       "id": 9,
-      "question": "Why is capital preservation considered more important than rapid account growth?",
+      "question": "What best describes the relationship between a trading plan and a trading journal?",
       "options": [
-        "Because profits are guaranteed later",
-        "Because a protected account can continue taking future trading opportunities",
-        "Because leverage becomes unnecessary",
-        "Because markets never change"
+        "The plan defines what the trader should do, while the journal records what the trader actually did",
+        "The plan records old trades, while the journal predicts future prices",
+        "The plan calculates profit, while the journal replaces the Stop Loss",
+        "They perform exactly the same function"
       ],
-      "correctAnswer": 1,
-      "explanation": "Protecting capital allows traders to survive losing periods and continue participating in future opportunities."
+      "correctAnswer": 0,
+      "explanation": "A trading plan establishes rules before execution. A trading journal records the actual analysis, execution, result and behaviour so performance can later be reviewed."
     },
     {
       "id": 10,
-      "question": "Which statement best describes professional risk management?",
+      "question": "A trader followed every setup and risk rule correctly, but the trade reached the planned Stop Loss. How should this trade primarily be classified?",
       "options": [
-        "Increase risk after every winning trade",
-        "Avoid using stop-losses",
-        "Follow predefined rules consistently regardless of emotions",
-        "Recover every loss immediately"
+        "An execution mistake because every valid trade should win",
+        "A revenge trade because money was lost",
+        "A normal strategy loss if all rules were genuinely followed",
+        "Proof that the Stop Loss should have been widened"
       ],
       "correctAnswer": 2,
-      "explanation": "Professional traders consistently follow their trading plan and risk management rules instead of making emotional decisions."
+      "explanation": "A correctly executed setup can still lose. If the strategy and risk rules were followed, the loss should be recorded as a normal strategy loss rather than automatically treated as an execution error."
     }
   ]
 }

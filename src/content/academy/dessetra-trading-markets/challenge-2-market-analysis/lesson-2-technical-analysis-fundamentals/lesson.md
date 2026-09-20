@@ -1,397 +1,183 @@
----
-title: Technical Analysis Fundamentals
+﻿---
+title: Support & Resistance
 lessonNumber: 2
-duration: 25
+duration: 15
 difficulty: Beginner
-objective: Learn the principles of technical analysis, understand how price action reflects market psychology, and discover the core tools used by professional traders.
+objective: Identify support and resistance zones, understand rejection, breakouts and retests, and mark useful price areas on a chart.
 video:
 resource:
 ---
 
-# Technical Analysis Fundamentals
+# Support & Resistance
 
-Technical analysis is the study of historical price movement in order to identify potential future market opportunities.
+Support and resistance are important areas where price has previously reacted.
 
-Instead of asking **"Why is the price moving?"**, technical analysis asks:
-
-- What is price doing?
-- What has price done before in similar situations?
-- What is the highest probability outcome?
-
-Technical analysis assumes that everything currently known about the market is already reflected in the price.
+They help traders identify where buying or selling pressure may appear again.
 
 ---
 
-# The Three Core Principles of Technical Analysis
+## Support
 
-Professional technical analysis is built upon three important principles.
+**Support** is an area where buying pressure has previously prevented price from continuing lower.
 
-## 1. Price Discounts Everything
+Think of support as a **floor area** where buyers may become active.
 
-Every known piece of information is believed to be reflected in the current market price.
-
-Examples include:
-
-- economic news
-- company performance
-- political events
-- investor expectations
-- market sentiment
-
-Because of this, technical analysts primarily study price itself.
+Support should be treated as a **zone**, not an exact price.
 
 ---
 
-## 2. Prices Move in Trends
+## Resistance
 
-Markets rarely move randomly forever.
+**Resistance** is an area where selling pressure has previously prevented price from continuing higher.
 
-Instead, they usually form:
+Think of resistance as a **ceiling area** where sellers may become active.
 
-- Uptrends
-- Downtrends
-- Sideways trends
-
-The objective of technical analysis is to identify these trends as early as possible.
+Resistance should also be treated as a **zone**, not an exact price.
 
 ---
 
-## 3. History Often Repeats Itself
+## How to Identify Important Zones
 
-Human emotions remain consistent.
+Look for areas where price has previously:
 
-Fear...
+- reversed strongly
+- rejected several times
+- paused before a strong move
+- repeatedly reacted
 
-Greed...
+Focus on the clearest areas.
 
-Hope...
-
-Panic...
-
-Confidence...
-
-These emotions repeatedly create similar price patterns.
-
-Although history never repeats perfectly, similar market behaviour often appears again.
+Avoid filling your chart with too many levels.
 
 ---
 
-# What Is a Price Chart?
+## Rejection
 
-A price chart is a visual representation of how an asset has moved over time.
+A rejection occurs when price reaches an area but fails to continue through it.
 
-It allows traders to observe:
+For example:
 
-- price movement
-- trends
-- volatility
-- momentum
-- buying pressure
-- selling pressure
+**Price reaches resistance â†’ sellers respond â†’ price moves downward**
 
-Every decision in technical analysis begins with reading a chart correctly.
+or:
 
----
+**Price reaches support â†’ buyers respond â†’ price moves upward**
 
-# Types of Charts
-
-The most common chart types are:
-
-## Line Chart
-
-Shows only closing prices.
-
-Advantages:
-
-- simple
-- clean
-- easy to understand
-
-Disadvantages:
-
-- hides important price information
+Candlestick wicks can help you see rejection, but one wick alone does not guarantee a reversal.
 
 ---
 
-## Bar Chart
+## Breakout
 
-Shows:
+A **breakout** occurs when price moves beyond an important support or resistance area.
 
-- Open
-- High
-- Low
-- Close
+Example:
 
-Provides more detail than a line chart.
+**Resistance â†’ price breaks above â†’ possible bullish continuation**
 
----
+or:
 
-## Candlestick Chart
+**Support â†’ price breaks below â†’ possible bearish continuation**
 
-The candlestick chart is the most popular among professional traders.
-
-Each candle displays:
-
-- Open
-- High
-- Low
-- Close
-
-Candlestick charts also make market psychology easier to understand.
-
-Most professional traders use candlestick charts.
+Not every breakout will continue.
 
 ---
 
-# Understanding Candlesticks
+## Retest
 
-Each candlestick tells the story of buyers and sellers during a specific period.
+After breaking an important area, price may return to test that area again.
 
-A candle contains:
+This is called a **retest**.
 
-- Opening price
-- Closing price
-- Highest price
-- Lowest price
+Example:
 
----
+**Resistance â†’ Breakout â†’ Retest â†’ Possible continuation**
 
-## Bullish Candle
+Previous resistance may sometimes act as support after a breakout.
 
-A bullish candle closes higher than it opened.
+Previous support may sometimes act as resistance after a breakdown.
 
-It indicates buying pressure during that period.
+A retest is not guaranteed to occur.
 
 ---
 
-## Bearish Candle
+## False Breakout
 
-A bearish candle closes lower than it opened.
+Sometimes price moves beyond support or resistance and then quickly returns inside the previous area.
 
-It indicates selling pressure.
+This is a **false breakout**.
 
----
+This is why traders should avoid assuming that every break is automatically a trade signal.
 
-# Timeframes
-
-Every chart can be viewed using different timeframes.
-
-Examples include:
-
-- 1 Minute
-- 5 Minutes
-- 15 Minutes
-- 30 Minutes
-- 1 Hour
-- 4 Hours
-- Daily
-- Weekly
-- Monthly
-
-Each timeframe tells a different part of the market story.
-
-Professional traders normally analyse multiple timeframes before entering a trade.
+Context and confirmation matter.
 
 ---
 
-# Trend
+## Practical Exercise
 
-One of the first tasks of technical analysis is identifying the current trend.
+Open **EURUSD, GBPUSD or XAUUSD** on TradingView.
 
-Markets usually move in one of three directions.
+Use the **H1 timeframe**.
 
-## Uptrend
+Mark:
 
-Characteristics:
+- 2 clear support zones
+- 2 clear resistance zones
 
-- Higher Highs
-- Higher Lows
+Then find one example of either:
 
-Buyers control the market.
+- rejection
+- breakout
+- retest
 
----
-
-## Downtrend
-
-Characteristics:
-
-- Lower Highs
-- Lower Lows
-
-Sellers control the market.
+Observe how price behaved when it reached each area.
 
 ---
 
-## Sideways Market
+## Screenshot Assignment
 
-Price moves within a range.
+Submit one annotated chart screenshot showing:
 
-Neither buyers nor sellers have full control.
+- at least one Support zone
+- at least one Resistance zone
+- one Rejection, Breakout or Retest
 
-Many beginners lose money because they trade trend strategies inside sideways markets.
+Use **zones rather than several thin lines**.
 
----
-
-# Support
-
-Support is an area where buying pressure has previously been strong enough to stop price from falling.
-
-Support is not an exact line.
-
-It is usually an area or zone.
-
-Price may:
-
-- bounce
-- break through
-- temporarily move below before reversing
-
-Support should always be treated as a zone.
+The instrument and timeframe should also be visible.
 
 ---
 
-# Resistance
+## Quick Knowledge Check
 
-Resistance is an area where selling pressure has previously prevented price from rising further.
+**1. What is support?**
 
-Like support, resistance is also a zone rather than a single price.
+**2. What is resistance?**
 
----
+**3. Why should support and resistance be treated as zones?**
 
-# Breakout
+**4. What is a breakout?**
 
-A breakout occurs when price moves beyond an important support or resistance level.
-
-A breakout may indicate:
-
-- trend continuation
-- trend reversal
-- increased volatility
-
-Not every breakout is genuine.
+**5. What is the difference between a breakout and a false breakout?**
 
 ---
 
-# False Breakout
+## Key Takeaways
 
-Sometimes price briefly moves beyond support or resistance before reversing.
-
-This is called a false breakout.
-
-Professional traders often wait for confirmation before entering after a breakout.
-
----
-
-# Market Structure
-
-Market structure describes how price forms:
-
-- Higher Highs
-- Higher Lows
-- Lower Highs
-- Lower Lows
-
-Understanding market structure is more important than memorising indicators.
-
-Many experienced traders rely primarily on market structure.
+- Support is an area where buyers may become active.
+- Resistance is an area where sellers may become active.
+- Treat support and resistance as **zones**.
+- Rejection shows price failing to continue through an area.
+- Breakouts can lead to continuation, but some fail.
+- Price may retest a broken area before continuing.
+- Support and resistance are areas of interest, not guaranteed reversal points.
 
 ---
 
-# Trendlines
+## Lesson Completion
 
-A trendline is a straight line connecting important swing highs or swing lows.
+You should now be able to identify important support and resistance areas and observe how price reacts around them.
 
-Trendlines help traders identify:
+Next:
 
-- trend direction
-- possible reversals
-- breakout areas
-
-Trendlines are guides, not guarantees.
-
----
-
-# Technical Indicators
-
-Indicators are mathematical calculations based on price and sometimes volume.
-
-Examples include:
-
-- Moving Average
-- RSI
-- MACD
-- Bollinger Bands
-- ATR
-- Stochastic Oscillator
-
-Indicators should support analysis.
-
-They should never replace understanding of price action.
-
----
-
-# Indicator Overload
-
-One common beginner mistake is placing too many indicators on one chart.
-
-This often creates confusion because indicators may give conflicting signals.
-
-A clean chart with solid market structure is usually more valuable than a chart filled with indicators.
-
----
-
-# Confirmation
-
-Before entering a trade, traders often look for confirmation.
-
-Examples include:
-
-- price respecting support
-- breakout confirmation
-- bullish candlestick
-- bearish rejection
-- increased volume
-- trend continuation
-
-Confirmation helps reduce low-quality entries.
-
----
-
-# Technical Analysis Is Probability
-
-Technical analysis does not predict the future.
-
-Instead, it identifies situations where one outcome appears more likely than another.
-
-Even the strongest technical setup can fail.
-
-This is why every trade must include proper risk management.
-
----
-
-# Key Principle
-
-Technical analysis is a decision-making tool.
-
-It should help traders answer:
-
-- What is the trend?
-- Where are buyers active?
-- Where are sellers active?
-- Where should I enter?
-- Where should I exit?
-- How much should I risk?
-
-It should never encourage emotional trading.
-
----
-
-# Lesson Summary
-
-Technical analysis studies historical price movement to identify trading opportunities.
-
-Professional traders use charts, trends, support, resistance, market structure, and confirmation to improve decision-making.
-
-Technical analysis improves probability—not certainty.
-
-Successful traders combine technical analysis with discipline, patience, and effective risk management.
+**Lesson 3 â€” Supply, Demand, Liquidity & FVG**

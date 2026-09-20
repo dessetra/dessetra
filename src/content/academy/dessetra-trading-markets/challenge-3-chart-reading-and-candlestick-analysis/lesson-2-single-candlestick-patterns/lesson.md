@@ -1,652 +1,427 @@
----
-title: Single Candlestick Patterns
+﻿---
+title: MACD & Momentum
 lessonNumber: 2
-duration: 25
-difficulty: Beginner
-objective: Learn how to identify and interpret important single candlestick patterns, understand the psychology behind them, and use market context before making trading decisions.
+duration: 20
+difficulty: Intermediate
+objective: Understand how MACD reflects trend and momentum, interpret crossovers and the histogram, and use MACD as confirmation alongside market structure and the 21, 50 and 200 EMA.
 video:
 resource:
 ---
 
-# Single Candlestick Patterns
+# MACD & Momentum
 
-Single candlestick patterns are formations created by one candle.
+Moving averages help us understand trend direction, but before entering a trade we also want to know whether price movement has enough momentum behind it.
 
-They can provide clues about:
+One tool we can use for this is **MACD**.
 
-- buying pressure
-- selling pressure
-- rejection
-- indecision
-- momentum
-- possible continuation
-- possible reversal
+MACD stands for:
 
-However, no single candlestick pattern guarantees what price will do next.
+**Moving Average Convergence Divergence**
 
-Its meaning depends heavily on:
+It is a trend-following momentum indicator built from moving averages.
 
-- trend
-- location
-- support
-- resistance
+In this course, MACD will be used mainly as a **confirmation tool**.
+
+It should not create a trade setup by itself.
+
+---
+
+## Understanding Momentum
+
+**Momentum** describes the strength or speed behind a price movement.
+
+Imagine two bullish markets.
+
+In the first, price moves slowly upward with small candles and frequent hesitation.
+
+In the second, buyers push price strongly upward with clear directional movement.
+
+Both markets may technically be bullish, but their momentum is different.
+
+Momentum helps us ask:
+
+**Is the current movement strengthening or weakening?**
+
+---
+
+## The Main Parts of MACD
+
+The MACD indicator normally contains:
+
+- MACD Line
+- Signal Line
+- Histogram
+- Zero Line
+
+Each provides different information about momentum and trend.
+
+---
+
+## MACD Line
+
+The MACD line is derived from the relationship between a faster and a slower moving average.
+
+Because the faster average reacts more quickly to price, changes in their relationship help show changes in momentum.
+
+When the faster movement strengthens relative to the slower movement, the MACD responds.
+
+---
+
+## Signal Line
+
+The **Signal Line** is a smoothed average of the MACD line.
+
+Because it moves more slowly, traders compare the MACD line with the Signal Line to observe changes in momentum.
+
+This creates one of the most common MACD observations:
+
+**the crossover.**
+
+---
+
+## Bullish MACD Crossover
+
+A bullish crossover occurs when:
+
+**MACD Line crosses above Signal Line**
+
+This may indicate increasing bullish momentum.
+
+But it does **not** automatically mean:
+
+**BUY**
+
+Before considering a bullish setup, also examine:
+
+- market trend
 - market structure
-- timeframe
-- confirmation
+- Supply/Demand
+- Support/Resistance
+- EMA alignment
+- price location
 
-The goal is not simply to memorize candle names.
-
-The goal is to understand what happened between buyers and sellers.
-
----
-
-# Why Context Matters
-
-The same candle can communicate different information depending on where it forms.
-
-For example, a candle with a long lower wick may be more meaningful:
-
-- near support
-- after a downtrend
-- following a false breakdown
-- at a major higher-timeframe level
-
-The same candle in the middle of a random sideways market may have little importance.
-
-Before trading any single candlestick pattern, ask:
-
-- Where did it form?
-- What was the trend before it formed?
-- Is it near an important level?
-- Has the candle closed?
-- Is there confirmation?
-- Does the setup match the trading plan?
+The crossover provides another piece of evidence.
 
 ---
 
-# Doji
+## Bearish MACD Crossover
 
-A Doji forms when the opening and closing prices are equal or very close.
+A bearish crossover occurs when:
 
-It usually has a very small body.
+**MACD Line crosses below Signal Line**
 
-A Doji may indicate:
+This may indicate increasing bearish momentum.
 
-- indecision
-- balance between buyers and sellers
-- weakening momentum
-- uncertainty
+Again, the crossover alone is not enough reason to enter.
 
-The existence of a Doji does not automatically mean the market will reverse.
-
-It becomes more meaningful when it appears:
-
-- after a strong uptrend
-- after a strong downtrend
-- near support
-- near resistance
-- after an extended move
+A bearish MACD signal is more useful when the rest of the market analysis also supports bearish conditions.
 
 ---
 
-# Types of Doji
+## Understanding the Histogram
 
-Several Doji variations may appear on a chart.
+The histogram visually represents the distance between the MACD line and Signal Line.
 
-## Standard Doji
+When the two lines move farther apart, the histogram generally becomes larger.
 
-A Standard Doji has a very small body with upper and lower wicks.
+When they move closer together, the histogram becomes smaller.
 
-It may show temporary balance between buyers and sellers.
-
----
-
-## Long-Legged Doji
-
-A Long-Legged Doji has long upper and lower wicks.
-
-This indicates that price moved strongly in both directions before closing close to its opening price.
-
-It may show:
-
-- high uncertainty
-- aggressive competition
-- market hesitation
-- volatility without clear control
+This allows us to observe changes in momentum more easily.
 
 ---
 
-## Dragonfly Doji
+## Expanding Histogram
 
-A Dragonfly Doji has:
+An expanding histogram suggests that the distance between the MACD and Signal Line is increasing.
 
-- little or no upper wick
-- a long lower wick
-- an opening and closing price near the high
-
-It shows that sellers pushed price downward, but buyers recovered most or all of the move.
-
-It may be bullish when it appears:
-
-- near support
-- after a downtrend
-- after a false breakdown
-
-Confirmation is still required.
-
----
-
-## Gravestone Doji
-
-A Gravestone Doji has:
-
-- little or no lower wick
-- a long upper wick
-- an opening and closing price near the low
-
-It shows that buyers pushed price upward, but sellers forced price back down.
-
-It may be bearish when it appears:
-
-- near resistance
-- after an uptrend
-- after a failed breakout
-
-It should not be traded without confirmation.
-
----
-
-# Hammer
-
-A Hammer is a candle with:
-
-- a small body near the top
-- a long lower wick
-- little or no upper wick
-
-It usually appears after a downward move.
-
-The long lower wick shows that sellers pushed price lower, but buyers recovered before the candle closed.
-
-A Hammer may suggest possible bullish rejection.
-
-It becomes more meaningful when it appears:
-
-- after a downtrend
-- near support
-- at a demand zone
-- after a false breakdown
-- with bullish confirmation
-
----
-
-# Hammer Psychology
-
-The Hammer tells a simple market story:
-
-1. Sellers initially controlled the candle.
-2. Price moved significantly lower.
-3. Buyers entered the market.
-4. Buyers pushed price back toward the opening area.
-5. The market rejected lower prices.
-
-This does not guarantee a reversal.
-
-The next candle should help confirm whether buyers are truly taking control.
-
----
-
-# Inverted Hammer
-
-An Inverted Hammer has:
-
-- a small body near the bottom
-- a long upper wick
-- little or no lower wick
-
-It usually appears after a downtrend.
-
-It shows that buyers attempted to push price higher, although sellers later pushed price back down.
-
-The pattern may indicate that buying pressure is beginning to appear.
-
-A bullish confirmation candle is often needed before considering a trade.
-
----
-
-# Hanging Man
-
-The Hanging Man has the same shape as a Hammer:
-
-- small body near the top
-- long lower wick
-- little or no upper wick
-
-The difference is its location.
-
-A Hanging Man appears after an uptrend.
-
-It may indicate that sellers were able to push price sharply lower during the candle, even though buyers later recovered.
-
-This can be an early warning that bullish strength is weakening.
-
-Confirmation may include:
-
-- a bearish candle afterward
-- a break below the Hanging Man low
-- rejection at resistance
-- weakening market structure
-
----
-
-# Shooting Star
-
-A Shooting Star has:
-
-- a small body near the bottom
-- a long upper wick
-- little or no lower wick
-
-It usually appears after an upward move.
-
-The long upper wick shows that buyers pushed price higher, but sellers rejected the move and forced price back down.
-
-A Shooting Star may suggest bearish rejection.
-
-It becomes more meaningful when it appears:
-
-- after an uptrend
-- near resistance
-- at a supply zone
-- after a failed breakout
-- with bearish confirmation
-
----
-
-# Shooting Star Psychology
-
-The Shooting Star may indicate:
-
-1. Buyers initially pushed price higher.
-2. Higher prices attracted selling pressure.
-3. Sellers regained control.
-4. Price closed near the lower part of the candle.
-5. The market rejected higher prices.
-
-A strong bearish candle afterward may provide additional confirmation.
-
----
-
-# Marubozu
-
-A Marubozu is a candle with a large body and little or no wick.
-
-It may show strong control from either buyers or sellers.
-
----
-
-## Bullish Marubozu
-
-A Bullish Marubozu has:
-
-- a large bullish body
-- little or no upper wick
-- little or no lower wick
-
-It shows strong buying pressure throughout the period.
-
-It may appear during:
-
-- trend continuation
-- strong breakouts
-- high-momentum market movement
-
----
-
-## Bearish Marubozu
-
-A Bearish Marubozu has:
-
-- a large bearish body
-- little or no upper wick
-- little or no lower wick
-
-It shows strong selling pressure throughout the period.
-
-It may appear during:
-
-- bearish continuation
-- strong breakdowns
-- panic selling
-- high-momentum downward movement
-
----
-
-# Spinning Top
-
-A Spinning Top has:
-
-- a small body
-- an upper wick
-- a lower wick
-
-It indicates that both buyers and sellers moved price, but neither side gained clear control by the close.
-
-A Spinning Top may suggest:
-
-- indecision
-- reduced momentum
-- temporary balance
-- possible pause
-
-It becomes more significant after a strong directional move.
-
----
-
-# Full-Bodied Bullish Candle
-
-A large bullish candle with small wicks may show strong buying momentum.
-
-This may indicate:
-
-- aggressive demand
-- breakout strength
-- trend continuation
-- market confidence
-
-However, entering immediately after a large candle can be risky because price may pull back.
-
-Traders should evaluate:
-
-- nearby resistance
-- stop-loss distance
-- risk-to-reward ratio
-- whether the move is already extended
-
----
-
-# Full-Bodied Bearish Candle
-
-A large bearish candle with small wicks may show strong selling momentum.
-
-This may indicate:
-
-- aggressive supply
-- breakdown strength
-- trend continuation
-- panic selling
-
-Traders should still consider whether price is approaching important support.
-
----
-
-# Rejection Candles
-
-A rejection candle usually has a long wick showing that price attempted to move in one direction but failed to remain there.
-
-Examples include:
-
-- Hammer
-- Shooting Star
-- Dragonfly Doji
-- Gravestone Doji
-- Pin Bar
-
-Rejection is stronger when it occurs at an important level.
-
-A long wick in the middle of an unimportant range may not provide a useful signal.
-
----
-
-# Pin Bar
-
-A Pin Bar is a candle with:
-
-- a small body
-- one long wick
-- a much smaller wick on the opposite side
-
-A bullish Pin Bar usually has a long lower wick.
-
-A bearish Pin Bar usually has a long upper wick.
-
-Pin Bars may show strong price rejection.
-
-Their effectiveness depends on:
-
-- location
-- trend
-- market structure
-- support or resistance
-- confirmation
-
----
-
-# Bullish Pin Bar
-
-A bullish Pin Bar may show rejection of lower prices.
-
-It is more meaningful when it appears:
-
-- near support
-- after a pullback in an uptrend
-- after a false breakdown
-- at a demand zone
-- at a higher-timeframe level
-
-The long lower wick suggests that sellers lost control.
-
----
-
-# Bearish Pin Bar
-
-A bearish Pin Bar may show rejection of higher prices.
-
-It is more meaningful when it appears:
-
-- near resistance
-- after a pullback in a downtrend
-- after a failed breakout
-- at a supply zone
-- at a higher-timeframe level
-
-The long upper wick suggests that buyers lost control.
-
----
-
-# Candle Body and Wick Relationship
-
-The relationship between the body and wick provides important information.
-
-## Large Body, Small Wicks
-
-May indicate:
-
-- strong momentum
-- clear control
-- aggressive buying or selling
-
----
-
-## Small Body, Long Wicks
-
-May indicate:
-
-- indecision
-- rejection
-- volatility
-- competition between buyers and sellers
-
----
-
-## Small Body, Small Wicks
-
-May indicate:
-
-- low volatility
-- weak participation
-- temporary market pause
-
----
-
-## One Long Wick
-
-May indicate:
-
-- rejection
-- failed breakout
-- failed breakdown
-- loss of control by one side
-
----
-
-# Bullish and Bearish Meaning Depends on Location
-
-A bullish-looking candle is not always a good buying signal.
-
-For example, a Hammer forming directly below strong resistance may still be risky.
-
-A bearish-looking candle is not always a good selling signal.
-
-For example, a Shooting Star forming directly above strong support may lack sufficient room for price to fall.
-
-Good analysis considers both the pattern and the available market space.
-
----
-
-# Confirmation
-
-Confirmation means waiting for additional evidence before entering.
-
-Possible confirmation includes:
-
-- the next candle closing in the expected direction
-- a break above a bullish pattern's high
-- a break below a bearish pattern's low
-- support holding
-- resistance holding
-- market structure shifting
-- increased volume
-- agreement with the higher timeframe
-
-Waiting for confirmation may reduce some false signals.
-
-However, confirmation does not guarantee success.
-
----
-
-# Stop-Loss Considerations
-
-Single candlestick patterns can help identify possible stop-loss areas.
+This can indicate that current momentum is strengthening.
 
 For example:
 
-- Below the low of a bullish rejection candle
-- Above the high of a bearish rejection candle
+### Bullish
 
-However, stop-loss placement should consider:
+MACD is bullish and positive histogram bars are expanding.
 
-- volatility
-- spread
+Bullish momentum may be strengthening.
+
+### Bearish
+
+MACD is bearish and negative histogram bars are expanding.
+
+Bearish momentum may be strengthening.
+
+---
+
+## Contracting Histogram
+
+When histogram bars begin becoming smaller, the MACD and Signal Line are moving closer together.
+
+This can indicate that current momentum is weakening.
+
+For example:
+
+Price may still be rising while bullish momentum begins to slow.
+
+This does not automatically mean price will reverse.
+
+It simply tells us that the strength behind the movement may be changing.
+
+---
+
+## The Zero Line
+
+The zero line represents the point where the underlying faster and slower averages have no difference.
+
+In simple terms:
+
+**MACD above zero** can support bullish trend context.
+
+**MACD below zero** can support bearish trend context.
+
+However, the zero line should not be treated as a standalone entry signal.
+
+We still need price structure and other confirmation.
+
+---
+
+## MACD Is a Lagging Indicator
+
+MACD is calculated from historical price information.
+
+Therefore, it reacts **after price has already started moving**.
+
+This is important.
+
+A MACD crossover can sometimes occur after a significant part of the move has already happened.
+
+This is why we do not chase price simply because MACD has crossed.
+
+Instead, MACD helps us confirm what our price analysis is already showing.
+
+---
+
+## False Signals & Choppy Markets
+
+MACD can produce misleading signals when price is ranging or moving without a clear direction.
+
+You may see:
+
+**Bullish crossover â†’ Bearish crossover â†’ Bullish crossover**
+
+within a relatively small price range.
+
+This is sometimes called a **whipsaw**.
+
+If market structure is unclear and the 21, 50 and 200 EMA are compressed or repeatedly crossing, MACD crossovers should be treated cautiously.
+
+Indicators cannot create a clean trend where price has none.
+
+---
+
+## Combining MACD With Market Structure
+
+Suppose price is bullish:
+
+**HH â†’ HL â†’ HH**
+
+Price then begins a pullback.
+
+Instead of buying immediately, we observe whether:
+
+- the bullish structure remains valid
+- price reaches an important area
+- buyers begin responding
+- MACD momentum turns bullish again
+
+This gives the MACD signal context.
+
+---
+
+## Combining MACD With the 21, 50 & 200 EMA
+
+From Lesson 1, our bullish EMA alignment is:
+
+**21 EMA > 50 EMA > 200 EMA**
+
+Our bearish alignment is:
+
+**21 EMA < 50 EMA < 200 EMA**
+
+Now MACD can provide another layer of confirmation.
+
+### Bullish Example
+
+- Market structure is bullish
+- 21 > 50 > 200
+- Price pulls back toward an important area
+- MACD turns bullish
+- Bullish momentum begins increasing
+
+### Bearish Example
+
+- Market structure is bearish
+- 21 < 50 < 200
+- Price pulls back toward an important area
+- MACD turns bearish
+- Bearish momentum begins increasing
+
+This is stronger than entering because of the MACD crossover alone.
+
+---
+
+## When MACD Disagrees With Price
+
+Sometimes your indicators will not agree.
+
+Example:
+
+- Market structure = Bullish
+- EMA alignment = Bullish
+- MACD = Bearish
+
+This may occur during a pullback.
+
+Instead of immediately entering or reversing direction, wait.
+
+Ask:
+
+**Is MACD simply reflecting the current correction?**
+
+**Is market structure still bullish?**
+
+**Has an important Higher Low been broken?**
+
+Conflicting evidence is a reason to seek more confirmation, not a reason to force a trade.
+
+---
+
+## Confirmation Before Entry
+
+A common beginner mistake is entering while the current candle is still forming.
+
+During a candle, MACD may temporarily appear to confirm a setup.
+
+By the candle close, conditions may have changed.
+
+For our course, when a setup requires candle confirmation, evaluate the signal using the **completed candle** rather than assuming an unfinished candle will close as expected.
+
+---
+
+## Practical Exercise â€” Configure MACD
+
+Open TradingView.
+
+Select:
+
+**EURUSD or XAUUSD**
+
+Add:
+
+- 21 EMA
+- 50 EMA
+- 200 EMA
+- MACD
+
+Use the standard MACD configuration available on the platform for this exercise.
+
+Observe the chart on:
+
+**H1 â†’ M15 â†’ M5**
+
+Identify where MACD changes as price momentum changes.
+
+---
+
+## Practical Exercise â€” Find 3 MACD Signals
+
+Find three historical examples:
+
+### Example 1 â€” Bullish
+
+Identify:
+
+- bullish MACD crossover
+- market structure at the time
+- EMA alignment
+- what price did afterwards
+
+### Example 2 â€” Bearish
+
+Identify:
+
+- bearish MACD crossover
 - market structure
-- nearby liquidity
-- total account risk
+- EMA alignment
+- what happened afterwards
 
-A stop-loss should not be placed randomly.
+### Example 3 â€” False or Weak Signal
 
----
+Find a MACD crossover that occurred during a range or unclear market structure.
 
-# Risk-to-Reward Considerations
-
-A valid candlestick pattern is not enough.
-
-The trade must also offer a reasonable potential reward compared with the amount being risked.
-
-For this course, learners should generally look for an average risk-to-reward ratio near:
-
-**1:3**
-
-This means risking one unit to potentially gain three units.
-
-A pattern should be skipped when:
-
-- the stop-loss is too wide
-- the target is too close
-- resistance blocks a buy trade
-- support blocks a sell trade
-- the potential reward does not justify the risk
+Observe why the crossover alone would have been unreliable.
 
 ---
 
-# Common Beginner Mistakes
+## Screenshot Assignment
 
-Avoid these mistakes:
+Submit **three annotated screenshots**:
 
-- Trading every Doji
-- Buying every Hammer
-- Selling every Shooting Star
-- Ignoring the trend
-- Ignoring support and resistance
-- Entering before the candle closes
-- Using patterns without confirmation
-- Placing stops too close to the wick
-- Risking too much on one setup
-- Memorizing names without understanding psychology
+### Screenshot 1
+A bullish MACD confirmation.
 
-The market does not reward pattern memorization alone.
+### Screenshot 2
+A bearish MACD confirmation.
 
-It rewards disciplined interpretation.
+### Screenshot 3
+A weak or false MACD signal.
 
----
+Each screenshot should show:
 
-# A Simple Single-Candle Checklist
+- price
+- 21 EMA
+- 50 EMA
+- 200 EMA
+- MACD
+- relevant market structure
 
-Before trading a single candlestick pattern, ask:
-
-1. Is the candle completed?
-2. What pattern has formed?
-3. What does the body show?
-4. What do the wicks show?
-5. Where has the pattern formed?
-6. What is the higher-timeframe trend?
-7. Is there support or resistance nearby?
-8. Is there confirmation?
-9. Where will the stop-loss be placed?
-10. Does the trade offer acceptable risk-to-reward?
-11. Does the risk stay within the trading plan?
-12. Is the decision based on analysis rather than emotion?
-
-If several answers are unclear, the best decision may be to avoid the trade.
+Under each screenshot, briefly explain whether MACD **confirmed or conflicted with price structure**.
 
 ---
 
-# Key Principle
+## Quick Knowledge Check
 
-A candlestick pattern is not powerful because of its name.
+**1. What does MACD stand for?**
 
-It becomes useful when its shape, location, market structure and confirmation all support the same trading idea.
+**2. What may a MACD Line crossing above the Signal Line indicate?**
+
+**3. What does an expanding histogram tell us about the distance between the MACD and Signal Line?**
+
+**4. Why can MACD produce unreliable signals in ranging markets?**
+
+**5. Why should MACD be combined with market structure and EMA alignment rather than traded alone?**
 
 ---
 
-# Lesson Summary
+## Key Takeaways
 
-Single candlestick patterns provide clues about momentum, indecision and price rejection.
+- MACD stands for **Moving Average Convergence Divergence**.
+- MACD helps traders observe trend and momentum.
+- A bullish crossover occurs when the MACD Line crosses above the Signal Line.
+- A bearish crossover occurs when it crosses below.
+- The histogram shows the distance between the MACD and Signal Line.
+- Expanding separation can indicate strengthening momentum.
+- Contracting separation can indicate weakening momentum.
+- MACD is a lagging indicator.
+- MACD can generate false or conflicting signals.
+- Use MACD as **confirmation**, not as an automatic Buy or Sell command.
+- Market structure and price context remain more important than a single indicator.
 
-Important patterns include:
+---
 
-- Doji
-- Hammer
-- Inverted Hammer
-- Hanging Man
-- Shooting Star
-- Marubozu
-- Spinning Top
-- Pin Bar
+## Lesson Completion
 
-These patterns should never be traded in isolation.
+You should now be able to interpret basic MACD momentum and determine whether it supports or conflicts with your market analysis.
 
-Professional traders consider trend, location, support, resistance, timeframe, confirmation, stop-loss placement and risk-to-reward before making a decision.
+Next:
 
-The goal is not to predict every market movement.
-
-The goal is to identify high-quality situations while protecting trading capital.
+**Lesson 3 â€” Dessetra Confirmation Model**

@@ -1,4 +1,4 @@
----
+﻿---
 title: Preparing Before the Market Opens
 lessonNumber: 1
 duration: 25
@@ -28,7 +28,7 @@ A well-prepared trader reacts according to a plan rather than emotion.
 
 ---
 
-# Why Market Preparation Matters
+## Why Market Preparation Matters
 
 The market can move quickly.
 
@@ -47,7 +47,7 @@ It creates a clear plan before market pressure begins.
 
 ---
 
-# Preparation Does Not Mean Prediction
+## Preparation Does Not Mean Prediction
 
 The purpose of preparation is not to predict every market movement.
 
@@ -65,7 +65,7 @@ Professional traders prepare for possibilities rather than depending on one pred
 
 ---
 
-# Build a Consistent Pre-Market Routine
+## Build a Consistent Pre-Market Routine
 
 A professional routine should be simple and repeatable.
 
@@ -85,7 +85,7 @@ Following the same process every trading day improves consistency.
 
 ---
 
-# Check Your Personal Readiness
+## Check Your Personal Readiness
 
 Before analyzing the market, evaluate yourself.
 
@@ -104,7 +104,7 @@ Sometimes the most professional decision is not to trade.
 
 ---
 
-# Review the Economic Calendar
+## Review the Economic Calendar
 
 Economic events can create significant volatility.
 
@@ -128,7 +128,7 @@ Never enter a trade without knowing whether a major event is approaching.
 
 ---
 
-# High-Impact News Events
+## High-Impact News Events
 
 High-impact events may cause:
 
@@ -151,7 +151,7 @@ News risk should always be planned.
 
 ---
 
-# Review Overnight Market Activity
+## Review Overnight Market Activity
 
 Before the trading session begins, review what happened earlier.
 
@@ -167,7 +167,7 @@ This helps the trader understand the current market environment.
 
 ---
 
-# Start with Higher Timeframes
+## Start with Higher Timeframes
 
 Higher timeframes provide the broader market picture.
 
@@ -191,7 +191,7 @@ Lower-timeframe entries should be understood within the larger market context.
 
 ---
 
-# Identify the Market Trend
+## Identify the Market Trend
 
 Determine whether the market is:
 
@@ -216,7 +216,7 @@ The trading plan should match the current market condition.
 
 ---
 
-# Mark Important Support and Resistance
+## Mark Important Support and Resistance
 
 Support and resistance help identify areas where price may react.
 
@@ -240,7 +240,7 @@ The objective is clarity.
 
 ---
 
-# Identify Key Price Zones
+## Identify Key Price Zones
 
 Price does not always react at one exact number.
 
@@ -261,7 +261,7 @@ Zones should be based on visible price behaviour rather than guesswork.
 
 ---
 
-# Check Current Volatility
+## Check Current Volatility
 
 Volatility measures how strongly price is moving.
 
@@ -282,7 +282,7 @@ The trader should adjust expectations according to current volatility.
 
 ---
 
-# Review Market Sessions
+## Review Market Sessions
 
 Different trading sessions may behave differently.
 
@@ -303,7 +303,7 @@ Session awareness helps improve timing.
 
 ---
 
-# Build a Daily Watchlist
+## Build a Daily Watchlist
 
 A watchlist is a small group of markets selected for possible trading.
 
@@ -320,7 +320,7 @@ Trying to monitor too many markets can lead to rushed decisions.
 
 ---
 
-# How to Select Watchlist Markets
+## How to Select Watchlist Markets
 
 A market may be added to the watchlist when:
 
@@ -334,7 +334,7 @@ Markets should not be selected only because they are moving quickly.
 
 ---
 
-# Remove Weak Opportunities
+## Remove Weak Opportunities
 
 Not every market deserves attention.
 
@@ -352,7 +352,7 @@ Filtering weak markets protects the trader from unnecessary trades.
 
 ---
 
-# Create Trading Scenarios
+## Create Trading Scenarios
 
 A trading scenario explains what the trader will do if a specific condition occurs.
 
@@ -381,7 +381,7 @@ Scenarios help reduce impulsive decisions.
 
 ---
 
-# Define Entry Areas in Advance
+## Define Entry Areas in Advance
 
 Before the market becomes active, identify areas where a trade may become possible.
 
@@ -399,7 +399,7 @@ Confirmation is still required.
 
 ---
 
-# Plan Stop-Loss Locations
+## Plan Stop-Loss Locations
 
 Stop-loss planning should happen before entry.
 
@@ -416,7 +416,7 @@ A stop-loss should never be placed randomly.
 
 ---
 
-# Plan Potential Targets
+## Plan Potential Targets
 
 Potential targets should also be identified before entry.
 
@@ -437,7 +437,7 @@ This means risking one unit to pursue approximately three units of potential rew
 
 ---
 
-# Confirm Risk Before Trading
+## Confirm Risk Before Trading
 
 Before the session begins, define:
 
@@ -454,7 +454,7 @@ This limit should be decided before emotions become involved.
 
 ---
 
-# Prepare the Trading Platform
+## Prepare the Trading Platform
 
 Before trading, confirm that:
 
@@ -469,7 +469,7 @@ Technical preparation prevents avoidable mistakes.
 
 ---
 
-# Prepare the Trading Journal
+## Prepare the Trading Journal
 
 Open the trading journal before the session begins.
 
@@ -489,7 +489,7 @@ A journal should be part of the trading process, not an afterthought.
 
 ---
 
-# Create a Pre-Trade Checklist
+## Create a Pre-Trade Checklist
 
 Before considering any trade, ask:
 
@@ -509,7 +509,7 @@ If important conditions are missing, do not trade.
 
 ---
 
-# Prepare for No Trade
+## Prepare for No Trade
 
 A professional trader does not force opportunities.
 
@@ -528,7 +528,7 @@ Capital protected is capital available for future opportunities.
 
 ---
 
-# Avoid Overanalysis
+## Avoid Overanalysis
 
 Preparation should create clarity.
 
@@ -546,7 +546,7 @@ A simple plan is easier to follow.
 
 ---
 
-# Example Pre-Market Routine
+## Example Pre-Market Routine
 
 A trader may follow this routine:
 
@@ -586,7 +586,7 @@ This routine can be adjusted to suit the trader's system.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -605,7 +605,7 @@ Preparation helps prevent these mistakes.
 
 ---
 
-# Key Principle
+## Key Principle
 
 Professional traders prepare before they participate.
 
@@ -621,7 +621,7 @@ Preparation creates discipline before pressure begins.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Before the market opens, a professional trader should:
 

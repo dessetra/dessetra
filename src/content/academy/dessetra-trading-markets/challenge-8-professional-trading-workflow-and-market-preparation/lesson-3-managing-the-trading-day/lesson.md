@@ -1,4 +1,4 @@
----
+﻿---
 title: Managing the Trading Day
 lessonNumber: 3
 duration: 25
@@ -22,7 +22,7 @@ Professional traders manage not only the market, but also themselves.
 
 ---
 
-# What Is Trading Day Management?
+## What Is Trading Day Management?
 
 Trading day management refers to everything a trader does from the moment the trading session begins until it ends.
 
@@ -39,7 +39,7 @@ A successful trading day is measured by discipline, not only by profit.
 
 ---
 
-# Start Every Session Calmly
+## Start Every Session Calmly
 
 Never begin a trading session while feeling:
 
@@ -56,7 +56,7 @@ A calm trader usually makes better decisions than an emotional trader.
 
 ---
 
-# Follow the Plan Throughout the Day
+## Follow the Plan Throughout the Day
 
 Many traders begin the day disciplined but gradually abandon their plan.
 
@@ -66,7 +66,7 @@ Consistency matters more than occasional discipline.
 
 ---
 
-# Focus on Quality, Not Quantity
+## Focus on Quality, Not Quantity
 
 More trades do not automatically produce more profit.
 
@@ -80,7 +80,7 @@ One excellent trade is often better than several poor-quality trades.
 
 ---
 
-# Avoid Overtrading
+## Avoid Overtrading
 
 Overtrading is one of the most common causes of unnecessary losses.
 
@@ -96,7 +96,7 @@ Every trade should have a valid reason.
 
 ---
 
-# Respect Your Maximum Number of Trades
+## Respect Your Maximum Number of Trades
 
 Your trading plan should define a reasonable maximum number of trades per session.
 
@@ -110,7 +110,7 @@ More trades do not always mean better results.
 
 ---
 
-# Respect Your Session Risk
+## Respect Your Session Risk
 
 Risk should always remain under control.
 
@@ -124,7 +124,7 @@ Protecting capital is more important than recovering losses.
 
 ---
 
-# Handle Winning Trades Professionally
+## Handle Winning Trades Professionally
 
 Winning trades are encouraging.
 
@@ -143,7 +143,7 @@ Treat every new trade independently.
 
 ---
 
-# Handle Losing Trades Professionally
+## Handle Losing Trades Professionally
 
 Losses are part of trading.
 
@@ -160,7 +160,7 @@ Never try to recover losses immediately.
 
 ---
 
-# Avoid Revenge Trading
+## Avoid Revenge Trading
 
 Revenge trading happens when a trader immediately enters another trade to recover money.
 
@@ -176,7 +176,7 @@ If emotions become strong, step away from the charts.
 
 ---
 
-# Stay Patient
+## Stay Patient
 
 Markets do not produce high-quality opportunities every minute.
 
@@ -188,7 +188,7 @@ Professional traders are comfortable waiting.
 
 ---
 
-# Do Not Force Trades
+## Do Not Force Trades
 
 A trader should never think:
 
@@ -202,7 +202,7 @@ If the answer is no, continue waiting.
 
 ---
 
-# Accept Missed Opportunities
+## Accept Missed Opportunities
 
 Every trader eventually misses a trade.
 
@@ -216,7 +216,7 @@ Missing one trade is usually less expensive than forcing one.
 
 ---
 
-# Monitor Your Emotions
+## Monitor Your Emotions
 
 Throughout the session ask yourself:
 
@@ -230,7 +230,7 @@ Honest self-awareness prevents many mistakes.
 
 ---
 
-# Recognise Mental Fatigue
+## Recognise Mental Fatigue
 
 Trading requires concentration.
 
@@ -244,7 +244,7 @@ If concentration begins to fall, consider ending the trading session.
 
 ---
 
-# Take Short Breaks
+## Take Short Breaks
 
 Professional traders do not need to stare at charts continuously.
 
@@ -259,7 +259,7 @@ Stepping away from the screen can improve decision-making.
 
 ---
 
-# Avoid Constant Chart Watching
+## Avoid Constant Chart Watching
 
 Watching every candle form may create unnecessary stress.
 
@@ -273,7 +273,7 @@ Constant observation can increase emotional reactions.
 
 ---
 
-# Manage Open Trades Calmly
+## Manage Open Trades Calmly
 
 Once a trade is active:
 
@@ -286,7 +286,7 @@ Do not interfere simply because price moves slightly.
 
 ---
 
-# Trust Your Preparation
+## Trust Your Preparation
 
 If the trade met every requirement before entry, allow the plan to work.
 
@@ -296,7 +296,7 @@ Trust the process.
 
 ---
 
-# Avoid Comparing Yourself to Others
+## Avoid Comparing Yourself to Others
 
 During the trading session you may see:
 
@@ -311,7 +311,7 @@ Your responsibility is to follow your own trading system.
 
 ---
 
-# Know When to Stop Trading
+## Know When to Stop Trading
 
 Sometimes the most profitable decision is to stop.
 
@@ -327,7 +327,7 @@ Professional traders know when the day's work is finished.
 
 ---
 
-# End the Session with Discipline
+## End the Session with Discipline
 
 At the end of the session:
 
@@ -340,7 +340,7 @@ Ending the day professionally prepares you for tomorrow.
 
 ---
 
-# Separate Self-Worth from Results
+## Separate Self-Worth from Results
 
 A losing day does not make you a poor trader.
 
@@ -357,7 +357,7 @@ Long-term success is built on behaviour rather than daily outcomes.
 
 ---
 
-# Maintain Healthy Habits
+## Maintain Healthy Habits
 
 Good trading also depends on healthy routines.
 
@@ -373,7 +373,7 @@ A healthy mind usually makes better trading decisions.
 
 ---
 
-# Stay Humble
+## Stay Humble
 
 The market constantly teaches lessons.
 
@@ -392,7 +392,7 @@ Overconfidence is dangerous.
 
 ---
 
-# Example of a Professional Trading Day
+## Example of a Professional Trading Day
 
 Morning:
 
@@ -419,7 +419,7 @@ This structured routine promotes consistency.
 
 ---
 
-# Common Beginner Mistakes
+## Common Beginner Mistakes
 
 Avoid:
 
@@ -437,7 +437,7 @@ These mistakes often cause avoidable losses.
 
 ---
 
-# Key Principle
+## Key Principle
 
 Professional traders manage themselves before they manage the market.
 
@@ -447,7 +447,7 @@ Protecting your mindset is just as important as protecting your capital.
 
 ---
 
-# Lesson Summary
+## Lesson Summary
 
 Managing the trading day requires traders to:
 
